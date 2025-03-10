@@ -1,0 +1,1 @@
+Variabile che ha un valore costante (costanti universali, non si usa il Camel Case). 

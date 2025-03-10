@@ -1,0 +1,1 @@
+Variabile dalla memoria dinamica.

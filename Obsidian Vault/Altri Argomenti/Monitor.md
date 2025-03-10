@@ -1,0 +1,1 @@
+Un monitor è una raccolta di procedure, variabili e strutture dati, raggruppate in un tipo speciale di modulo o pacchetto. I processi possono chiamare le procedure di un monitor quando vogliono, ma non possono accedere direttamente alle strutture dati interne del monitor da procedure dichiarate al di fuori del monitor.

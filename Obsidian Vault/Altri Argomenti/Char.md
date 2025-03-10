@@ -1,0 +1,1 @@
+Carattere unicode a 16 bit, minimo 0000, massimo FFFF

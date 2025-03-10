@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"3df31fddf78069c0","type":"text","text":"Problemi di progettazione dei sistemi di paginazione","x":-125,"y":-30,"width":250,"height":60},
+		{"id":"911a0bf7cf011628","type":"text","text":"Politiche di allocazione locale e globale\n- Gli algoritmi locali assegnano ad ogni processo una frazione fissa della memoria. Se il set di lavoro aumenta in un algoritmo locale si ottiene del trashing, se invece il set di lavoro si restringe, si spreca memoria\n- Gli algoritmi globali assegnano dinamicamente frame fra i processi eseguibili. In questo modo il numero di frame assegnato a ogni processo varia nel tempo. Gli algoritmi globali funzionano generalmente meglio, specie quando la dimensione del set di lavoro può variare durante la vita di un processo. Quando si utilizza un algoritmo globale, il sistema deve continuamente decidere quanti frame assegnare a ciascun processo. Un metodo è monitorare i frame con i bit di aging, ma non è detto che questo approccio prevenga il trashing. Se è utilizzato un algoritmo globale è possibile avviare ogni processo con un certo numero di pagine proporzionale alla sua dimensione, ma quando l'allocazione deve essere aggiornata dinamicamente durante l'esecuzione. Un modo per gestire l'allocazione è usare l'algoritmo PFF (Page Fault Frequency), che indica quando aumentare e quando diminuire l'allocazione delle pagine di un processo.","x":-540,"y":120,"width":540,"height":540},
+		{"id":"a0940e817d40a70f","type":"text","text":"Controllo del carico \nPuò succedere che nel sistema si verifichi il trashing anche con il miglior algoritmo di sostituzione delle pagine e l'assegnazione ottimale dei frame. \nLa soluzione più semplice è piuttosto cruda: uccidere qualche processo. Spesso i sistemi operativi dispongono di uno speciale processo: l'OMM (Out of Memory Killer), che si attiva quando il sistema è a corto di memoria","x":0,"y":120,"width":433,"height":270}
+	],
+	"edges":[
+		{"id":"d68d99734af24df9","fromNode":"3df31fddf78069c0","fromSide":"bottom","toNode":"911a0bf7cf011628","toSide":"top"},
+		{"id":"c6d3817998d0947d","fromNode":"3df31fddf78069c0","fromSide":"bottom","toNode":"a0940e817d40a70f","toSide":"top"}
+	]
+}
