@@ -160,7 +160,14 @@ $c[i] = ENC(K, c[i-1] \oplus m[i])$
 
 
 
+#### Counter Mode (CTR)
+- Inizializzare un counter **ctr**, e incrementarlo ad ogni blocco nuovo incontrato
+- "Decryptare" il contatore con la cifratura a blocchi (indipendentemente dal plaintext, che può essere pre-computato)
+- Output con XOR con **il blocco del plaintext** 
 
+**In pratica**: costruisce una keystream **PRNG** fuori un blocco **PRP**
+Molto sicuro, se **PRP** è sicuro lo sarà anche **PRNG**
 
+![[Pasted image 20250313160812.png]]
 
 
