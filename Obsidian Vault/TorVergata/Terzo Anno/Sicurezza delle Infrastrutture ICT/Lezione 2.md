@@ -170,4 +170,25 @@ Molto sicuro, se **PRP** è sicuro lo sarà anche **PRNG**
 
 ![[Pasted image 20250313160812.png]]
 
+>[!example] Sommario
+>Modalità con **più vantaggi**
+>- Cambia la cifratura a **blocchi** con **stream**
+>- Combina tutti i vantaggi di **CFB** e **OFB**
+>
+>Efficienza di **implementazione** (SW/HW)
+>- Encryption e Decryption **Parallele**
+>
+>Richiede solamente l'**implementazione dell'encryption a blocchi**
+>- A differenza di **ECB** e **CBC** che richiedono anche blocchi inversi
+>
+>Accesso Random
+>- Decryptare l'$i$-esimo blocco non dipende dal blocco precedente 
+>	- A differenza di *CBC* o *CFB*, dove devi decriptare tutti i blocchi precedenti
+>
+>Sicurezza
+>- I contatori (se usati bene) non si ripetono. 
+>- Garantisce l'assenza di **cicli corti**
+
+
+
 
