@@ -78,6 +78,6 @@ Esplicitamente formulato come segue:
 - Bit di informazione con *XOR* = Random bit
 - Lo XOR con qualsiasi stringa random "rimuove" ogni informazione o plaintext
 
-![[Pasted image 20250311150901.png | 500]]
+![[Pasted image 20250311150901.png#center | 500]]
 
 

@@ -18,7 +18,7 @@
 
 #### Cifrature Stream
 
-![[Pasted image 20250311151248.png | 600]]
+![[Pasted image 20250311151248.png#center | 600]]
 
 *Goal*: "Approssimare" un one-time-pad
 
@@ -52,7 +52,7 @@ Nonostante ciò, se il messaggio è cryptato 2 volte, il ciphertext verrà ripet
 >[!tip] Goal
 >"*Generalizzare*" la cifratura con sostituzione
 
-![[Pasted image 20250313144046.png | 500]]
+![[Pasted image 20250313144046.png#center | 500]]
 
 - Gli algoritmi a Blocchi dovrebbero essere implementati come una *Pseudo Permutazione Random*
 	- In pratica, le chiavi permetteranno solo di selezionare intorno a $2^{keysize}$ permutazioni
@@ -65,13 +65,13 @@ Pseudo Random Permutation:
 
 - Permutazione: Funzione *biettiva* 
 
-![[Pasted image 20250313144409.png|| 700]]
+![[Pasted image 20250313144409.png#center | 700]]
 
 
 
 Un possibile **problema** della cifratura a Blocchi potrebbe essere cryptare il messaggio 2 volte.
 
-![[Pasted image 20250313144813.png | 600]]
+![[Pasted image 20250313144813.png#center | 600]]
 
 
 #### Cifratura a Blocchi: Modi di Operare

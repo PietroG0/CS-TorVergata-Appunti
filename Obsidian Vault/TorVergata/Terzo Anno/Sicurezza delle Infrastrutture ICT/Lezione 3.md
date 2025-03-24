@@ -56,7 +56,7 @@
 
 #### Proteggersi da attaccanti MITM (Man In The Middle)
 
-![[Pasted image 20250317121438.png | 600]]
+![[Pasted image 20250317121438.png#center | 600]]
 
 Questa immagine spiega come il meccaniscmo di autenticazione dei messaggi protegge da un attacco **MITM**, ovvero un attacco in cui un malintenzionato intercetta e modifica il messaggio durante la trasmissione
 
@@ -77,7 +77,7 @@ Questa immagine spiega come il meccaniscmo di autenticazione dei messaggi proteg
 
 #### NON si può proteggersi dai "replay attacks"
 
-![[Pasted image 20250317122143.png | 600]]
+![[Pasted image 20250317122143.png#center | 600]]
 
 **Gli attacchi replay utilizzano nonces**
 - Un **attacco di replay** avviene quando un attaccante intercetta un messaggio autentico, e lo **invia nuovamente** per ingannare il destinatario e far eseguire l'operazione più volte
@@ -91,8 +91,12 @@ Un **Nonce** è un valore unico che viene aggiunto a ogni messaggio per garantir
 - **Non deve rimanere segreto**, può essere incluso nel messaggio in chiaro
 - Tipicamente è generato come:
 	- **Numero di sequenza**: un numero incrementale per ogni messaggio
+		- Ottimo modo per controllare se il messaggio è **fresco**
+		- Attenzione particolare ai reboot, da dove si riparte se si riavvia?
 	- **Numero casuale**: generato casualmente per ogni transazione
+		- Problema: generando numeri casuali, e controllare che non siano uguali, c'è bisogno di un **DB**, che a lungo andare si riempirà 
 	- **Timestamp**: data e ora del messaggio
+		- Il tempo viene gestito da protocolli e da server, quindi si può attaccare con il forward-replay attack
 
 
 #### MAC = Digital Signature?
@@ -105,9 +109,14 @@ Un **Nonce** è un valore unico che viene aggiunto a ogni messaggio per garantir
 **Entrambi hanno lo stesso scopo**
 - Integrità del messaggio/dei dati
 
-**Ma a differenza del MAC, DS garantisce non repudation (source authentication)
+**Ma a differenza del MAC, DS garantisce non repudation (non ripudio) (source authentication)
 - *DS* = Una forma di autenticazione *più sicura* rispetto al MAC
 	- Ma richiede diverse cifrature
+
+- Non ripudio = **DS** è considerata anche a livello legale, con un codice MAC posso "ripudiare" il fatto di aver mandato un messaggio (es. mandare una PEC)
+
+*Come computare un MAC?* 
+- Utilizzando le funzioni Hash
 
 
 #### Hash function
@@ -118,7 +127,7 @@ Un **Nonce** è un valore unico che viene aggiunto a ogni messaggio per garantir
 **Caratteristiche principali di una funzione hash crittografica**
 1. *Deterministica*: Lo stesso input darà sempre lo stesso output
 2. *Output di lunghezza fissa*: Indipendentemente dalla dimensione dell'input, il risultato avrà una lunghezza prestabilita (SHA-256 produce sempre 256 bit)
-3. *Resistenza alla preimmagine*: Dato un hash $H(x)$, è computazionalmente difficile trovare il valore originale $x$
+3. *Resistenza alla preimmagine (one way)*: Dato un hash $H(x)$, è computazionalmente difficile trovare il valore originale $x$
 4. *Resistenza alla seconda preimmagine*: Dato un messaggio $x$ e il suo hash $H(x)$, è difficile trovare un altro messaggio $x'$ tale che $H(x) = H(x')$
 5. *Resistenza alle collisioni*: E' difficile trovare due input diversi $x$ e $y$ tali che $H(x) = H(y)$
 6. *Efficienza computazionale*: Deve essere veloce da calcolare per qualsiasi input
@@ -126,13 +135,13 @@ Un **Nonce** è un valore unico che viene aggiunto a ogni messaggio per garantir
 
 #### Autenticazione di messaggi con l'utilizzo delle hash functions
 
-![[Pasted image 20250317153003.png | 600]]
+![[Pasted image 20250317153003.png#center | 600]]
 
 >[!tip] Spiegazione
 >E' molto difficile trovare un messaggio $M'$ che ha lo stesso Hash di un messaggio iniziale $M$, questo per la proprietà della resistenza alle collisioni dell'Hash spiegato in precedenza
 
 
-![[Pasted image 20250317153157.png | 600]]
+![[Pasted image 20250317153157.png#center | 600]]
 
 >[!tip] Spiegazione
 >Aggiungendo una **chiave di autenticazione segreta** (secret), dato che l'attaccante non ne è a conoscenza, è computazionalmente difficile costruire un codice di autenticazione
@@ -185,7 +194,7 @@ La soluzione più robusta è utilizzare **HMAC (Hash-based Message Authenticatio
 >- Viene usato nei protocolli sicuri come **TLS, IPsec, OAuth**
 
 
-![[Pasted image 20250317154903.png | 600]]
+![[Pasted image 20250317154903.png#center | 600]]
 
 
 
