@@ -1,7 +1,5 @@
 #Sicurezza 
 
-#### Introduzione in cifrature pratiche: Stream, Block, Modi di operare
-
 #### Cifrature Pratiche
 *Due maggiori categorie*
 - Cifrature *Stream*

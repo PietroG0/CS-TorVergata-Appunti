@@ -1,7 +1,4 @@
 #Sicurezza 
-
-#### Autenticazione di Messaggi con Funzioni Hash 
-
 #### Confidenza != Integrità
 **Confidenza**
 - Nascondere i messaggi
@@ -16,7 +13,6 @@
 - Es. il tuo CV
 - Tutti dovrebbero essere in grado di leggerlo
 - Ma solo il **proprietario** dovrebbe essere in grado di modificarlo
-
 
 #### Autenticazione di messaggi (con una chiave simmetrica)
 
