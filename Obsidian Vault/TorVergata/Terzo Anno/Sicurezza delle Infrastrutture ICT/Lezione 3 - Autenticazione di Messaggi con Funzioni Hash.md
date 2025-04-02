@@ -143,6 +143,9 @@ Un **Nonce** è un valore unico che viene aggiunto a ogni messaggio per garantir
 >Aggiungendo una **chiave di autenticazione segreta** (secret), dato che l'attaccante non ne è a conoscenza, è computazionalmente difficile costruire un codice di autenticazione
 
 
+- [ ] Aggiungere slide in riferimento a SHA-256
+
+
 #### Secret Suffix e Secret Prefix
 Quando si utilizza una funzione hash per autenticare un messaggio con una chiave segreta, ci sono due approcci principali:
 - **Secret Suffix**: Si concatena la chiave **alla fine** del messaggio
@@ -191,8 +194,6 @@ La soluzione più robusta è utilizzare **HMAC (Hash-based Message Authenticatio
 
 
 ![[Pasted image 20250317154903.png#center | 600]]
-
-
 
 
 
