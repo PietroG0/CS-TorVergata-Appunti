@@ -84,7 +84,7 @@ Il migliore ad oggi è SHA256, ma ha 2 problematiche
 
 >[!danger] Due Problemi
 >1. Idealizzato per essere veloce
->	-Computazione veloce = cracking veloce
+>	-Computazione veloce = cracking veloce (più tentativi al secondo)
 >2. Usato nel mining dei Bitcoin
 
 **Hashed passwd: Migliore con hash lenti**
@@ -227,9 +227,117 @@ $x_{1} = face(A), x_{2} = face(B)$, $p_{1}=p_{2}=\frac{1}{2}$
 
 
 #### Approcci per il cracking delle password
-**Boost dictionary attacks con approcci rule-based**
-- SW specializzati per "cracckare" database con passwd hashate
-	- e.g. John the Ripper, hashcat, etc
 
-- Due componenti principali
-	- 
+**Boost dictionary attacks con approcci rule-based**
+Software specializzati nel "crackare" password hashate in Database
+- es. John the Ripper, haschat, ecc
+
+*Due componenti principali*
+- Un database 
+- Un generatore di regole per le password
+
+
+**Hash cracking via precomputazione**
+*Idea*: precomputazione
+- Guardare in una tabella gigante (algoritmi efficienti di lookup)
+
+Quanto giganti?
+(es. MD5 = 128b = 16B)
+- Tutti i 95 caratteri in una tastiera standard, 1-8 passwd sizes:
+	- N.entries $\sim 95^{8} \sim 2^{52.6} \sim 6.7 \cdot 10^{15}$ 
+	- Memoria (1B passwd, 16GB MD5) $\rightarrow$ 112781 Tera Bytes
+
+
+**Space-time trade-offs**
+- *Rainbow Tables*
+	- Tutti i 95 caratteri in una tastiera standard
+	- 1-8 char passwd
+	- "Solamente" 460 GB per il 96.8% rate di successo 
+	- $\rightarrow$ https://project-rainbowcrack.com/buy.htm
+
+- Perchè così "piccolo"?
+	- Space-Time trade-off
+
+
+![[Pasted image 20250409111019.png#center | 600]]
+
+*Metodo*
+1. Parti da una password iniziale
+2. Calcola il suo **hash**
+3. Applichi una **funzione di riduzione** per ottenere una nuova password (simile a una "decodifica", ma non è vera inversione crittografica)
+4. **Iteri** questo processo per costruire una catena di hash/riduzioni
+5. Alla fine, **memorizzi solo la prima password della catena e l'ultimo hash**
+
+*Dettagli*
+- *Funzione di riduzione*: è una funzione "fatta su misura" che **converte un hash in una possibile password** (non è crittografica). Ad esempio, può prendere i primi N caratteri dell'hash e trasformarli in una password in BASE64
+- Questo metodo ti permette, quando trovi un hash in un DB, di **scorrere catene precalcolate** per vedere se quell'hash è già stato visto e risalire alla password originale
+
+*Obiettivo finale*
+- Creare delle **catene hash/riduzione**, salvando solo:
+	- L'inizio della catena (plaintext)
+	- La fine della catena (hash)
+
+- Questo permette di risparmiare spazio, e di cercare più velocemente una password a partire da un hash usando la rainbow table
+
+
+
+**Hashed passwd DBs: salt**
+
+*Sicurezza*: la stessa di password hashate
+- Salt in chiaro: non è un problema per crypto hash
+
+*3 Vantaggi principali*
+- Più difficile da crackare (una tabella rainbow per ogni valore di salt)
+	- 12 bit salt = $2^{12}$ tabelle
+
+- Stesse password ma salt differente $\rightarrow$ Hash differente
+	- L'attaccante non dovrebbe vedere se una password è riutilizzata
+		- Dentro al DB: stessa passwd tra user differenti
+		- Attraverso i DBs: passwd riutilizzata dallo stesso utente
+
+- I DB possono essere "re-salted" $\rightarrow$ CHAP-specific vantaggi
+
+
+**Bloom Filters**
+
+>[!info] Definizione
+>Un **Bloom filter** è una struttura dati **probabilistica** che serve per verificare **appartenenza a un insieme** in modo:
+>- Molto veloce (0,1 per ogni verifica)
+>- Molto compatto in memoria
+>
+>Ma attenzione:
+>- Possono dare dei **falsi positivi**
+>- Mai **falsi negativi**
+
+
+![[Pasted image 20250409113008.png#center | 600]]
+
+Qui vediamo come funziona una verifica di appartenenza **senza Bloom filter**:
+1. Hai una lista di elementi ($Element1, Element2, ..., Element n$)
+2. Per sapere se $Element 3$ è presente, devi **scorrere l'elenco**
+3. **Tempo**: almeno $\log(n)$ (con strutture tipo albero) o peggio con liste non ordinate
+4. **Memoria**: devi **memorizzare tutti gli elementi** $\rightarrow$ richiede almeno $n \cdot sizeof(element)$ 
+
+Con un **Bloom Filter**:
+1. Quando inserisci un elemento, **calcoli diversis hash** e **attivi dei bit** in un array di bit
+2. Quando vuoi sapere se un elemento è presente, **ricalcoli gli hash** e controlli se **tutti i bit corrispondenti sono attivi**
+3. Se anche uno solo non lo è $\rightarrow$ elemento sicuramente **non presente**
+4. Se tutti lo sono $\rightarrow$ elemento **potrebbe essere presente**
+
+>[!danger] Price to pay
+>C'è una **piccola possibilità** che il filtro risponda "Si" anche se l'elemento **non è davvero presente**
+>Questo succede perchè più elementi impostano gli stessi bit $\rightarrow$ si crea una **sovrapposizione**
+
+
+![[GIF Speed Changer (3).gif#center | 600]]
+
+
+**Probabilità falsi positivi**
+$n$ = occorrenze elementi conservati
+$k$ = occorrenze funzioni hash
+$m$ = bits di memoria nel filter
+
+$P(bit_{0)} = {(1 - \frac{1}{m)}^{k\cdot n}} \approx e^{-kn/m}$ 
+$P(bit_{1)} = {(1 - (1 - \frac{1}{m)}^{k\cdot n}}) \approx 1-e^{-kn/m}$  
+
+$P(falsepos) = {(1 - (1 - \frac{1}{m)}^{k\cdot n}})^{k} \approx (1-e^{-kn/m})^{k}$  
