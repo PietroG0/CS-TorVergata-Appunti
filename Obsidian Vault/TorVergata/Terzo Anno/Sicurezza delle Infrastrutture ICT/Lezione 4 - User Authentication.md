@@ -41,11 +41,13 @@
 
 - **Deve** essere human-friendly
 
+
 **HOTP - HMAC-based OTP**
 - Usano HMAC, non hash plain
 - Non usano una catena, ma un *contatore*
 - $HOTP(K,C)$ = $Truncate(HMAC-SHA-256(K,C))$
 - Dettagli in RFC 4226
+
 
 **TOTP - Time-based OTP**
 - Trasformano il tempo in un contatore
@@ -337,7 +339,37 @@ $n$ = occorrenze elementi conservati
 $k$ = occorrenze funzioni hash
 $m$ = bits di memoria nel filter
 
-$P(bit_{0)} = {(1 - \frac{1}{m)}^{k\cdot n}} \approx e^{-kn/m}$ 
-$P(bit_{1)} = {(1 - (1 - \frac{1}{m)}^{k\cdot n}}) \approx 1-e^{-kn/m}$  
+$P(bit_{0}) = {({1 - \frac{1}{m}})^{k\cdot n}} \approx e^{-kn/m}$ 
+$P(bit_{1}) = {(1 - (1 - \frac{1}{m})^{k\cdot n}}) \approx 1-e^{-kn/m}$  
 
-$P(falsepos) = {(1 - (1 - \frac{1}{m)}^{k\cdot n}})^{k} \approx (1-e^{-kn/m})^{k}$  
+$$P(falsepos) = {(1 - (1 - \frac{1}{m})^{k\cdot n}})^{k} \approx (1-e^{-kn/m})^{k}$$  
+
+**Numero ottimo di Hash**
+
+Assumiamo:
+- Misura del filtro $m$
+- Numero di elementi $n$
+
+$$
+\phi \approx (1-{e}^{-nk/m})^{k}
+= f(k)
+$$
+
+*Esempio*
+
+![[Pasted image 20250417191704.png#center | 500]]
+
+
+>[!info] Da ricordare
+>Il numero ottimo di Hash si ha quando c'è probabilità $\frac{1}{2}$   
+
+
+>[!question] Domanda
+>Un password checker è realizzato con un Filtro di Bloom avente una memoria di 10Mbit. Si vuole garantire una probabilità di falso positivo di circa il $6.25$% (1/16).
+>
+>1) Quale è il numero ottimo di hash per questo filtro? $\rightarrow$ $-log_{2} e$ 
+>2) In tale condizione di ottimo, quale sarebbe il massimo numero di password memorizzabili? $\rightarrow$ $k=\frac{m}{n} \log 2$ $\rightarrow$ $k=4;$ $n = \frac{m}{4}\log 2$ = $10^{7} \cdot \frac{{log_{2}}}{4}$ = $1.733.000$ password
+>3) Se si volessero usare solo DUE hash, quale sarebbe il massimo numero di password memorizzabile garantendo il requisito di falso positivo precedente? $\rightarrow \phi = {(1-{e}^{-k\cdot \frac{n}{m}})^{k}} \rightarrow k=4 \rightarrow 1-{e}^{-2x} = \frac{1}{4}$ = $e^{-2x} = \frac{3}{4} \rightarrow -2x = ln \frac{3}{4} \rightarrow x = \frac{1}{2} ln \frac{4}{3}$     
+
+
+

@@ -104,3 +104,54 @@ dentro $OPT[j]$ voglio mettere il peso dell'II di peso massimo di $G_{j}$
 
 
 
+#### Ricostruire la soluzione (in tempo lineare)
+
+*Idea semplice*
+Mentre calcoliamo i valori $OPT[j]$ possiamo mantenere esplicitamente anche la soluzione $\rightarrow$ *corretta ma non ideale: spreco di tempo e spazio*
+
+*Un'idea migliore*
+Ricostruire la soluzione solo alla fine sfruttando il vettore $OPT[ ]$ 
+
+*Proprietà chiave*
+$v_{j} \in II$ di peso massimo di $G_{j}$ $\rightarrow$ $w_{j} + $OPT[j-2]  \geq OPT[j-1]$ 
+
+>[!tip] Algoritmo
+>$S^{*} = 0; j=n;$
+>while $j \geq 3$ do
+>	if $OPT[j-1] \geq w_{j} + OPT[j-2]$
+>			then $j = j-1;$
+>		else $S^{*} = S^{*} \cup \{v_{j}\}$ $\rightarrow$ $j = j-2$
+>	if $j=2$ e $w_{2} > w_{1}$ then $S^{*} = S^{*} \cup \{v_{2}\}$
+>		else $S^{*} = S^{*} \cup \{v_{1}\}$
+>return $S^{*}$
+
+Complessità temporale? $T(n) = \Theta(n)$
+
+![[Algoritmi Strutture Dati Dynamic II.gif#center | 550]]
+
+
+#### Programmazione Dinamica: principi generali
+
+1) Identificare un numero piccolo di sottoproblemi
+	- es: calcolare l'$II$ di peso massimo di $G_{j}, j=1, ..., n$
+
+2) Descrivere la soluzione di un generico sottoproblema in funzione delle soluzioni di sottoproblemi più "piccoli"
+	- es: $OPT[j] =$  max $\{OPT[j-1], w_{j} + OPT[j-2]\}$  
+
+3) Le soluzioni dei sottoproblemi sono memorizzate in una tabella
+
+4) Avanzare opportunamente sulla tabella, calcolando la soluzione del sottoproblema corrente in funzione delle soluzioni di sottoproblemi già risolti
+
+
+#### Proprietà che devono avere i sottoproblemi
+
+1) Essere pochi
+
+2) Risolti tutti i sottoproblemi si può calcolare velocemente la soluzione al problema originale, spesso la soluzione cercata è semplicemente quella del sottoproblema più grande
+
+3) Ci devono essere sottoproblemi "piccoli", casi base
+
+4) Ci deve essere un ordine in cui risolvere i sottoproblemi, e quindi un modo di avanzare nella tabella e riempirla
+
+
+
