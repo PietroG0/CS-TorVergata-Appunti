@@ -119,3 +119,14 @@ Qui si descrive un **approccio pratico del protocollo TLS**, nello specifico qua
 	- Dopo che la banca ha decifrato $K$, **entrambi condividono la stessa chiave simmetrica**
 	- Da questo punto in poi, tutte le comunicazioni sono cifrate con la **chiave simmetrica $K$**, che è molto più efficiente per cifrare dati rispetto all'RSA
 
+
+#### PKI Public Key Infrastructure
+Una **PKI** è un insieme di protocolli, regole e meccanismi tecnici per supportare lo scambio di chiavi pubbliche
+
+Un'architettura PKI richiede:
+- Un formato standard per i certificati
+- Relazione con le CA, e con gli utenti
+- Politiche per la revoca ed il rilascio dei certificato
+
+
+
