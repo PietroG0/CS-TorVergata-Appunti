@@ -125,7 +125,7 @@ $$
 
 ---
 
-*D3* Una applicazione deve frequentemente accedere in SOLA LETTURA a parti intermedie di un database cifrato. Quali tra i modi CBC, CFB, OGB, CTR, sicuramente NON considerereste per questo scenario, e perchè? (Lo si spieghi riportando anche esplicitamente i diagrammi dello/degli schemi scartati)
+*D3* Una applicazione deve frequentemente accedere in SOLA LETTURA a parti intermedie di un database cifrato. Quali tra i modi CBC, CFB, OFB, CTR, sicuramente NON considerereste per questo scenario, e perchè? (Lo si spieghi riportando anche esplicitamente i diagrammi dello/degli schemi scartati)
 
 - In uno scenario in cui l'applucazione deve accedere in sola lettura a parti intermedie di un database cifrato, una proprietà fondamentale è la *random access decryption*: bisogna poter decriptare un blocco (o record) senza dover processare in sequenza tutti i blocchi precedenti. Tra le modalità elencate, quelle che non offrono tale proprietà sono il *CBC* e il *CFB*, perchè entrambi richiedono una dipendenza dai blocchi precedenti
 
