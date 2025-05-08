@@ -61,6 +61,29 @@ Esplicitamente formulato come segue:
 *Conseguenza IND-CPA 2*: Se una *sottostringa si ripete* deve cifrarsi in un cifrato differente
 
 
+#### Il cipher perfetto: One-Time Pad = Vernam cipher
+
+![[Pasted image 20250507103118.png#center | 600]]
+
+Qui si spiega il concetto di cifratura perfetta tramite il metodo del **one-time pad**, evidenziando i passaggi fondamentali sia per l'encryption sia per la decryption.
+
+1) Cifratura:
+	- **Testo in chiaro (Plaintext)**: Rappresentato come una sequenza binaria
+	- **Chiave (Key)**: Una sequenza di bit casuali della stessa lunghezza del testo
+	- **Operazione**: Il testo in chiaro viene combinato con la chiave usando l'operazione XOR ($\oplus$), ottenendo così il testo cifrato (CT)
+	- **Formula**: $CT = ENC(K, M) = M \oplus K$ 
+	- **Spiegazione**: La proprietà fondamentale dello XOR è che essa restituisce 1 quando i bit in ingresso sono differenti e 0 quando sono uguali. Usando una chiave veramente casuale e della stessa lunghezza del messaggio, il risultato non rivela informazioni sul testo originale, garantendo così una cifratura perfetta
+
+2) Decifratura:
+	- **Testo cifrato (CT)**: Il risultato della cifratura
+	- **Operazione**: Si applica nuovamente l'operazione XOR tra il testo cifrato e la **stessa chiave** utilizzata per cifrare
+	- **Formula**: $M = DEC(K, CT) = CT \oplus K$
+	- **Spiegazione**: L'operazione XOR ha la proprietà interessante che se applichi due volte la stessa chiave (cioè $M \oplus K \oplus K$), il risultato è nuovamente il messaggio originale: la doppia applicazione della stessa chiave annulla l'effetto della prima cifratura
+
+
+Quindi, evidenzia come l’unica condizione necessaria per garantire la sicurezza (la perfetta segretezza) del one-time pad sia che la chiave sia veramente casuale, sia lunga quanto il messaggio e, soprattutto, usata una sola volta. Qualsiasi violazione di queste condizioni comprometterebbe la sicurezza del sistema.
+
+
 #### Random != Pseudo Random
 - Pseudo Random Number Generator (*PRNG*): un algoritmo
 	- es. RAND() in C
