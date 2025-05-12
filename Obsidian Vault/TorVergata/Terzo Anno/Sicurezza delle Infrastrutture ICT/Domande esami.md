@@ -195,3 +195,228 @@ Risultato finale: Le lettere cifrate sono R, M, F, V, V
 
 
 --- 
+
+*D8* Assumendo un cifrario a blocchi da 4 bit basato sulla permutazione riportata in tabella, si cifri, usando la costruzione **OFB**, la stringa 0000.1111.000.1111 usando come vettore di inizializzazione il valore 0101
+
+![[Pasted image 20250511185233.png#center | 100]]
+
+**Modalità OFB (Output Feedback)**
+
+1. **Vettore di inizializzazione (IV)**: Si parte dall'IV $Y_{0}$. In questo esercizio, $Y_{0} = 0101$
+2. **Generazione del Keystream**: Per $i \geq 1$, si calcola il blocco:
+$$
+Y_{i} = E(Y_{i-1}).
+$$
+Questi $Y_{i}$ saranno i blocchi del keystream, indipendenti dal testo in chiaro.
+3. **Cifratura**: Il plaintext viene diviso in blocchi $P_{i}$ (in questo caso ciascuno dei 4 bit) e si ottiene il ciphertext tramite:
+$$
+C_{i} = P_{i} \oplus Y_{i}
+$$
+
+**Primo blocco del keystream**:
+$$
+Y_{1} = E(Y_{0}) = E(0101) = 0000
+$$
+**Secondo blocco del keystream**:
+$$
+Y_{2} = E(Y_{1}) = E(0000) = 0001
+$$
+**Terzo blocco del keystream**:
+$$
+Y_{3} = E(Y_{2}) = E(0001) = 0010
+$$
+**Quarto blocco del keystream**:
+$$
+Y_{4} = E(Y_{3}) = E(0010) = 1011
+$$
+
+Il keystream così ottenuto è 
+$$
+Y_{1}= 0000, Y_{2} = 0001, Y_{3} = 0010, Y_{4} = 1011
+$$
+
+
+**Cifratura del Plaintext**
+Per ogni blocco $P_{i}$, viene calcolato il ciphertext $C_{i}$ tramite l'operazione XOR con il corrispondente blocco $Y_{i}$ del keystream
+
+1. **Primo blocco**:
+$$
+C_{1} = P_{1} \oplus Y_{1} = 0000 \oplus 0000 = 0000
+$$
+2. **Secondo blocco**:
+$$
+C_{2} = P_{2} \oplus Y_{2} = 1111 \oplus 0001 \rightarrow C_{2} = 1110
+$$
+3. **Terzo blocco**:
+$$
+C_{3} = P_{3} \oplus Y_{3} = 0000 \oplus 0010 = 0010
+$$
+4. **Quarto blocco**:
+$$
+C_{4} = P_{4} \oplus Y_{4} = 1111 \oplus 1011 \rightarrow C_{4} = 0100
+$$
+
+**Risultato finale**
+Concatenando i blocchi cifrati, il ciphertext risultante è:
+$$
+0000.1110.0010.0100
+$$
+
+----
+
+
+*D9* Si assuma un cifrario a blocchi basato su blocchi di 4 bit. Il block cipher usa una chiave che realizza la permutazione illustrata in tabella. Si chiede di:
+- Illustrare le costruzioni **CBC** e **CTR**
+- Usando **CBC**, si DECIFRI il ciphertext CT = (1101) 1001 0101 0110
+- Usando **CTR**, si CIFRI il plaintext PT = 0001 0010 0011, usando come contatore iniziale il valore 1100
+
+**Costruzioni CBC e CTR**
+
+**CBC (Cipher Block Chaining)**
+Funzionamento - Cifratura: Si parte da un vettore di inizializzazione (IV). Se indichiamo $C_{0} = IV$, ogni blocco di plaintext $P_{i}$ viene cifrato come
+$$
+C_{i} = E(P_{i} \oplus C_{i-1})
+$$
+Decifratura: Per decifrare, si usa la funzione inversa $E^{-1}$ 
+$$
+P_{i} = E^{-1} (C_{i})\oplus C_{i-1}
+$$
+In una trasmissione in modalità CBC, l'IV viene generalmente inviato in chiaro come primo blocco
+
+
+**CTR (Counter)**
+Funzionamento-Cifratura: In CTR si genera un keystream indipendentemente dal testo in chiaro. Si parte da un valore iniziale (il counter) e, per ogni blocco, si incrementa il counter (sommando 1 in modulo $2^{4}$ nel nostro caso). Per ogni blocco $i$ si calcola
+$$
+KS_{i} = E(counter_{i})
+$$
+e poi si cifra
+$$
+C_{i} = P_{i} \oplus KS_{i}
+$$
+
+Decifratura: La decifratura in CTR è analoga poichè si tratta di XOR: si calcola lo stesso keystream e si esegue
+$$
+P_{i} = C_{i} \oplus KS_{i}
+$$
+
+**Decrittazione in modalità CBC**
+Il testo cifrato è 
+$$
+CT = (1101). 1001. 0101. 0110
+$$
+Decifriamo blocco per blocco:
+1. **Primo blocco** $P_{1} = E^{-1} (C_{1}) \oplus C_{0}$ Con $C_{1} = 1001$ e $C_{0} = 1101$. Individuiamo $E^{-1}(1001) = 0111$. Ora, $0111 \oplus 1101 \rightarrow P_{1} = 1010$ 
+2. **Secondo blocco** $P_{2} = E^{-1}(C_{2}) \oplus C_{1}$ Con $C_{2} = 0101$ e $C_{1} = 1001$. Individuiamo $E^{-1}(0101) = 1010$. Ora, $1010 \oplus 1001 \rightarrow P_{2} = 0011$
+3. **Terzo blocco** $P_{3} = E^{-1} (C_{3}) \oplus C_{2}$ con $C_{3} = 0110$ e $C_{2} = 0101$. Individuiamo $E^{-1}(0110) = 1000$. Ora, $0101 \oplus 1000 \rightarrow 1101$ 
+
+**Risultato della decrittazione CBC**: Il plaintext ottenuto è 
+$$
+P = 1010.0011.1101
+$$
+
+
+**Cifratura in modalità CTR**
+Si deve cifrare il plaintext 
+$$
+PT = 0001. 0010. 0011
+$$
+utilizzando CTR con valore iniziale del counter = 1100. In modalità CTR, per ciascun blocco si procede come segue:
+1. Per il blocco $i$, il counter viene impostato a $CTR_{i} = (IV + i)$ (somma in modulo $2^{4}$); per il primo blocco usiamo il counter iniziale direttamente
+2. Si calcola il keystream come $KS_{i} = E(CTR_{i})$
+3. Si ottiene in ciphertext
+$$
+C_{i} = P_{i} \oplus KS_{i}
+$$
+
+**Determiniamo i counter e i corrispondenti keystream**
+- **Blocco 1**: Counter = 1100, dalla tabella $E(1100) = 1110$, quindi keystream1 = 1110
+- **Blocco 2**: Il counter si incrementa: 1100+1 = 1101. Dalla tabella, $E(1101) = 1100$, quindi keystream2 = 1100
+- **Blocco 3**: Il counter si incrementa: 1100 + 2 = 1110, dalla tabella, $E(1110) = 1010, quindi keystream3 = 1010.
+
+**Cifratura blocco per blocco**
+1. **Blocco 1**: $P_{1} = 0001$, keystream1 = 1110
+$$
+C_{1} = 0001 \oplus 1110 \rightarrow C_{1} = 1111
+$$
+2. **Blocco 2**: $P_{2} = 0010$, keystream2 = 1100
+$$
+C_{2} = 0010 \oplus 1100 \rightarrow C_{2} = 1110
+$$
+3. **Blocco 3**: $P_{3} = 0011$, leystream3 = 1010
+$$
+C_{3} = 0011 \oplus 1010 \rightarrow C_{3} = 1001
+$$
+**Ciphertext ottenuto**
+$$
+C = 1111. 1110. 1001
+$$
+
+---
+
+
+*D10* E' necessario memorizzare una whitelist di 256.000 indirizzi IP in un filtro di Bloom, in modo da garantire una probabilità di falso positivo strettamente inferiore al 3.2%. Quanta memoria è necessaria, e quante funzioni hash usereste?
+
+$n$, il numero di elementi da memorizzare (qui 256.000)
+$p$, la probabilità di falso positivo desiderata (qui 0.032, cioè il 3.2%)
+
+1. **Numero di bit necessari**:
+$$
+m = -\frac{n \ln p}{(\ln 2)^2}
+$$
+
+2. **Numero ottimale di funzioni hash**
+$$
+k = \frac{m}{n} \ln 2
+$$
+
+**Calcolo della memoria m**
+1. Calcoliamo il logaritmo naturale di p
+$$
+\ln(0.032) \approx -3.4421
+$$
+2. Sappiamo inoltre che:
+$$
+\ln2 \approx 0.6931 \quad e \quad (\ln2)^{2} \approx 0.48045 
+$$
+3. Sostituendo nella formula:
+$$
+m = -{256.000 \cdot (-3.4421)}/{0.48045}
+$$
+
+Il segno negativo doppio si annulla, per cui:
+$$
+m = 256.000 \cdot 3.4421/0.48045
+$$
+
+Calcoliamo il numeratore:
+$$
+256.000 \cdot 3.4421 \approx 880.640
+$$
+Dividendo per $0.48045$:
+$$
+m \approx \frac{880640}{0.48045} \approx 1.883.000 \quad bit
+$$
+
+Questo significa che occorrono circa 1.83 milioni di bit. In termini di byte:
+$$
+\frac{1.883.000}{8} \approx 229.125 byte \quad (\approx 229 KB)
+$$
+
+
+**Calcolo del numero di funzioni hash k**
+Utilizziamo la formula:
+$$
+k = \frac{m}{n}\ln2
+$$
+Prima calcoliamo $\frac{m}{n}$:
+$$
+\frac{m}{n} \approx \frac{1.833.000}{256.000} \approx 7.16 \quad \text{bit per elemento}
+$$
+Ora moltiplichiamo per $\ln2$:
+$$
+k \approx 7.16 \cdot 0.6931 \approx 4.96
+$$
+Arrotondando, otteniamo:
+$$
+k \approx 5
+$$
