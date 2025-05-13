@@ -420,3 +420,310 @@ Arrotondando, otteniamo:
 $$
 k \approx 5
 $$
+
+---
+
+
+*D11* Attacco CPA a Vigenère. Il plaintext "ladispoli" viene cifrato in "mdfktsqnj". Quale è la chiave di cifratura usata?
+
+- Chiave = $bdcc$ 
+
+
+---
+
+
+*D12* Quanto deve essere lunga, come minimo, una password randomica contenente lettere maiuscole, minusole e cifre, per garantire una entropia di almeno 64 bit? (alfabeto a 26 lettere)
+
+- Per calcolare l'entropia di una password generata casualmente, si può usare la formula
+$$
+\text{Entropia totale} = L \cdot \log_{2}(N)
+$$
+dove $L$ è la lunghezza della password e $N$ è la **dimensione** dell'alfabeto del quale ciascun carattere viene scelto casualmente
+Di conseguenza, $N = 26$, quindi:
+$$
+log_{2}(26) \approx 4,7 \quad \text{bit}
+$$
+
+Vogliamo garantire almeno 64 bit di entropia, perciò dobbiamo avere
+$$
+L \cdot 4,7 \geq 64
+$$
+Risolvendo per $L$:
+$$
+L \geq \frac{64}{4,7} \approx 13,62
+$$
+Dal momento che $L$ deve essere un intero, la password deve essere lunga **almeno 14 caratteri**
+
+
+---
+
+
+*D13* Dei quattro modi standard di cifratura a blocchi (CBC, OFB, CFB, CTR), 
+1. Quali sono parallelizzabili in DECIFRATURA?
+2. Quali usano la PRP diretta ANCHE in decifratura?
+
+- **Parallelizzabili in decrittazione**: CBC, CFB, CTR
+- **Non parallelizzabile (almeno nella fase di generazione del keystream)**: OFB
+
+- **Usano la PRP diretta (Ek) anche in decrittazione**: CFB, OFB, CTR
+- **Non la usano**: CBC (che richiede $D_{k}$)
+
+
+---
+
+
+*D14* I primi 10 valori prodotti da un generatore perfettamente casuale sono: 682974445052, 131466546273, 169162415351, 275593015638, 188171305529, 756846079161, 961205710266, 685888388030, 825053400005, 328120818293. Quante estrazioni, approssimativamente, dobbiamo fare per avere una collisione con circa il 50% di probabilità?
+
+- Approssimativamente
+$$
+P(collisione) \approx 1-e^{-n^{2}/(2N)}
+$$
+
+Poniamo $P(collisione) \approx$ 50%. Quindi
+$$
+1-e^{\frac{-n^{2}}{(2N)}} = 0.5 \quad \rightarrow \quad e^{\frac{-n^{2}}{(2N)}}= 0.5 
+$$
+
+Prendendo il logaritmo naturale a entrambi i lati, otteniamo
+$$
+-\frac{n^{2}}{2N} = \ln(0.5) = -\ln2 \rightarrow \frac{n^{2}}{2N} = \ln2
+$$
+
+Risolvendo per $n$ si ha
+$$
+n = \sqrt{2N\ln2}
+$$
+
+Nel problema, i numeri mostrati sono a 12 cifre, il che suggerisce che il generatore produce valori in un intervallo di circa $N = 10^{12}$ possibili valori. Sostituendo $N = 10^{12}$ e ricordando che $\ln2 \approx 0.693$:
+$$
+n = \sqrt{2\cdot10^{12}\cdot 0.693} \approx \sqrt{1.386\cdot 10^{12}}
+$$
+
+Poichè $\sqrt{10^{12}} = 10^{6}\quad \text{e} \quad \sqrt{1.386} \approx 1.177$, troviamo:
+$$
+n \approx 1.177 \cdot 10^{6}
+$$
+Pertanto, servono approssimativamente **1.18 milioni di estrazioni** per avere circa il 50% di probabilità di osservare una collisione
+
+
+---
+
+
+*D15* $A$ ha chiave pubblica $PK_{a}$ e chiave privata $SK_{a}$. $B$ ha chiave pubblica $PK_{b}$ e chiave privata $SK_{b}$. Quale tra queste quattro chiavi viene usata nei seguenti casi:
+1. $A$ vuole mandare un messaggio cifrato a $B$
+2. $A$ vuole mandare un messaggio firmato digitalmente a $B$
+
+- $A$ vuole mandare un messaggio cifrato a $B$: Qui l'obiettivo è garantire che solo $B$, il destinatario, possa decifrare il messaggio. Perciò, $A$ **utilizza la chiave pubblica di B** $PK_{b}$ per cifrare il messaggio. In seguito, $B$ userà la sua chiave privata per decifrarlo
+
+- $A$ vuole mandare un messaggio firmato digitalmente a $B$: In questo caso l'obiettivo è garantire l'autenticità e l'integrità del messaggio. Quindi, $A$ **usa la sua chiave privata** $SK_{a}$ per garantire la firma digitale. Chi riceve il messaggio, $B$, può verificare la firma utilizzando la chiave pubblica di $A$
+
+
+---
+
+
+*D16* In quale scenario di minaccia è preferibile usare PAP in luogo di CHAP, e per quale motivo?
+
+Vediamo innanzitutto le differenze fondamentali:
+- **PAP (Password Authentication Protocol)** trasmette la password in chiaro su canale di comunicazione. A causa di ciò, è vulnerabile a intercettazioni e replay se il canale non è sicuro
+- **CHAP (Challenge-Handshake Authentication Protocol)**, al contrario, prevede che il server invii una sfida (challenge) al client, il quale risponde con una funzione hash della sfida concatenata alla password. In questo modo la password non viene mai trasmessa direttamente e vengono fornite contromisure contro gli attacchi replay
+
+**Scenario in cui è preferibile usare PAP invece di CHAP**: Quando il canale di comunicazione è già sicuro, in modo da mitigare il rischio che la password trasmessa in chiaro venga intercettata
+
+**Motivo**: La sicurezza del canale elimina la principale debolezza di PAP (trasmissione in chiaro), rendendone vantaggiosa la semplicità e riducendo l'overhead computazionale rispetto a CHAP
+
+
+---
+
+
+*D17* Un filtro di Bloom usa una memoria di 1 milione di bit e contiene 180.000 password
+1. Quale è il valore minimo possibile del falso positivo ottenibile
+2. Se il numero delle password contenute nel filtro aumentasse del 50%, senza cambiare 
+
+Per calcolare il minimo tasso di falso positivo di un filtro di Bloom, si usa il risultato noto che, con il numero ottimale di funzioni hash
+$$
+k = \frac{m}{n}\ln2
+$$
+Il tasso minimo di falso positivo è approssimativamente
+$$
+f_{min} \approx (0.6185)^{\frac{m}{n}} \quad \text{oppure equivalenti} \quad f_{min} \approx e^{-\frac{m}{n}(\ln2)^2}
+$$
+Dove:
+- $m$ è la dimensione del filtro (in bit)
+- $n$ è il numero di elementi inseriti
+
+Abbiamo:
+- $m = 1.000.000$ bit
+- $n = 180.000$ password
+
+Il rapporto è 
+$$
+\frac{m}{n} = \frac{1.000.000}{180.000} \approx 5.56
+$$
+
+Quindi, il minimo falso positivo ottenibile è
+$$
+f_{min} \approx (0.6185)^{5.56}
+$$
+
+Calcoliamo l'esponente: $\ln(0.6185) \approx -0.48$, dunque
+$$
+\ln f_{min} \approx 5.56 \cdot (-0.48) \approx -2.67
+$$
+
+e quindi
+$$
+f_{min} \approx e^{-2.67} \approx 0.07
+$$
+
+cioè **circa il 7%**
+
+Se il numero di password aumenta del 50% mantenendo invariata la memoria, abbiamo
+$$
+n = 1.5 \cdot 180.000 = 270.000
+$$
+
+Il nuovo rapporto diventa
+$$
+\frac{m}{n'} = \frac{1.000.000}{270.000} \approx 3.70
+$$
+
+Usiamo la stessa relazione
+$$
+f_{min'} \approx (0.6185)^{3.70}
+$$
+
+Calcolando l'esponente 
+$$
+\ln f_{min'} \approx 3.70 \cdot (-0.48) \approx -1.78
+$$
+
+Quindi
+$$
+f_{min'} \approx e^{-1.78} \approx 0.17
+$$
+
+Questo significa che il filtro otterrebbe un tasso di falso positivo di circa il **17%**
+
+
+---
+
+
+*D18* Tra i quattro modi di cifratura a blocchi (CBC, CFB, OFB, CTR), si dica 
+1. Quali modi NON sono adatti quando il nostro scopo è accedere in sola lettura ad una memoria ad accesso casuale
+2. Come cambia la risposta se si vuole accedere sia in lettura che in scrittura
+
+- Non sono adatti per accessi casuali in sola lettura **CBC, CFB e OFB**, mentre CTR è l'unico tra questi che consente la decrittazione indipendente da ciascun blocco
+- Se vogliamo accedere sia in lettura che in scrittura in modo casuale, CBC, CFB e OFB risentono della loro natura sequenziale e pertanto risultano inadatti. La modalità **CTR**, per via della sua indipendenza per ogni blocco, rimane l'unica scelta adatta sia per operazioni di lettura che di scrittura casuale
+
+
+---
+
+
+*D19* Quale è l'entropia di una password, ad esempio 
+Atrw23mmm!
+Dove (alfabeto di 26 lettere):
+- La prima lettera è randomica ma sempre maiuscola
+- Le tre lettere successive sono randomiche ma sempre minuscole
+- I due numeri successivi sono randomici
+- Le tre lettere successive sono sempre identiche tra loro (mmm)
+- L'ultimo simbolo è sempre un punto esclamativo
+
+1. **Prima lettera ("A") - maiuscola**: Possiamo scegliere tra 26 lettere maiuscole
+$$
+E_{1} = \log_{2}(26) \approx 4.60 
+$$
+
+2. **Le tre lettere successive - minuscole**: Ogni lettera ha 26 possibilità, essendo indipendenti:
+$$
+E_{2} = 2 \cdot \log_{2}(26) \approx 3\cdot 4.60 = 14.10 
+$$
+
+3. **I due numeri successivi - cifre**: Per ogni cifra ci sono 10 possibilità, quindi:
+$$
+E_{3} = 2\cdot \log_{2}(10) \approx 2 \cdot 3.32 = 6.64
+$$
+
+4. **Le tre lettere che sono identiche - minuscola**: Anche se la lettera viene ripetuta per tre volte, essa viene scelta una sola volta da un alfabeto di 26 lettere. Pertanto:
+$$
+E_{4} = \log_{2}(26) \approx 4.70
+$$
+
+5. **L'ultimo simbolo ("!")**: E' fisso, quindi non comporta alcuna scelta
+$$
+E_{5} = \log_{2}(1) = 0
+$$
+**Calcoliamo l'entropia totale**
+$$
+E_{totale} = 4.70+14.10+6.64+4.70+0 \approx 30.14
+$$
+
+Quindi, **l'entropia della password "Atrw23mmm!" è di circa 30 bit**
+
+
+---
+
+
+*D20* Si mostri come è possibile fare un attacco MITM al protocollo di key agreement Diffie Hellman
+
+- **La sicurezza del DH** si bassa sull'asserzione che, conoscendo solo $g^{x}$ e $g^{y}$, è difficile calcolare $g^{xy}$ senza risolvere il problema del logaritmo discreto
+- **In presenza di un attaccante MITM**, tuttavia, l'attacco non richiede di risolvere il problema del logaritmo discreto. L'attaccante si limita a sostituire i valori $g^{x}$ e $g^{y}$ con i propri $g^{m1}$ e $g^{m2}$
+- **L'assenza di autenticazione** è il punto debole: le parti coinvolte non hanno alcun modo per verificare che il valore ricevuto corrisponda veramente all'altra parte
+
+
+---
+
+
+*D21* Cifrate le prime 4 lettere del vostro cognome usando un substituition cipher (alfabeto a 26 lettere) con chiave: CDAB GHEF KLIJ QRST MNOP XYZ UVW
+
+$$
+ECJS
+$$
+
+
+---
+
+
+*D22* Per quale motivo la costruzione H(segreto, messaggio) non è assolutamente da considerare come metodo per calcolare un tag di integrità mediante una funzione hash?
+
+- **Vulerabilità a attacchi di estensione della lunghezza**: Un attaccante che conosce $MAC = H(secret||message)$ e la lunghezza del segreto può, sfruttando il modo in cui viene eseguito il padding interno, calcolare $H(secret||message||padding||extra)$ senza conoscere il segreto. In altre parole, l'attaccante può estendere il messaggio e produrre un nuovo tag valido, compromettendo l'integrità
+
+
+---
+
+
+*D23* Per uno schema crittografico RSA che utilizza come modulo $N = 187$,
+1. Si determini (utilizzando per il calcolo l'algoritmo esteso di Euclide) il valore della chiave privata corrispondente ad una chiave pubblica $e = 3$ 
+2. Avreste potuto usare come chiave pubblica $e = 5$? Perchè?
+
+**Calcolo della chiave privata d per e=3**
+Per un modulo RSA $N = 187$ il primo passo è trovare i suoi fattori primi. Poichè
+$$
+187=11 \cdot 17
+$$
+abbiamo
+$$
+p = 11, \quad q = 17
+$$
+Quindi, la funzione di Eulero è
+$$
+\phi(N) = (p-1)(q-1) = 10 \cdot 16 = 160
+$$
+
+La chiave privata $d$ deve essere l'inverso di $e$ modulo $\phi(N)$, cioè deve soddisfare:
+$$
+e \cdot d \equiv 1 \quad (\text{mod} \hspace{0.1cm} 160)
+$$
+Con $e = 3$, cerchiamo $d$ tale che:
+$$
+3 \cdot d \equiv 1 (\text{mod} \hspace{0.2cm} 160)
+$$
+
+**Utilizzo dell'algoritmo esteso di Euclide**
+Vogliamo risolvere l'equazione:
+$$
+3d + 160k = 1
+$$
+per qualche intero $k$
+
+- [ ] Da completare
+
