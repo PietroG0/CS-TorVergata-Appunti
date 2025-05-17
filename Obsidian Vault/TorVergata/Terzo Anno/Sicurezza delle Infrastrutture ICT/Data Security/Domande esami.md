@@ -727,3 +727,125 @@ per qualche intero $k$
 
 - [ ] Da completare
 
+
+---
+
+
+*D24* Assumendo un cifrario a blocchi da 4 bit basato sulla specifica permutazione riportata nella tabella in basso a sinistra,
+1. Si richiamino brevemente le costruzioni CBC e CTR, specificando se sono parallelizzabili in cifratura d/o decifratura
+2. Dato il plaintext 1111.1111.1111,
+	a. lo si cifri con CBC e vettore di inizializzazione 1011
+	b. lo si cifri con CTR e contatore iniziale 1100 (si parte da 00)
+
+3. Si dica che la permutazione a destra è preferibile in linea teorica rispetto a quella usata per risolvere l'esercizio, motivando la risposta.
+
+![[Pasted image 20250514121920.png#center |250]]
+
+**Costruzione CBC e CTR**:
+
+**CBC**
+- Cifratura: sequenziale (non parallelizzabile)
+- Decifratura: parallelizzabile
+
+**CTR**
+- Sia cifratura che decifratura sono completamente parallelizzabili
+
+**Cifratura con CBC (IV = 1011)** 
+- **Blocco 1**: 
+	- $P_{1} = 1111$
+	- $C_{0} = IV = 1011$
+	- $1111 \oplus 1011 = Y_{1} = 0100 \rightarrow E(0100) = 1000$ Quindi, $C_{1} = 1000$
+
+- **Blocco 2**
+	- $P_{2} = 1111$
+	- $C_{1} = 1000 \rightarrow 1111 \oplus 1000 = 0111$
+	- $E(0111) = 1101$, quindi $C_{2} = 1101$
+
+- **Blocco 3**
+	- $P_{3} = 1111$
+	- $C_{2} = 1101 \rightarrow 1111 \oplus 1101 = 0010$
+	- $E(0010) = 0011$, quindi $C_{3} = 0011$
+
+**Risultato**
+$$
+1000.1101.0011
+$$
+ 
+**Cifratura con CTR (contatore iniziale = 1100)**:
+- **Blocco 1**:
+	- **Contatore**: 1100
+	- **Cifratura del contatore**: $E(1100) = 1010$
+	- **XOR con il Plaintext**: $1010 \oplus 1111 = 0101$ 
+
+- **Blocco 2**:
+	- **Contatore**: 1101
+	- **Cifratura del contatore**: $E(1101) = 1100$
+	- **XOR con il Plaintext**: $1100 \oplus 1111 = 0011$ 
+
+- **Blocco 3**:
+	- **Contatore**: 1110
+	- **Cifratura del contatore**: $E(1110) = 0001$
+	- **XOR con il Plaintext**: $0001 \oplus 1111 = 1110$
+
+**Risultato**
+$$
+101.0011.1110
+$$
+
+--- 
+
+
+*D25* Si consideri il sistema di cifratura a chiave pubblica El Gamal con i seguenti parametri:
+modulo primo p=29, generatore g=3. Si assuma che un server utilizza come chiave privata il valore s=13, e come chiave pubblica corrispondente il valore h=19.
+1. Si illustri, in formule, il procedimento in cifratura
+2. Si cifri il messaggio m=14, usando come nonce il valore r=5: quale è il messaggio complessivo inviato al server? (per i calcoli si mostrino in dettaglio le operazioni di square & multiply usate)
+3. Opzionale: si verifichi la correttezza della cifratura effettuata, decifrando il messaggio sopra calcolato
+
+**Procedimento in cifratura El Gamal**
+Data la scelta dei parametri pubblici e privati:
+- Modulo primo $p$
+- Generatore $g$
+- Chiave pubblica $h = g^{s}$
+- Messaggio $m$ da cifrare
+- Scelta casuale (nonce) $r$
+
+1. *Calcolo del primo componente del ciphertext*
+$$
+c_{1} = g^{r}\mod p
+$$
+2. *Calcolo del secondo componente*
+$$
+c_{2} = m \cdot h^{r}\mod p
+$$
+La coppia inviata al destinatario è dunque $(c_{1},c_{2})$
+
+
+**Cifratura del messaggio m=14 con p=29, g=3, h=19, usando r=5**
+*Calcolo di* $c_{1} = 3^{5}\mod 29$
+
+Utilizziamo l'algoritmo **square & multiply**
+
+**Passaggi**:
+1. Espressione binaria dell'esponente: $5_{10} = 101_{2}$ 
+2. Inizializzazione:
+	- result = 1
+	- base = 3
+
+3. Iterazione sui bit (da sinistra a destra):
+	- Primo bit (1):
+		- Aggiornamento: result = $1 \cdot 3 = 3 \mod 29$
+		- Squadratura della base: base = $3^{2}=9 \mod 29$
+
+	- Secondo bit (0):
+		- Nessuna moltiplicazione (bit 0)
+		- Squadratura: base = $9^{2} = 81 \mod 29$; Poichè $29 \cdot 2 = 58$, $81-58 = 23$; pertanto, base = 23
+
+	- Terzo bit (1):
+		- Aggiornamento: result = $3 \cdot 23 = 69 \mod 29$; $29 \cdot 2 = 58$ e $69 - 58 = 11$; quindi, result = 11
+		- L'ultimo step di squadratura, non è necessario perchè abbiamo esaurito i bit
+
+Il risultato è dunque:
+$$
+c_{1} = 11
+$$
+
