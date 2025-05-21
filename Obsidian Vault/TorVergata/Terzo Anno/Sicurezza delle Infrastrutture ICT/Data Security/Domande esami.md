@@ -131,7 +131,8 @@ $$
 
 
 **Diagramma CBC**
-![[Obsidian LaTeX.pdf]]
+
+![[Pasted image 20250521125349.png#center | 600]]
 
 Nel **CBC**, ad ogni blocco si applica uno XOR tra il plaintext corrente e il ciphertext precedente (per il primo blocco si usa l'IV) $\rightarrow$ Questo crea una catena: per decriptare il blocco $C_{i}$ è necessario $C_{i-1}$   
 
@@ -848,4 +849,543 @@ Il risultato è dunque:
 $$
 c_{1} = 11
 $$
+
+---
+
+
+*D26* Assumendo un cifrario a blocchi da 4 bit basato sulla specifica permutazione riportata nella tabella in basso,
+1. Si disegni lo schema di cifratura per la costruzione CBC
+2. Usando CBC, si DECIFRI il PRIMO ed il QUARTO blocco relativo al ciphertext (0101) 0101.0110.1010.0101
+3. Un attaccante in grado di modificare il precedente messaggio cifrato potrebbe cambiare i primi due bit del plaintext contenuto, lasciando invariato il resto del messaggio? Se si, come, esattamente?
+
+![[Pasted image 20250518190611.png#center]]
+
+![[Pasted image 20250518191604.png#center | 500]]
+
+
+**Decifrazione dei blocchi 1 e 4 del ciphertext**
+Il problema ci fornisce il seguente ciphertext:
+- **IV**: 0101
+- **Ciphertext**: 0101.0110.1010.0101 
+
+Inoltre, viene indicato che nel caso del valore 0101 si ha la trasformazione $0101 \rightarrow 1010$
+Questo corrisponde **all'applicazione inversa** della permutazione usata nel cifrario. Quindi, in decrittazione si assume:
+$D(0101) = 1010$
+
+Calcoliamo i due casi richiesti:
+**Blocco 1**:
+La decrittazione in CBC dà: $P_{1} = D(C_{1}) \oplus IV$
+Dato che:
+- $C_{1} = 0101$
+- $IV = 0101$
+- $D(0101) = 1010$
+
+Si ha:
+- $P_{1} = 1010 \oplus 0101 \rightarrow P_{1} = 1111$ 
+
+**Blocco 4**:
+Per il quarto blocco, la formula di decrittazione è: $P_{4} = D(C_{4}) \oplus C_{3}$
+Allora:
+- $P_{4} = 1010 \oplus 1010 \rightarrow P_{4} = 0000$
+
+
+**Possibilità di manipolare i primi due bit del plaintext**
+Per cambiare *soltanto i primi due bit* del plaintext, l'attaccante deve calcolare come modificare l'IV in modo tale che la XOR con $D(C_{1})$ alteri esattamente quei bit e lasci invariati gli altri
+
+Facendo dei conti:
+- Con IV originale = 0101 si otteneva $P_{1} = 1010 \oplus 0101 = 1111$
+- Se l'attaccante sostituisce l'IV con 1001, allora: $P^{*}_{1} = D(C_{1}) \oplus IV^{'} = 101$ 
+
+---
+
+
+*D27* Per uno schema crittografico RSA che utilizza come modulo N=187,
+1. Si determini (utilizzando per il calcolo l'algoritmo esteso di Euclide) il valore della chiave privata corrispondente ad una chiave pubblica e=3
+2. Avreste potuto usare come chiave pubblica e=5? Perchè?
+
+
+**Calcolo della chiave privata con** $e=3$ 
+Dati:
+- Modulo: $N = 187$
+- $N = p \cdot q$, con $p = 11$ e $q = 17$ (poichè 11 x 17 = 187)
+- Di conseguenza
+$$
+\phi(N) = (p-1)(q-1) = 10 \cdot 16 = 160
+$$
+
+La chiave privata $d$ deve soddisfare:
+$$
+3 \cdot d \equiv 1 \mod160
+$$
+Ovvero trovare $d$ tale che:
+$$
+3d + 160k = 1, k\in Z
+$$
+
+Utilizziamo **l'algoritmo esteso di Euclide** per trovare $d$
+1. **Calcolo del massimo comune divisore (MCD)**:
+	Dividiamo 160 per 3:
+$$
+160 = 3 \cdot 53 + 1
+$$
+qui il quoziente è 53 e il resto 1.
+
+2. **Espressione in forma lineare**:
+	Dall'operazione precedente possiamo scrivere
+$$
+1 = 160 - 3 \cdot 53
+$$
+Questa equazione esprime 1 come combinazione lineare di 160 e 3:
+$$
+1 = 160 \cdot 1 + 3 \cdot (-53)
+$$
+Per l'equazione $3d + 160k = 1$, vediamo che il coefficiente relativo a 3 è -53. Quindi, una soluzione per $d$ è:
+$$
+d \equiv -53 \mod160
+$$
+
+3. **Normalizzazione del valore negativo**
+	Per ottenere $d$ in forma positiva, sommiamo 160:
+$$
+d = 160 - 53 = 107
+$$
+
+Verifichiamo:
+$$
+3 \cdot 107 = 321 \quad \text{e} \quad 321 \mod160 = 321 - 2 \cdot 160 = 1
+$$
+Quindi, il valore della chiave privata è $d = 107$
+
+
+**Verifica della validità di e = 5 come Chiave Pubblica**
+Nel sistema RSa è indispensabile che l'esponente pubblico $e$ sia **coprimo** con $\phi(N)$. In altre parole, deve essere soddisfatta la condizione:
+$$
+gcd(e, \phi(N)) = 1
+$$
+
+Calcoliamo la condizione per $e = 5$:
+$$
+\phi(N) = 160 \quad \text{e} \quad 160 = 5 \cdot 32
+$$
+Pertanto:
+$$
+gcd(5, 160) = 5 \neq 1
+$$
+
+Essendo 5 un divisore di 160, $e = 5$ **non** è coprimo con $\phi(N)$ e, di conseguenza, **non ammette un inverso modulo** $\phi(N)$. Senza un inverso, non è possibile calcolare la chiave privata $d$
+
+
+---
+
+
+*D28* i consideri il sistema di cifratura a chiave pubblica El Gamal con i seguenti parametri: modulo primo p=29, generatore g=3. Si assuma che un server utilizza come chiave privata il valore s=13, e come chiave pubblica corrispondente il valore h=19.  
+1. Si illustri, in formule, il procedimento di cifratura. 
+2. Si cifri il messaggio m=14, usando come nonce il valore r=5: quale è il messaggio complessivo inviato al server? (per i calcoli si mostrino in dettaglio le operazioni di square & multiply usate) 
+3. Opzionale: si verifichi la correttezza della cifratura effettuata, decifrando il messaggio sopra calcolato
+
+
+**Procedimento di Cifratura - Formule Generali**
+In El Gamal le scelte iniziali sono:
+- Un numero primo $p$
+- Un generatore $g$ del gruppo moltiplicativo $Z^{*}_{p}$
+- La chiave privata del destinatario $s$ e la relativa chiave pubblica $h = g^{s} \mod p.$ 
+
+Per cifrare un messaggio $m$ si procede come segue:
+1. Scelta del nonce $r$ 
+2. Calcolo di $c_{1}$
+$$
+c_{1} = g^{r}\mod p
+$$
+3. Calcolo di $c_{2}$ 
+$$
+c_{2} = m \cdot h^{r} \mod p
+$$
+Il messaggio cifrato inviato è la coppia $(c_{1}, c_{2})$
+
+
+**Applicazione con i dati specifici**
+I parametri del problema sono:
+- $p = 29$
+- $g = 3$
+- Chiave privata del server: $s = 13$
+- Chiave pubblica: $h = 19$ (dato che $3^{13} \mod 29 = 19$)
+- Messaggio: $m = 14$
+- Nonce: $r = 5$
+
+*Calcolo di c1 usando square & multiply*
+Dobbiamo calcolare $3^{5} \mod 29$ 
+
+1. Rappresentiamo l'esponente in binario: $5_{10} = 101_{2}$ 
+2. Procedimento (left-to-right):
+   - Inizializzazione: result = 1, base = 3
+   - Primo bit (1): result $\leftarrow 1 \cdot 3 = 3$. Quindi, quadrato della base: base $\leftarrow 3^{2} = 9 \mod 29$ 
+   - Secondo bit (0): Poichè il bit è 0, result resta 3. Quadrato della base: base $\leftarrow 9^{2} = 81 \mod 29$. Calcoliamo: $29 \cdot 2 = 58, 81 - 58 = 23$. Così, base = 23
+   - Terzo bit (1): result $\leftarrow 3 \cdot 23 = 69 \mod 29$. $29 \cdot 2 = 58, 69 - 58 = 11$. Quindi, result = 11
+
+Il risultato finale è $c_{1} = 11$
+
+*Calcolo di* $h^{r}$
+Dobbiamo calcolare $19^{5} \mod 29$
+
+1. Rappresentiamo l'esponente in binario: $5_{10} = 101_{2}$
+2. Procedimento:
+   - Inizializzazione: result = 1, base = 19
+   - Primo bit (1): result $\leftarrow 1 \cdot 19 = 19$. Quindi, quadrato della base: base $\leftarrow 19^{2} = 361$. Calcoliamo $361 \mod 29$: $29 \cdot 12 = 348, 361 - 348 = 13$. Quindi, base = 13
+   - Secondo bit (0): result risulta 19. Quadrato della base: base $\leftarrow 13^{2} = 169$. $29 \cdot 5 = 145$. $169 - 145 = 24$. Quindi, base = 24
+   - Terzo bit (1): result $\leftarrow 19 \cdot 24 = 456$. Calcoliamo $456 \mod 29$: $29 \cdot 15 = 435, 456 - 435 = 21$. Così, result = 21
+
+Il risultato è $19^{5} \mod 29 = 21$
+
+
+*Calcolo di c2*
+Utilizziamo la formula:
+$$
+c_{2} = m \cdot h^{r} \mod p
+$$
+Sostituendo:
+- $m = 14$
+- $h^{r} \mod p = 21$
+- $p = 29$
+
+Calcoliamo:
+$$
+c_{2} = 14 \cdot 21 = 294
+$$
+Riduciamo modulo 29:
+$$
+294 \mod 29: \quad 29 \cdot 10 = 290, \quad 294 - 290 = 4
+$$
+Quindi:
+$$
+c_{2} = 4.
+$$
+
+**Messaggio complessivo inviato**
+Il ciphertext inviato al server è la coppia
+$$
+(c_{1},c_{2}) = (11, 4)
+$$
+
+
+---
+
+
+*D29* Un sistema di anonimizzazione genera, per ogni utente, un identificativo randomico di 12 caratteri scelti dall’insieme dei caratteri Base64 (10 cifre, 26 lettere minuscole, 26 lettere maiuscole, 2 caratteri speciali, esempio: e9PsNjBuQ7/e ) 
+
+a) quale e’ l’entropia dell’identificativo? 
+
+b) Assumendo 8 miliardi di persone nel mondo, quale è approssimativamente la probabilità che due persone abbiano lo stesso identificativo? 
+
+(Ricordando che $2^{10} \approx 10^{3}$ e che, per x piccolo, $1-e^{-x} \approx x$ , sarebbe anche possibile rispondere alla domanda senza usare alcuna calcolatrice)
+
+
+**Entropia dell'identificativo**
+Ogni identificativo è composto da 12 caratteri, ed ogni carattere è scelto da 64 possibili simboli. Quindi il numero totale di identificativi possibili è 
+$$
+64^{12} = {(2^{6})}^{12} = 2^{72}
+$$
+
+L'entropia è esattamente il logaritmo in base 2 del numero di possibilità, cioè
+$$
+\log_{2}(2^{72}) = 72  \text{bit}
+$$
+
+
+**Probabilità che due persone abbiano lo stesso identificativo**
+Assumiamo $n = 8 \cdot 10^{9}$ persone e $D = 2^{72}$ possibili identificativi. La probabilità di collisione può essere approssimata, per x piccolo, da questa formula
+$$
+P_{collisione} \approx \frac{n^{2}}{2D}
+$$
+
+**Passo 1**: Calcolo di $n^{2}$ 
+$$
+n^{2} = (8 \cdot 10^{9})^{2} = 64 \cdot 10^{18} = 6.4 \cdot 10^{19} 
+$$
+
+**Passo 2**: Stima di $D$ usando $2^{10} \approx 10^{3}$
+$$
+2^{72} = (2^{10})^{7.2} \approx (10^{3})^{7.2} = 10^{21.6}
+$$
+
+ossia, in ordine di grandezza, $D \approx 4.7 \cdot 10^{21}$ 
+
+**Passo 3**: Applichiamo la formula
+
+$$
+P_{collisione} \approx \frac{6.4 \cdot 10^{19}}{2 \cdot 4.7 \cdot 10^{21}} \approx \frac{6.4 \cdot 10^{19}}{9.4 \cdot 10^{21}} \approx 0.0068
+$$
+
+Quindi la probabilità è circa lo 0.68%
+
+
+---
+
+
+*D30* Nell'autenticazione a due fattori quale è la differenza tra HOTP e TOTP
+
+**HOTP (HMAC-Based One-Time Password)**: L'HOTP genera il codice usando una funzione HMAC applicata a una chiave segreta e a un contatore. Ad ogni richiesta il contatore viene incrementato. Il codice ottenuto resta valido fino a quando viene usato e il server e il client devono tenere sincronizzato questo contatore
+
+**TOTP (Time-Based One-Time Password**: Il TOTP si basa fondamentalmente sullo stesso principio, ma invece di un contatore utilizza il fattore tempo. L'OTP viene generato applicando HMAC a una chiave segreta e a un valore derivato dall'orario corrente. Di conseguenza, il codice è valido solo per breve tempo e non è necessaria una sincronizzazione basata su eventi, ma solo una corretta sincronizzazione dell'orologio
+
+
+---
+
+
+*D31* Usando l'algoritmo square&multiply, quale è il numero di operazioni necessario per calcolare $13^{224} \mod 541$, e perchè?
+
+Per l’esponente 224 che in binario è lungo 8 bit, l’algoritmo esegue 7 squaring. Inoltre, eseguendo la moltiplicazione solo per (gli altri) bit pari a 1, con 2 ulteriori moltiplicazioni otteniamo un totale di 9 operazioni modulari. Questo è il motivo per cui, usando il metodo square & multiply, risulta necessario effettuare 9 operazioni per calcolare $13^{224} \mod 541$
+
+
+---
+
+
+*D32* Usando un insieme di caratteri Base 64 (26 lettere maiuscole, 26 lettere minuscole, 10 cifre e 2 simboli speciali), due utenti scelgono le loro password in questo modo:
+- U1: XxxxxDDS $\rightarrow$ X = maiuscola, x = minuscola, D = cifra, S = simbolo speciale
+- U2: AAAAAA $\rightarrow$ A = un carattere qualunque nel charset base 64
+
+1. Calcolando l'entropia per entrambi i casi si dica quale delle due password è più robusta
+2. Assumendo di poter provare 1 milione di passwd/secondo, quanto tempo in media è necessario per craccare le passwd sia per U1 che per U2
+
+
+**Calcolo dell'entropia**
+Per U1, il pattern specifica:
+- X: 1 lettera maiuscola $\rightarrow 26$ possibilità
+- xxxx: 4 lettere minuscole $\rightarrow 26^{4}$ possibilità
+- DD: 2 cifre $\rightarrow 10^{2}$ possibilità
+- S: 1 simbolo speciale $\rightarrow 2$ possibilità
+
+Il totale delle combinazioni è dunque:
+$$
+26 \cdot 26^{4} \cdot 10^{2} \cdot 2 = 26^{5} \cdot 10^{2} \cdot 2
+$$
+
+L'entropia (in bit) si calcola come:
+$$
+E_{1} = \log_{2}(26^{5}\cdot 10^{2} \cdot 2) = 5\log_{2}(26) + 2\log_{2}(10) + \log_{2}(2)
+$$
+
+Utilizzando le approssimazioni:
+- $\log_{2}(26) \approx 4.70$
+- $\log_{2}(10) \approx 3.32$
+- $\log_{2}(2) = 1$
+
+Abbiamo così:
+$$
+E_{1} \approx 5 \cdot 4.70 + 2 \cdot 3.32 + 1 = 23.5 + 6.64 + 1 \approx 31.14 
+$$
+
+
+Per U2:
+Qui ogni carattere è scelto casualmente da tutto il charset Base64, che contiene 64 caratteri. Poichè la password è lunga 7 caratteri:
+
+Il totale delle combinazioni è:
+$$
+64^{6}
+$$
+L'entropia satà:
+$$
+E_{2} = 6 \cdot \log_{2}(64)
+$$
+Quindi
+$$
+E_{2} = 6 \cdot 6 = 36
+$$
+
+**Calcolo cracking**
+*Per U1*
+Il numero totale di combinazioni per U1 è:
+$$
+N_{1} = 26^{5} \cdot 10^{2} \cdot 2
+$$
+
+Calcoliamo:
+- $26^{5}$ risulta essere $11.881.376$ 
+- Moltiplicando per $10^{2} = 100$ e poi per 2:
+$$
+N_{1} = 11.881.376 \cdot 100 \cdot 2 = 2.376.275.200
+$$
+
+Il numero medio di tentativi necessari sarà la metà:
+$$
+\text{Tentativi medi} = \frac{N_{1}}{2} = 1.188.137.600
+$$
+
+A 1 milione di tentativi al secondo:
+$$
+t_{1} = \frac{1.188.137.600}{1.000.000} \approx 1188 
+$$
+
+Convertendo in minuti:
+$$
+1188s \div 60 \approx 19.8 
+$$
+Circa 20 minuti
+
+
+
+*Per U2*
+Il numero totale di combinazioni per U2 è:
+$$
+N_{2} = 2^{36}
+$$
+
+Il numero medio di tentativi necessari è:
+$$
+\text{Tentativi medi} = \frac{2^{36}}{2} = 2^{35}
+$$
+
+Per trovare il tempo medio in secondi:
+$$
+t_{2} = \frac{2^{35}}{10^{6}}
+$$
+
+Sappiamo che $2^{35}$ è circa 34.359.738.368.
+Quindi:
+$$
+t_{2} \approx \frac{34.359.738.368}{1.000.000} \approx 34359
+$$
+
+Convertendo in ore:
+$$
+34359s \div 3600 \approx 9,55 
+$$
+Circa 9 ore e 30 minuti
+
+
+---
+
+
+*D33* 
+
+![[Pasted image 20250521142614.png]]
+
+1. BCRYPT
+2. VERO
+3. In decifratura
+4. Si ma solo per CBC
+5. FALSO
+6. Dipende
+
+
+---
+
+
+*D34* Si descriva brevemente l'attacco di password spraying
+
+Il password spraying è una tecnica di attacco di brute force in cui l'attaccante utilizza una piccola lista di password comunemente usate, tentandole su un gran numero di account utente. A differenza degli attacchi tradizionali che colpiscono un singolo account con innumerevoli password, qui l'obiettivo è evitare i meccanismi di blocco legati e ripetuti tentetivi falliti su uno stesso account, distribuendo gli attacchi su molti utenti e rendendoli meno evidenti.
+
+
+---
+
+
+*D35* 
+
+![[Screenshot 2025-05-21 alle 15.03.35.png]]
+
+1. In un sistema asimmetrico il mittente cifra il messaggio utilizzando la chiave pubblica del destinatario. In questo modo solo il destinatario, che possiede la corrispondente chiave privata, potrà decifrare il messaggio
+2. Aggiungere 13 bit alla lunghezza di una chiave aumenta lo spazio delle possibili combinazioni di un fattore pari a $2^{13}$ (circa 8000)
+3. Nelle modalità OFB, CFB e CTR il processo di decifratura non utilizza la funzione inversa del block cipher. Anzichè applicare l'inverso, su entrambe le operazioni si usa la funzione di cifratura per generare un keystream che viene XORato con il testo in chiaro o con il ciphertext
+4. AES ha un blocco di 16 byte. Con CBC, se il plaintext (256 byte) è un multiplo del blocco, il meccanismo di padding aggiunge un intero blocco (16 byte) per evitare ambiguità durante la decifratura. Inoltre, l'IV viene trasmeso insieme al ciphertext e occupa 16 byte
+5. Con il principio del "paradosso del compleanno", per ottenere una probabilità di collisione del 50% il numero totale di possibili codici deve essere dell'ordine di $(350.000)^{2}$. Poichè un codice di X cifre decimali ha $10^{x}$ combinazioni, ponendo $10^{x} \approx (350.000)^{2}$ si ottiene $X \approx \log_{10}(350.000^{2}) \approx 11$ 
+6. Una chiave di 4 byte equivale a 32 bit, dunque ci sono $2^{32}$ possibili combinazioni. Poichè la ricerca in forza bruta richiede di provare metà dello spazio (ossia $2^{31}$ tentativi), il tempo medio necessario è:
+$$
+\frac{2^{31}}{10^{6}} \approx \frac{2.147 \cdot 19^{9}}{10^{6}} \approx 2147 \approx 35
+$$ Questo rientra nell'intervallo "tra 30 minuti e 1 ora"
+
+7. Poichè $91 = 7 \cdot 13$, 7 e 91 non sono coprimi. L'inverso modulare esiste solo se il numero e il modulo sono coprimi, pertanto non esiste un inverso di 7 modulo 91
+8. Dobbiamo trovare un valore $X$ tale che:
+$$
+43 \oplus X = 45
+$$
+Calcolando, 43 in binario è 00101011 e 45 è 00101101. Il risultato dell'operazione XOR è dunque:
+$$
+43 \oplus 45 = 0000110
+$$
+Esattamente, 00000110 corrisponde all'opzione "0000.0110". Quindi, applicando
+$$
+C[4] \oplus 0000.0110
+$$
+si otterrà il byte 45, cioè il simbolo '-'
+
+9. Anno (AAAA): Poichè l'anno è compreso tra il 2000 e il 2009, ci sono 10 possibili valori, Giorno e mese (GGMMM): in media, si considerano circa 365 possibili combinazioni per giorno e mese
+
+Quindi, il numero totale delle possibili date è circa:
+$365 \cdot 10 = 3650$
+
+$\text{entropia} = \log_{2}(3650) \approx 11.8$
+
+
+
+---
+
+
+*D36* Aritmetica modulare e crittografia a chiave pubblica:
+a. Usando obbligatoriamente l'algoritmo esteso di Euclide, si determini la chiave privata per un sistema RSA avente modulo N=253 e chiave pubblica e=9
+
+$253 = 11 \cdot 23 \rightarrow \phi(253) = 10 \cdot 22 = 220$ 
+Chiave privata $d = 9^{-1} \mod 220 = 49$
+
+b. Usando obbligatoriamente l'algoritmo Square&multiply, usando il sistema RSA precedente, si cifri il messaggio M=10
+
+ciphertext = $M^{e} \mod 253 = 10^{9} \mod 253 = 43$
+
+c. Si consideri un protocollo di key agreement Diffie-Hellman avente paramtetri g=5 e p=107. Si calcoli la chiave condivisa che si ottiene dal seguente scambio:
+- A genera x=13 e manda a B il coefficiente pubblico $g^{x} \mod p = 45$
+- B genera y=16 e manda ad A il coefficiente pubblico $g^{y} \mod p = 61$ 
+(nel calcolo, si scelga la "strada che minimizza i calcoli da fare con gli algoritmi S&M)
+
+E' possibile ricavare la chiave condivisa sia mettendoci dal punto di vista di A, che dal punto di vista di B. Facendo i conti a mano, conviene metterci dal lato di B, in quanto il suo coefficiente privato, in binario, è y = 16 = $10000_{2}$ e quindi dovremo solo fare quattro quadrati modulati - nel caso 13 = $1101_{2}$, anche se il numero è minore, dobbiamo comunque fare tre quadrati e due moltiplicazioni, e quindi in totale una operazione in più.
+Risulta:
+$K = (g^{x})^{y} \mod p = (45)^{16} \mod p = 44$
+
+
+
+---
+
+
+*D37* Per hash crittografiche, quale è la differenza tra "weak collision resistance" e "strong collision resistance"?
+
+**Weak Collision Resistance**: Questa proprietà richiede che, dato un messaggio fissato $m$, sia computazionalmente impossibile (o estremamente difficile) trovare un altro messaggio $m'$ (con $m' \neq m$) tale che 
+$$
+H(m) = H(m')
+$$
+
+**Strong Collision Resistance**: Qui il requisito è più stringente: deve risultare computazionalmente impossibile (o estremamente difficile) trovare **qualsiasi** coppia di messaggi distinti $m$ e $m'$ tali che
+$$
+H(m) = H(m')
+$$
+
+
+---
+
+
+*D38* Dopo aver spiegato cos'è un replay attack, si discutano i pro e i contro di possibili metodi per mitigare tali attacchi
+
+
+Un **replay attack** è un tipo di attacco in cui un aggressore intercetta una comunicazione leggittima tra due parti e, in un secondo momento, la ritrasmette per ottenere un effetto indesiderato o per guadagnare accesso non autorizzato. In pratica l'attaccante "riusa" un messaggio valido, per simulare una nuova, leggittima richiesta
+
+- **Sequence number** $\rightarrow$ C'è una protezione in caso di reboot del sistema?
+- **Random numbers** $\rightarrow$ Necessita memorizzazione dello storico dei nonce per poter identificare eventuali riutilizzi
+- **Time Stamp** $\rightarrow$ Problemi di sincronizzazione possono portare a falsi negativi o positivi. La finestra di validità deve essere calibrata con attenzione per evitare che messaggi legittimi vengano scartati o che l'attaccante trovi l'occasione per ripetizioni nel periodo consentito
+
+
+---
+
+
+*D39* Assumendo un cifrario a blocchi da 4 bit basato sulla specifica permutazione riportata nella tabella a destra, si CIFRI il messaggio 1111.1111.1111 usando rispettivamente (ove servissse un vettore di inizializzazione o un contatore iniziale, si usi il valore 0100)
+
+
+**ECB**
+Ogni blocco viene cifrato in modo indipendente usando la stessa funzione.
+Di conseguenza, il ciphertext finale diventa "0100.0100.0100"
+
+**CTR**
+Si utilizza un contatore che viene aumentato di 1 ogni volta, viene criptato ogni volta e XORato con il plaintext
+(0100) 0010.1111.1100
+
+**OFB**
+Il contatore viene criptato quante volte sono i blocchi del ciphertext (in questo caso 3)
+Quindi verrà
+(0010) 0010.0011.0001
+
 
