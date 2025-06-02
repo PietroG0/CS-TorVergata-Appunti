@@ -1,0 +1,166 @@
+body{
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%; /*full page*/
+    max-width: 1200px; /* maximum width */ 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    /*text-align: center;*/
+}
+
+#header, #footer{
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px, 20px;
+    text-align: center;
+    
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header h1{
+    margin: 0.5em 0;
+}
+
+#footer{
+    margin-top: auto; 
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-menu ul{
+    list-style-type: none; /*Rimuove i punti elenco*/
+    padding: 0;
+    margin: 10;
+    display: flex;
+}
+
+#nav-menu li{
+    margin: 0 10px;  /*Spazio tra link e menu*/
+}
+
+#nav-menu a{
+    text-decoration: none; /*Rimuove la sottolineatura*/
+    color: #ffffff; /*Colore del testo*/
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Permette al main di espandersi per riempire lo spazio disponibile */
+    padding: 20px;
+    text-align: center;
+}
+
+.counter-section #counter-value{
+    font-size: 3em;
+    margin: 0.3em 0;
+}
+
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.button-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 50%; /* Larghezza piena per la riga dei pulsanti */
+    
+}
+
+.buttons-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 1px;
+    min-width: 150px; /* Larghezza minima per i pulsanti */
+}
+
+.buttons-section button:hover {
+    opacity: 0.8;
+}
+
+.color-button button{
+    width: 302px; /* Larghezza fissa per i pulsanti di colore */
+}
+
+
+@media (max-width: 599px) {
+    #nav-menu ul {
+        flex-direction: column; /* Cambia la direzione in colonna per schermi piccoli */
+        align-items: center; /* Centra gli elementi */
+        display: none;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .hamburger {
+        display: block; /* Mostra l'icona hamburger su schermi piccoli */
+    }
+
+    #nav-menu ul {
+        display: none; /* Mostra il menu quando attivo */
+    }
+
+
+    #nav-menu ul.active{
+        display: flex; /* Mostra il menu quando attivo */
+    }
+
+    .buttons-section{
+        align-items: stretch;
+    }
+
+    .button-row{
+        flex-direction: column; /* Cambia la direzione in colonna per schermi piccoli */
+        width: 100%; /* Larghezza piena per i pulsanti */
+        margin-bottom: 0;
+    }
+
+    .button-row button{
+        margin: 3px 0; /* Margine verticale per i pulsanti */
+    }
+
+    
+}

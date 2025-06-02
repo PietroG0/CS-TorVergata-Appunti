@@ -1,0 +1,7 @@
+[
+    {"id": 1,"name": "Sample Data", "value": 42},
+    {"id": 2,"name": "Another Sample", "value": 100},
+    {"id": 3,"name": "More Data", "value": 75},
+    {"id": 4,"name": "Extra Sample", "value": 58},
+    {"id": 5,"name": "Final Sample", "value": 90}
+]
