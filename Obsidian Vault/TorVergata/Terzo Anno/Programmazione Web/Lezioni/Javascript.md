@@ -381,3 +381,306 @@ Oltre ad alert, prompt e confirm, l'oggetto "window" ha altre funzioni utili:
 - setInterval(funz_da_chiamare, time): Richiama la funzione *ciclicamente* dopo *time* millisecondi
 - clearTimeout e clearInterval interrompono le funzioni precedenti
 
+
+
+#### Eccezioni
+Indicano che qualcosa è andato storto, un'eccezione può essere un qualunque tipo di dato. Il frammento di codice "lancia" un'eccezione (throw) che può essere gestita (catch)
+
+1. Interrompe la normale esecuzione
+2. Cerca una routine in grado di risolvere il problema (catch)
+3. Se "gestita", il flusso continua da dopo il blocco "catch"
+
+```JS
+function getMonthName(monthId) {
+	if (monthId == 1) {return "Gennaio";}
+	else if (monthId == 2) {return "Febbraio";}
+	/*...*/
+	else if (monthId == 12) {return "Dicembre";}
+	else {
+		throw "Il mese non è valido;
+	}
+	//C'è un problema, lascio l'eccezione
+
+}
+
+function f(myMonth) {
+	try {
+		monthName = getMonthName(myMonth);
+	}
+	catch(e) {
+		monthName = "unknown";
+	}
+	finally {
+	//eseguita in ogni caso (es. chiudi un file)
+	}
+}
+// Gestisco l'eccezione
+```
+
+**Error Object**
+Si tratta di una struttura dati "errore generico" per l'eccezione. Ha due proprietà
+1. **name**: Errore sintetico ("DOMExpection");
+2. **message**: Descrizione verbosa dell'errore. 
+
+
+
+#### Approfondiamo le funzioni
+
+**Var e Let**
+- Lo scope di *var* è il functional block più vicino
+- Lo scope di *let* è l'enclosing block più vicino
+
+![[Immagine Pasted Mag 3 2024.png#center | 500]]
+
+>[!danger]
+>Se dimentichiamo di dimenticare una variabile, diventerà una proprietà dell'oggetto *window*
+
+
+**Funzioni e oggetti**
+Possiamo definire le funzioni *dentro* altre funzioni. La funzione *nested* può accedere allo scope della funzione che la include (oltre che allo scope globale)
+
+![[Immagine Pasted Maggio 2024.png#center|500]]
+
+
+**Scope e funzioni nested**
+
+```JS
+function molto_fuori(){
+	let a = 5;
+	function fuori(){
+		let b =6;
+		function dentro() {
+			let c = 7;
+			console.log(a,b,c);
+			}
+		return dentro();
+	}
+	return fuori();
+}
+molto_fuori();
+```
+
+
+![[Immagine Pasted Mag 3 2024 (1).png#center | 150]]
+
+
+**Funzioni che ritornano funzioni**
+
+```JS
+function multisum(p1, a, b) {
+	let x = p1;
+	function sum(a, b) {
+		return x * (a + b);
+	}
+	return sum(a,b);
+}
+
+/*
+multisum(10, 1, 2) <- torna 30
+La funzione "multisum" ritorna l'output di "sum", ovvero ritorna un numero
+*/
+
+function multisum(p1) {
+	let x = p1;
+	return function sum(a, b) {
+		return x * (a + b);
+	}
+}
+
+/*
+multisum(10); <- torna una funzione
+multisum(10)(1,2) <- torna 30
+*/
+```
+
+
+**Closure**
+
+```JS
+function salutatore(name){
+	let text = 'Ciao' + name; // Local variable
+	let diCiao = function() {alert(text);}
+	return diCiao;
+}
+
+let s = salutatore('Giovanni');
+s(); // alerts "Ciao Giovanni"
+```
+
+"s" non memorizza solo il return della funzione "salutatore" (che è una funzione), ma anche le variabili appartenenti al suo scope (ad es. la variabile "text")
+
+
+#### Approfondiamo gli oggetti
+**This**
+Un oggetto può avere come proprietà una funzione. La parola chiave *this* usata dentro la funzione indica l'oggetto che la contiene (dipende dal contesto, la stessa funzione può indicare come *this* oggetti diversi)
+
+```JS
+var studente = {
+	name: "pippo",
+	getName : function() {
+		return this.name
+	}
+}
+```
+
+Attenzione al contesto!
+
+```JS
+let x = 9;
+let module = {
+	x: 81,
+	getX: function() {return this.x;}
+};
+
+module.getX(); //81
+
+let getX = module.getX;
+getX();
+```
+
+
+
+**Prototipi di oggetto**
+In JS gli oggetti hanno un prototipo, che è un altro oggetto da cui eredita tutte le proprietà
+
+![[Immagine Pasted 2024-05-07.png#center | 500]]
+
+**Oggetti: Proprietà di base e ereditate**
+Quando chiamiamo una proprietà di un oggetto:
+- Prima si cerca tra le proprietà dell'oggetto
+- Poi tra le proprietà del prototipo
+- Poi tra le proprietà del prototipo del prototipo
+
+```JS
+pippo.name //trova la proprietà nell'oggetto
+pippo.university //trova la proprietà nel prototipo
+```
+
+Possiamo vedere se la proprietà è dell'oggetto o del prototipo con
+
+```JS
+pippo.hasOwnProperty("university"); //false
+pippo.__proto__.hasOwnProperty("university"); //true
+```
+
+
+**Prototipi di funzione**
+Ogni funzione ha la proprietà *prototype* il cui valore è un oggetto. Scrivendo *student.prototype.university = "Tor Vergata* assegniamo una proprietà a quell'oggetto. **Tutti gli oggetto creati con questo costruttore avranno come prototipo il prototipo della funzione**
+
+
+**Costruttori, prototipo e proprietà**
+
+![[Pasted image 2024-05-07.png#center | 500]]
+
+```JS
+function Student(name, age) {
+	this.name = name;
+	this.age = age;
+}
+Student.prototype.university = "Tor Vergata";
+let pippo = new Student("Pippo", 20);
+```
+
+*Cosa succede?*
+1. Viene creato un nuovo oggetto vuoto
+2. Viene passato al costruttore (*function Student*), in modo che ci possa riferire con "this";
+3. Il costruttore setta le proprietà dell'oggetto
+4. Il costruttore imposta: prototipo dell'oggetto creato = prototipo della funzione *Student.prototype* $\rightarrow$ *pippo.__proto__.*
+
+
+**Prototipi**
+
+>[!important] Prototipi di funzione
+>E' l'istanza di un oggetto che diventerà il prototipo per tutti gli oggetti creati usando la funzione come costruttore
+>
+>**Prototipi di oggetto**:
+>E' l'istanza dell'oggetto dal quale l'oggetto è ereditato
+
+
+```JS
+function Student(name, age) {
+	this.name = name;
+	this.age = age;
+}
+Student.prototype.university = "TV";
+let pippo = new Student("Pippo", 20);
+let pluto = new Student("Pluto", 21);
+
+pippo.university;
+pluto.university;
+```
+
+![[CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Pasted image 20240507152923.png#center | 300]]
+
+```JS
+Student.prototype.university = "La Sapienza";
+pippo.color;
+pluto.color;
+```
+
+
+![[Immagine Pasted Mag 7 2024.png#center | 300]]
+
+```JS
+Student.prototype = {university: "La terza"};
+pippo.color;
+pluto.color;
+```
+
+![[CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Pasted image 20240507153023.png#center | 300]]
+
+
+**Bind**
+Il metodo *bind* ci permette di definire chi è il "this" per una funzione
+- Metodo di una funzione $\rightarrow$ la funzione è un oggetto
+
+```JS
+let a = {id: 10};
+let x = function() {return this.id}
+let w = x.bind(a);
+x(); // ritorna undefined
+w(); // ritorna 10
+```
+
+
+#### Manipolazione del DOM
+**Document Object Model**
+E' un'interfaccia di programmazione per HTML (e XML). Fornisce una mappa strutturata del documento ed i metodi per interfacciarsi con gli elementi
+
+- Ogni elemento della pagina è un nodo
+- L'elemento radice è "document"
+- "document" ha una serie di proprietà standard
+
+```JS
+let foo = document.getElementById("miodiv").innerHTML;
+```
+
+foo contiene il contenuto HTML del div con id "miodiv"
+
+
+**Selezionare un elemento**
+
+```JS
+document.getElementById("miodiv")
+//Ritorna il node associato al div con id "miodiv"
+document.getElementsByTagName("p")
+//Ritorna una NodeList degli elementi "p"
+document.getElementsByClassName("myclass")
+//Ritorna una NodeList degli elementi con classe "myclass"
+document.querySelectorAll("p.warning")
+//Permette di usare selettori css e ritorna una NodeList
+```
+
+Una NodeList è simile a un'array.
+
+```JS
+let paragraphs = document.getElementsByTagName("p");
+paragraphs[0]; paragraphs.lenght
+```
+
+
+**Eventi**
+
+![[Immagine Pasted Maggio 2024 (1).png#center|600]]
+
+
