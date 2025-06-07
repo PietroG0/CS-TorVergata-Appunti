@@ -1389,3 +1389,62 @@ Quindi verrà
 (0010) 0010.0011.0001
 
 
+
+---
+
+
+*D40* Un messaggio è lungo 1500 bit; Quante funzioni di compressione devono essere calcolate per produrre un tag HMAC-SHA256 con chiave di autenticazione a 128 bit?
+
+Rigorosamente parlando sarebbe 7, perchè ai 1500 bit sarebbe da aggiungere i 64 bit len e quindi il ms sta in 4 blocchi, più blocco per chiave + 2 blocchi finali (ma risposta 6 = OK)
+
+
+---
+
+
+*D41* Generando casualmente circa 10 miliardi di codici alfabetici composti da $X$ lettere minuscole, la probabilità che due di essi siano identici è approssimativamente del 50%. Di quante lettere sono composti questi codici?
+
+$\log_{26} 10^{20} = 14$ 
+
+
+---
+
+
+*D42* Quale è, approssimativamente, il tempo medio necessario, in ore, per craccare un codice di 12 cifre decimali, assumendo di poter effettuare 1 milione di tentativi al secondo?
+
+Tra 100 e 200 ore
+$\frac{10^{6}}{2} \rightarrow \frac{\text{risultato}}{3600} \rightarrow 139$ 
+
+
+---
+
+
+*D43* Per un sistema di cifratura a chiave pubblica El Gamal con modulo $p = 83$, generatore $g=5$, e chiave privata $s=8$, si decifri il messaggio cifrato $CT=(44,48)$ (si svolgano i calcoli facendo esplicito uso degli algoritmi square&multiply e algoritmo di Euclide esteso)
+
+
+Rappresentare 8 in binario
+$8 = 1000_{2}$ 
+
+Eseguire square&Multiply
+$44^{8} \mod 83 = 75$
+
+Calcolare l'inverso mod 83 di 75
+$83 = 1 \cdot 75 + 8$
+$75 = 9 \cdot 8 + 3$
+$8 = 2 \cdot 3 + 2$ 
+$3 = 1 \cdot 2 + 1$
+$2 = 2 \cdot 1 + 0$
+
+Facendo tutto il passaggio otteniamo
+$$
+75^{-1} \mod 83 = 31
+$$
+
+
+Calcolare il messaggio
+$M = 48 \cdot 31 \mod 83 = 1488 \mod 83 = 77$
+
+Quindi **il messaggio decifrato è** $M = 77$
+
+
+---
+
