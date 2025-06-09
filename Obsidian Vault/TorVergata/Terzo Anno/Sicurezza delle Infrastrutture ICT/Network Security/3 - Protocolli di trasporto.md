@@ -21,44 +21,20 @@ TCP fornisce **connessioni virtuali**, tramissione affidabile, in order, con mec
 ![[Pasted image 20250607185033.png#center | 500]]
 
 
-**Flow Control**
-Nel TCP il *flow control* è il meccanismo che permette al *ricevente* di regolare la quantità di dati che il *mittente* può inviare, in modo da non saturare i propri buffer. 
-
-1. *Finestra di ricezione (rwnd)*
-	- Nel campo *window* dell'header TCP il ricevente indica quanti byte è ancora in grado di ricevere senza perdere dati
-	- Questa quantità, chiamata *rwnd*, è calcolata in base allo spazio libero nei buffer di ricezione
-
-2. *Limite di throughput*
-	- Il mittente può avere al massimo rwnd byte "in volo" (non ancora acknowledged)
-	- Il throughput teorico è quindi $rate_{max} \approx \frac{rwnd}{RTT}$ 
-	- Es. Se rwnd = 250kB e RTT = 200 ms, il mittente non può superare 1,25 MB/s
-
-3. *Sliding window*
-	- Il mittente mantiene un buffer di tutti i datagrammi inviati ma non ancora acked, perchè potrebbero dover essere ritrasmessi
-	- La "finestra scorre" (sliding): quando arriva un ACK per i primi $N$ byte, la finestra si sposta permettendo di inviare altri $N$ byte
-
-4. *Interazione con il congestion control*
-	- In TCP l'effettiva finestra di invio è $wnd = min(cwnd, rwnd)$, dove $cwnd$ è la finestra di congestione (gestita dal mittente per non esaurire la rete) e $rwnd$ quella di flow control
-	- Finchè $rwnd < cwnd$, il mittente è limitato dal ricevente; se $cwnd < rwnd$, è la rete a porre il vincolo
-
-5. *Adattamento dinamico*
-	- Se il ricevente vede che i suoi buffer si stanno riempiendo più rapidamente del previsto, riduce $rwnd$ negli ACK successivi: questo "dichiara" al mittente di rallentare
-	- Quando il ricevente libera spazio (l'applicazione legge i dati), riporta rwnd a valori maggiori, autorizzando l'invio di nuovi segmenti
+**Controllo del flusso e finestra di trasmissione (Sliding Window)**
+TCP utilizza il concetto di "finestra" per gestire il numero di byte che possono essere inviati senza ricevere un ACK. La dimensione della finestra (detta anche "cwnd" per congestion window) influenza direttamente il throughput: il tasso di trasmissione è approssimativamente dato dal rapporto tra la dimensione della finestra e il Round Trip Time (RTT). In questo modo, il protocollo si adatta alle capacità dei router e dei buffer del ricevitore, evitando saturazioni e perdite
 
 
-**Congestion Control**
-- *Congestione*: avviene quando il carico supera la capacità del "collo di bottiglia" (banda minima lungo il percorso)
-- *Congestion window (cwnd)*: limite massimo di pacchetti "in volo". La finestra effettiva + $min(cwnd, rwnd)$
-- *BDP (Bandwidth-Delay Product)*: $BDP = BW \cdot RTT$ stabilisce il valore di $cwnd$ ottimale per pieno utilizzo della banda
+**Controllo della congestione**
+Uno degli obiettivi principali di TCP è evitare il fenomeno del "congestion collapse", una situazione in cui la rete viene sovraccaricata da traffico e si generano ritardi e perdite massicce di pacchetti
+- *Slow Start*: All'avvio della connessione, TCP inizia con una finestra molto piccola e la aumenta in maniera esponenziale ad ogni RTT finchè non raggiunge una soglia detta "ssthresh". Questa fase permette di sondare la capacità della rete senza inondarla fin da subito
+- *Congestion Avoidance (AIMD)*: Superata la soglia, la crescita della finestra diventa lineare, in modo da evitare incrementi troppo brushi che potrebbero portare a congestione. Con l'algoritmo AIMD, ad ogni RTT ben riuscito la finestra si incrementa gradualmente e, al verificarsi di una perdita, la finestra viene ridotta drasticamente per alleviare il sovraccarico
+- *Ritrasmissione e gestione degli errori*: Dato che ogni byte inviato deve essere riconosciuto dal ricevitore, TCP mantiene copie dei pacchetti inviati finchè non vengono confermati. Se un ACK non viene ricevuto entro un tempo calcolato (RTO - Retransmission Timeout), il pacchetto viene ritrasmesso. Questo meccanismo garantisce che, anche in presenza di errori o perdite, il flusso di dati sia corretto e completo
 
 
-**Algoritmi di controllo**
-- *Slow Start*: all'inizio della connessione $cwnd = 1$ MSS; con ogni ACK $cwnd++$, raddoppiando ogni RTT fino a raggiungere ssthresh o a incontrare una perdita
-- *Congestion Avoidance (AIMD)*: quando $cwnd \geq ssthresh$, si aumenta $cwnd$ di $1/cwnd$ per ogni ACK, ottenendo crescita lineare
-- *Reazione alle perdite*
-	- *Timeout (RTO)*: reset di $cwnd = 1$, $ssthresh = cwnd_loss/2$ 
-	- *Fast Retransmit/Fast Recovery (TCP Reno)*: alla ricezione di 3 ACK duplicati, si ritrasmette immediatamente il pacchetto perso e si riduce $cwnd$ a $ssthresh = \frac{cwnd}{2}$ senza tornare a Slow Start completo
-
+**Varianti di TCP: Tahoe vs Reno**
+- *Tahoe* rappresenta la versione base, in cui in caso di perdita di pacchetto il meccanismo prevede la riduzione drastica della finestra (impostandola a 1) e quindi il riavvio della procedura di slow start
+- *Reno*, invece, introduce il meccanismo di fast retransmit e fast recovery. Quando il ricevitore invia tre ACK duplicati, il protocollo interpreta che un pacchetto è andato perso e lo ritrasmette immediatamente, riducendo la finestra solo a metà invece di riportarla a 1. Questo consente di riprendere la trasmissione più rapidamente, evitando l'impatto negativo di un timeout completo
 
 **Esercizio**
 Dati iniziali
