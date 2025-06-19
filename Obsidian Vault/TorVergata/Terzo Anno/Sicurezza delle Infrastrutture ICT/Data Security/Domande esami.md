@@ -1448,3 +1448,567 @@ Quindi **il messaggio decifrato è** $M = 77$
 
 ---
 
+
+*D44* Si considerino codici numerici composti da 6 cifre, ovvero del tipo XXXXXX
+- Qual'è l'entropia ne caso in cui le cifre siano scelte in modo uniforme?
+- Come cambia l'entropia se un utente usa solo cifre dispari?
+- Come cambia l'entropia se un utente usa solo le tre cifre 1-3-7, ed in particolare '1' con probabilità 50%, '5' con probabilità 30% e '7' con probabilità 20%?
+
+
+*Premessa* L’entropia in teoria dell’informazione misura l’incertezza media associata a una variabile casuale. Per un insieme di eventi (o simboli) che si verificano con probabilità pip_i, la formula è:
+$$
+H = -{\sum\limits_{i} p_{i} \cdot \log_{2}(p_{i})}
+$$
+Se tutti gli eventi sono ugualmente probabili, vale
+$$
+H = \log_{2} (n)
+$$
+Dove $n$ è il numero totale di eventi possibili
+
+In questo esercizio, ogni cifra viene scelta da 10 possibili valori (da 0 a 9) con probabilità uniforme
+
+$$
+H_{digit} = \log_{2}(10) \approx 3.32193
+$$
+Entropia dell'intero codice
+$$
+H = 6 \cdot 3.32193 \approx 19.93
+$$
+
+Arrotondando, si ottiene **19.9 bit**
+
+
+*Caso 2*
+Totale 5 cifre (solamente numeri dispari)
+$$
+H_{digit} = \log_{2}(5) \approx 2.32193
+$$
+Entropia per il codice a 6 cifre
+$$
+H = 6 \cdot 2.32193 \approx 13.93
+$$
+Arrotondando, otteniamo **13.9 bit**
+
+
+*Caso 3*
+Distribuzione non uniforme
+- $p(1) = 50\% = 0.5$
+- $p(2) = 30\% = 0.3$
+- $p(3) = 20\% = 0.2$
+
+Utilizziamo la formula
+$$
+H_{digit} = - [0.5\log_{2}(0.5) + 0.3\log_{2}(0.3) + 0.2\log_{2}(0.2)]
+$$
+
+Quindi
+$$
+H_{digit} = -[-0.5 - 0.5211 - 0.4644] \approx 1.4855
+$$
+
+Entropia totale per il codice a 6 cifre
+$$
+H = 6 \cdot 1.4855 \approx 8.91 
+$$
+
+Arrotondando, si ottiene **8.9 bit**
+
+
+---
+
+
+*D45* Un filtro di Bloom usa una memoria di 10 milioni di bit. L'obiettivo è di avere un falso positivo non maggiore di circa il 3%
+- Quante password può memorizzare al massimo, dimensionando il filtro in modo ottimo?
+- Quante password può memorizzare al massimo, ove il filtro usasse solo due hash?
+- Se, nel caso (1) il filtro è parzialmente riempito e sta operando con un falso positivo dell'1%, quante password potete ancora aggiungere al filtro?
+
+
+1. Dimensionamento ottimo del filtro 3%
+
+*Dati*
+- Memoria disponibile $m$ = 10 milioni di bit
+- Tasso di falso positivo desiderato $P_{fp} \leq 3\% = 0,03$ 
+
+*Numero ottimo di hash k*
+Il valore di $k$ che minimizza il falso positivo è
+$$
+k_{opt} = \frac{m}{n}\ln2
+$$
+ma spesso lo ricaviamo dall'approssimazione inversa: per $P_{fp} \approx \frac{1}{32} \approx 3\%$ si nota che
+$$
+\frac{1}{32} = \frac{1}{2^{5}} \rightarrow k = 5
+$$
+
+*Massimo numero di elementi n*
+Con $k = 5$, in regime "ottimo" vale l'approssimazione
+$$
+n = \frac{n}{k\ln2} = \frac{10Mbit}{5 \cdot 0,693} \approx 1,386 \cdot 10^{6} = 1,386 \text{milioni di password}
+$$
+Questo sarebbe il **numero teorico massimo di password stoccabili ottimizzando k**
+
+
+
+2. Se il filtro usa solo due hash
+
+La probabilità di falso positivo per un filtro di Bloom con $k$ hash è approssimativamente
+$$
+P_{fp} \approx (1-e^{-kn/m})^k
+$$
+Imponiamo $P_{fp} = 0,03$ e $k = 2$. Dunque
+$$
+(1-e^{-2m/m})^{2} = 0,03 \rightarrow 1-e^{-2n/m} = \sqrt{0,03} \approx 0,1732
+$$
+Da cui
+$$
+e^{-2n/m} = 1-0,1732 = 0,8268
+$$
+$-\frac{2n}{m} = \ln(0,8268) \approx -0,1906 \rightarrow n = -\frac{m}{2}\ln(0,8268) = \frac{10\cdot10^{6}}{2} \cdot 0,1906 \approx 953.000$
+
+Con **2 hash** e 10Mbit di memoria, si possono memorizzare **circa 953.000 password** per mantenere il falso positivo al 3%
+
+
+---
+
+
+*D46* E' necessario memorizzare una whitelist di 64.000 indirizzi IP in un filtro di Bloom, in modo da garantire una probabilità di falso positivo minore dello 0.4%. Quanta memoria è necessaria, e quante funzioni hash usereste?
+
+
+Per un filtro di Bloom con 64.000 elementi e probabilità $p = 0.4\% = 0.004$ 
+
+1. **Numero di bit totali (m)**:
+$$
+m = -\frac{n \ln p}{(\ln2)^{2}} = - \frac{64.000\ln(0.004)}{(0.6931)^{2}} \approx 735.500 bit
+$$
+Che corrispondono a circa
+$$
+\frac{735.500}{8} \approx 91.938byte \rightarrow \frac{91.938}{1024} \approx 89,8 KB
+$$
+
+2. **Numero di funzioni hash (k)**:
+$$
+k = \frac{m}{n} \ln2 \approx \frac{735.500}{64.000} \cdot 0.6931 \approx 7,97
+$$
+Si arrotonda quindi a **8 funzioni hash**
+
+
+---
+
+
+*D47* E' necessario memorizzare una whitelist di 256.000 indirizzi IP in un filtro di Bloom, in modo da garantire una probabilità di falso positivo strettamente inferiore al 3.2%. Quanta memoria è necessaria, e quante funzioni hash usereste?
+
+Per un filtro di Bloom con 256.000 elementi e probabilità $p = 3.2\% = 0.032$ 
+
+1. **Numero di bit totali (m)**:
+$$
+m = -\frac{n \ln p}{(\ln2)^{2}} = -\frac{256.000 \ln(0.032)}{(0.6931)^{2}} \approx 1.834.00 bit
+$$
+Che corrispondono a circa
+$$
+\frac{1.834.000}{8} \approx 229.250byte \rightarrow \frac{229.250}{1024} \approx 223,8 KB 
+$$
+
+2. **Numero di funzioni hash (k)**:
+$$
+k = \frac{m}{n}\ln2 \approx \frac{1.834.000}{256.000} \cdot 0.6931 \approx 4,97
+$$
+Si arrotonda quindi a **5 funzioni hash**
+
+
+---
+
+
+*D48* Un sistema di cifratura a chiave pubblica El Gamal usa i seguenti parametri: modulo primo $p = 29$, generatore $g = 8$
+1. Si illustri, il procedimento di cifratura El Gamal
+2. Sapendo che la chiave privata è $s = 11$, quale è la chiave pubblica? La si calcoli manualmente, usando l'algoritmo square&multiply, e mostrando i vari passaggi e risultati intermedi
+3. Un client invia un messaggio cifrato dalla coppia di valor (14,22). Si decifri il messaggio
+
+
+- **Procedura di cifratura el Gamal**
+
+Sia $(p, g, h)$ la chiave pubblica (con $h = g^{s} \mod p$) e $m$ il messaggio
+Per cifrare $m$:
+1. Il mittente sceglie **a caso** un intero $k$ fra 1 e $p-2$
+2. Calcola $c1 = g^{k} \mod p$, $c2 = m\cdot h^{k}\mod p$ 
+3. Invia la coppia di cifrari $(c1, c2)$ 
+
+
+- **Calcolo della chiave pubblica h = g^s mod p**
+
+Vogliamo $h = 8^{11} \mod p$. Usiamo lo square&multiply, sfruttando la rappresentazione binaria di 11, che è $1011_{2}$ 
+
+Calcoliamo le potenze di 8:
+- $8^{1} \mod 29 = 8$
+- $8^{2} = 64 \mod 29 = 64 - 2 \cdot 29 = 6$
+- $8^{4} = (8^{2})^{2} = 6^{2} = 32 \mod 29 = 7$
+- $8^{8} = (8^{4})^{2} = 7^{2} = 49 \mod p = 20$
+
+Moltiplichiamo le potenze corrispondenti ai bit "1" di 11
+$$
+8^{11} = 8^{8} \cdot 8^{2} \cdot 8^{1} \mod 29 = 20 \cdot 6 \cdot 8 \mod 29
+$$
+- $20 \cdot 6 = 120 \mod 29 = 120 - 4 \cdot 29 = 4$
+- $4 \cdot 8 = 32 \mod 29 = 3$
+
+Quindi **la chiave pubblica è h = 3**
+
+
+- **Decifratura del messaggio (c1, c2) = (14, 22)**
+
+Il destinatario calcola il segreto condiviso
+$$
+s_{shared} = c^{s}_{1} \mod p = 14^{11} \mod 29
+$$
+e poi ottiene
+$$
+m = c2 (s_{shared})^{-1} \mod p
+$$
+
+**Calcolo di $14^{11} \mod 29$**
+
+Rappresentiamo 11 in binario e calcoliamo:
+- $14^{1} \mod 29 = 14$
+- $14^{2} = 196 \mod 29 = 196 - 6 \cdot 29 = 22$
+- $14^{4} = 22^{2} = 484 \mod 29 = 484 - 16 \cdot 29 = 20$
+- $14^{8} = 20^{2} = 400 \mod 29 = 400 - 13 \cdot 29 = 23$
+
+Ora
+$$
+14^{11} = 14^{8} \cdot 14^{2} \cdot 14^{1} = 23 \cdot 22 \cdot 14 \mod 29
+$$
+- $23 \cdot 22 = 506 \mod 29 = 506 - 17 \cdot 29 = 13$
+- $13 \cdot 14 = 182 \mod 29 = 182 - 6 \cdot 29 = 8$
+
+Quindi 
+$$
+s_{shared}=8
+$$
+
+**Inversione di $s_{shared} = 8 \mod 29$**
+
+Cerchiamo $x$ tale che $8x \equiv 1 (\mod 29)$ 
+Con l'Euclide esteso si trova facilmente
+$$
+8^{-1} \mod 29 = 11
+$$
+perchè $8 \cdot 11 = 88 \equiv 1 (\mod 29)$ 
+
+
+**Estrazione di** $m$ 
+
+Infine
+$$
+m = c2 \cdot (8^{-1}) \mod 29 = 22 \cdot 11 \mod 29 = 242 \mod 29 = 242 - 8 \cdot 29 = 10
+$$
+
+**Risultato definitivo**
+$m = 10$
+
+
+
+---
+
+
+*D49* Un filtro di Bloom usa una memoria di 1 milione di bit e contiene 180.000 password
+1. Quale è il minimo valore possibile del falso positivo ottenibile?
+2. Se il numero delle password contenute nel filtro aumentasse del 50%, senza cambiare null'altro, quale sarebbe il falso positivo risultante?
+
+
+**Numero ottimale di hash**
+$$
+k^{*} = \frac{m}{n}\ln2 = \frac{1.000.000}{180.000} \cdot 0.6931 \approx 3.85
+$$
+In pratica useremo $k = 4$ funzioni hash
+
+
+**Probabilità di falso positivo**
+$$
+p = (1 - e^{-4 \cdot (\frac{180.000}{1.000.000})})^{4} = (1 - e^{-0.72})
+^{4}$$
+
+Che approssimato è $0.0690$
+
+
+**Aumento del 50% di n (a 270.000), senza cambiare m nè k**
+Manteniamo $k = 4$ e ricalcoliamo
+$$
+p' = (1 - e^{-4 \cdot (270.000/1.000.000)})^{4} = (1-e^{-1.08})^4 = (1-0.339)^4 \approx 0.661^4 \approx 0.19
+$$
+Ossia **19%**
+
+
+---
+
+
+*D50* Un sistema di anonimizzazione genera, per ogni utente, un identificativo randomico di 12 caratteri scelti dall’insieme dei caratteri Base64 (10 cifre, 26 lettere minuscole, 26 lettere maiuscole, 2 caratteri speciali, esempio: e9PsNjBuQ7/e ) 
+
+a) quale e’ l’entropia dell’identificativo? 
+
+b) Assumendo 8 miliardi di persone nel mondo, quale è approssimativamente la probabilità che due persone abbiano lo stesso identificativo?
+
+
+- Stringa composta da 12 caratteri, ciascuno scelto in modo indipendente da un insieme di 64 simboli, questo significa che il numero totale di identificativi è $64^{12}$
+
+Utilizzando le proprietà dei logaritmi per calcolare l'entropia in bit, otteniamo
+$$
+\log_{2} (64^{12}) = 12 \cdot \log_{2}(64) = 12 \cdot 6 = 72bit
+$$
+
+Pertanto, **l'entropia complessiva finale è di 72 bit**
+
+
+- L'insieme di identificativi possibile è di dimensione
+$$
+64^{12} = 2^{6 \cdot 12} = 2^{72}
+$$
+
+  
+- Con 8 miliardi di persone, poniamo $n = 8 \cdot 10^{9}$. La probabilità che almeno due persone abbiano lo stesso identificativo si può approssimare con la formula derivata dal "paradosso del compleanno"
+
+$$P \approx \frac{n^{2}}{2\cdot2^{72}}$$
+- Calcoliamo $n^{2}$
+$$
+n^{2} = (8\cdot 10^{9})^{2} = 64\cdot 10^{18} = 6.4\cdot10^{19}
+$$
+
+- Calcoliamo il denominatore $2\cdot2^{72}$. Con l'approssimazione nota $2^{10}\approx 10^{3}$, possiamo stimare
+$$
+2^{72} \approx 4.7 \cdot 10^{21} \rightarrow 2\cdot2^{72} \approx 9.4 \cdot 10^{21}
+$$
+- Quindi
+$$
+P \approx \frac{6.4 \cdot 10^{19}}{9.4 \cdot 10^{21}} \approx 0.0068
+$$
+Questo significa che la **probabilità che esista almeno una coppia di persone con lo stesso identificativo è circa dello 0,7%**
+
+
+---
+
+
+
+*D51* Si consideri El Gamal con modulo $p = 79$, generatore $g=3$ e chiave privata $s=7$ 
+- Si descriva come vengono DECIFRATI i messaggi in ElGamal
+- Si mostri il ciphertext ottenuto dalla cifratura del messaggio $M=64$ con nonce $r=4$, mostrando nei dettagli il/i calcolo/i effettuato/i usando l'algoritmo Square&Multiply
+
+
+**Decifrazione in ElGamal**
+In ElGamal il messaggio viene cifrato in forma di coppia $(a,b)$ definita come
+$$
+a = g^{r} \mod p, \quad b = M\cdot y^{r} \mod p
+$$
+
+Per *decifrare* un ciphertext, chi possiede la chiave privata $s$ procede così
+1. Calcolo del segreto condiviso
+$$
+K = a^{s} \mod p
+$$
+(ricordando che, essendo $a = g^{r}$, si ha $K = g^{rs}$)
+
+2. Calcolo dell'inversa modulo $p$ di $K$: Si determina $K^{-1}$ tale che
+$$
+K \cdot K^{-1} \equiv 1 \mod p
+$$
+
+3. Recupero del messaggio: Dato che $b = M \cdot K \mod p$, si ottiene
+$$
+M = b \cdot K^{-1} \mod p
+$$
+questo procedimento "annulla" il mascheramento applicato al messaggio durante la cifratura
+
+
+**Cifratura del messaggio M = 64 con r = 4**
+Abbiamo i seguenti parametri:
+- $p = 79$
+- $g = 3$
+- Chiave privata $s = 7$
+
+*Calcolo della chiave pubblica*
+Calcoliamo $y = 3^{7} \mod 79$
+
+Pertanto, la chiave pubblica è 54
+
+
+*Calcolo di a=g^r mod p con r=4 usando square&mutiply*
+Dobbiamo calcolare 
+$$
+a = 3^{4} \mod 79
+$$
+
+Al termine del ciclo, $a = R = 2$
+
+
+*Calcolo di b = M x y^r mod p con M=64 e r=4*
+Esprimiamo:
+$$
+b = 64\cdot54^{4} \mod 79
+$$
+Calcoliamo $54^{4} \mod 79$
+Al termine, otteniamo $54^{4} \mod 79 = R = 49$
+
+*Calcolo di b*
+$$
+b = 64 \cdot 49 \mod 79
+$$
+Alla fine dei calcoli, verrà $b = 55$
+
+
+**Il ciphertext finale è (2, 55)**
+
+
+---
+
+
+*D52* Tre utenti scelgono le password come segue (alfabeto di 26 lettere): 
+
+- Utente 1: passwd di 15 lettere maiuscole o minuscole, ripetendo blocchi di 3, es: MMMxxxfffAAAzzz 
+- Utente 2: due date di nascita consecutive nel formato DDMMAAAA, es: 1402199911032002 (attenzione: sono date di nascita non cifre generiche!!) 
+- Utente 3: sei caratteri base 64, es. e9Ps/Q 
+
+Calcolando (eventualmente con qualche approssimazione) l’entropia di ogni approccio, si determnini quale tra queste tre soluzioni e’ preferibile.
+
+*Utente 1*
+- La password è di 15 lettere, ma viene scelta in blocchi di 3 lettere identiche
+- Questo significa che, invece di avere 15 posizioni libere, si hanno 5 blocchi indipendenti
+- Il problema specifica l'alfabeto a 26 lettere
+
+Quindi il numero delle possibili password è 
+$$
+N_{1} = 26^{5}
+$$
+L'entropia è
+$$
+H = \log_{2}(26^{5}) = 5 \cdot \log_{2}(26)
+$$
+Sapendo che $\log_{2}(26) \approx 4.7$, troviamo
+$$
+H_{1} \approx 5\cdot 4.7 \approx 23.5 bit
+$$
+
+
+*Utente 2*
+- Una data di nascita reale non può avere qualsiasi combinazione di 8 cifre, ma corrisponde a una data valida
+- Supponendo un intervallo realistico (per esempio, 100 anni), il numero totale di possibili date valide è approssimativamente pari a 365
+- Adottando una stima più grossolana, si può ipotizzare che il numero di possibili date sia dell'ordine di $36.500$ 
+
+L'entropia per una data sarà quindi
+$$
+H_{data} \approx \log_{2}(36.500)
+$$
+
+Calcoliamo:
+- Poichè $\log_{2}(365) \approx 8.5$ e $\log_{2}(100) \approx 6.64$, allora $\log_{2}(36.500) \approx 8.5 + 6.64 \approx 15.14$ bit per data
+
+Per due date, l'entropia complessiva è:
+$$
+H_{2} \approx 2 \cdot 15.14 \approx 30.3bit
+$$
+che approssimiamo a circa 30 bit
+
+
+*Utente 3*
+- La password è costituita da 6 caratteri scelti da un alfabeto base64
+
+Il numero totale di combinazioni è:
+$$
+N_{3} = 64^{6}
+$$
+e l'entropia corrispondente è:
+$$
+H_{3} = \log_{2}(64^{6}) = 6 \cdot \log_2(64)
+$$
+Sapendo che $\log_{2}(64) = 6$, otteniamo:
+$$
+H_{3} = 6\cdot6 = 36bit
+$$
+
+Riassumendo, la **soluzione migliore è quella dell'utente 3**
+
+
+---
+
+
+*D53* Usando un insieme di caratteri Base 64 (26 lettere maiuscole, 26 lettere minuscole, 10 cifre e 2 simboli speciali), sue utenti scelgono le loro password in questo modo: 
+- U1: XxxxxDDS à X= maiuscola, x=minuscola, D=cifra, S=simbolo speciale; 
+- U2: AAAAAA à A= un carattere qualunque nel charset base64 
+
+1) Calcolando l’entropia per entrambi i casi si dica quale delle due password è più robusta; 
+2) assumendo di poter provare 1 milione di passwd/secondo, quanto tempo in media è necessario per craccare le passwd sia per U1 che per U2
+
+
+**Calcolo dell'entropia**
+Per U1
+- 1 carattere maiuscolo (X): 26 possibilità 
+- 4 caratteri minuscoli (xxxx): ogni posizione ha 26 possibilità, cioè $26^{4}$
+- 2 cifre (D): ogni posizione ha 10 possibilità, cioè $10^{2}$
+- 1 simbolo speciale (S): 2 possibilità
+
+Il totale delle combinazioni è quindi:
+$$
+N_{U1} = 26 \cdot 26^{4} \cdot10^{2} \cdot 2 = 26^{5} \cdot 100 \cdot 2
+$$
+Sapendo che:
+$$
+26^{5} = 11.881.376
+$$
+Otteniamo:
+$$
+N_{U1} = 11.881.376 \cdot 100 \cdot 2 = 2.376.275.200
+$$
+L'entropia in bit è
+$$
+H_{U1} = \log_{2}(N_{U1}) = \log_{2}(26^{5}) + \log_{2}(10^{2}) + \log_{2}(2)
+$$
+Utilizzando le approssimazioni:
+- $\log_{2}(26) \approx 4.7$, quindi $\log_{2}(26^{5}) \approx 5 \cdot 4.7 = 23.5bit$ 
+- $\log_{2}(10) \approx 3.32$, dunque $\log_{2}(10^{2}) \approx 2 \cdot 3.32 = 6.64 bit$
+- $\log_{2}(2)= 1bit$ 
+
+in totale:
+$$
+H_{U1} = 23.5+6.64+1 = 31.14bit
+$$
+
+
+Per U2
+Ogni carattere è scelto da un intero charset di 64 caratteri, quindi:
+$$
+N_{U2} = 64^{6}
+$$
+Poichè $\log_{2}(64) = 6$, l'entropia è:
+$$
+H_{U2} = 6 \cdot 6 = 36bit
+$$
+
+
+**Tempo medio necessario per craccare le password**
+L'ipotesi è di provare 1 milione di password al secondo ($1\cdot10^{6}$ passwd/s). In un attacco esaustivo, in media occorre provare la metà dello spazio di ricerca
+
+Per U1: Numero totale di possibilità: $N_{U1} = 2.376.275.200$. Numero medio di tentativi:
+$$
+\frac{N_{U1}}{2} \approx \frac{2.376 \cdot 10^{9}}{2} = 1.188 \cdot 10^{9}
+$$
+Tempo medio in secondi:
+$$
+T_{U1} = \frac{1.188 \cdot 10^{9}}{1 \cdot 10^{6}} \approx 1188secondi
+$$
+Convertiamo in minuti:
+$$
+1188 \div 60 \approx 19.8 minuti
+$$
+
+Per U2: Numero totale di possibilità:
+$$
+N_{U2} = 64^{4} = 2^{36} \approx 68.719.476.736
+$$
+Numero medio di tentativi:
+$$
+\frac{N_{U2}}{2} \approx \frac{68.72 \cdot 10^{9}}{2} \approx 34.36 \cdot 10^{9}
+$$
+Tempo medio in secondi:
+$$
+T_{U2} = \frac{34.36 \cdot 10^{9}}{1 \cdot 10^{6}} \approx 34.360 secondi
+$$
+Convertiamo in ore:
+$$
+34.360 \div 3600 \approx 9.55 ore
+$$
+

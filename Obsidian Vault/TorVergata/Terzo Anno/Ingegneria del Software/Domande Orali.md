@@ -243,3 +243,211 @@ Le principali differenze tra req. funzionali/non funzionali sono quindi che:
 - I primi identificano tutte quelle operazioni che il sistema deve eseguire, ad esempio *"Arriva la richiesta di cancellazione di un account, il sistema deve essere in grado di eseguire tale operazione senza problemi"*
 - Gli altri identificano tutte quelle funzionalità che il sistema deve avere e rispettare, ad esempio *"Il sistema deve essere affidabile, sicuro e deve garantire la crittografia dei dati"*, oppure *"Il sistema deve garantire performance adeguate al numero di query che arrivano"*, ecc..
 
+
+#### Domanda 3 - Caratteristiche modello a spirale
+
+>[!info] Modello del ciclo di vita del SW
+>Il modello del ciclo di vita del SW specifica la serie di fasi attraverso cui il prodotto SW progredisce e l'ordine in cui vanno eseguite, dalla definizione dei requisiti alla dismissione
+
+Ci sono vari modelli, tra cui i più importanti sono:
+- **Build & Fix**: Non è un vero modello, infatti si usa in assenza di uno degli altri modelli, qui il prodotto SW viene prima sviluppato e poi rilavorato fino a soddisfare le esigenze del cliente
+- **Modello Waterfall**: Modello dove le operazioni vengono effettuate a "cascata", con approccio *sequenziale e lineare*.
+	- Ogni fase deve essere completata prima di passare alla successiva
+	- Ad ogni fine fase è associata la verifica, per poter passare alla successiva
+	- Ideale per progetti i cui requisiti sono chiari e ben definiti dall'inizio
+
+- **Modello a Spirale**: Modello con approccio *iterativo* che combina elementi del modello Waterfall con attenzione particolare per l'analisi dei rischi
+	- Il SW viene sviluppato attraverso iterazioni, ognuna delle quali affronta una parte del progetto
+	- Ideale per progetti complessi e ad alto rischio, in cui i requisiti possono cambiare durante il ciclo di vita
+
+Le caratteristiche principali del modello a spirale sono:
+**Struttura iterativa** 
+- Il progetto è suddiviso in cicli (spirali), ognuno dei quali comporta pianificazione, progettazione, implementazione e valutazione
+- Ogni iterazione aggiunge valore al prodotto
+
+**Fasi principali in ogni ciclo**
+- *Customer communication* (Comunicazione con il cliente): Interazione costante per raccogliere e aggiornare i requisiti
+- *Planning* (Pianificazione): Definizione degli obiettivi, stime di costo, tempi e gestione dei rischi
+- *Risk analysis* (Analisi dei rischi): Identificazione e gestione dei rischi associati al progetto
+- *Engineering* (Ingegnerizzazione): Progettazione e implementazione tecnica
+- *Construction & Release* (Costruzione e rilascio): Realizzazione e rilascio dei deliverable
+- *Customer evaluation* (Valutazione del cliente): Feedback e valutazione del prodotto per prepararsi al ciclo successivo
+
+**Gestione dei rischi**
+- L'identificazione e la mitigazione dei rischi sono centrali in questo modello
+
+**Incrementalità**
+- Ogni ciclo produce una versione incrementale del software, migliorando il prodotto fino alla versione finale
+
+
+![[Pasted image 20250609144901.png#center | 500]]
+
+
+#### Domanda 4 - Cosa significa fare Risk Analysis
+L'analisi dei rischi è un processo fondamentale per identificare, valutare e gestire i possibili problemi o incertezze che potrebbero influenzare negativamente il successo di un progetto. Nel contesto dello sviluppo software (e in particolare nel modello a spirale), l'analisi dei rischi aiuta a prevenire problemi futuri, ottimizzare i costi e garantire che il progetto rimanga nei limiti previsti di tempo e qualità
+
+**Fasi Principali**
+
+- **Identificazione dei rischi**
+	- Trovare tutte le possibili minacce che potrebbero compromettere il progetto
+	- Tipologie di rischi da considerare:
+		- Tecnici: Incertezza nella fattibilità tecnica, utilizzo di nuove tecnologie o complessità del sistema
+		- Gestionali: Budget insufficiente, risorse non adeguate o scadenze non realistiche
+		- Operativi: Cambiamenti nei requisiti del cliente, modifiche alle priorità del progetto
+		- Esterni: Fattori esterni come problemi legali, economici o di mercato
+		- Di qualità: Il software potrebbe non soddisfare i requisiti di qualità stabiliti
+
+- **Valutazione dei rischi**
+	- Obiettivo: Stimare l'impatto e la probabilità di ogni rischio
+	- Due parametri principali:
+		- **Probabilità (Likelihood)**: Quanto è probabile che il rischio si verifichi? 
+		- **Impatto (Impact)**: Qual'è l'effetto sul progetto se il rischio si verifica?
+	- Matrici di rischio: Tabelle che classificano i rischi combinando probabilità ed impatto
+
+- **Prioritizzazione dei rischi**
+	- Obiettivo: Stabilire quali rischi devono essere affrontati immediatamente
+	- Tecniche comuni:
+		- Analisi Pareto (80/20): Concentrarsi sui pochi rischi che causano la maggior parte dei problemi
+		- Diagramma di Ishikawa: Visualizzare le cause principali dei rischi
+
+- **Pianificazione delle azioni di mitigazione**
+	- Obiettivo: Definire le azioni per ridurre la probabilità o l'impatto dei rischi
+	- Azioni comuni:
+		- **Evitare**: Cambiare il piano per eliminare il rischio
+		- **Ridurre**: Prendere misure per diminuire la probabilità o l'impatto
+		- **Trasferire**: Delegare il rischio a terzi
+		- **Accettare**: Decidere di non agire e gestire le conseguenze se il rischio si verifica
+
+- **Monitoraggio e revisione continua**
+	- Obiettivo: Assicurarsi che i rischi siano costantemente gestiti durante tutto il ciclo di vita del progetto
+	- Strumenti utilizzati:
+		- Revisioni periodiche dei rischi
+		- Aggiornamenti alle matrici di rischio
+		- Verifica delle azioni di mitigazione intraprese
+
+
+#### Domanda 5 - Architettura Oggetti Distribuiti
+L'architettura di sistema **definisce** la struttura dei **componenti** del sistema software, insieme alle **relazioni tra questi** componenti
+
+L'architettura ad **oggetti distribuiti** è un'architettura di sistema che non fa distinzioni tra client/server, infatti ogni oggetto distribuito può fungere sia da client che da server.
+La comunicazione remota fra gli oggetti è resa **trasparente** usando *middlewar* basati sul concetto di **software bus**
+
+Le applicazioni basate su questa architettura consistono in un **insieme di oggetti** che sono eseguiti su piattaforme **distribuite ed eterogenee**, e comunicano tramite invocazioni remote e metodi
+
+
+
+#### Domanda 6 - ORB
+
+>[!info] ORB (Object Request Broker)
+>Componente SW (Middlewar) che permette la comunicazione tra oggetti distribuiti su una rete, indipendentemente dalla loro posizione fisica, dal linguaggio di programmazione utilizzato o dal S.O. su cui sono in esecuzione
+
+Funge quindi da **intermediario** per facilitare l'interazione tra oggetti in un'architettura distribuita
+
+**Funzionamento**
+- **Intermediazione delle richieste**:
+	- L'ORB consente a un oggetto client (richiedente) di invocare metodi su un oggetto server (fornitore di servizi) che può risiedere su una macchina remota o locale
+	- Il client non deve conoscere i dettagli sull'implementazione o sulla posizione fisica dell'oggetto server
+
+- **Astrazione**: 
+	- Fornisce un'interfaccia standard che permette agli sviluppatori di concentrarsi sulla logica applicativa, senza preoccuparsi della complessità della comunicazione a basso livello
+
+- **Gestione della comunicazione**:
+	- L'ORB si occupa della serializzazione (marshalling) e deserializzazione (unmarshalling) dei dati trasmessi tra il client e il server
+	- Gestisce i protocolli di rete necessari per il trasporto dei dati
+
+- **Trasparenza**:
+	- Fornisce trasparenza sia nella posizione (**Location transparency**) che nell'implementazione (**implementation transparency**), garantendo che gli oggetti possano interagire senza preoccuparsi dei dettagli di dove o come sono implementati
+
+Ci sono varie implementazioni per l'ORB, ma la più famosa è **CORBA** (Common Object Request Broker Architecture)
+
+
+#### Domanda 7 - Che relazione c'è tra prodotto e costo di produzione?
+La relazione tra prodotto e costo di produzione nel contesto del software è complessa e si basa su diversi fattori:
+- **Dimensione del prodotto**:
+	- Maggiore è la complessità e la dimensione del software, maggiore sarà il costo di produzione
+
+- **Qualità del prodotto**:
+	- Un software di alta qualità richiede più tempo e risorse per essere progettato, sviluppato e testato, aumentando i costi iniziali
+	- Tuttavia, un software di bassa qualità può comportare costi aggiuntivi per manutenzione e correzioni
+
+- **Efficienza dei processi di sviuppo**:
+	- L'uso di metodologie di sviluppo efficienti può ridurre i costi mantenendo alta la qualità
+
+- **Automazione e strumenti**:
+	- L'uso di strumenti di automazione può ridurre il costo di produzione migliorando l'efficienza
+
+- **Scalabilità del prodotto**:
+	- Un software scalabile e modulare può ridurre i csoti a lungo termine, facilitando aggiornamenti e manutenzione
+
+In sintesi, esiste un equilibrio tra il costo iniziale di produzione e i costi successivi legati alla manutenzione, supporto e aggiornamenti
+
+
+#### Domanda 8 - Implementazione SOA
+
+>[!info] SOA (Service Oriented Architecture)
+>La **SOA** è un'architettura distribuita che consiste in molteplici servizi. I servizi sono distribuiti in modo tale da poter essere eseguiti su nodi differenti con differenti service provider.
+>L'obiettivo di SOA è quello di sviluppare **applicazioni SW che sono composte da servizi distribuiti**, in modo tale che i singoli servizi possano essere eseguiti su più piattaforme differenti e implementati con differenti linguaggi di programmazione
+
+
+All'interno di SOA troviamo l'ORB, che gestisce la comunicazione tra i client e i servizi offerti nel SOA
+
+Anche se le SOA sono concettualmente platform-indipendent, attualmente vengono fornite con grande successo su piattaforme tecnologiche di **Web Services**
+
+Da un punto di vista SW, i Web Services sono le API (Application Programming Interface) che forniscono i metodi standard di comunicazione
+Da un punto di vista del business, i Web Services sono funzionalità di business fornite da una compagnia nella forma di servizio esplicito in Internet
+
+I Web Services sono quindi il fulcro dell'implementazione SOA, e sfruttano vari protocolli per far comunicare i servizi fra di loro
+
+Tra questi troviamo:
+- **SOAP** (Simple Object Access Protocol):
+	- Protocollo basato su linguaggio XML e HTML che permette lo scambio di informazioni in un sistema distribuito
+	- Utilizza protocolli di trasporto come HTTP, SMTP e altri
+
+- **REST** (Representational State Transfer)
+	- Architettura che utilizza i metodi HTTP per performare le operazioni **CRUD** (Create Read Update Delete)
+
+Oltre ai Web Services, le architettura SOA utilizzano altre tecnologie, tra cui:
+- **UDDI** (Universal Description, Discovery, and Integration)
+	- Registro per pubblicare e trovare servizi web all'interno di un'architettura SOA 
+	- Aiuta a localizzare e identificare i servizi disponibili su una rete
+
+- **WSDL** (Web Services Description Language)
+	- Linguaggio basato su XML utilizzato per descrivere le interfacce dei servizi in un'architettura SOA
+	- Specifica cosa il servizio fa, come può essere invocato e dove si trova
+
+
+#### Domanda 9 - Secondo quali attività va declinata la fase di testing?
+La fase di testing, nel ciclo di vita del software, è articolata in una serie di attività che assicurano che il prodotto soddisfi i requisiti definiti. Queste attività includono:
+
+1. **Pianificazione del testing**:
+	- Definizione degli obiettivi del testing
+	- Identificazione delle risorse necessarie
+	- Pianificazione temporale e stima dei costi
+
+2. **Progettazione dei casi di test**:
+	- Creazione di scenari di test basati sui requisiti funzionali e non funzionali
+	- Identificazione delle condizioni iniziali, dei dati di input e dei risultati attesi
+
+3. **Preparazione dell'ambiente di test**:
+	- Configurazione degli ambienti (hardware, software, reti)
+	- Installazione delle versioni del software da testare
+
+4. **Esecuzione dei test**:
+	- Esecuzione dei casi di test progettati
+	- Registrazione dei risultati (successo o fallimento) e documentazione delle anomalie
+
+5. **Analisi dei risultati**:
+	- Confronto tra i risultati ottenuti e quelli attesi
+	- Identificazione e classificazione dei difetti
+
+6. **Risoluzione dei problemi**.
+	- Collaborazione con il team di sviluppo per risolvere i difetti identificati
+	- Verifica delle correzioni mediante retesting
+
+7. **Test di regressione**:
+	- Assicurarsi che le modifiche al codice non abbiano introdotto nuovi errori
+
+8. **Valutazione finale e report**:
+	- Verifica se il prodotto soddisfa i criteri di accettazione
+	- Redazione di un report con le conclusioni del testing
+
