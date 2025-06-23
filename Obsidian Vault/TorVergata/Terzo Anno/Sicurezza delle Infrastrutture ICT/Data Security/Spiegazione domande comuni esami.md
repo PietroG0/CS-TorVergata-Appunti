@@ -131,3 +131,87 @@ $$
 
 Perciò, sono necessarie circa 1.18 x $10^{6}$ estrazioni, in altre parole, all'incirca 1,2 milioni di estrazioni
 
+
+
+---
+
+
+#### ElGamal
+
+1. **Generazione delle chiavi**:
+- Scelta dei parametri pubblici: Scegli un numero primo $p$ e un generatore $g$ del gruppo moltiplicativo modulo $p$
+- Chiave privata: Scegli un numero segreto $s$
+- Chiave pubblica: Calcola $y=g^{s} \mod p$. La chiave pubblica è $(p,g,y)$, mentre $s$ resta segreta
+
+2. **Cifratura**
+- Per cifrare un messaggio $M$ (inteso come un numero modulo $p$), scegli un numero casuale $r$ (detto nonce)
+- Calcola $a = g^{r} \mod p$
+- Calcola $b = M \cdot y^{r} \mod p$
+- Il ciphertext è la coppia $(a, b)$
+
+3. **Decifratura**
+- Conosciuta la chiave privata $s$, calcola il segreto condiviso $K = a^{s} \mod p$
+- Trova l'inverso modulo $p$ di $K$, $K^{-1}$, in modo che $K \cdot K^{-1} \equiv 1 \mod p$
+- Recupera il messaggio $M$ calcolando $M = b \cdot K^{-1} \mod p$
+
+
+---
+
+#### Inverso modulare
+
+1. **Verifica della condizione**
+- Assicurati che $gcd(a,m) = 1$. Se non è 1, l'inverso non esiste
+
+2. **Algoritmo di Euclide esteso**
+- Applica l'algoritmo di Euclide per trovare i coefficienti $x$ ed $y$ tali che
+$$
+a \cdot x + m \cdot y = gcd(a,m) = 1
+$$
+
+3. **Back-Substituition**
+- Risali la catena delle equazioni per esprimere 1 come combinazione lineare di $a$ e $m$
+- Il coefficiente $x$ trovato in questa equazione è l'inverso di $a \mod m$
+
+4. **Normalizzazione**
+- Se $x$ è negativo, trasformalo in un intero positivo usando $x \mod m$
+
+
+---
+
+#### Filtri di Bloom
+
+**Identifica i parametri dati**
+- $n$: numero di elementi da inserire
+- $p$: probabilità massima di falso positivo desiderata
+
+
+**Calcolo della dimensione del filtro (m in bit)**
+La formula classica è:
+$$
+m = -\frac{n \ln p}{(\ln2)^2}
+$$
+1. Calcola $(\ln2)^{2}$: Con $\ln2 \approx 0.6931$, allora $(\ln2)^{2} \approx 0.4805$
+2. Sostituisci i valori: Inserisci $n$, $\ln p$ e $(\ln2)^{2}$ nella formula per ottenere $m$
+
+**Calcolo del numero ottimale di funzioni hash (k)**
+La formula per $k$ è:
+$$
+k = \frac{m}{n}\ln 2
+$$
+
+**Calcolo del numero di probabilità di falsi positivi (p)**
+La formula è:
+$$
+p = (1-e^{-k\cdot \frac{n}{m}})^k
+$$
+
+**Calcolo del numero massimo di password (n)**
+La formula è:
+$$
+n = \frac{m(\ln2)^2}{-\ln(p)}
+$$
+
+**Calcolo degli elementi massimi quando si usa un valore k diverso (con p uguale)**
+$$
+n = -\frac{m}{k}\ln (1-p^{1/k})
+$$

@@ -1,7 +1,7 @@
 #Sicurezza 
 
 #### Ruolo degli ISP e infrastruttura di rete
-Un aspetto cruciale per la nostra esperienza quotidiana su Internet è il ruolo degli ISP (Internet Service Provider). Un ISP, definito anche come fornitore di accesso (IAP), è la societàà che collega privati, aziende e reti locali al più ampio mondo di Internet. Questi provider impiegano tecnologie differenti per trasportare pacchetti IP. 
+Un aspetto cruciale per la nostra esperienza quotidiana su Internet è il ruolo degli ISP (Internet Service Provider). Un ISP, definito anche come fornitore di accesso (IAP), è la società che collega privati, aziende e reti locali al più ampio mondo di Internet. Questi provider impiegano tecnologie differenti per trasportare pacchetti IP. 
 
 - Un concetto importante qui è quello del **Point of Presence (PoP)**: questi sono centri dati che ospitano server, router, switch e altri dispositivi di rete, fungendo da nodi attraverso cui il traffico degli utenti viene raccolto e instradato. Dal PoP, la connessione si rafforza ulteriormente grazie a linee ad alta capacità che portano il traffico verso i più grandi snodi della rete, i Network Access Point (NAP)
 
@@ -9,7 +9,7 @@ Un aspetto cruciale per la nostra esperienza quotidiana su Internet è il ruolo 
 
 
 #### Il paradigma Client-Server
-Il modello client-server è alla base della maggior parte delle interazioni su Internet. In questo paradigma il client, che può essere un browser, un'applicazione mobile o un qualsiasi altro dispositivo, è colui che inizia la comunicazione facendo una richiesta, mentre il serve è il "ricevitore" che attende costantemente queste richieste per fornire il servizio richiesto
+Il modello client-server è alla base della maggior parte delle interazioni su Internet. In questo paradigma il client, che può essere un browser, un'applicazione mobile o un qualsiasi altro dispositivo, è colui che inizia la comunicazione facendo una richiesta, mentre il server è il "ricevitore" che attende costantemente queste richieste per fornire il servizio richiesto
 
 - **Aspetti operativi**: Il server dispone di una "porta" ben definita, a cui i client si connettono per accedere ai servizi
 - **Considerazioni sulla sicurezza**: Durante questa interazione è fondamentale implementare adeguati meccanismo di autenticazione (per verificare l'identità del client) e di autorizzazione (per garantire che il client abbia il permesso di accedere al servizio), al fine di preservare l'integrità e la sicurezza dei dati

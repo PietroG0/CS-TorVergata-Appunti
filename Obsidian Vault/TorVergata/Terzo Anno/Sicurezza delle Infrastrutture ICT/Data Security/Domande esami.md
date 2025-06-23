@@ -1936,7 +1936,7 @@ Riassumendo, la **soluzione migliore è quella dell'utente 3**
 
 **Calcolo dell'entropia**
 Per U1
-- 1 carattere maiuscolo (X): 26 possibilità 
+-  1 carattere maiuscolo (X): 26 possibilità 
 - 4 caratteri minuscoli (xxxx): ogni posizione ha 26 possibilità, cioè $26^{4}$
 - 2 cifre (D): ogni posizione ha 10 possibilità, cioè $10^{2}$
 - 1 simbolo speciale (S): 2 possibilità
@@ -2011,4 +2011,80 @@ Convertiamo in ore:
 $$
 34.360 \div 3600 \approx 9.55 ore
 $$
+
+
+---
+
+
+*D54* Si calcoli $13^{-1} \mod 101$ usando l'algoritmo di Euclide esteso
+
+**Calcolo del MCD**
+- $101 = 13 \cdot 7 + 10$
+- $13 = 10 \cdot 1 + 3$
+- $10 = 3 \cdot 3 + 1$
+- $3 = 1 \cdot 3 + 0$
+
+L'inverso modulare esiste
+
+**Back-substituition**
+- Dall'equazione $10 = 3 \cdot 3 + 1$, scriviamo 
+$$
+1 = 10 - 3 \cdot 3
+$$
+- Dall'equazione $13 = 10 \cdot 1 + 3$, scriviamo
+$$
+3 = 13 - 10
+$$
+
+Sostituendo:
+$$
+1 = 10 - 3 \cdot (13 - 10) = 10 - 3 \cdot 13 + 3 \cdot 10 = 4 \cdot 10 - 3 \cdot 13
+$$
+
+- Dall'equazione $101 = 13 \cdot 7 + 10$, esprimiamo il 10
+$$
+10 = 101 - 13 \cdot 7
+$$
+Sostituendo in $1 = 4 \cdot 10 - 3 \cdot 13$:
+$$
+1 = 4 \cdot (101 - 13 \cdot 7) - 3 \cdot 13
+$$
+Applichiamo la proprietà distributiva:
+$$
+1 = 4 \cdot 101 - 4 \cdot (13 \cdot 7) - 3 \cdot 13
+$$
+
+Osserviamo che $4 \cdot (13 \cdot 7) = (4 \cdot 7) \cdot 13 = 28 \cdot 13$, dunque:
+$$
+1 = 4 \cdot 101 - 28 \cdot 13 - 3 \cdot 13
+$$
+Raccogliendo 13:
+$$
+1 = 4 \cdot 101 - (28 + 3) \cdot 13 = 4 \cdot 101 -31 \ cdot 13
+$$
+Questa equazione ci dice che
+$$
+-31 \cdot 13 + 4 \cdot 101 = 1
+$$
+
+Per esprimere l'inverso (dato che è negativo), calcoliamo:
+$$
+-31 \mod 101 = 101 - 31 = 70
+$$
+
+Quindi, il risultato finale è:
+$$
+13^{-1} \equiv 70 (\mod 101)
+$$
+
+
+---
+
+
+*D55* Nell'autenticazione a due fattori quale è la differenza tra HOTP e TOTP
+
+- HOTP (HMAC-based One-Time Password) e TOTP (Time-based One-Time Password) sono entrambe tecniche per generare password monouso (OTP), ma differiscono nel meccanismo di generazione dei codici
+
+- *HOTP* utilizza un contatore incrementale: ogni volta che si richiede un codice, il contatore aumenta e viene applicato un algoritmo HMAC alla chiave segreta associata e al contatore stesso. Il codice generato rimane valido fino a che non viene utilizzato, indipendentemente dal tempo trascorso. 
+- *TOTP*, invece, si basa sul tempo: il codice OTP è calcolato in funzione dell'orario corrente, solitamente suddiviso in intervalli standard. In questo caso il codice scade automaticamente al termine dell'intervallo, rendendo più difficile il riutilizzo di un token intercettato e migliorando la sicurezza complessiva
 
