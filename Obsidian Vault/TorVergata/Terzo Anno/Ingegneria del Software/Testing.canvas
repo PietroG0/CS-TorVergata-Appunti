@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"6d4fc4138714a26c","x":-100,"y":-120,"width":147,"height":60,"color":"3","type":"text","text":"Testing"},
+		{"id":"1e9a997c059388b8","x":-760,"y":-210,"width":472,"height":241,"color":"6","type":"text","text":"Verification e Validation\n-Verification: Risponde a domande tipo \"stiamo costruendo il prodotto correttamente?\", ovvero, il software deve essere conforme alle sue specifiche\n\n-Validation: Risponde a domande tipo \"stiamo costruendo il giusto prodotto?\", ovvero, il software deve essere quello che l'utente veramente ha richiesto"},
+		{"id":"2cdbf2f87186746d","x":-182,"y":31,"width":311,"height":149,"color":"3","type":"text","text":"La fase di testing si assicura che un **sistema software sia conforme alle sue specifiche e che soddisfi le esigenze** dell'utente"},
+		{"id":"2c77fc43d6d8aee1","x":-693,"y":139,"width":338,"height":281,"color":"6","type":"text","text":"Tecniche di V&V\n-Ispezioni software: si occupa dell'analisi della rappresentazione statica del sistema per scoprire i problemi (*tecniche statiche*)\n\n-Testing Software: si occupa dell'esercizio e dell'osservazione del comportamento del prodotto (*tecniche dinamiche*)"},
+		{"id":"a3dde469efe21b03","x":180,"y":-120,"width":180,"height":60,"type":"text","text":"Tipi di Testing"},
+		{"id":"f53483cced32966d","x":145,"y":-480,"width":250,"height":240,"color":"1","type":"text","text":"Defect Testing\nIl goal del defect testing è quello di scoprire difetti nei programmi, **un defect test riuscito è un test che causa un comportamento anomalo** all'interno del programma"},
+		{"id":"6340eb12328bf66c","x":-26,"y":-800,"width":248,"height":177,"color":"1","type":"text","text":"Component Testing\n-Si testano le componenti del programma in modo individuale, in generale la responsabilità è del developer"},
+		{"id":"22368e789bd97368","x":300,"y":-813,"width":280,"height":190,"color":"1","type":"text","text":"Integration Testing\n-Si testano gruppi di componenti integrati per creare un sistema o sottosistema, la responsabilità è del team di testing indipendente"},
+		{"id":"f2727433dee47ee8","x":500,"y":-248,"width":406,"height":318,"type":"text","text":"Black-Box Testing\nApproccio al testing dove il programma viene considerato una **scatola nera**. Il tester presenta gli input al componente o al sistema ed esamina l'output corrispondente. Se gli output non sono quelli specificati, allora il test ha rilevato con successo un problema con il software. Di fatto, il tester **lavora \"dal di fuori\", non consulta codici, classi o architetture interne, ma valuta solo se il comportamento osservato corrisponde a quanto definito dalle specifiche**"},
+		{"id":"6d8a8fbdcbbf9131","x":104,"y":200,"width":333,"height":250,"color":"#ffffff","type":"text","text":"White-Box Testing\nI test case sono derivati dalla *struttura del programma*, la conoscenza del programma viene usata per identificare ultetiori test case. L'obiettivo di questo tipo di testing **è quello di far lavorare ogni istruzione di codice all'interno del programma**"},
+		{"id":"5c9115718c98d219","x":1020,"y":-206,"width":354,"height":233,"type":"text","text":"Equivalence Partitioning\nE' una tecnica di progettazione dei test case che **suddivide lo spazio degli input in gruppi (partizioni) di valori ritenuti equivalenti**. L'idea è che un singolo test per ciascuna partizione possa validare il comportamento per tutti i valori di quel gruppo"},
+		{"id":"2f9af92abee02813","x":521,"y":186,"width":364,"height":279,"color":"#ffffff","type":"text","text":"Path Testing\nE' una tecnica che mira a esercitare tutti i possibili percorsi di esecuzione di una procedura o di un modulo. L'obiettivo è **verificare che ogni sequenza di istruzioni, condizione e ramo logico sia stata eseguita almeno una volta, per individuare difetti legati a combinazioni di flusso** non coperte da test più superficiali"}
+	],
+	"edges":[
+		{"id":"ee6a2ede4f47ccb4","fromNode":"6d4fc4138714a26c","fromSide":"bottom","toNode":"2cdbf2f87186746d","toSide":"top","label":"Definizione"},
+		{"id":"e92ac45d92f204c0","fromNode":"6d4fc4138714a26c","fromSide":"left","toNode":"1e9a997c059388b8","toSide":"right","label":"V&V"},
+		{"id":"135f7663d42f56b0","fromNode":"1e9a997c059388b8","fromSide":"bottom","toNode":"2c77fc43d6d8aee1","toSide":"top","label":"Tecniche"},
+		{"id":"9fceff046bcf53ce","fromNode":"6d4fc4138714a26c","fromSide":"right","toNode":"a3dde469efe21b03","toSide":"left"},
+		{"id":"014395edb3c4d763","fromNode":"a3dde469efe21b03","fromSide":"top","toNode":"f53483cced32966d","toSide":"bottom"},
+		{"id":"930577eadd7d3796","fromNode":"f53483cced32966d","fromSide":"top","toNode":"6340eb12328bf66c","toSide":"bottom","label":"Fase 1"},
+		{"id":"1f82795a70d918a2","fromNode":"f53483cced32966d","fromSide":"top","toNode":"22368e789bd97368","toSide":"bottom","label":"Fase 2"},
+		{"id":"2a1bd6b75f3b5235","fromNode":"a3dde469efe21b03","fromSide":"right","toNode":"f2727433dee47ee8","toSide":"left"},
+		{"id":"532c0c8803ff2e29","fromNode":"a3dde469efe21b03","fromSide":"bottom","toNode":"6d8a8fbdcbbf9131","toSide":"top"},
+		{"id":"2d5e0b10eeb5047d","fromNode":"f2727433dee47ee8","fromSide":"right","toNode":"5c9115718c98d219","toSide":"left"},
+		{"id":"19c3e773fa3daa35","fromNode":"6d8a8fbdcbbf9131","fromSide":"right","toNode":"2f9af92abee02813","toSide":"left"}
+	]
+}

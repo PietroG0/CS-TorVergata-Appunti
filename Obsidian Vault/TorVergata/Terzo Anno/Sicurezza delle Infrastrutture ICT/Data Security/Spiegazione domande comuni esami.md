@@ -155,6 +155,37 @@ Perciò, sono necessarie circa 1.18 x $10^{6}$ estrazioni, in altre parole, all'
 - Recupera il messaggio $M$ calcolando $M = b \cdot K^{-1} \mod p$
 
 
+
+*Calcolo della chiave pubblica*
+- Dato il primo $p$, il generatore $g$ e la chiave privata $x$
+- Si ottiene la chiave pubblica $h$ con la formula $h \equiv g^{x} \mod p$
+- La chiave pubblica è la tripla $(p, g, h)$
+
+
+*Decifrare un messaggio*
+Testo cifrato $\rightarrow (c_{1},c_{2})$ Chiave privata $\rightarrow x$
+- Calcolare $s = c_{1}^{x} \mod p$
+- Trovare l'inverso di $s \mod p$, cioè $s^{-1}$ tale che $s \cdot s^{-1} \equiv 1 \mod p$
+- Ricostruire il messaggio: $m \equiv c_{2} \cdot s^{-1} \mod p$
+
+
+*Cifrare un messaggio*
+Messaggio in chiaro $\rightarrow m$ Chiave pubblica $\rightarrow (p, g, h)$
+- Scegliere un intero casuale $k$
+- Calcolare $c_{1} \equiv g^{k} \mod p$ e $c_{2} \equiv m \cdot h^{k} \mod p$
+- Testo cifrato $\rightarrow (c_{1},c_{2})$
+
+
+*Distinguere chiave pubblica e privata*
+Dati due valori $a$ e $b$, per capire quale sia $x$ e quale $h$:
+- Verificare se $g^{a} \mod p = b$
+	- Se si, allora $x=a$ (privata) e $h=b$ (pubblica)
+
+- Altrimenti, se $g^{b} \mod p = a$
+	- Allora $x=b$ (privata) e $h=a$ (pubblica)
+
+In pratica, il valore che soddisfa $h \equiv g^{x} \mod p$ è sempre la chiave pubblica
+
 ---
 
 #### Inverso modulare
@@ -199,6 +230,12 @@ $$
 k = \frac{m}{n}\ln 2
 $$
 
+**K ottimo per dato m e p**
+$$
+k = -\frac{\ln p}{\ln2}
+$$
+
+
 **Calcolo del numero di probabilità di falsi positivi (p)**
 La formula è:
 $$
@@ -211,7 +248,37 @@ $$
 n = \frac{m(\ln2)^2}{-\ln(p)}
 $$
 
+
+
 **Calcolo degli elementi massimi quando si usa un valore k diverso (con p uguale)**
 $$
 n = -\frac{m}{k}\ln (1-p^{1/k})
 $$
+
+
+**In sintesi**
+
+| Obiettivo                        | Dati noti | Formula                          |
+| -------------------------------- | --------- | -------------------------------- |
+| Dimensionare $m$                 | $n,p$     | $m = -\frac{n \ln p}{(\ln2)^2}$  |
+| Scegliere $k$ ottimale           | $m,n$     | $k = \frac{m}{n}\ln2$            |
+| Calcolare $k$ da target $p$      | $p$       | $k = -\frac{\ln p}{\ln 2}$       |
+| Trovare $n$ massimo              | $m,p$     | $n = \frac{m(\ln 2)^2}{\ln p}$   |
+| Stimare $n$ con $k$ non ottimale | $m,p,k$   | $n = -\frac{m}{k}\ln(1-p^{1/k})$ |
+| Stimare $p$                      | $m,n,k$   | $p = (1-e^{-k\cdot n/m})^k$      |
+
+
+---
+
+
+#### RSA
+
+**Cifratura**
+$$
+M^{e} \mod N
+$$
+**Decifratura**
+$$
+C^{d} \mod N
+$$
+

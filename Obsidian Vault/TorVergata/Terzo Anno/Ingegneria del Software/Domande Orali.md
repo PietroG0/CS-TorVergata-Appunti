@@ -53,7 +53,7 @@ https://refactoring.guru/design-patterns/abstract-factory
 - *Motivazione*: E' un pattern ampiamente usato nei framework, dove le classi astratte definiscono le relazioni tra gli elementi del dominio, e sono responsabili per la creazione degli oggetti concreti
 
 ![[Pasted image 20250607151235.png#center]]
-https://refactoring.guru/design-patterns/factory-method
+https://refactoring.guruAb![[Pasted image 20250704170006.png]]/design-patterns/factory-method
 
 *Affidabilità*:
 - Una classe non è in grado di sapere in anticipo le classi di oggetti che deve creare

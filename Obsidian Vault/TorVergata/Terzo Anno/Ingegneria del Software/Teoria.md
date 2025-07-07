@@ -251,4 +251,3 @@ L'approccio BCE ti guida nel progettare un sistema che sia pulito, modulare e co
 Un'architettura software è un insieme di decisioni strutturali e di linee guida che definiscono la forma generale di un sistema software: come è suddiviso, come comunicano le sue parti, e quali responsabilità ha ciascuna componente
 
 
-##### OOD Architecture distribute (Distributed Software Systems)

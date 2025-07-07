@@ -46,7 +46,7 @@ $MSS = 1000$ byte
 
 *Tetto imposto dal receiver*
 Il ricevente, con la finestra rwnd, limita quanti byte il mittente può tenere "in volo"
-Tasso massim teorico dal punto di vista del ricevente
+Tasso massimo teorico dal punto di vista del ricevente
 $$
 \frac{rwnd}{RTT} = \frac{250kB}{0,2s} = 1,25 Mbit/s = 10Mbit/s
 $$

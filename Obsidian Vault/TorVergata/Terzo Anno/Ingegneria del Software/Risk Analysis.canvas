@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"fd6473f2bc2d3587","type":"text","text":"Risk Analysis","x":-160,"y":-160,"width":211,"height":60},
+		{"id":"60110c42ef536be8","type":"text","text":"Identificazione dei rischi\n*Obiettivo*: Trovare tutte le possibili minacce che potrebbero compromettere il progetto. \n\nTipologie di rischi da considerare:\n-Tecnici\n-Gestionali\n-Operativi\n-Esterni\n-Di qualità","x":-640,"y":-279,"width":351,"height":299,"color":"1"},
+		{"id":"2cae226791d400e7","type":"text","text":"Valutazione dei rischi\n-**Obiettivo**: Stimare l'impatto e la probabilità di ogni rischio\n","x":-539,"y":100,"width":250,"height":146,"color":"6"},
+		{"id":"76f46f4c01f077a0","type":"text","text":"**Probabilità**\nQuanto è probabile che il rischio si verifichi? (alta, media, bassa)","x":-664,"y":360,"width":250,"height":137,"color":"6"},
+		{"id":"3736cc567c786467","type":"text","text":"**Impatto**\nQual'è l'effetto sul progetto se il rischio si verifica? (critico, moderato, lieve)","x":-414,"y":359,"width":250,"height":161,"color":"6"},
+		{"id":"88bbe9d54d5f15b3","type":"text","text":"Prioritizzazione dei rischi\n*Obiettivo*: Stabilire quali rischi devono essere affrontati immediatamente","x":-179,"y":20,"width":250,"height":148,"color":"5"},
+		{"id":"ae9c45778450b615","type":"text","text":"Pianificazione delle azioni di mitigazione\n*Obiettivo*: Definire le azioni per ridurre la probabilità o l'impatto dei rischi","x":180,"y":118,"width":327,"height":128,"color":"2"},
+		{"id":"cd8e9d34b1be2104","type":"text","text":"*Evitare*\nCambiare il piano per eliminare il rischio","x":-100,"y":353,"width":218,"height":110,"color":"2"},
+		{"id":"e1cdb9aa397c6362","type":"text","text":"*Ridurre*\nPrendere misure per diminuire la probabilità o l'impatto","x":118,"y":372,"width":220,"height":135,"color":"2"},
+		{"id":"7a6bbb7c5f14d63e","type":"text","text":"*Trasferire*\nDelegare il rischio a terzi","x":344,"y":377,"width":227,"height":104,"color":"2"},
+		{"id":"0a0efe677ae41bb6","type":"text","text":"*Accettare*\nDecidere di non agire e gestire le conseguenze se il rischio si verifica","x":571,"y":360,"width":250,"height":139,"color":"2"},
+		{"id":"dfdfc5e925aca935","x":170,"y":-195,"width":336,"height":131,"color":"4","type":"text","text":"Monitoraggio e revisione continua\n*Obiettivo*: Assicurarsi che i rischi siano costantemente gestiti durante tutto il ciclo di vita del progetto"}
+	],
+	"edges":[
+		{"id":"75e5ac2c9d3778ab","fromNode":"fd6473f2bc2d3587","fromSide":"left","toNode":"60110c42ef536be8","toSide":"right"},
+		{"id":"70ec4c56ca48eac6","fromNode":"fd6473f2bc2d3587","fromSide":"left","toNode":"2cae226791d400e7","toSide":"right"},
+		{"id":"0fe095d399219370","fromNode":"2cae226791d400e7","fromSide":"bottom","toNode":"76f46f4c01f077a0","toSide":"top"},
+		{"id":"29855483230cd687","fromNode":"2cae226791d400e7","fromSide":"bottom","toNode":"3736cc567c786467","toSide":"top"},
+		{"id":"ecc9e5d61c68fa51","fromNode":"fd6473f2bc2d3587","fromSide":"bottom","toNode":"88bbe9d54d5f15b3","toSide":"top"},
+		{"id":"16df58c7110e62d3","fromNode":"fd6473f2bc2d3587","fromSide":"right","toNode":"ae9c45778450b615","toSide":"left"},
+		{"id":"b127df83bb124dc4","fromNode":"ae9c45778450b615","fromSide":"bottom","toNode":"cd8e9d34b1be2104","toSide":"top"},
+		{"id":"9ff5a593318003be","fromNode":"ae9c45778450b615","fromSide":"bottom","toNode":"e1cdb9aa397c6362","toSide":"top"},
+		{"id":"ed902e4dc1f3439d","fromNode":"ae9c45778450b615","fromSide":"bottom","toNode":"7a6bbb7c5f14d63e","toSide":"top"},
+		{"id":"ee1609800c42f4c4","fromNode":"ae9c45778450b615","fromSide":"bottom","toNode":"0a0efe677ae41bb6","toSide":"top"},
+		{"id":"e66a2305e74ef38b","fromNode":"fd6473f2bc2d3587","fromSide":"right","toNode":"dfdfc5e925aca935","toSide":"left"}
+	]
+}

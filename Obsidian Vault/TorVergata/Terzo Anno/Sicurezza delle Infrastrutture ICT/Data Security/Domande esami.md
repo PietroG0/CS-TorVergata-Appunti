@@ -666,7 +666,7 @@ Quindi, **l'entropia della password "Atrw23mmm!" è di circa 30 bit**
 
 *D20* Si mostri come è possibile fare un attacco MITM al protocollo di key agreement Diffie Hellman
 
-- **La sicurezza del DH** si bassa sull'asserzione che, conoscendo solo $g^{x}$ e $g^{y}$, è difficile calcolare $g^{xy}$ senza risolvere il problema del logaritmo discreto
+- **La sicurezza del DH** si basa sull'asserzione che, conoscendo solo $g^{x}$ e $g^{y}$, è difficile calcolare $g^{xy}$ senza risolvere il problema del logaritmo discreto89
 - **In presenza di un attaccante MITM**, tuttavia, l'attacco non richiede di risolvere il problema del logaritmo discreto. L'attaccante si limita a sostituire i valori $g^{x}$ e $g^{y}$ con i propri $g^{m1}$ e $g^{m2}$
 - **L'assenza di autenticazione** è il punto debole: le parti coinvolte non hanno alcun modo per verificare che il valore ricevuto corrisponda veramente all'altra parte
 
@@ -2087,4 +2087,51 @@ $$
 
 - *HOTP* utilizza un contatore incrementale: ogni volta che si richiede un codice, il contatore aumenta e viene applicato un algoritmo HMAC alla chiave segreta associata e al contatore stesso. Il codice generato rimane valido fino a che non viene utilizzato, indipendentemente dal tempo trascorso. 
 - *TOTP*, invece, si basa sul tempo: il codice OTP è calcolato in funzione dell'orario corrente, solitamente suddiviso in intervalli standard. In questo caso il codice scade automaticamente al termine dell'intervallo, rendendo più difficile il riutilizzo di un token intercettato e migliorando la sicurezza complessiva
+
+
+---
+
+
+*D56* Si consideri il sistema di cifratura a chiave pubblica El Gamal con i seguenti parametri: modulo primo $p=23$, generatore $g=5$ 
+1. Si illustri, in formule, il procedimento di cifratura
+2. Si assuma che un server abbia generato una coppia di chiavi che risultano avere valori 9 e 10 (operazioni modulo p=23 con generatore g=5): tra questi due valori quale è la chiave pubblica e quale è la chiave privata?
+3. Un client invia un messaggio cifrato con la chiave pubblica del server, dato dalla coppia di valori: (17,7). Si *decifri* il messaggio
+
+
+*Procedimento di cifratura*
+$c_{1} \equiv g^{k} \mod p$
+$c_{2} \equiv m \cdot h^{k} \mod p$
+
+
+*Chiavi del server*
+I due valori ottenuti sono 9 e 10. La chiave pubblica $h$ deve soddisfare $h \equiv g^{x} \mod p$ 
+
+Calcoli:
+$5^{9} \mod 23 = 11$
+$5^{10} \mod 23 = 9$
+
+Si conclude che $x=10$ è la chiave privata e $h=9$ è la chiave pubblica
+
+
+*Decifrazione del messaggio*
+Il client invia $(c_{1},c_{2}) = (17,7)$ 
+
+Formula di decifratura: $m \equiv c_{2} \cdot c_{1}^{-x} \mod p$ 
+
+Passaggi
+1. $c_{1}^{x} \mod p = 17^{10} \mod 23 = 4$
+2. inverso di $4 \mod 23 = 6$
+3. $m = 7 \cdot 6 \mod 23 = 42 \mod 23 = 19$
+
+Testo in chiaro $\rightarrow m=19$ 
+
+
+---
+
+
+*D57* Un sistema di cifratura a chiave pubblica El Gamal usa i seguenti parametri: modulo primo $p=29$, generatore $g=8$
+1. Si illustri, in formule, il procedimento di cifratura El Gamal
+2. Sapendo che la chiave privata è $s=11$, quale è la chiave pubblica? La si calcoli manualmente, usando l'algoritmo Square&Multiply, e mostrando i vari passaggi e risultati intermedi
+3. Un client invia un messaggio cifrato dato dalla coppia di valori: $(14,22)$. Si *decifri* il messaggio
+
 
