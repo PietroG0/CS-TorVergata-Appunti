@@ -80,7 +80,7 @@
 		{
 			"id":"ab79e18e16493571",
 			"type":"text",
-			"text":"Fan-In e Fan-Out\n- Fan-In: di un modulo $M$ è il numero di flussi locali (diretti+indiretti) che terminano su $M$ più il numero di flussi globali le cui informazioni sono prelevate da $M$\n- Fan-Out: di un modulo $M$ è il numero di flussi locali (diretti+indiretti) che iniziano da $M$ più il numero di flussi globali aggiornati da $M$",
+			"text":"Fan-In e Fan-Out\n- Fan-In: di un modulo $M$ è il numero di flussi locali (diretti+indiretti) che terminano su $M$ più il numero di flussi globali le cui informazioni sono prelevate da $M$\n- Fan-Out: di un modulo $M$ è il numero di flussi locali (diretti+indiretti) che iniziano da $M$ più il numero di flussi globali aggiornati da $M$\n\nIn sintesi, il fan-in è il numero di altri moduli/funzioni che **invocano** un dato modulo, il fan-out è il ",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-780,
 			"y":760,
@@ -149,7 +149,7 @@
 			"text":"Complessità ciclomatica\nLa complessità di un programma può essere misurata dal numero **ciclomatico** del flowgraph del programma\n\nSi può calcolare in due modi diversi:\n- Flowgraph-Based\n- Code-Based\n\nIn sintesi, la complessità ciclomatica fornisce un valore numerico che aiuta a **quantificare quanto un pezzo di codice sia \"ramificato\"** e quindi quanto lavoro di testing e comprensione richiede",
 			"styleAttributes":{"textAlign":"center"},
 			"x":-1300,
-			"y":500,
+			"y":470,
 			"width":420,
 			"height":420,
 			"color":"1"

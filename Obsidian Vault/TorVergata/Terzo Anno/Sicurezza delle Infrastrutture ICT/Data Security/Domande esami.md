@@ -41,9 +41,7 @@
 	A = g^{x} \mod p
 $$
 	- Bob calcola il proprio valore pubblico
-$$
-B = g^{y} \mod p
-$$
+$$B = g^{y} \mod p$$
 Questi valori vengono poi scambiati sulla rete
 
 4) **Calcolo della chiave segreta condivisa**: Una volta scambiati questi valori, entrambi possono calcolare la stessa chiave segreta
