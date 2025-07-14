@@ -3,7 +3,7 @@
 #### Modelli
 
 ##### Modello Build & Fix
-Il modello Build & Fix è uno dei modelli di sviluppo software più semplici e primitivi, speso adottato in contesti non professionali o da sviluppatori alle prime armi. In questo approccio, il software viene costruito senza una vera analisi dei requisiti nè una progettazione preliminare, e viene continuamente corretto e modificato man mano che emergono proglemi e richieste.
+Il modello Build & Fix è uno dei modelli di sviluppo software più semplici e primitivi, speso adottato in contesti non professionali o da sviluppatori alle prime armi. In questo approccio, il software viene costruito senza una vera analisi dei requisiti nè una progettazione preliminare, e viene continuamente corretto e modificato man mano che emergono problemi e richieste.
 
 Consiste in un semplice ciclo:
 1. **Build**: Si scrive il codice in base a una vaga idea di cosa debba fare il programma
@@ -249,5 +249,6 @@ L'approccio BCE ti guida nel progettare un sistema che sia pulito, modulare e co
 **OOD (Object-Oriented Design)** è una fase nello sviluppo del software che si concentra su come realizzare il software, trasformando i concetti analizzati in un'architettura sotware concreta
 
 Un'architettura software è un insieme di decisioni strutturali e di linee guida che definiscono la forma generale di un sistema software: come è suddiviso, come comunicano le sue parti, e quali responsabilità ha ciascuna componente
+
 
 
