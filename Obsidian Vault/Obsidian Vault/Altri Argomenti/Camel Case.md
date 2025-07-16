@@ -1,1 +1,0 @@
-Nomi delle variabili iniziano sempre con una lettera minuscola (es. redCar)

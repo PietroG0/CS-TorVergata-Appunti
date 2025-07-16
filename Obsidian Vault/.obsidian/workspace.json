@@ -154,8 +154,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -164,8 +164,8 @@
             "state": {
               "type": "reminder-list",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "icon": "clock",
+              "title": "Reminders"
             }
           },
           {
@@ -174,8 +174,8 @@
             "state": {
               "type": "reminder-list",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "icon": "clock",
+              "title": "Reminders"
             }
           },
           {
@@ -189,12 +189,27 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
+      },
+      {
+        "id": "b9cd6ba60489d18f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abc3454052119ddf",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista grafo"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 390.5,
-    "collapsed": true
+    "width": 390.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,8 +221,9 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "fd974aed6ef2120f",
+  "active": "abc3454052119ddf",
   "lastOpenFiles": [
+    "TorVergata/Terzo Anno/Ingegneria del Software/Domande Orali.md",
     "TorVergata/Terzo Anno/Ingegneria del Software/Risposte-Domande orali (1).pdf",
     "TorVergata/Terzo Anno/Ingegneria del Software/Teoria.md",
     "Creazione e Chiusura di un Processo.md",
@@ -253,7 +269,6 @@
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/2 - Processi e thread.docx",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf/SOR2023-2024_9_virtual_memory.pdf",
-    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf/SOR2023-2024_8_memory_abstraction.pdf",
     "Processi e Thread.canvas",
     "Pasted image 20240202114858.png",
     "Screenshot 2024-01-18 alle 14.41.55.png",

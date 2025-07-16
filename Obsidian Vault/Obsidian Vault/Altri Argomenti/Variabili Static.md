@@ -1,1 +1,0 @@
-Variabili che non puntano all'oggetto ma alla classe, Static perché fanno parte della memoria statica.

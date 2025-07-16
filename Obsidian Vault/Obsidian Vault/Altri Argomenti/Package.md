@@ -1,2 +1,0 @@
-
-E' uno spazio dei nomi che organizza un set di classi e interfacce correlate. Concettualmente puoi pensare che i pacchetti siano simili alle diverse cartelle sul tuo computer. È possibile mantenere le pagine HTML in una cartella, le immagini in un'altra e gli script o le applicazioni in un'altra. Perché il software scritto nel linguaggio di programmazione Java può essere composto da centinaia o _migliaia_ delle singole classi, ha senso mantenere le cose organizzate inserendo classi e interfacce correlate in pacchetti.

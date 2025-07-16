@@ -13,7 +13,7 @@
     "dateTimeFormat": "YYYY-MM-DD HH:mm",
     "strictDateFormat": false,
     "linkDatesToDailyNotes": false,
-    "enableTasksPluginReminderFormat": true,
+    "enableTasksPluginReminderFormat": false,
     "useCustomEmojiForTasksPlugin": false,
     "removeTagsForTasksPlugin": false,
     "enableKanbanPluginReminderFormat": false,

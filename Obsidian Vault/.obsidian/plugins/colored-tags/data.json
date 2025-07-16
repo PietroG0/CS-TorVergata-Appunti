@@ -1,0 +1,45 @@
+{
+  "palette": {
+    "seed": 0,
+    "selected": "adaptive-soft",
+    "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": true
+  },
+  "knownTags": {
+    "Algoritmi": 1,
+    "Database": 2,
+    "Fondamenti": 3,
+    "Linguaggi": 4,
+    "Prolog": 5,
+    "Reti": 6,
+    "Sistemi_operativi": 7,
+    "Software": 8,
+    "ProgrammazioneWeb": 9,
+    "O": 10,
+    "Sicurezza": 11,
+    "express": 12,
+    "Web": 13,
+    "Analisi": 14,
+    "feature": 15,
+    "feature/transformer": 1,
+    "component": 16,
+    "feature/emitter": 2,
+    "feature/filter": 3,
+    "plugin": 17,
+    "plugin/emitter": 1,
+    "plugin/transformer": 2,
+    "plugin/filter": 3,
+    "setDefaults": 18,
+    "RGB": 19,
+    "RRGGBB": 20,
+    "RGBA": 21,
+    "RRGGBBAA": 22,
+    "typescript": 23,
+    "example-tag": 24
+  },
+  "_version": 3
+}

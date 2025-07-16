@@ -1,7 +1,0 @@
-Il problema dell’inversione delle priorità è risolvibile in diversi modi, il più semplice dei quali è la disattivazione di tutti gli interrupt mentre ci si trova nella regione critica. Come già accennato, questa soluzione non è desiderabile per i programmi utente: che cosa succede se dimenticano di riattivarli?
-
-Un altra soluzione è nota come **priority ceiling** (**limite della priorità**); consiste nell’associare una priorità al mutex e assegnarla al processo che lo detiene. Fintanto che nessun processo che deve acquisire il mutex ha una priorità superiore al limite, l’inversione non è più possibile.
-
-Un terzo modo è la **priority inheritance** (**ereditarietà della priorità**): il task a bassa priorità che detiene il mutex eredita temporaneamente la priorità del task ad alta priorità che cerca di acquisire il mutex. Anche in questo caso, nessun task a priorità media riuscirà ad anticipare il task che detiene il mutex. Per risolvere i problemi del Mars Pathfinder fu adottata questa tecnica.
-
-Infine, sistemi operativi quali Microsoft Windows utilizzano il **random boosting** (potenziamento casuale); essenzialmente, di tanto in tanto giocano a testa o croce e attribuiscono una priorità alta a thread scelti a caso tra quelli che detengono un mutex, fino a quando escono dalla regione critica.
