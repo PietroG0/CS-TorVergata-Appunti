@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"04fb5cb1f05d3cec","type":"text","text":"NRU (Not Recently Used)\n2 Bit:\n- R riferimento (lettura o scrittura)\n- M (Modificato in un quantum)\n\nNRU rimuove una pagina a caso della classe non vuota con il numero più basso\n","x":-822,"y":0,"width":285,"height":292},
+		{"id":"335f09a08b8af2db","type":"text","text":"WSClock\nSemplice da implementare, buone prestazioni\nLista circolare di frame, come nel clock.\nInizialmente la lista è vuota, quando è caricata la prima pagina, viene aggiunta all'elenco\nOgni voce contiene il campo istante di ultimo utilizzo, così come il bit R e il bit M","x":646,"y":0,"width":364,"height":274},
+		{"id":"fe2e165ecf6812b1","type":"text","text":"LRU \nFattibile, Non Economico\nPer implementare LRU, è necessario mantenere una lista concatenata di tutte le pagine in memoria, con quelle più usate in testa e quelle meno utilizzate in coda. \nL'elenco deve essere modificato ad ogni accesso in memoria, di conseguenza le operazioni di lettura, cancellazione ecc.. diventano eccessivamente costose.\nUna possibile soluzione è implementare l'LRU con un hardware speciale, un contatore a 64 Bit, C, incrementato automaticamente dopo ogni istruzione.\nQuando si verifica un page fault il Sistema Operativo esamina tutti i contatori nella tabella delle pagine per trovare il più basso","x":0,"y":274,"width":400,"height":460},
+		{"id":"5f8e88b1af1dec05","type":"text","text":"Clock\nL'algoritmo Seconda Chance è ragionevole, perà è inutilmente inefficiente poichè fa scorrere di continuo le pagine lungo la lista\nUn approccio migliore è di tenere tutti i frame su una lista circolare a forma di orologio. \nQuando avviene un page fault, la pagina indicata dalla lancetta viene controllata, se il suo bit R=0 viene sfrattata, la nuova pagina viene inserita al suo posto e la lancetta prosegue, se il bit è uguale a 1, la lancetta continua.\n","x":-360,"y":274,"width":360,"height":380},
+		{"id":"0b84a5188ec9fef1","type":"text","text":"Seconda Chance\nFIFO con una piccola modifica, consiste nel controllare il bit R di una pagina prima di eliminarla, se la pagina ha il bit R = 0 viene eliminata, se ha il bit R = 1 viene portata in fondo alla lista","x":-651,"y":320,"width":291,"height":220},
+		{"id":"a274a41ab08a6f04","type":"text","text":"Working Set\nSet di lavoro = insieme delle pagine che un processo sta attualmente usando.\n- Intero set in memoria = processo eseguito senza molti page fault\n- Memoria disponibile troppo piccola = molti page fault e molta lentezza\nMolti sistemi di paginazione cercano di tenere traccia del set di lavoro di ciascun processo e di accertarsi che sia in memoria prima di consentire l'esecuzione --> Working Set Model ","x":400,"y":320,"width":388,"height":369},
+		{"id":"abf3ceab8125cc4c","type":"text","text":"Algoritmi di Sostituzione delle pagine","x":-125,"y":-100,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"719b4b8f2430faf0","fromNode":"abf3ceab8125cc4c","fromSide":"bottom","toNode":"04fb5cb1f05d3cec","toSide":"top"},
+		{"id":"8c0ae6fd94d31ac9","fromNode":"abf3ceab8125cc4c","fromSide":"bottom","toNode":"0b84a5188ec9fef1","toSide":"top"},
+		{"id":"56fa9116f512d591","fromNode":"abf3ceab8125cc4c","fromSide":"bottom","toNode":"5f8e88b1af1dec05","toSide":"top"},
+		{"id":"e6d30da4a00fb138","fromNode":"abf3ceab8125cc4c","fromSide":"bottom","toNode":"fe2e165ecf6812b1","toSide":"top"},
+		{"id":"56aeba18aa36b460","fromNode":"abf3ceab8125cc4c","fromSide":"bottom","toNode":"a274a41ab08a6f04","toSide":"top"},
+		{"id":"c5183f99ebdbe5d1","fromNode":"abf3ceab8125cc4c","fromSide":"bottom","toNode":"335f09a08b8af2db","toSide":"top"},
+		{"id":"2b7c879e1d77cb84","fromNode":"0b84a5188ec9fef1","fromSide":"bottom","toNode":"5f8e88b1af1dec05","toSide":"bottom","color":"2"}
+	]
+}

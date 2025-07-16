@@ -1,0 +1,80 @@
+{
+	"nodes":[
+		{"id":"16e87985769dc5d8","type":"text","text":"Design Pattern\n- Rappresentano soluzioni a problematiche che si incontrano durante le varie fasi di sviluppo del software\n- Organizzano l'esperienza di OOD favorendone il riuso","x":-200,"y":-100,"width":409,"height":200,"color":"4"},
+		{
+			"id":"0b56fb0194bc254f",
+			"type":"text",
+			"text":"*Creazionali*: I pattern di questo tipo sono relativi alle operazioni di creazione di oggetti\n\n*Strutturali*: Sono utilizzati per definire la struttura del sistema \n\n*Comportamentali*: Permettono di modellare il comportamento del sistema definendo le responsabilità delle sue componenti e definendo le modalità di interazione",
+			"styleAttributes":{
+				"shape":null,
+				"border":null
+			},
+			"x":-480,
+			"y":-560,
+			"width":425,
+			"height":276,
+			"color":"4"
+		},
+		{"id":"43e53f47b80e796f","type":"text","text":"*Classi*: Pattern che definiscono le relazioni fra classi e sottoclassi. Le relazioni sono statiche\n\n*Oggetti*: Pattern che definiscono relazioni tra oggetti. Le relazioni sono dinamiche","x":100,"y":-500,"width":294,"height":216,"color":"4"},
+		{"id":"57fd809ba49f6250","type":"text","text":"Abstract Factory\n- *Scopo*: Fornire un'interfaccia per la creazione di famiglie di oggetti tra loro correlati","x":-783,"y":-245,"width":303,"height":145,"color":"1"},
+		{"id":"7f6ac3e9eea0fb6b","type":"text","text":"Factory Method\n- *Scopo*: Definire un'interfaccia per la creazione di un oggetto, che consenta di decidere a tempo di esecuzione quale specifico oggetto istanziare","x":-791,"y":-1,"width":320,"height":202,"color":"1"},
+		{"id":"5226dfb7aae52b31","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Factory Method.png","x":-1161,"y":12,"width":284,"height":176},
+		{"id":"2ef7812e5aea5620","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Abstract Factory.png","x":-1161,"y":-261,"width":284,"height":178},
+		{"id":"0640f688c49987d6","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Adapter.png","x":-1019,"y":280,"width":311,"height":193,"color":"1"},
+		{"id":"60c4f51b4bcec8c5","type":"text","text":"Adapter\n- *Scopo*: Convertire l'interfaccia di una classe esistente incompatibile con un client,, in una compatibile","x":-559,"y":287,"width":292,"height":180,"color":"1"},
+		{"id":"a06b825c8c8d322b","type":"text","text":"Composite\n- *Scopo*: Comporre oggetti in strutture che consentano di trattare i singoli elementi e la composizione in modo uniforme","x":247,"y":287,"width":278,"height":228,"color":"1"},
+		{"id":"502b1f570d82b240","type":"text","text":"Decorator\n- *Scopo*: Aggiungere dinamicamente funzionalità (responsabilità) ad un oggetto","x":440,"y":10,"width":295,"height":180,"color":"1"},
+		{"id":"a6291d41b4507f12","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Composite.png","x":680,"y":292,"width":320,"height":218,"color":"1"},
+		{"id":"55d858921ff9840b","type":"text","text":"Observer\n- *Scopo*: Definire una dipendenza uno a molti tra oggetti, mantenendo basso il grado di coupling. In altre parole la variazione dello stato di un oggetti deve essere osservata da altri oggetti, in modo che possano aggiornarsi automaticamente","x":440,"y":-320,"width":394,"height":240,"color":"1"},
+		{"id":"0ebeb4d87828e06a","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Decorator.png","x":880,"y":5,"width":300,"height":190},
+		{"id":"c3441b21a7b8ac05","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Observer.png","x":886,"y":-291,"width":288,"height":183},
+		{"id":"a0d56ddb89260e7a","type":"text","text":"Strategy\n- *Scopo*: Definire ed incapsulare una famiglia di algoritmi in modo da renderli intercambiabili indipendentemente dal client che li usa","x":84,"y":600,"width":326,"height":214,"color":"1"},
+		{"id":"b1f60d9c301c5096","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Strategy.png","x":82,"y":902,"width":330,"height":217,"color":"1"},
+		{"id":"ca1ca4fbb1d5b232","type":"text","text":"Template Method\n- *Scopo*: Definire la struttura di un algoritmo all'interno di un metodo, delegando alcuni passi alle sottoclassi","x":-434,"y":600,"width":334,"height":182,"color":"1"},
+		{"id":"f35e8828dd3cd75b","type":"file","file":"CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Template Method.png","x":-437,"y":902,"width":340,"height":201,"color":"1"}
+	],
+	"edges":[
+		{"id":"8fa5b40057b3cebd","fromNode":"16e87985769dc5d8","fromSide":"top","toNode":"0b56fb0194bc254f","toSide":"bottom","label":"Criterio scopo"},
+		{"id":"616f67fe91b67890","fromNode":"16e87985769dc5d8","fromSide":"top","toNode":"43e53f47b80e796f","toSide":"bottom","label":"Criterio raggio di azione"},
+		{
+			"id":"d26dadfc2c07b9de",
+			"fromFloating":false,
+			"styleAttributes":{
+				"pathfindingMethod":null,
+				"path":null
+			},
+			"toFloating":false,
+			"fromNode":"16e87985769dc5d8",
+			"fromSide":"left",
+			"toNode":"57fd809ba49f6250",
+			"toSide":"right"
+		},
+		{"id":"17fa5b549ea76cd9","fromNode":"57fd809ba49f6250","fromSide":"left","toNode":"2ef7812e5aea5620","toSide":"right"},
+		{"id":"a75ffcb95f902bd9","fromNode":"16e87985769dc5d8","fromSide":"left","toNode":"7f6ac3e9eea0fb6b","toSide":"right"},
+		{"id":"778f8ca1a950042c","fromNode":"7f6ac3e9eea0fb6b","fromSide":"left","toNode":"5226dfb7aae52b31","toSide":"right"},
+		{"id":"315d47c92e38cfc3","fromNode":"16e87985769dc5d8","fromSide":"bottom","toNode":"60c4f51b4bcec8c5","toSide":"top"},
+		{"id":"12d558f8bbe33829","fromNode":"60c4f51b4bcec8c5","fromSide":"left","toNode":"0640f688c49987d6","toSide":"right"},
+		{"id":"61970f141672acec","fromNode":"16e87985769dc5d8","fromSide":"bottom","toNode":"ca1ca4fbb1d5b232","toSide":"top"},
+		{"id":"9bfd5f3d9e864f4c","fromNode":"ca1ca4fbb1d5b232","fromSide":"bottom","toNode":"f35e8828dd3cd75b","toSide":"top"},
+		{"id":"60985236cce781a0","fromNode":"16e87985769dc5d8","fromSide":"bottom","toNode":"a06b825c8c8d322b","toSide":"top"},
+		{"id":"e9ce65233df7bac7","fromNode":"a06b825c8c8d322b","fromSide":"right","toNode":"a6291d41b4507f12","toSide":"left"},
+		{"id":"799b067a8d94c439","fromNode":"16e87985769dc5d8","fromSide":"right","toNode":"502b1f570d82b240","toSide":"left"},
+		{
+			"id":"77ded9caec29d10e",
+			"fromFloating":false,
+			"styleAttributes":{"pathfindingMethod":"direct"},
+			"fromNode":"502b1f570d82b240",
+			"fromSide":"right",
+			"toNode":"0ebeb4d87828e06a",
+			"toSide":"left"
+		},
+		{"id":"c3069e9b591d101a","fromNode":"16e87985769dc5d8","fromSide":"right","toNode":"55d858921ff9840b","toSide":"left"},
+		{"id":"23e9cfb5f49ec271","fromNode":"55d858921ff9840b","fromSide":"right","toNode":"c3441b21a7b8ac05","toSide":"left"},
+		{"id":"117b12d62e04f8bf","fromNode":"16e87985769dc5d8","fromSide":"bottom","toNode":"a0d56ddb89260e7a","toSide":"top"},
+		{"id":"6f1f45d26d8d8489","fromNode":"a0d56ddb89260e7a","fromSide":"bottom","toNode":"b1f60d9c301c5096","toSide":"top"}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

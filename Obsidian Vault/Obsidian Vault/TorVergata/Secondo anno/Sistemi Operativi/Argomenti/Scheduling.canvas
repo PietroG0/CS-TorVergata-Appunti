@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"be95b32c36e9444c","type":"text","text":"Scheduling","x":-31,"y":-169,"width":151,"height":60,"color":"6"},
+		{"id":"deb236df3e16765f","type":"text","text":"Non preemptive:\n- Seleziona un processo e lo lascia eseguire fino al rilascio volontario","x":-220,"y":7,"width":250,"height":133,"color":"6"},
+		{"id":"9ad0bd76afbc3d4d","type":"text","text":"Preemptive:\n- Sceglie un processo e lo lascia eseguire per un tempo massimo definito","x":60,"y":7,"width":250,"height":174,"color":"6"},
+		{"id":"0d5345c913153e54","type":"text","text":"Scheduling in Sistemi Interattivi","x":451,"y":-167,"width":250,"height":58,"color":"2"},
+		{"id":"faad0366f9912012","type":"text","text":"Round-Robin Scheduling\n- Viene assegnato ad ogni processo un tempo limite per l'esecuzione, chiamato \"quanto\"; se il processo non ha terminato prima del quanto, la CPU viene selezionata per un altro processo in lista.\n- Unico problema del RR è la durata del quanto","x":803,"y":-680,"width":433,"height":240,"color":"2"},
+		{"id":"31b81a8877c28ff7","type":"text","text":"Priority Scheduling\n- Ogni processo ha una priorità assegnata, la CPU esegue il processo con la priorità più alta tra quelli pronti\n- Priorità Statica = Gerarchie; Priorità Dinamica = utilizzo CPU o sul comportamento I/O bound","x":800,"y":-440,"width":436,"height":218,"color":"2"},
+		{"id":"886e92affbcff775","type":"text","text":"Shortest Process Next\n- Identificare quale tra i processi eseguibili sia effettivamente il più breve, basandosi sul comportamento passato\n- Utilizzo dell'Aging","x":800,"y":-222,"width":433,"height":198,"color":"2"},
+		{"id":"d981442518efce90","type":"text","text":"Guaranteed Scheduling\n- Se ci sono n utenti o processi, ciascuno ottiene più o meno 1/n della potenza della CPU\n- Il sistema calcola quanta CPU ogni processo dovrebbe avere, Tempo della creazione / N\n- Esegue il processo con il rapporto più basso","x":800,"y":-24,"width":436,"height":205,"color":"2"},
+		{"id":"3a1ad5eb74171dfa","type":"text","text":"Lottery Scheduling\n- Assegnazione di biglietti della lotteria ai processi per le risorse del sistema -> Estrazione casuale di un biglietto per decidere quale processo ottiene la risorsa\n- Adatto a situazione dove altri metodi falliscono, per esempio in Server video ","x":800,"y":181,"width":436,"height":235,"color":"2"},
+		{"id":"26549e3f7daa0174","type":"text","text":"Fair-Share Scheduling\n- Considera la proprietà di ogni processo prima di considerarlo\n- Ogni utente riceve una frazione predefinita di CPU\n- Lo scheduler si assicura che ogni utente riceva la sua frazione, indipendentemente dal numero di processo posseduti","x":800,"y":416,"width":436,"height":240,"color":"2"},
+		{"id":"0641e6a685e7b114","type":"text","text":"Scheduling in Sistemi Real-Time\n- Tempo di risposta fondamentale, ritardi o mancati tempi di risposta possono avere gravi implicazioni\n\n2 Categorie\n1) Hard Real-Time: Scadenze assolute da rispettare\n2) Soft Real-Time: Qualche scadenza mancata è torrelabile\n\nTipi di eventi:\n- Periodici: Avvengono in modo imprevedibile\n- Non Periodici: Avvengono in modo imprevedibile\n\nCondizione di \"Schedulibilità\": La CPU deve essere in grado di gestire la somma totale del tempo richiesto dai processi\n\n![[Pasted image 20231110150510.png]]\n\n","x":-1000,"y":-170,"width":549,"height":557,"color":"3"},
+		{"id":"8dadf2d54457b536","type":"text","text":"Scheduling in Sistemi Batch","x":-80,"y":656,"width":250,"height":60,"color":"1"},
+		{"id":"a5cb4f297f0eaf53","type":"text","text":"Shortest Job First\n- Il job più breve viene eseguito per primo.\n- Se i job arrivano in momenti diversi, SJF potrebbe non essere ottimale","x":-175,"y":840,"width":440,"height":157,"color":"1"},
+		{"id":"a7bb7913f117014a","type":"text","text":"Shortest Remaining Time Next\n- Versione con prelazione di SJF.\n- Seleziona sempre il processo con il tempo rimanente più breve per completare\n- Contronta il tempo totale del nuovo job con il tempo rimanente dei processi in esecuzione\n- Se il nuovo job è più breve del processo corrente, sospende il processo corrente ed esegue il nuovo job","x":265,"y":840,"width":615,"height":280,"color":"1"},
+		{"id":"e462fd0e9b1277e5","type":"text","text":"First-Come First-Served\nSingola coda di processi, assegnati alla CPU nell'ordine in cui arrivano.\nFacile da capire e programmare.\n","x":-655,"y":840,"width":480,"height":157,"color":"1"}
+	],
+	"edges":[
+		{"id":"9edeeefe9b512ebb","fromNode":"be95b32c36e9444c","fromSide":"bottom","toNode":"deb236df3e16765f","toSide":"top"},
+		{"id":"6d71f8a7c1608a74","fromNode":"be95b32c36e9444c","fromSide":"bottom","toNode":"9ad0bd76afbc3d4d","toSide":"top"},
+		{"id":"2e0ae26304348dfb","fromNode":"be95b32c36e9444c","fromSide":"bottom","toNode":"8dadf2d54457b536","toSide":"top"},
+		{"id":"1b536978943425a8","fromNode":"8dadf2d54457b536","fromSide":"bottom","toNode":"e462fd0e9b1277e5","toSide":"top"},
+		{"id":"803aed2da25680b8","fromNode":"8dadf2d54457b536","fromSide":"bottom","toNode":"a5cb4f297f0eaf53","toSide":"top"},
+		{"id":"0d75078f648f2e3b","fromNode":"8dadf2d54457b536","fromSide":"bottom","toNode":"a7bb7913f117014a","toSide":"top"},
+		{"id":"55a83b2f29281d06","fromNode":"be95b32c36e9444c","fromSide":"right","toNode":"0d5345c913153e54","toSide":"left"},
+		{"id":"ce1222564a253b9b","fromNode":"0d5345c913153e54","fromSide":"right","toNode":"faad0366f9912012","toSide":"left"},
+		{"id":"84224dec9ad5a589","fromNode":"0d5345c913153e54","fromSide":"right","toNode":"31b81a8877c28ff7","toSide":"left"},
+		{"id":"b7bdbddfb1ac8d40","fromNode":"0d5345c913153e54","fromSide":"right","toNode":"886e92affbcff775","toSide":"left"},
+		{"id":"4f524851962b6c78","fromNode":"0d5345c913153e54","fromSide":"right","toNode":"d981442518efce90","toSide":"left"},
+		{"id":"61c103fd7004bb27","fromNode":"0d5345c913153e54","fromSide":"right","toNode":"3a1ad5eb74171dfa","toSide":"left"},
+		{"id":"2a36b5a6ffa3c80d","fromNode":"0d5345c913153e54","fromSide":"right","toNode":"26549e3f7daa0174","toSide":"left"},
+		{"id":"6a77684842ae1f4b","fromNode":"be95b32c36e9444c","fromSide":"left","toNode":"0641e6a685e7b114","toSide":"right"}
+	]
+}

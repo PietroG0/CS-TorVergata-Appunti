@@ -1,0 +1,49 @@
+body{
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+header, main, footer{
+    color: darkblue;
+    font-size: 16px;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+h1, h2, h3 {
+    color: orange;
+    font-weight: bold;
+}
+
+ul li {
+    color: brown;
+    margin: 10px;
+}
+
+.menu a {
+    color: white;
+    background-color: darkblue;
+}
+
+h1{
+    color: red;
+}
+
+.evidenziato{
+    color: yellow;
+}
+
+.lista li {
+    color: purple;
+}
+
+footer{
+    color: lightgray;
+}

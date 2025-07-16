@@ -1,0 +1,10 @@
+div[src$="#right"] {
+	text-align:right;
+}
+div[src$="#left"] {
+	text-align:left;
+}
+div[src$="#center"] {
+	text-align:center;
+}
+

@@ -1,0 +1,36 @@
+{
+	"nodes":[
+		{"id":"d4d8d17968bd8c85","type":"text","text":"Una Maglia di commutatori di pacchetti e collegamento che interconnettono i sistemi periferici di internet","x":-180,"y":80,"width":260,"height":138},
+		{"id":"cf600e28c59ab4e4","type":"text","text":"Nucleo della rete","x":-149,"y":-140,"width":200,"height":60},
+		{"id":"ce27498ace7e111f","type":"text","text":"Inoltro o \"Switching\"\n- Sposta i pacchetti in arrivo al collegamento di ingresso del router al collegamento di uscita appropriato","x":-794,"y":-311,"width":250,"height":201},
+		{"id":"7eac9f57b94c2d1b","type":"text","text":"Instradamento (Routing)\n- Determina i percorsi presi dai pacchetti dalla sorgente alla destinazione\n- Algoritmi di instradamento","x":-880,"y":-110,"width":336,"height":197},
+		{"id":"0e9023046052c990","type":"text","text":"Store-and-forward\n- Ritardo di trasmissione\n- Il router deve aver ricevuto l'intero pacchetto prima di poter comunicare a trasmettere sul collegamento in uscita","x":170,"y":-460,"width":290,"height":239,"color":"4"},
+		{"id":"6addb9b4dd509c65","type":"text","text":"Commutazione di circuito\n- Risorse dedicate: nessuna condivisione\n- Trasferimento dati a velocità costante e garantita\n- I segmenti del circuito restano inattivi se non utilizzati\n- Usato comunemente nella rete telefonica tradizionale","x":160,"y":80,"width":310,"height":301,"color":"2"},
+		{"id":"ab6596be54785562","type":"text","text":"Multiplexing a Divisione di Frequenza (FDM):\n- spettro di frequenza di un collegamento suddiviso in bande\n- ogni circuito ha una propria banda, può trasmettere alla velocità massima di quella banda ristretta","x":620,"y":76,"width":250,"height":310,"color":"2"},
+		{"id":"510e886c6619582c","type":"text","text":"Multiplexing a Divisione di Tempo (TDM):\n- tempo suddiviso frame di durata fissa, ripartiti in un numero fisso di slot\n- ciascun circuito riceve slot periodici, può trasmettere alla massima velocità della banda di frequenza solo nei propri slot temporali","x":582,"y":425,"width":327,"height":311,"color":"2"},
+		{"id":"3dd4c70cb51d5c1a","type":"text","text":"Accodamento\n- L'accodamento si verifica quando il lavoro arriva più velocemente di quanto possa essere servito","x":625,"y":-221,"width":240,"height":222,"color":"4"},
+		{"id":"a6046066e13f1ddf","type":"text","text":"Ritardo di Propagazione\n- d = Lunghezza del collegamento fisico\n- v = velocità di propagazione\n- d propagazione = d/v","x":-209,"y":700,"width":319,"height":186,"color":"5"},
+		{"id":"4426ef01593e23eb","type":"text","text":"Ritardo di Trasmissione\n- Dipende dalla lunghezza del pacchetto e dal tasso di trasmissione di collegamento. E' calcolato come rapporto tra la lunghezza del pacchetto e il tasso di trasmissione del collegamento L/R","x":-201,"y":381,"width":303,"height":280,"color":"5"},
+		{"id":"acd872aad6741830","type":"text","text":"Ritardo di Elaborazione\n- Controllo errori sui bit\n- Determinazione del canale di uscita\n- Tipicamente < microsecondi","x":-841,"y":422,"width":250,"height":198,"color":"5"},
+		{"id":"29073b127a7c417f","type":"text","text":"Ritardi e Perdite","x":-483,"y":620,"width":185,"height":60,"color":"5"},
+		{"id":"d46a1ec86e434db2","type":"text","text":"Ritardo di Accodamento\n- Attesa di trasmissione\n- Dipende dal livello di congestione del router","x":-841,"y":700,"width":250,"height":180,"color":"5"},
+		{"id":"1d6490de91fde683","type":"text","text":"Ritardo end-to-end\nDeterminato dalla somma dei ritardi accumulati durante il percorso\n\nTraceroute\n- E' un programma diagnostico che fornisce una misura del ritardo della sorgente al router lungo i percorsi internet punto-punto. La perdita di pacchetti si verifica quando la coda precedente a un collegamento ha capacità finita e un pacchetto trova la coda piena, venendo quasi scartato.\n\nThroughput\n- Frequenza alla quale i bit sono trasferiti tra mittente e ricevente, espresso in bit per unità di tempo","x":-560,"y":905,"width":340,"height":540,"color":"5"},
+		{"id":"1a79614e562add4b","type":"text","text":"Commutazione di pacchetto","x":220,"y":-160,"width":190,"height":100,"color":"4"}
+	],
+	"edges":[
+		{"id":"ea304063e4a4a2fa","fromNode":"cf600e28c59ab4e4","fromSide":"bottom","toNode":"d4d8d17968bd8c85","toSide":"top","label":"Definizione"},
+		{"id":"b04e15a3eae963ff","fromNode":"cf600e28c59ab4e4","fromSide":"left","toNode":"7eac9f57b94c2d1b","toSide":"right","label":"Funzioni chiave"},
+		{"id":"9eb0b1ab4bbc16ae","fromNode":"cf600e28c59ab4e4","fromSide":"left","toNode":"ce27498ace7e111f","toSide":"right","label":"Funzioni chiave"},
+		{"id":"6de221e50b409f61","fromNode":"cf600e28c59ab4e4","fromSide":"right","toNode":"1a79614e562add4b","toSide":"left"},
+		{"id":"01624b2f43370132","fromNode":"1a79614e562add4b","fromSide":"top","toNode":"0e9023046052c990","toSide":"bottom"},
+		{"id":"50e1429fd66a607e","fromNode":"1a79614e562add4b","fromSide":"right","toNode":"3dd4c70cb51d5c1a","toSide":"left"},
+		{"id":"9ec5909f4715529c","fromNode":"cf600e28c59ab4e4","fromSide":"right","toNode":"6addb9b4dd509c65","toSide":"left"},
+		{"id":"97a13828981de7fb","fromNode":"6addb9b4dd509c65","fromSide":"right","toNode":"ab6596be54785562","toSide":"left"},
+		{"id":"ef0525186f9953bb","fromNode":"6addb9b4dd509c65","fromSide":"right","toNode":"510e886c6619582c","toSide":"left"},
+		{"id":"f04e91ca945f4614","fromNode":"29073b127a7c417f","fromSide":"left","toNode":"acd872aad6741830","toSide":"right"},
+		{"id":"ebf71f1a92009995","fromNode":"29073b127a7c417f","fromSide":"left","toNode":"d46a1ec86e434db2","toSide":"right"},
+		{"id":"adc72318773b0e6c","fromNode":"29073b127a7c417f","fromSide":"right","toNode":"4426ef01593e23eb","toSide":"left"},
+		{"id":"3817655159337ce7","fromNode":"29073b127a7c417f","fromSide":"right","toNode":"a6046066e13f1ddf","toSide":"left"},
+		{"id":"cc0a14d8764ec7b3","fromNode":"29073b127a7c417f","fromSide":"bottom","toNode":"1d6490de91fde683","toSide":"top"}
+	]
+}

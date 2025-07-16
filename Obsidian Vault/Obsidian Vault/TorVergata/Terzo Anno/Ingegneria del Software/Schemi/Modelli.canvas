@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"9d5ae95a7e87efd5","type":"text","text":"Modelli","x":-80,"y":-120,"width":160,"height":60},
+		{"id":"49fb99fc69a5d7fc","type":"text","text":"Agile\nIl modello Agile non è un singolo modello di sviluppo, ma un insieme di principi e valori che guidano un modo di lavorare flessibile, collaborativo e iterativo. E' nato come risposta ai limiti dei modelli tradizionali, che spesso si rivelano troppo rigidi in contesti dove le esigenze cambiano rapidamente o i requisiti non sono completamente chiari fin dall'inizio.\n\nAlla base del modello Agile c'è il manifesto Agile che valorizza:\n- Le persone e le interazione più dei processi e degli strumenti\n- Il software funzionante più della documentazione esaustiva\n- La collaborazione col cliente più della negoziazione del contratto\n- La risposta al cambiamento più della pianificazione rigida","x":-286,"y":-762,"width":573,"height":362,"color":"#bb00ff"},
+		{"id":"7b018b5361d9af26","type":"text","text":"A prototipi\nIl modello di Rapid Prototyping è un approccio allo sviluppo del software che **mette al centro la costruzione veloce di prototipi di sistema**, con lo scopo di comprendere meglio i requisiti, validare le funzionalità con l'utente e ridurre il rischio di incomprensioni","x":394,"y":-581,"width":386,"height":224,"color":"3"},
+		{"id":"734107b8b6114c07","type":"text","text":"Modello Microsoft\nL'approccio usato attualmente dalla Microsoft è noto come **syncronize-and-stabilize**, con questo modello otteniamo un ciclo di sviluppo a 3 fasi.\nLe caratteristiche principali sono:\n- Sviluppo software e testing eseguiti in parallelo\n- Features prioritizzate e integrate in 3-4 sottoprogetti cardini\n- Continuo feedback dei customer durante il processo di sviluppo","x":-840,"y":-619,"width":441,"height":300,"color":"5"},
+		{"id":"9c00f61b03745167","type":"text","text":"Build & Fix\nIn questo approccio, il software viene costruito senza una vera analisi dei requisiti nè una progettazione preliminare, e viene continuamente corretto e modificato man mano che emergono problemi e richieste\n\n1. **Build**: Si scrive il codice in base a una vaga idea di cosa debba fare il programma\n2. **Fix**: Quando emergono problemi o richieste, si corregge modificando direttamente il codice","x":-719,"y":-239,"width":433,"height":300,"color":"4"},
+		{"id":"52a9553cfa4d3f8a","type":"text","text":"Modello a spirale\nIl modello a spirale è un modello pensato per interagire i punti di forza del modello a cascata e dello sviluppo iterativo, mettendo però al centro un elemento spesso trascurato: **la gestione del rischio**\n","x":287,"y":-198,"width":389,"height":217,"color":"2"},
+		{"id":"106de3c0c58123ae","type":"text","text":"Ogni ciclo della spirale è composto da 4 fasi fondamentali:\n1. **Pianificazione**: si definiscono obiettivi, funzionalità da sviluppare, risorse necessarie\n2. **Analisi dei rischi**: si individuano i rischi tecnici o gestionali, si valutano alternative e si pianificano soluzioni\n3. **Sviluppo e verifica**: si implementa e si testa un prototipo o una parte del sistema\n4. **Revisione e feedback**: si valuta quanto prodotto, si ottiene feedback dal cliente e si decide se proseguire con un nuovo giro","x":820,"y":-252,"width":540,"height":325,"color":"2"},
+		{"id":"8835de34f060aae0","type":"text","text":"Waterfall\nOgni fase del progetto deve essere completata prima di passare alla successiva. Dopo ogni fase c'è la verifica, si tratta di controllare che il processo di sviluppo sia stato eseguito correttamente e che gli artefatti prodotti siano conformi alle specifiche.\nOltre alla fase di verification c'è la fase di validation nella quale si verifica che il prodotto soddisfi effettivamente i bisogni dell'utente finale","x":-612,"y":206,"width":426,"height":260,"color":"#1430ff"},
+		{"id":"e7c4b756d793a430","type":"text","text":"Modello iterativo o incrementale\nIl modello incrementale è un approccio allo sviluppo del software **che prevede la realizzazione del sistema per gradi, cioè per incrementi** successivi. Ogni incremento aggiunge nuove funzionalità al sistema","x":205,"y":242,"width":379,"height":189,"color":"6"},
+		{"id":"5a8a04f84752049e","type":"text","text":"A differenza del modello a cascata, dove si sviluppa tutto in un'unica volta, il modello incrementale prevede un ciclo ripetuto di:\n1. Analisi dei requisiti\n2. Progettazione\n3. Implementazione\n4. Test\n5. Consegna di un incremento (build) funzionante","x":194,"y":560,"width":400,"height":303,"color":"6"}
+	],
+	"edges":[
+		{"id":"4a3752d0c61a6d60","fromNode":"9d5ae95a7e87efd5","fromSide":"left","toNode":"9c00f61b03745167","toSide":"right"},
+		{"id":"13a62a4a120f44dd","fromNode":"9d5ae95a7e87efd5","fromSide":"bottom","toNode":"8835de34f060aae0","toSide":"top"},
+		{"id":"a4f34931ebdeb54f","fromNode":"9d5ae95a7e87efd5","fromSide":"right","toNode":"7b018b5361d9af26","toSide":"left"},
+		{"id":"64ddb100004bfd25","fromNode":"9d5ae95a7e87efd5","fromSide":"bottom","toNode":"e7c4b756d793a430","toSide":"top"},
+		{"id":"d74376919854c6d3","fromNode":"e7c4b756d793a430","fromSide":"bottom","toNode":"5a8a04f84752049e","toSide":"top","label":"Ciclo"},
+		{"id":"ce6df66f7cd04f84","fromNode":"9d5ae95a7e87efd5","fromSide":"right","toNode":"52a9553cfa4d3f8a","toSide":"left"},
+		{"id":"773ba9f1326dc3fd","fromNode":"52a9553cfa4d3f8a","fromSide":"right","toNode":"106de3c0c58123ae","toSide":"left","label":"Fasi"},
+		{"id":"dae5c58166abd32b","fromFloating":false,"fromNode":"9d5ae95a7e87efd5","fromSide":"left","toNode":"734107b8b6114c07","toSide":"right"},
+		{"id":"0eb922a63421055e","fromNode":"9d5ae95a7e87efd5","fromSide":"top","toNode":"49fb99fc69a5d7fc","toSide":"bottom"}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
