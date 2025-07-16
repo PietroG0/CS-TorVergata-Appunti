@@ -1,0 +1,17 @@
+{
+  "spellcheck": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "root",
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini",
+  "useMarkdownLinks": false,
+  "promptDelete": false,
+  "showUnsupportedFiles": false,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

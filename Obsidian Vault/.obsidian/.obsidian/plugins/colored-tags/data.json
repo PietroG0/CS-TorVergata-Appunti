@@ -1,0 +1,29 @@
+{
+  "palette": {
+    "seed": 0,
+    "selected": "adaptive-soft",
+    "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": true
+  },
+  "knownTags": {
+    "Algoritmi": 1,
+    "Database": 2,
+    "Fondamenti": 3,
+    "Linguaggi": 4,
+    "Prolog": 5,
+    "Reti": 6,
+    "Sistemi_operativi": 7,
+    "Software": 8,
+    "ProgrammazioneWeb": 9,
+    "O": 10,
+    "Sicurezza": 11,
+    "express": 12,
+    "Web": 13,
+    "Analisi": 14
+  },
+  "_version": 3
+}

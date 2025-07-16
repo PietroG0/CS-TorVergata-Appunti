@@ -1,0 +1,14 @@
+{
+  "accentColor": "",
+  "theme": "obsidian",
+  "cssTheme": "Wombat",
+  "translucency": true,
+  "baseFontSize": 16,
+  "baseFontSizeAction": false,
+  "enabledCssSnippets": [
+    "immagini",
+    "Easy-multicolumn",
+    "blockquoteinline",
+    "aside"
+  ]
+}
