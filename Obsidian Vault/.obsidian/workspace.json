@@ -1,0 +1,249 @@
+{
+  "main": {
+    "id": "4f1b92b3ee7f979d",
+    "type": "split",
+    "children": [
+      {
+        "id": "9c4cd01c21c980b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "334d02ae8549b981",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "74177b02bb49414c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a9a947e05aa574ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62c57b5baab577e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "cd58ffd89f2a57ef",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "b3d949567263f9df",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 249.50247192382812
+  },
+  "right": {
+    "id": "1dbdbe2525227e64",
+    "type": "split",
+    "children": [
+      {
+        "id": "5970220965ca9491",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0b89477c143a8a1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti"
+            }
+          },
+          {
+            "id": "ce81493d906f0ebc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita"
+            }
+          },
+          {
+            "id": "e7c940c4e6bb093b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "b2c528e4ace85430",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura"
+            }
+          },
+          {
+            "id": "3fe7b56d8f965006",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "b9cd6ba60489d18f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abc3454052119ddf",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista grafo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 339.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "graph:Apri vista grafo": false
+    }
+  },
+  "active": "62c57b5baab577e1",
+  "lastOpenFiles": [
+    "TorVergata/Secondo anno/Fondamenti di Informatica/Metodi per Esame.md",
+    "TorVergata/Primo anno/Analisi/Tauraso/an1-lezione03.pdf",
+    "TorVergata/Primo anno/Analisi/Tauraso/Sito Tauraso.md",
+    "TorVergata/Terzo Anno/Sicurezza delle Infrastrutture ICT/Data Security/Lezione 4 - User Authentication.md",
+    "TorVergata (PDF)",
+    "TorVergata/Terzo Anno/Sicurezza delle Infrastrutture ICT/Data Security/Lezione 3 - Autenticazione di Messaggi con Funzioni Hash.md",
+    "TorVergata/Terzo Anno/Sicurezza delle Infrastrutture ICT/Data Security/Lezione 2 - Introduzione in cifrature pratiche - Stream, Block, Modi di operare.md",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/k cluster.gif",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Union by Size.gif",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/TurboBL.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Template Method.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Strategy.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Screenshot 2025-05-21 alle 15.03.35.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Screenshot 2025-01-17 alle 13.33.51.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Screenshot 2024-01-18 alle 14.41.55.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Schermata del 2023-10-19 11-47-26.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Schermata del 2023-10-19 11-44-01.png",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Obsidian Overleaf.pdf",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Obsidian Overleaf (2).pdf",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini/Obsidian LaTeX.pdf",
+    "Immagini-Argomenti-.obsidian/Immagini/Immagini",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/sistema informativo.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/sistema informatico.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/informazione.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Variabili Static.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Vantaggi e Svantaggi dei DBMS.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Valori di Default.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Transazioni.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Torre di Hanoi.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Tipologie di Scheduling e Prelazione.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Tipo di dato primitivo.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Tipi di valore nullo.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Tabelle e relazioni.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Strutture nidificate.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Struttura non posizionale.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Struttura di commutazione.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Structured System Analysis (SSA).md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Sostituzione.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Software Prototyping.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Short.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Scrum.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Schemi ed istanze.md",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti/Livello di Collegamento.canvas",
+    "Immagini-Argomenti-.obsidian/Immagini",
+    "Immagini-Argomenti-.obsidian/Icon\r",
+    "Immagini-Argomenti-.obsidian/Altri Argomenti",
+    "Immagini-Argomenti-.obsidian",
+    "Immagini:Argomenti:.obsidian/Altri Argomenti/Livello di Collegamento.canvas",
+    "TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Ciclo di vita SW.canvas",
+    "TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Architetture.canvas",
+    "Algoritmi di Sostituzione delle pagine.canvas",
+    "Scheduling.canvas",
+    "Problemi di Progettazione dei sistemi di paginazione canvas.canvas",
+    "Memory Abstraction.canvas",
+    "Memoria Virtuale.canvas",
+    "Virtual Memory.canvas"
+  ]
+}
