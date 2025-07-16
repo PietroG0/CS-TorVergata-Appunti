@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5da95283ebabddb2",
+        "id": "1f3414b8fe3fdf3a",
         "type": "tabs",
         "children": [
           {
-            "id": "fd974aed6ef2120f",
+            "id": "3d6c1de6125f3901",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TorVergata/Terzo Anno/Ingegneria del Software/Domande Orali.md",
+                "file": "TorVergata/Terzo Anno/Ingegneria del Software/nota per provare github.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Domande Orali"
+              "title": "nota per provare github"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 249.50247192382812
   },
   "right": {
     "id": "1dbdbe2525227e64",
@@ -157,36 +157,6 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
-          },
-          {
-            "id": "343381e770904996",
-            "type": "leaf",
-            "state": {
-              "type": "reminder-list",
-              "state": {},
-              "icon": "clock",
-              "title": "Reminders"
-            }
-          },
-          {
-            "id": "dbbec8e4418b2215",
-            "type": "leaf",
-            "state": {
-              "type": "reminder-list",
-              "state": {},
-              "icon": "clock",
-              "title": "Reminders"
-            }
-          },
-          {
-            "id": "fb8f07843de4b903",
-            "type": "leaf",
-            "state": {
-              "type": "reminder-list",
-              "state": {},
-              "icon": "clock",
-              "title": "Reminders"
-            }
           }
         ],
         "currentTab": 4
@@ -209,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 390.5
+    "width": 339.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,8 +191,15 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "abc3454052119ddf",
+  "active": "3d6c1de6125f3901",
   "lastOpenFiles": [
+    "TorVergata/Terzo Anno/Ingegneria del Software/nota per provare github.md",
+    "TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Ciclo di vita SW.canvas",
+    "TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Ciclo di vita SW.png",
+    "TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Architetture.png",
+    "TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Architetture.canvas",
+    "TorVergata/Terzo Anno/Sicurezza delle Infrastrutture ICT/Data Security/Lezione 6 - Digital Certificates and Public Key Infrastructure.md",
+    "TorVergata/Terzo Anno/Sicurezza delle Infrastrutture ICT/Data Security/Spiegazione domande comuni esami.md",
     "TorVergata/Terzo Anno/Ingegneria del Software/Domande Orali.md",
     "TorVergata/Terzo Anno/Ingegneria del Software/Risposte-Domande orali (1).pdf",
     "TorVergata/Terzo Anno/Ingegneria del Software/Teoria.md",
@@ -257,27 +234,20 @@
     "Problemi di Progettazione per Sistemi di Paging.md",
     "Memory Abstraction.md",
     "Tabella delle Pagine.md",
-    "Virtual Memory.md",
-    "TorVergogna/Secondo anno/Sistemi Operativi/5 - Scheduling.md",
-    "TorVergogna/Secondo anno/Sistemi Operativi/4 - Sincronizzazione dei processi nei so.md",
     "File System Canvas.canvas",
     "Input-Output.canvas",
-    "I file (canvas).canvas",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/3.7 Segmentazione.pdf",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/3.5 Problemi di progettazione dei sistemi di paginazione.pdf",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/3.3 Memoria Virtuale.pdf",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/2 - Processi e thread.docx",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro",
     "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf/SOR2023-2024_9_virtual_memory.pdf",
-    "Processi e Thread.canvas",
     "Pasted image 20240202114858.png",
     "Screenshot 2024-01-18 alle 14.41.55.png",
     "Pasted image 20240122145726.png",
     "Pasted image 20231220173922.png",
     "Pasted image 20231220173715.png",
     "Pasted image 20231220173539.png",
-    "Pasted image 20231214165637.png",
-    "Pasted image 20231213160638.png",
-    "Pasted image 20231213154217.png"
+    "Pasted image 20231214165637.png"
   ]
 }
