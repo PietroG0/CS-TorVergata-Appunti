@@ -11,24 +11,13 @@
             "id": "fd974aed6ef2120f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Creazione e Chiusura di un Processo.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0518aa3a2107835c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -47,8 +36,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
             }
           },
           {
@@ -63,7 +55,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
             }
           },
           {
@@ -71,7 +65,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
             }
           }
         ]
@@ -101,7 +97,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti"
             }
           },
           {
@@ -112,7 +110,9 @@
               "state": {
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita"
             }
           },
           {
@@ -122,8 +122,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": false
-              }
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
             }
           },
           {
@@ -131,7 +135,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura"
             }
           },
           {
@@ -139,7 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           },
           {
@@ -147,7 +159,19 @@
             "type": "leaf",
             "state": {
               "type": "reminder-list",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
+            }
+          },
+          {
+            "id": "dbbec8e4418b2215",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {},
+              "icon": "clock",
+              "title": "Reminders"
             }
           }
         ],
@@ -168,7 +192,7 @@
       "graph:Apri vista grafo": false
     }
   },
-  "active": "0518aa3a2107835c",
+  "active": "fd974aed6ef2120f",
   "lastOpenFiles": [
     "Creazione e Chiusura di un Processo.md",
     "Dinamica di Allocazione e Algoritmo Page Fault Frequency (PFF).md",
