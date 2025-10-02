@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "spellcheck": true,
+  "spellcheck": false,
   "attachmentFolderPath": "Immagini-Argomenti-.obsidian/Immagini/Immagini",
   "newLinkFormat": "relative"
 }
