@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "4f1b92b3ee7f979d",
+    "type": "split",
+    "children": [
+      {
+        "id": "5da95283ebabddb2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd974aed6ef2120f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Creazione e Chiusura di un Processo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0518aa3a2107835c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "74177b02bb49414c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a9a947e05aa574ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62c57b5baab577e1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cd58ffd89f2a57ef",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b3d949567263f9df",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1dbdbe2525227e64",
+    "type": "split",
+    "children": [
+      {
+        "id": "5970220965ca9491",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0b89477c143a8a1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ce81493d906f0ebc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "e7c940c4e6bb093b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "b2c528e4ace85430",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "3fe7b56d8f965006",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "343381e770904996",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 390.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "graph:Apri vista grafo": false
+    }
+  },
+  "active": "0518aa3a2107835c",
+  "lastOpenFiles": [
+    "Creazione e Chiusura di un Processo.md",
+    "Dinamica di Allocazione e Algoritmo Page Fault Frequency (PFF).md",
+    "Double.md",
+    "Container.md",
+    "Char.md",
+    "Automi a stati finiti.md",
+    "Archivio di file.md",
+    "TorVergogna/Secondo anno/Reti/1 - Introduzione.md",
+    "TorVergogna/Secondo anno/Reti/Reti di calcolatori e Inter (Z-Library)-1.pdf",
+    "TorVergogna/Secondo anno/Reti",
+    "TorVergogna/Secondo anno/Sistemi Operativi/Reti",
+    "Algoritmi di Sostituzione delle pagine.canvas",
+    "Scheduling.canvas",
+    "Problemi di Progettazione dei sistemi di paginazione canvas.canvas",
+    "Memory Abstraction.canvas",
+    "Memoria Virtuale.canvas",
+    "TorVergogna/Secondo anno/Sistemi Operativi/6 - Gestione della memoria.md",
+    "Algoritmi di sostituzione delle pagine.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi/Comandi bash.png",
+    "Virtual Memory.canvas",
+    "TorVergogna/Secondo anno/Sistemi Operativi/8 - Gestione Directory, Spazio e Performance.md",
+    "Implementazione dei file nei File System.md",
+    "I file.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi/7 - File System.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi/Domande 1.md",
+    "Implementare le Directory.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi/Domande.md",
+    "Allocazione di Memoria in Sistemi di Paginazione.md",
+    "Problemi di Progettazione per Sistemi di Paging.md",
+    "Memory Abstraction.md",
+    "Tabella delle Pagine.md",
+    "Virtual Memory.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi/5 - Scheduling.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi/4 - Sincronizzazione dei processi nei so.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi/3 - Processi e Thread.md",
+    "File System Canvas.canvas",
+    "Input-Output.canvas",
+    "I file (canvas).canvas",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/3 - Processi e Thread.md",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/3.7 Segmentazione.pdf",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/3.5 Problemi di progettazione dei sistemi di paginazione.pdf",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/3.3 Memoria Virtuale.pdf",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro/2 - Processi e thread.docx",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf Libro",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf/SOR2023-2024_9_virtual_memory.pdf",
+    "TorVergogna/Secondo anno/Sistemi Operativi copia/Lezioni pdf/SOR2023-2024_8_memory_abstraction.pdf",
+    "Processi e Thread.canvas",
+    "Pasted image 20240202114858.png",
+    "Screenshot 2024-01-18 alle 14.41.55.png",
+    "Pasted image 20240122145726.png",
+    "Pasted image 20231220173922.png",
+    "Pasted image 20231220173715.png",
+    "Pasted image 20231220173539.png",
+    "Pasted image 20231214165637.png",
+    "Pasted image 20231213160638.png",
+    "Pasted image 20231213154217.png"
+  ]
+}
