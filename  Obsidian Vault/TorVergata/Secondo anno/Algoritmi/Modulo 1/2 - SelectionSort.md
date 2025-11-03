@@ -19,7 +19,7 @@ for k=0 to n-2 do   # Fino ad n-2 perchè basta confrontare l'ultimo con il penu
 
 Costo = $O(n^2)$
 
-[Insertion Sort](Insertion%20Sort.md)
+[Insertion Sort](obsidian://open?vault=Documents&file=CS-TorVergata-Appunti%2F%20Obsidian%20Vault%2FAltri%20Argomenti%2FInsertion%20Sort)
 [[Bubble Sort]]
 
 Algoritmi di ordinamento che usano la tecnica del _divide et impera_
