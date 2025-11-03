@@ -19,11 +19,11 @@ for k=0 to n-2 do   # Fino ad n-2 perchè basta confrontare l'ultimo con il penu
 
 Costo = $O(n^2)$
 
-[Insertion Sort](Insertion%20Sort.md)
+[Insertion Sort](Argomenti/Insertion%20Sort.md)
 [Bubble Sort](Argomenti/Bubble%20Sort.md)
 
 Algoritmi di ordinamento che usano la tecnica del _divide et impera_
-[[MergeSort]]
-[[Quick Sort]]
+[MergeSort](Argomenti/MergeSort.md)
+[Quick Sort](Argomenti/Quick%20Sort.md)
 
 
