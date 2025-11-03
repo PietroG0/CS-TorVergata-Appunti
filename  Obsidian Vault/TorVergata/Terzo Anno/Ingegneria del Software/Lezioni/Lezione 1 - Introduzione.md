@@ -137,11 +137,11 @@ Si parla di una *relazione* non-semplice tra l'affidabilità osservata ed il num
 	
 
 ###### Hardware
-![[Pasted image 20241010125053.png |500]]  
+![500](Pasted%20image%2020241010125053.png%20)  
 
 
 ###### Software
-![[Pasted image 20241010125201.png | 500]]
+![ 500](Pasted%20image%2020241010125201.png%20)
 
 
 

@@ -5,7 +5,7 @@
 2) VMM ospitato nel sistema operativo (QEMU)
 3) Hybrid: VMM all'interno del sistema operativo (KVM)
 
-![[Schermata del 2023-10-12 12-59-31.png]]
+![Schermata del 2023-10-12 12-59-31](../../../../Immagini/Immagini/Schermata%20del%202023-10-12%2012-59-31.png)
 
 
 

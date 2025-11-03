@@ -62,7 +62,7 @@
 >Dimostrare che conosci la tua password, semplicemente immettendola
 
 
-![[Pasted image 20250318141148.png | 500]]
+![ 500](Pasted%20image%2020250318141148.png%20)
 
 **Due principali modelli di attacco**
 - Attacco al canale della comunicazione
@@ -79,7 +79,7 @@
 - Aumenta la sicurezza, se l'attaccante ruba il Database, dovrebbe comunque "invertire" passwd
 - Con un buon hash c'è solo un metodo --> brute-force/indovinare
 
-![[Pasted image 20250318141617.png | 600]]
+![ 600](Pasted%20image%2020250318141617.png%20)
 
 **Quale Hash utilizzare?**
 Il migliore ad oggi è SHA256, ma ha 2 problematiche
@@ -100,7 +100,7 @@ Il migliore ad oggi è SHA256, ma ha 2 problematiche
 #### Challenge-Handshake Authentication
 **Prova di conoscenza: Result of computation**
 
-![[Pasted image 20250318142230.png | 500]]
+![ 500](Pasted%20image%2020250318142230.png%20)
 
 >[!info] Due Proprietà
 >-Questa computazione **non** può rilevare il segreto:
@@ -112,7 +112,7 @@ Il migliore ad oggi è SHA256, ma ha 2 problematiche
 
 **CHAP**
 
-![[Pasted image 20250318142732.png | 600]]
+![ 600](Pasted%20image%2020250318142732.png%20)
 
 **Passwd segreta non può mai essere trasmessa in chiaro**
 - Sicuro contro avversari che possono eavesdrop il canale
@@ -139,7 +139,7 @@ Il migliore ad oggi è SHA256, ma ha 2 problematiche
 >	- Non si possono usare database con password decriptate irriversibili
 
 
-![[Pasted image 20250318143634.png]]
+![Pasted image 20250318143634](../../../../Immagini/Immagini/Pasted%20image%2020250318143634.png)
 
 Questa slide spiega una debolezza del protocollo **CHAP** rispetto alla gesntione delle password
 
@@ -204,13 +204,13 @@ Un altro metodo è utilizzare il **salt**.
 > - Cattive abitudini nella scelta delle password
 > - Regole human-friendly per "generare" password
 
-![[Pasted image 20250318150009.png | 600]]
+![ 600](Pasted%20image%2020250318150009.png%20)
 
 
-![[Pasted image 20250318150028.png | 600]]
+![ 600](Pasted%20image%2020250318150028.png%20)
 
 
-![[Pasted image 20250318150058.png | 600]]
+![ 600](Pasted%20image%2020250318150058.png%20)
 
 
 #### Entropia
@@ -225,7 +225,7 @@ $x_{1} = face(A), x_{2} = face(B)$, $p_{1}=p_{2}=\frac{1}{2}$
 --> $H(X) = -2 \cdot (\frac{1}{2} \log{2} \cdot \frac{1}{2})$ = $-\log{2}\frac{1}{2}$ = $\log_{2} 2$ = $1$ 
 
 
-![[Pasted image 20250318153829.png | 600]]
+![ 600](Pasted%20image%2020250318153829.png%20)
 
 
 #### Approcci per il cracking delle password
@@ -261,7 +261,7 @@ Quanto giganti?
 	- Space-Time trade-off
 
 
-![[Pasted image 20250409111019.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250409111019.png#center%20|%20600)
 
 *Metodo*
 1. Parti da una password iniziale
@@ -312,7 +312,7 @@ Quanto giganti?
 >- Mai **falsi negativi**
 
 
-![[Pasted image 20250409113008.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250409113008.png#center%20|%20600)
 
 Qui vediamo come funziona una verifica di appartenenza **senza Bloom filter**:
 1. Hai una lista di elementi ($Element1, Element2, ..., Element n$)
@@ -331,7 +331,7 @@ Con un **Bloom Filter**:
 >Questo succede perchè più elementi impostano gli stessi bit $\rightarrow$ si crea una **sovrapposizione**
 
 
-![[GIF Speed Changer (3).gif#center | 600]]
+![](../../../../Immagini/Immagini/GIF%20Speed%20Changer%20(3).gif#center%20|%20600)
 
 
 **Probabilità falsi positivi**
@@ -357,7 +357,7 @@ $$
 
 *Esempio*
 
-![[Pasted image 20250417191704.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250417191704.png#center%20|%20500)
 
 
 >[!info] Da ricordare

@@ -10,14 +10,14 @@ Il browser deve:
 - Mostrarlo.
 ## Indirizzi
 Le pagine web vengono trovate tramite un *URL* ( Uniform Resource Locator), ovvero un identificatore per la posizione di un documento.
-![[Pasted image 20240306104556.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240306104556.png)
 
 # Internet
 Internet è un sistema di dispositivi elettronici interconnessi. Ogni computer ha un indirizzo IP ( Internet Protocol ). Chi è connesso alla rete può *condividere informazioni*.
 ## WWW
 Il **World Wide Web** è uno dei modi con cui le *informazioni* possono essere condivise; si tratta di un insieme di pagine wev ed altri documenti collegati tra loro utilizzando i collegamenti ipertestuali ( link ). Il protocollo principale per scambiare documenti è *HTTP* (HyperText Transfer Protocol).
 ## DNS
-All'uomo è comodo dare un nome ai Server, mentre ai computer serve un indirizzo numerico per comunicare con le altre macchine. Esistono dei computer che traducono nomi in indirizzi IP.![[Pasted image 20240306105443.png|center]]
+All'uomo è comodo dare un nome ai Server, mentre ai computer serve un indirizzo numerico per comunicare con le altre macchine. Esistono dei computer che traducono nomi in indirizzi IP.![center](../Immagini/Pasted%20image%2020240306105443.png)
 ### Server Web
 I Server Web sono computer che *rispondono a delle richieste di documenti*.
 - In realtà chi offre il servizio è un programma: il **Server Web**;
@@ -41,7 +41,7 @@ I software che fanno *richieste HTTP* ai server si chiamano **client**.
 > - Il server glielo spedisce;
 > - Il browser lo mostra all'utente.
 
-![[Pasted image 20240306110212.png|center|600]]
+![center|600](../Immagini/Pasted%20image%2020240306110212.png)
 ### I Browser
 I browser "parlano" HTTO come i server web ( sia le richieste che le risposte sono gestite mediante HTTP).
 Richiedono documenti di qualsiasi tipo: testo, immagini, video, script, ecc..
@@ -61,14 +61,14 @@ I tag non sono mostrati dal browser, sono definiti dallo standard e molti di ess
 Lo stile è definito in un altro file con estensione .css, il quale contiene delle direttive sull'aspetto della pagina. Le istruzioni riportate sul file segono il linguaggio CSS.
 # HTML
 	Sigla per HyperText Markup Language
-Si tratta di un linguaggio per *strutturare* documenti ipertestuali; è uno standard del W3C ed è lo standard più utilizzato per la creazione di pagine web visualizzabili attraverso i browser.![[Pasted image 20240306115545.png|center|600]]
+Si tratta di un linguaggio per *strutturare* documenti ipertestuali; è uno standard del W3C ed è lo standard più utilizzato per la creazione di pagine web visualizzabili attraverso i browser.![center|600](../Immagini/Pasted%20image%2020240306115545.png)
 ## Elementi e tag
 I tag possono essere annidati:
-![[Pasted image 20240306115646.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240306115646.png)
 Tuttavia è fondamentale evitare degli annidamenti scorretti:
-![[Pasted image 20240306115727.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240306115727.png)
 ## Attributi
-![[Pasted image 20240306120016.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240306120016.png)
 Alcuni elementi hanno attributi.
 - Coppie chiave-valore definite nel tag di apertura;
 - Sono specificati dallo standard per i diversi tag;
@@ -85,10 +85,10 @@ Sono definiti con un solo tag e possono contenere attributi.
 <img src="img_food.jpg">
 ```
 ## Albero degli elementi
-![[Pasted image 20240306120548.png|center|600]]
+![center|600](../Immagini/Pasted%20image%2020240306120548.png)
 # Struttura di documenti HTML
 ## Head e Body
-![[Pasted image 20240306120718.png|center|600]]
+![center|600](../Immagini/Pasted%20image%2020240306120718.png)
 
 - L'elemento `<html>` è la radice dell'albero e contiene tutti gli altri;
 - L'elemento `<head>` fornisce informazioni circa il documento;
@@ -96,10 +96,10 @@ Sono definiti con un solo tag e possono contenere attributi.
 ## Dichiarazione `<!DOCTYPE>`
 La dichiarazione `<!DOCTYPE>` serve a dire al browser il tipo di documento HTML, poiché il browser deve sapere il tipo e la versione dell'HTML da visualizzare.
 ## Sezione Head
-![[Pasted image 20240306121157.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240306121157.png)
 La sezione `<head>` contiene i metadati relativi alla pagina. Generalmente, il contenuto di questo tag non viene visualizzato nella pagina web
 ## Titolo della pagina `<title>`
 Esso definisce il titolo della pagina visualizzato dal browser nella toolbar. È usato quando la pagina è memorizzata nei preferiti e dai motori di ricerca. Tale elemento è obbligatorio nella pagine, altrimenti il documento HTML non sarebbe valido, ed è unico ( non possono essercene altri ).
 ## Sezione `<body>`
 Essa contiene la parte visibile della pagina, e normalmente è divisa in sezioni.
-![[Pasted image 20240306121706.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240306121706.png)

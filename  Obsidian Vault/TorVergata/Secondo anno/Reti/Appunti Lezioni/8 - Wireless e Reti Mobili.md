@@ -1,8 +1,8 @@
 #Reti 
 
-[[Introduzione]]
+[Introduzione](../../../../Altri%20Argomenti/Introduzione.md)
 
-[[Wireless]]
+[Wireless](../Argomenti/Wireless.md)
 
-[[Mobilità]]
+[Mobilità](../../../../Altri%20Argomenti/Mobilità.md)
 

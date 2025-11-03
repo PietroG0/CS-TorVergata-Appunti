@@ -68,8 +68,8 @@ class MountainBike extend Bicycle{
 }
 
 
-Definizione di [[Interfacce]].
-Definizione di [[Package]] 
+Definizione di [Interfacce](../../../Altri%20Argomenti/Interfacce.md).
+Definizione di [Package](../../../Altri%20Argomenti/Package.md) 
 
 
 

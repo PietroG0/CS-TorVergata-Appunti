@@ -18,7 +18,7 @@ Layout del File System:
 - Ogni partizione inizia con un boot block, seguito da vari elementi di sistema
 - A destra un esempio di layout, includendo superblocco, bitmap, I-node e directory radice
 
-![[Pasted image 20231211102246.png| 500]]
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020231211102246.png)
 
 
 **Nuova Scuola - UEFI (Unified Extensible Firmware Interface)**
@@ -34,5 +34,5 @@ EFI System Partition:
 - Utilizza un file system FAT per memorizzare i programmi di avvio
 - Il firmware UEFI legge la GPT e carica i file dalla partizione EFI per avviare il sistema
 
-![[Pasted image 20231211102313.png]]
+![Pasted image 20231211102313](../../../../Immagini/Immagini/Pasted%20image%2020231211102313.png)
 

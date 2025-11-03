@@ -25,7 +25,7 @@ Confronto con FAT (File Allocation Table)
 - Esempio e Struttura
 	Ogni I-Node ha una dimensione fissa e contiene informazioni quali dimensione del file, permessi, proprietario, e indirizzi dei blocchi di dati
 
-![[Pasted image 20231211161039.png| 400]]
+![ 400](../../../../Immagini/Immagini/Pasted%20image%2020231211161039.png)
 
 **Gestione dei File di Grandi dimensioni e Confronto con NTFS**
 - Gestione File di Grandi Dimensioni

@@ -13,7 +13,7 @@
 - Asintoto: il limite di w(k, t) è finito, correlato allo spazio degli indirizzi del programma
 - Implicazione C'è un ampio intervallo di k dove il working set resta invariato
 
-![[Pasted image 20231206161408.png| 500]]
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020231206161408.png)
 
 **Working Set e Performance**
 Gestione della Memoria e Page Fault:

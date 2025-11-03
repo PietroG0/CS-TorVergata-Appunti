@@ -130,7 +130,7 @@ $$
 
 **Diagramma CBC**
 
-![[Pasted image 20250521125349.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250521125349.png#center%20|%20600)
 
 Nel **CBC**, ad ogni blocco si applica uno XOR tra il plaintext corrente e il ciphertext precedente (per il primo blocco si usa l'IV) $\rightarrow$ Questo crea una catena: per decriptare il blocco $C_{i}$ è necessario $C_{i-1}$   
 
@@ -138,7 +138,7 @@ Nel **CBC**, ad ogni blocco si applica uno XOR tra il plaintext corrente e il ci
 
 
 **Diagramma CFB**
-![[Obsidian Overleaf.pdf]]
+![Obsidian Overleaf](../../../../Immagini/Immagini/Obsidian%20Overleaf.pdf)
 
 Nel **CFB**, si parte da un IV che viene cifrato per generare un keystream da cui, effettuando uno XOR con $M_{1}$, si ottiene $C_{1}$. Il ciphertext $C_{1}$ diventa l'input per il successivo calcolo $E_{K} (C_{1})$ e così via. Anche in questo schema, per decriptare $M_{i}$ è necessaria una dipendenza dal blocco precedente.
 
@@ -190,14 +190,14 @@ Risultato finale: Le lettere cifrate sono R, M, F, V, V
 - Usando CBC, si DECIFRI il ciphertext CT = (1101) 1001 0101 0110
 - Usando CTR, si CIFRI il plaintext PT = 0001 0010 011, usando come contatore iniziale il valore 1100
 
-![[Obsidian Overleaf (2).pdf]]
+![Obsidian Overleaf (2)](../../../../Immagini/Immagini/Obsidian%20Overleaf%20(2).pdf)
 
 
 --- 
 
 *D8* Assumendo un cifrario a blocchi da 4 bit basato sulla permutazione riportata in tabella, si cifri, usando la costruzione **OFB**, la stringa 0000.1111.000.1111 usando come vettore di inizializzazione il valore 0101
 
-![[Pasted image 20250511185233.png#center | 100]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250511185233.png#center%20|%20100)
 
 **Modalità OFB (Output Feedback)**
 
@@ -738,7 +738,7 @@ per qualche intero $k$
 
 3. Si dica che la permutazione a destra è preferibile in linea teorica rispetto a quella usata per risolvere l'esercizio, motivando la risposta.
 
-![[Pasted image 20250514121920.png#center |250]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250514121920.png#center%20|250)
 
 **Costruzione CBC e CTR**:
 
@@ -856,9 +856,9 @@ $$
 2. Usando CBC, si DECIFRI il PRIMO ed il QUARTO blocco relativo al ciphertext (0101) 0101.0110.1010.0101
 3. Un attaccante in grado di modificare il precedente messaggio cifrato potrebbe cambiare i primi due bit del plaintext contenuto, lasciando invariato il resto del messaggio? Se si, come, esattamente?
 
-![[Pasted image 20250518190611.png#center]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250518190611.png#center)
 
-![[Pasted image 20250518191604.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250518191604.png#center%20|%20500)
 
 
 **Decifrazione dei blocchi 1 e 4 del ciphertext**
@@ -1255,7 +1255,7 @@ Circa 9 ore e 30 minuti
 
 *D33* 
 
-![[Pasted image 20250521142614.png]]
+![Pasted image 20250521142614](../../../../Immagini/Immagini/Pasted%20image%2020250521142614.png)
 
 1. BCRYPT
 2. VERO
@@ -1278,7 +1278,7 @@ Il password spraying è una tecnica di attacco di brute force in cui l'attaccant
 
 *D35* 
 
-![[Screenshot 2025-05-21 alle 15.03.35.png]]
+![Screenshot 2025-05-21 alle 15.03.35](../../../../Immagini/Immagini/Screenshot%202025-05-21%20alle%2015.03.35.png)
 
 1. In un sistema asimmetrico il mittente cifra il messaggio utilizzando la chiave pubblica del destinatario. In questo modo solo il destinatario, che possiede la corrispondente chiave privata, potrà decifrare il messaggio
 2. Aggiungere 13 bit alla lunghezza di una chiave aumenta lo spazio delle possibili combinazioni di un fattore pari a $2^{13}$ (circa 8000)

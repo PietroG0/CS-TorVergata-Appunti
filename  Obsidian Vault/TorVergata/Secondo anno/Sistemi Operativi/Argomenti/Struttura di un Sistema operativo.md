@@ -30,7 +30,7 @@ Estensioni caricabili
 - Questi componenti possono essere caricati e scaricati a seconda delle necessità, offrendo una certa modularità anche in un sistema monolitico
 
 Librerie condivise e DLL
-- Sia [[Unix]] che Windows supportano l'idea di librerie di codice che possono essere condivise tra più programmi
+- Sia [Unix](Unix.md) che Windows supportano l'idea di librerie di codice che possono essere condivise tra più programmi
 - Contengono codice che può essere eseguito da più programmi contemporaneamente, riducendo la necessità di avere copie multiple del medesimo codice in memoria.
 
 Struttura
@@ -42,7 +42,7 @@ Struttura
 - Interconnessione: Ogni componente ha la capacità di richiamare qualsiasi altro componente
 - Scalabilità: Questa struttura può diventare complessa e meno gestibile con l'evoluzione del sistema.
 
-![[Schermata del 2023-10-11 10-19-04.png]]
+![Schermata del 2023-10-11 10-19-04](../../../../Immagini/Immagini/Schermata%20del%202023-10-11%2010-19-04.png)
 
 
 

@@ -10,7 +10,7 @@ Il processo è associato:
 
 Il processo può essere pensato come un contenitore di tutte le informazioni necessarie per l'esecuzione del programma
 
-![[Schermata del 2023-10-11 09-43-04.png]]
+![Schermata del 2023-10-11 09-43-04](../../../../Immagini/Immagini/Schermata%20del%202023-10-11%2009-43-04.png)
 
 Il Layout dipende da:
 - Architettura della macchina
@@ -32,9 +32,9 @@ Un processo può creare un altro processo
 - Conosciuto come processo "figlio"
 - Crea una gerarchia dei processi (o albero)
 
-![[Schermata del 2023-10-11 09-47-30.png]]
+![Schermata del 2023-10-11 09-47-30](../../../../Immagini/Immagini/Schermata%20del%202023-10-11%2009-47-30.png)
 
 I processo sono "di proprietà" di un utente, identificato da un UID
 - Ogni processo ha tipicamente l'UID dell'utente che lo ha avviato
-- Su [[Unix]], un processo figlio ha lo stesso UID del suo processo padre
+- Su [Unix](Unix.md), un processo figlio ha lo stesso UID del suo processo padre
 - Gli utenti possono essere membri di gruppi, identificato da un GUID 

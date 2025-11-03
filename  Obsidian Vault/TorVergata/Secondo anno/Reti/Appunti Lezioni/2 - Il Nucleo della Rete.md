@@ -41,7 +41,7 @@ Multiplexing a Divisione di Tempo (TDM)
 I sistemi periferici accedono tramite Internet Service Provider (ISP) di accesso, che a loro volta, devono essere interconnessi. Questa complessa rete è guidata dall'economia e dalle politiche nazionali. Collegare direttamente ogni IPS di accesso non è scalabile, quindi si ricorre a Internet Exchange Points (IXP) dove gli ISP possono fare peering tra di loro, stabilendo connessioni dirette a costo zero. Le reti regionali emergono per collegare le reti di accesso agli ISP.
 Al centro di Internet vi sono poche grandi reti ben connesse, come gli ISP commerciali "tier 1" con copertura nazionale e internazionale. Inoltre, reti di fornitori di contenuti come Google e Facebook gestiscono le proprie reti private per avvicinare i servizi agli utenti, aggirando talvolta gli ISP tier-1 e regionali
 
-![[Pasted image 20240312151500.png]]
+![Pasted image 20240312151500](../../../../Immagini/Immagini/Pasted%20image%2020240312151500.png)
 
 
 **Come si verificano ritardi e perdite?**
@@ -67,7 +67,7 @@ Al centro di Internet vi sono poche grandi reti ben connesse, come gli ISP comme
 	- v: velocità di propagazione 
 	- d propagazione = d/v
 
-[[Il Ritardo end-to-end]]
+[Il Ritardo end-to-end](../Argomenti/Il%20Ritardo%20end-to-end.md)
 
 
 

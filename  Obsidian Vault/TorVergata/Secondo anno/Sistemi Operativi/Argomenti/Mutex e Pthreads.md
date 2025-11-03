@@ -26,8 +26,8 @@ Due procedure principali: mutex_lock e mutex_unlock
 - Passaggio al kernel per bloccare processi è oneroso se le contese sono poche
 - Soluzione: Futex (Fast User Space Mutex) - combina il meglio di entrambi gli approcci
 
-[[Futex]]
-[[Pthread e Mutex]]
+[Futex](../../../../Altri%20Argomenti/Futex.md)
+[Pthread e Mutex](Pthread%20e%20Mutex.md)
 
 **Semafori o Mutex?**
 Finalità:

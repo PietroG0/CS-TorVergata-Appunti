@@ -3,7 +3,7 @@ Nel problema del produttore-consumatore, due processi condividono un buffer di d
 - Il produttore si addormenta (entra in modalità sleep) se il buffer è pieno e viene risvegliato (viene riattivato) quando il consumatore preleva dati
 - Analogamente, il consumatore dorme se il buffer è vuoto e viene risvegliato quando il produttore inserisce dati
 
-![[Pasted image 20231110105558.png]]
+![Pasted image 20231110105558](../../../../Immagini/Immagini/Pasted%20image%2020231110105558.png)
 
 **Bit in attesa del wakeup**
 Problema

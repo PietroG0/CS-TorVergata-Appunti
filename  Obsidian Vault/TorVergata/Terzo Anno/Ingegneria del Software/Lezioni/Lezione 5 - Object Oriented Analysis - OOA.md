@@ -43,11 +43,11 @@
 - Le *operazioni* di ciascuna classe vengono identificate a partire dal modello comportamentale, per cui vengono inizialmente trascurate
 
 
-#### [[Approcci per l'identificazione delle classi]]
+#### [Approcci per l'identificazione delle classi](../../../../Altri%20Argomenti/Approcci%20per%20l'identificazione%20delle%20classi.md)
 
-#### [[Identificazione delle associazioni]]
+#### [Identificazione delle associazioni](../../../../Altri%20Argomenti/Identificazione%20delle%20associazioni.md)
 
-#### [[Modello comportamentale]]
+#### [Modello comportamentale](../../../../Altri%20Argomenti/Modello%20comportamentale.md)
 
 #### Diagrammi di iterazione
 Sequence diagram
@@ -107,7 +107,7 @@ Usando criteri aggiuntivi, come ad esempio:
 - Rappresenta il comportamento dinamico degli oggetti di una singola classe, in termini di *stati* possibili ed *eventi* e *condizioni* che originano *transizioni* di stato (assieme alle eventuali *azioni* da svolgere a seguito dell'evento verificatosi)
 - Fa uso del formalismo *State Diagrams*
 
-![[Pasted image 20241127165807.png | 500]]
+![ 500](Pasted%20image%2020241127165807.png%20)
 
 - Viene costruito per ogni *classe di controllo* (per le quali è interessante descrivere il comportamento dinamico)
 - Usato principalmente per *applicazioni scientifiche e real-time* (meno frequentemente nello sviluppo di applicazioni gestionali)
@@ -153,4 +153,4 @@ Usando criteri aggiuntivi, come ad esempio:
 	- Descrive classi i cui oggetti gestiscono l'accesso alle entità fondamentali del sistema
 	- Le classi corrispondono alle strutture dati gestite dal sistema
 
-#### [[OOA - Esercizi]]
+#### [OOA - Esercizi](../../../Secondo%20anno/Linguaggi%20e%20metodologie%20di%20programmazione/OOA%20-%20Esercizi.md)

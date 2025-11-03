@@ -49,5 +49,5 @@ h1 {color: rgb(102,102,102); }
 Allineamento orizzontale
 Valori: left / right / center / iustifv
 
-![[Pasted image 20250526150823.png#center ]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250526150823.png#center%20)
 

@@ -1,7 +1,7 @@
 - Si trova abitualmente dentro la MMU e consiste di un numero ridotto di voci
 - Ciascuna voce contiene informazioni riguardo una pagina, tra cui il numero di pagina virtuale, un bit impostato quando la pagine viene modificata, il codice di protezione (i permessi di lettura, scrittura ed esecuzione) e il frame fisico in cui si trova la pagina
 
-![[Pasted image 20231122113806.png]]
+![Pasted image 20231122113806](../../../../Immagini/Immagini/Pasted%20image%2020231122113806.png)
 
 - Quando un indirizzo virtuale viene presentato alla MMU per la traduzione, l'hardware prima guarda se il suo numero di pagina virtuale è presente nel TLB confrontandolo simultaneamente con tutte le voci.
 - Questa operazione richiede un hardware specializzato, presente in tutte le MMU dotate di TLB. Se trova un riscontro valido e l'accesso non viola i bit di protezione, il frame è prelevato direttamente dal TLB, senza andare alla tabella delle pagine in memoria

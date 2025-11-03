@@ -8,7 +8,7 @@
 - Se mutex è unlocked, l'accesso è immediato e atomico
 - Se locked, il mutex attende
 
-![[Pasted image 20231110114357.png]]
+![Pasted image 20231110114357](../../../../Immagini/Immagini/Pasted%20image%2020231110114357.png)
 
-![[Pasted image 20231110114409.png]]
+![Pasted image 20231110114409](../../../../Immagini/Immagini/Pasted%20image%2020231110114409.png)
 

@@ -7,7 +7,7 @@
 	- Efficienza di spazio: una sola voce directory per ciascun hard link
 	- Ideali per la gestione di file condivisi tra più proprietari 
 
-![[Pasted image 20231213154217.png| 400]]
+![ 400](../../../../Immagini/Immagini/Pasted%20image%2020231213154217.png)
 
 **Hard Links**
 - Vantaggi degli Hard Link:
@@ -17,7 +17,7 @@
 	- Il file permane fino all'eliminazione di tutti gli hard link, potenzialmente causando confusione sulla proprietà del file
 	- A destra: Illustrano come i file condivisi sono gestiti nel file system e le implicazioni dell'eliminazione di hard link
 
-![[Pasted image 20231213160638.png| 400]]
+![ 400](../../../../Immagini/Immagini/Pasted%20image%2020231213160638.png)
 
 **Link Simbolici**
 - Vantaggi dei Link Simbolici:

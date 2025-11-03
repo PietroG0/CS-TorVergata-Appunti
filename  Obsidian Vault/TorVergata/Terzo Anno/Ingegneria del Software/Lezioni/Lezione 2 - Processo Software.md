@@ -39,21 +39,21 @@ Durante ogni fase si procede ed effettuare il *testing* di quanto prodotto, medi
 - La scelta del modello dipende dalla natura dell'applicazione, dalla maturità dell'organizzazione, da metodi e tecnologie usate e da eventuali vincoli dettati dal cliente
 - L'assenza di un modello del ciclo di vita corrisponde ad una modalità di sviluppo detta *build & fix* (o fix later), in quale il prodotto software viene sviluppato e successivamente rilavorato fino a soddisfare le necessità del cliente
 
-![[Pasted image 20241014125011.png | 500]]
+![ 500](Pasted%20image%2020241014125011.png%20)
 
 
 #### Modello Waterfall
 
-![[Pasted image 20241015160141.png | 500]]
+![ 500](Pasted%20image%2020241015160141.png%20)
 
 
 #### Verification & Validation (V&V) nel Waterfall
 
-![[Pasted image 20241015160241.png | 500]]
+![ 500](Pasted%20image%2020241015160241.png%20)
 
 
 
-[[Software Prototyping]]
+[Software Prototyping](../../../../Altri%20Argomenti/Software%20Prototyping.md)
 
 
 #### Programmazione visiva
@@ -62,7 +62,7 @@ Durante ogni fase si procede ed effettuare il *testing* di quanto prodotto, medi
 - Potrebbero essere su misura per i requisiti delle applicazioni 
 
 
-![[Pasted image 20241015163755.png]]
+![Pasted image 20241015163755](../../../../Immagini/Immagini/Pasted%20image%2020241015163755.png)
 
 
 #### Problemi con la programmazione visiva
@@ -89,7 +89,7 @@ Durante ogni fase si procede ed effettuare il *testing* di quanto prodotto, medi
 #### Modello Incrementale
 Il prodotto software viene sviluppato e rilasciato per incrementi (build) successivi
 
-![[Pasted image 20241021150806.png | 500]]
+![ 500](Pasted%20image%2020241021150806.png%20)
 
 
 #### Modello Incrementale (cont.)
@@ -100,9 +100,9 @@ Il prodotto software viene sviluppato e rilasciato per incrementi (build) succes
 	- versione senza overall architecture (più rischiosa)
 
 
-![[Pasted image 20241021151019.png | 500]]
+![ 500](Pasted%20image%2020241021151019.png%20)
 
-![[Pasted image 20241021151043.png | 500]]
+![ 500](Pasted%20image%2020241021151043.png%20)
 
 
 #### Confronto con modello a cascata
@@ -123,22 +123,22 @@ Modello Incrementale
 
 #### Modello a spirale
 
-![[Pasted image 20241021151641.png | 600]]
+![ 600](Pasted%20image%2020241021151641.png%20)
 
-![[Pasted image 20241021151716.png | 600]]
+![ 600](Pasted%20image%2020241021151716.png%20)
 
-![[Pasted image 20241021151748.png | 600]]
+![ 600](Pasted%20image%2020241021151748.png%20)
 
 
 
-[[Gestione del Rischio]]
+[Gestione del Rischio](../../../../Altri%20Argomenti/Gestione%20del%20Rischio.md)
 
-[[Il Modello Microsoft]]
+[Il Modello Microsoft](../../../../Altri%20Argomenti/Il%20Modello%20Microsoft.md)
 
-[[Il Modello Netscape]]
+[Il Modello Netscape](../../../../Altri%20Argomenti/Il%20Modello%20Netscape.md)
 
-[[Agile Methods]]
+[Agile Methods](../../../../Altri%20Argomenti/Agile%20Methods.md)
 
-[[Scrum]]
+[Scrum](../../../../Altri%20Argomenti/Scrum.md)
 
-[[Capability Maturity Model (CMM)]]
+[Capability Maturity Model (CMM)](../../../../Altri%20Argomenti/Capability%20Maturity%20Model%20(CMM).md)

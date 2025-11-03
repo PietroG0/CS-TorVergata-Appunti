@@ -7,7 +7,7 @@ Premessa:
 - La CPU esegue il processo con la priorità più alta tra quelli pronti
 - Applicabile anche su singoli PC
 
-![[Pasted image 20231120144330.png]]
+![Pasted image 20231120144330](../../../../Immagini/Immagini/Pasted%20image%2020231120144330.png)
 
 **Gestione delle Priorità**:
 - Priorità del processo attualmente in esecuzione può diminuire con il tempo

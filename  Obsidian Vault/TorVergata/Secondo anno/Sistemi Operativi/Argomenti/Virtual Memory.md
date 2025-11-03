@@ -26,7 +26,7 @@ Soluzione (e vantaggio dell'uso della Memoria Virtuale):
 - La RAM (molto più limitata) è nota come memoria fisica
 - Memory Management Unit (MMU): traduce gli indirizzi virtuali (come usati dal processo) in indirizzi fisici
 
-![[Pasted image 20231122104040.png]]
+![Pasted image 20231122104040](../../../../Immagini/Immagini/Pasted%20image%2020231122104040.png)
 
 
 **Memoria Virtuale e Paginazione**
@@ -34,7 +34,7 @@ I sistemi moderni utilizzano la paginazione (paging):
 - Dividendo la memoria fisica e virtuale in pagine di dimensioni fisse
 - Traducendo le pagine virtuali in pagine fisiche (frame)
 
-![[Pasted image 20231122104125.png]]
+![Pasted image 20231122104125](../../../../Immagini/Immagini/Pasted%20image%2020231122104125.png)
 
 
 **Spazio di Indirizzamento Virtuale vs Spazio degli indirizzi fisici e page table**
@@ -54,7 +54,7 @@ Problema di Prestazioni nella Paginazione:
 - I programmi tendono a fare molti riferimenti a un piccolo numero di pagine
 - Solo una parte limitata delle voci della tabella delle pagine viene utilizzata frequentemente
 
-[[Introduzione del Translation Lookaside Buffer (TLB)]]
+[Introduzione del Translation Lookaside Buffer (TLB)](Introduzione%20del%20Translation%20Lookaside%20Buffer%20(TLB).md)
 
 **Page Table sizes**
 - Uno spazio di indirizzi virtuali molto grande porterebbe a una tabella di pagine molto grande
@@ -65,7 +65,7 @@ Una possibile soluzione è il **Page Table a due livelli (x86)**
 
 64 Bit: Page Table a 4 livelli
 
-![[Pasted image 20231122115747.png]]
+![Pasted image 20231122115747](../../../../Immagini/Immagini/Pasted%20image%2020231122115747.png)
 
 
 

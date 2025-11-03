@@ -28,7 +28,7 @@ Criterio raggio di azione:
 
 **Struttura**
 
-![[Pasted image 20250607150736.png#center]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250607150736.png#center)
 https://refactoring.guru/design-patterns/abstract-factory
 
 *Applicabilità*:
@@ -51,8 +51,8 @@ https://refactoring.guru/design-patterns/abstract-factory
 - *Scopo*: Definire un'interfaccia per la creazione di un oggetto, che consenta di decidere a tempo di esecuzione quale specifico oggetto istanziare
 - *Motivazione*: E' un pattern ampiamente usato nei framework, dove le classi astratte definiscono le relazioni tra gli elementi del dominio, e sono responsabili per la creazione degli oggetti concreti
 
-![[Pasted image 20250607151235.png#center]]
-https://refactoring.guruAb![[Pasted image 20250704170006.png]]/design-patterns/factory-method
+![](../../../Immagini/Immagini/Pasted%20image%2020250607151235.png#center)
+https://refactoring.guruAb![Pasted image 20250704170006](../../../Immagini/Immagini/Pasted%20image%2020250704170006.png)/design-patterns/factory-method
 
 *Affidabilità*:
 - Una classe non è in grado di sapere in anticipo le classi di oggetti che deve creare
@@ -71,7 +71,7 @@ https://refactoring.guruAb![[Pasted image 20250704170006.png]]/design-patterns/f
 - *Scopo*: *Convertire* l'interfaccia di una classe esistente *incompatibile* con un client, in una *compatibile*
 - *Motivazione*: Consideriamo un editor che consente di disegnare e comporre elementi grafici. L'astrazione chiave è un singolo oggetto grafico. Supponiamo di voler integrare un nuovo componente, ma che questo non abbia un'interfaccia compatibile con l'editor
 
-![[Pasted image 20250607151757.png#center]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250607151757.png#center)
 https://refactoring.guru/design-patterns/adapter
 
 *Applicabilità*:
@@ -91,7 +91,7 @@ https://refactoring.guru/design-patterns/adapter
 - *Scopo*: Comporre oggetti in strutture che consentano di trattare i singoli elementi e la composizione in modo uniforme
 - *Motivazione*: Le applicazioni grafiche consentono di trattare in modo uniforme sia le forme geometriche di base sia gli oggetti complessi che si creano a partire da questi elementi semplici. Molti editor grafici ad esempio hanno la funzione raggruppa
 
-![[Pasted image 20250607152117.png#center]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250607152117.png#center)
 https://refactoring.guru/design-patterns/composite
 
 *Applicabilità*:
@@ -114,7 +114,7 @@ https://refactoring.guru/design-patterns/composite
 - *Motivazione*: Uno scenario classico di applicabilità per questo pattern è la realizzazione di interfacce utente. Responsabilità quali il testo scorrevole o un particolare bordo devono poter essere aggiunti a livello di singolo oggetto
 
 
-![[Pasted image 20250607152601.png#center]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250607152601.png#center)
 https://refactoring.guru/design-patterns/decorator
 
 *Applicabilità*:
@@ -135,7 +135,7 @@ https://refactoring.guru/design-patterns/decorator
 - *Scopo*: Definire una dipendenza *uno a molti* tra oggetti, mantenendo basso il grado di coupling. In altre parole la variazione dello stato di un oggetto deve essere osservata da altri oggetti, in modo che possano aggiornarsi automaticamente
 - *Motivazione*: Lo scenario classico è quello di applicazioni con GUI, realizzate secondo il paradigma *Model-View-Control*. Quando il Model cambia, gli oggetti che implementano la View devono aggiornarsi
 
-![[Pasted image 20250607153135.png#center]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250607153135.png#center)
 https://refactoring.guru/design-patterns/observer
 
 *Applicabilità*:
@@ -160,7 +160,7 @@ https://refactoring.guru/design-patterns/observer
 - *Scopo*: Definire la struttura di un algoritmo all'interno di un metodo, delegando alcuni passi alle sottoclassi
 - *Motivazione*: Consideriamo un framework per costruire applicazioni in grado di gestire documenti diversi. Il Template Method definisce un algoritmo in base ad operazioni astratte che saranno definite nelle sottoclassi specifiche
 
-![[Pasted image 20250607155333.png#center]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250607155333.png#center)
 https://refactoring.guru/design-patterns/template-method
 
 *Applicabilità*:
@@ -186,7 +186,7 @@ Il Template Method è simile al Factory Method
 - *Scopo*: Definire ed incapsulare una famiglia di algoritmi in modo da renderli intercambiabili indipendentemente dal client che li usa
 - *Motivazione*: Consideriamo la famuglia degli algoritmi di ordinamento. Ne esistono diversi (QuickSort, BubbleSort, MergeSort, ecc..). Costruiamo un'applicazione che li supporti tutti, che possa essere facilmente estendibile, e che permetta una scelta rapida del tipo di algoritmo
 
-![[Pasted image 20250607160025.png#center]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250607160025.png#center)
 https://refactoring.guru/design-patterns/strategy
 
 *Applicabilità*:
@@ -279,7 +279,7 @@ Le caratteristiche principali del modello a spirale sono:
 - Ogni ciclo produce una versione incrementale del software, migliorando il prodotto fino alla versione finale
 
 
-![[Pasted image 20250609144901.png#center | 500]]
+![](../../../Immagini/Immagini/Pasted%20image%2020250609144901.png#center%20|%20500)
 
 
 #### Domanda 4 - Cosa significa fare Risk Analysis

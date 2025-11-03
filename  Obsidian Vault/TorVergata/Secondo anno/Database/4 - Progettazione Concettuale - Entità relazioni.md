@@ -17,7 +17,7 @@ Sono stati sviluppati modelli più moderni:
 - Modello Entità-Relazioni Esteso - EER (consente l'utilizzo di costrutti più potenti)
 - UML: linguaggio unificato per la progettazione dei dati e delle funzioni
 
-[[Progettazione di Basi di Dati]]
-[[Modello concettuale]]
-[[Modello Entità Relazioni ER]]
+[Progettazione di Basi di Dati](../../../Altri%20Argomenti/Progettazione%20di%20Basi%20di%20Dati.md)
+[Modello concettuale](../../../Altri%20Argomenti/Modello%20concettuale.md)
+[Modello Entità Relazioni ER](../../../Altri%20Argomenti/Modello%20Entità%20Relazioni%20ER.md)
 

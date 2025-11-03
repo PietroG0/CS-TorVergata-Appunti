@@ -126,4 +126,4 @@ Per descrivere la specifica semi-formale di un sistema software si usano 3 tipi 
 	- State diagram (UML)
 
 
-## [[Structured System Analysis (SSA)]]
+## [Structured System Analysis (SSA)](../../../../Altri%20Argomenti/Structured%20System%20Analysis%20(SSA).md)

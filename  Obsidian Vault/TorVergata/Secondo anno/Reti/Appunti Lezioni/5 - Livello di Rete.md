@@ -32,13 +32,13 @@ Piano di controllo
 **Piano di controllo per router**
 I singoli componenti dell'algoritmo di routing in ogni songolo router
 
-![[Pasted image 20240426172850.png]]
+![Pasted image 20240426172850](../../../../Immagini/Immagini/Pasted%20image%2020240426172850.png)
 
 
 **Software-Defined Networking (SDN)**
 Un controllore remoto calcola e installa le tabelle di inoltro nei router
 
-![[Pasted image 20240426172920.png]]
+![Pasted image 20240426172920](../../../../Immagini/Immagini/Pasted%20image%2020240426172920.png)
 
 #### Modello di servizio del livello di rete
 Esempi di servizi per un singolo datagramma
@@ -61,11 +61,11 @@ Il successo del modello di servizio best effort è difficilmente contestabile
 ### Architettura del router
 Visione ad alto livello di una generica architettura di router:
 
-![[Pasted image 20240426173017.png]]
+![Pasted image 20240426173017](../../../../Immagini/Immagini/Pasted%20image%2020240426173017.png)
 
 #### Funzioni delle porte di ingresso 
 
-![[Pasted image 20240426173100.png]]
+![Pasted image 20240426173100](../../../../Immagini/Immagini/Pasted%20image%2020240426173100.png)
 
 Commutazione decentralizzata:
 - Usando i valori dei campi di intestazione, trova la porta di uscita usando la tabella di inoltro nella memoria della porta di ingresso
@@ -75,8 +75,8 @@ Commutazione decentralizzata:
 - Inoltro generalizzato: inoltro basato su più campi di intestazione
 
 
-[[Struttura di commutazione]]
-[[Accodamento sulle porte di ingresso]]
+[Struttura di commutazione](../../../../Altri%20Argomenti/Struttura%20di%20commutazione.md)
+[Accodamento sulle porte di ingresso](../../../../Altri%20Argomenti/Accodamento%20sulle%20porte%20di%20ingresso.md)
 
 
 ##### Gestione del Buffer
@@ -86,12 +86,12 @@ Commutazione decentralizzata:
 
 - Marcatura: quali pacchetti marcare per segnalare la congestione (ECN, RED)
 
-![[Pasted image 20240426174618.png| 600]]
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020240426174618.png)
 
 
-[[Schedulazione dei pacchetti]]
-[[IP - Il Protocollo Internet]]
-[[IPv6]]
-[[NAT - Network Address Translation]]
-[[Inoltro generalizzato - Match Plus Action]]
-[[Middlebox]]
+[Schedulazione dei pacchetti](../../Sistemi%20Operativi/Argomenti/Schedulazione%20dei%20pacchetti.md)
+[IP - Il Protocollo Internet](../Argomenti/IP%20-%20Il%20Protocollo%20Internet.md)
+[IPv6](../Argomenti/IPv6.md)
+[NAT - Network Address Translation](../Argomenti/NAT%20-%20Network%20Address%20Translation.md)
+[Inoltro generalizzato - Match Plus Action](../Argomenti/Inoltro%20generalizzato%20-%20Match%20Plus%20Action.md)
+[Middlebox](../../../../Altri%20Argomenti/Middlebox.md)

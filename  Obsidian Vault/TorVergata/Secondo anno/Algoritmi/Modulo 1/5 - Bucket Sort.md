@@ -11,18 +11,18 @@ Input del problema:
 1) campo chiave (rispetto al quale ordinare)
 2) altri campi associati alla chiave (informazione satellite)
 
-- Basta mantenere un array di liste, anzichè di contatori, ed operare come per [[4 - IntegerSort]] 
+- Basta mantenere un array di liste, anzichè di contatori, ed operare come per [4 - IntegerSort](4%20-%20IntegerSort.md) 
 - La lista $Y[i]$ conterrà gli elementi con chiave uguale a $i$
 - Concatenare poi le liste
 
-Tempo $O(n+k)$ come per [[4 - IntegerSort]]
+Tempo $O(n+k)$ come per [4 - IntegerSort](4%20-%20IntegerSort.md)
 
-![[Pasted image 20231031142143.png]]
+![Pasted image 20231031142143](../../../../Immagini/Immagini/Pasted%20image%2020231031142143.png)
 
-![[Pasted image 20231031142210.png]]
+![Pasted image 20231031142210](../../../../Immagini/Immagini/Pasted%20image%2020231031142210.png)
 
 
-![[Pasted image 20231031142232.png]]
+![Pasted image 20231031142232](../../../../Immagini/Immagini/Pasted%20image%2020231031142232.png)
 
 **Stabilità**
 - Un algoritmo è stabile se preserva l'ordine iniziale tra elementi con la stessa chiave

@@ -3,7 +3,7 @@
 - Le chiamate di sistema si basano sullo stesso meccanismo di messaggistica
 - Meccanismo di messaggistica implementato nel kernel minimale -> Microkernel
 
-![[Schermata del 2023-10-12 13-01-05.png]]
+![Schermata del 2023-10-12 13-01-05](../../../../Immagini/Immagini/Schermata%20del%202023-10-12%2013-01-05.png)
 
 _Pro_ :
 - Trusted Computing Base (TCB) relativamente "piccolo".

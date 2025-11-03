@@ -6,7 +6,7 @@
 - Distribuzione dinamica della memoria tra i processi
 - Più efficace per adattarsi alle esigenze variabili dei processi, ma richiede una gestione più complessa
 
-![[Pasted image 20231128103452.png]]
+![Pasted image 20231128103452](../../../../Immagini/Immagini/Pasted%20image%2020231128103452.png)
 
 **Vantaggi dell'allocazione globale della memoria**
 Adattabilità degli Algoritmi Globali:

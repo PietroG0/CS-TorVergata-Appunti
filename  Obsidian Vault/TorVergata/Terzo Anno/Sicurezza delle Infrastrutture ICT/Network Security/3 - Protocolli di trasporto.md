@@ -10,7 +10,7 @@ TCP fornisce **connessioni virtuali**, tramissione affidabile, in order, con mec
 **Segmento TCP e header**
 - Il segmento include campi fondamentali: porte sorgente/destinazione, Sequence Number, Acknowledgement Number, Advertised Window, Flags (SYN, ACK, FIN), Checksum, Urgent Pointer e lunghezza header
 
-![[Pasted image 20250607184746.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250607184746.png#center%20|%20600)
 
 
 **Three-Way Handshake**
@@ -18,7 +18,7 @@ TCP fornisce **connessioni virtuali**, tramissione affidabile, in order, con mec
 - **SYN/ACK**: Il server risponde con SYN/ACK, indicando il proprio ISN e riconoscendo SeqC+1
 - **ACK**: Il client chiude il handshake con ACK a SeqS+1, stabilendo lo stato su entrambi i nodi. L'uso di ISN casuali previene ambiguità e attaacchi di "session hijacking"
 
-![[Pasted image 20250607185033.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250607185033.png#center%20|%20500)
 
 
 **Controllo del flusso e finestra di trasmissione (Sliding Window)**

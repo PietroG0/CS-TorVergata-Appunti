@@ -7,7 +7,7 @@ Problema:
 Soluzione:
 - Incapsulare le chiamate di sistema nella libreria C
 - Tipicamente esporta una chiamata di libreria per ogni chiamata di sistema
-- [[Unix]] 'libc' si basa sulla libreria C POSIX
+- [Unix](Unix.md) 'libc' si basa sulla libreria C POSIX
 - Si noti che esistono molte librerie C UNIX.
 
 I 10 passi per effettuare la chiamata di sistema:
@@ -20,5 +20,5 @@ I 10 passi per effettuare la chiamata di sistema:
 - Possibilità di blocco. La chiamata di sistema può bloccare il chiamante, ad esempio, se l'output desiderato non è disponibile.
 - Ripresa dopo il blocco: Quando i'input o le condizioni desiderate sono disponibili, il processo bloccato viene ripreso.
 
-![[Schermata del 2023-10-11 10-03-44.png]]
+![Schermata del 2023-10-11 10-03-44](../../../../Immagini/Immagini/Schermata%20del%202023-10-11%2010-03-44.png)
 

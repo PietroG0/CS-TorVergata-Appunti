@@ -92,15 +92,15 @@ Ogni dato appartiene ad un tipo
 #### Interazione base
 
 **Alert**
-![[Immagine Pasted Apr 23 2024.png#center|500]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%20Apr%2023%202024.png#center|500)
 
 **Prompt**
 
-![[Pasted Image Apr 23 2024.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20Image%20Apr%2023%202024.png#center%20|%20500)
 
 **Confirm**
 
-![[CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Pasted image 20240423151815.png#center | 500]]
+![](CS-TorVergata-Appunti/Obsidian%20Vault/Immagini/Immagini/Pasted%20image%2020240423151815.png#center%20|%20500)
 
 
 
@@ -207,7 +207,7 @@ let a = {nome; "pippo"};
 let b = a;
 ```
 
-![[Immagine Pasted Apr 24 2024.png#center | 500]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%20Apr%2024%202024.png#center%20|%20500)
 
 *a* e *b* sono dei riferimenti allo stesso oggetto:
 - Copiando *a* in *b*, copiamo solo il riferimento;
@@ -354,7 +354,7 @@ getTime() //ritorna i millisecondi dal 1-1-1970
 **Math**
 L'oggetto built-In *Math* ha metodi e costanti per operazioni matematiche
 
-![[Pasted Image 2024-05-03.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20Image%202024-05-03.png#center%20|%20500)
 
 ```JS
 Math.random() //0.9485474
@@ -373,7 +373,7 @@ JSON.parse(objString);
 **Window**
 L'oggetto *Window* rappresenta la finestra del browser
 
-![[CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Pasted image 20240503114736.png#center | 500]]
+![](CS-TorVergata-Appunti/Obsidian%20Vault/Immagini/Immagini/Pasted%20image%2020240503114736.png#center%20|%20500)
 
 *Funzioni dell'oggetto window*
 Oltre ad alert, prompt e confirm, l'oggetto "window" ha altre funzioni utili:
@@ -430,7 +430,7 @@ Si tratta di una struttura dati "errore generico" per l'eccezione. Ha due propri
 - Lo scope di *var* è il functional block più vicino
 - Lo scope di *let* è l'enclosing block più vicino
 
-![[Immagine Pasted Mag 3 2024.png#center | 500]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%20Mag%203%202024.png#center%20|%20500)
 
 >[!danger]
 >Se dimentichiamo di dimenticare una variabile, diventerà una proprietà dell'oggetto *window*
@@ -439,7 +439,7 @@ Si tratta di una struttura dati "errore generico" per l'eccezione. Ha due propri
 **Funzioni e oggetti**
 Possiamo definire le funzioni *dentro* altre funzioni. La funzione *nested* può accedere allo scope della funzione che la include (oltre che allo scope globale)
 
-![[Immagine Pasted Maggio 2024.png#center|500]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%20Maggio%202024.png#center|500)
 
 
 **Scope e funzioni nested**
@@ -461,7 +461,7 @@ molto_fuori();
 ```
 
 
-![[Immagine Pasted Mag 3 2024 (1).png#center | 150]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%20Mag%203%202024%20(1).png#center%20|%20150)
 
 
 **Funzioni che ritornano funzioni**
@@ -543,7 +543,7 @@ getX();
 **Prototipi di oggetto**
 In JS gli oggetti hanno un prototipo, che è un altro oggetto da cui eredita tutte le proprietà
 
-![[Immagine Pasted 2024-05-07.png#center | 500]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%202024-05-07.png#center%20|%20500)
 
 **Oggetti: Proprietà di base e ereditate**
 Quando chiamiamo una proprietà di un oggetto:
@@ -570,7 +570,7 @@ Ogni funzione ha la proprietà *prototype* il cui valore è un oggetto. Scrivend
 
 **Costruttori, prototipo e proprietà**
 
-![[Pasted image 2024-05-07.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%202024-05-07.png#center%20|%20500)
 
 ```JS
 function Student(name, age) {
@@ -610,7 +610,7 @@ pippo.university;
 pluto.university;
 ```
 
-![[CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Pasted image 20240507152923.png#center | 300]]
+![](CS-TorVergata-Appunti/Obsidian%20Vault/Immagini/Immagini/Pasted%20image%2020240507152923.png#center%20|%20300)
 
 ```JS
 Student.prototype.university = "La Sapienza";
@@ -619,7 +619,7 @@ pluto.color;
 ```
 
 
-![[Immagine Pasted Mag 7 2024.png#center | 300]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%20Mag%207%202024.png#center%20|%20300)
 
 ```JS
 Student.prototype = {university: "La terza"};
@@ -627,7 +627,7 @@ pippo.color;
 pluto.color;
 ```
 
-![[CS-TorVergata-Appunti/Obsidian Vault/Immagini/Immagini/Pasted image 20240507153023.png#center | 300]]
+![](CS-TorVergata-Appunti/Obsidian%20Vault/Immagini/Immagini/Pasted%20image%2020240507153023.png#center%20|%20300)
 
 
 **Bind**
@@ -681,6 +681,6 @@ paragraphs[0]; paragraphs.lenght
 
 **Eventi**
 
-![[Immagine Pasted Maggio 2024 (1).png#center|600]]
+![](../../../../Immagini/Immagini/Immagine%20Pasted%20Maggio%202024%20(1).png#center|600)
 
 

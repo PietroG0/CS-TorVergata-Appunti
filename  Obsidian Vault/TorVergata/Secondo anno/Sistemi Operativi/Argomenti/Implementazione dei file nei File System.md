@@ -23,7 +23,7 @@ Implicazioni Pratiche:
 - Difficoltà nell'aggiungere nuovi file in un disco frammentato
 - Necessità di compattazione del disco o di gestione intelligente dello spazio libero
 
-![[Pasted image 20231211145558.png| ]]
+![ ](../../../../Immagini/Immagini/Pasted%20image%2020231211145558.png)
 
-[[Allocazione a Liste Concatenate]]
+[Allocazione a Liste Concatenate](../../../../Altri%20Argomenti/Allocazione%20a%20Liste%20Concatenate.md)
 

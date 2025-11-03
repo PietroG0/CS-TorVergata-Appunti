@@ -24,7 +24,7 @@ C) File come Albero di Record:
 - L'organizzazione consente ricerche rapide basate su chiavi specifiche
 - Utilizzato principalmente in sistemi mainframe per elaborazioni dati di carattere commerciale, diverso dalle sequenze non strutturate di unix e windows
 
-![[Pasted image 20231204133748.png| 500]]
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020231204133748.png)
 
 
 **Tipi di file e le loro strutture**

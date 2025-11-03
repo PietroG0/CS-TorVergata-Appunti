@@ -20,7 +20,7 @@ File hosts, associa un indirizzo IP a uno o più hostname, locale a un nodo, il 
 
 <span style="color:#0070c0">DNS: un database distribuito e gerarchico</span>
 
-![[Pasted image 20240324181632.png]]
+![Pasted image 20240324181632](../../../../Immagini/Immagini/Pasted%20image%2020240324181632.png)
 
 
 <span style="color:#0070c0">DNS: root name server</span>

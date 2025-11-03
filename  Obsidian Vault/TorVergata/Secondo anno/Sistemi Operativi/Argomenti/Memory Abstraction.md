@@ -37,7 +37,7 @@ c) OS+drivers in ROM+RAM, primi personal computer (MS-DOS)
 - Il registro di base mette in atto la rilocazione dinamica
 - Il registro limite applica la protezione
 
-![[Pasted image 20231115113932.png]]
+![Pasted image 20231115113932](../../../../Immagini/Immagini/Pasted%20image%2020231115113932.png)
 
 
 **Funzionamento e limiti dei registri**
@@ -62,7 +62,7 @@ Ogni riferimento alla memoria da parte di un programma:
 - Lo scambio può portare alla frammentazione della memoria
 - Necessaria compattazione della memoria (Estremamente lenta)
 
-![[Pasted image 20231115114636.png]]
+![Pasted image 20231115114636](../../../../Immagini/Immagini/Pasted%20image%2020231115114636.png)
 
 **Gestione dello spazio e crescita dei processi**
 - Sfida: gestire processi con segmenti di dati in crescita
@@ -86,7 +86,7 @@ Ogni riferimento alla memoria da parte di un programma:
 - Allocazione lenta contro deallocazione lenta
 - Buchi ordinati per indirizzo per una rapida coalescenza (come fusione tra gocce)
 
-![[Pasted image 20231115115415.png]]
+![Pasted image 20231115115415](../../../../Immagini/Immagini/Pasted%20image%2020231115115415.png)
 
 **Memory Management e Linked List**
 Nella pratica viene spesso usata una doppia linked list
@@ -94,7 +94,7 @@ Rende più facile gestire lo spazio libero
 - Può controllare facilmente se il precedente spazio è libero
 - Può regolare facilmente i puntatori
 
-![[Pasted image 20231115115547.png]]
+![Pasted image 20231115115547](../../../../Immagini/Immagini/Pasted%20image%2020231115115547.png)
 
 **Schemi di allocazione della memoria**
 - First Fit: Seleziona il primo spazio disponibile
@@ -116,7 +116,7 @@ Rende più facile gestire lo spazio libero
 - Il Buddy Algorithm può causare frammentazione interna: una richiesta di 65 pagine richiede l'allocazione di 128 pagine
 - Lo SLAB Allocator in Linux risolve questo problema, prendendo blocchi tramite l'algoritmo buddy e ritagliando unità più piccole (slab) per gestirle separatamente
 
-![[Pasted image 20231207101101.png| 400]]
+![ 400](../../../../Immagini/Immagini/Pasted%20image%2020231207101101.png)
 
-[[Slab Allocator]]
+[Slab Allocator](Slab%20Allocator.md)
 

@@ -14,7 +14,7 @@
 	- File system gestisce dispositivi a blocchi astratti
 	- Software di livello inferiore gestisce le specificità dei dispositivi
 
-![[Pasted image 20231220173539.png| 400]]
+![ 400](../../../Immagini/Immagini/Pasted%20image%2020231220173539.png)
 
 **Controller dei Dispositivi - Panoramica Generale**
 - Componenti dei Dispositivi di I/O:
@@ -24,7 +24,7 @@
 	- Controller con connettori per il collegamento a dispositivi
 	- Capacità di gestire più dispositivi identici
 
-![[Pasted image 20231220173922.png| 400]]
+![ 400](../../../Immagini/Immagini/Pasted%20image%2020231220173922.png)
 
 - Standardizzazione dell'Interfaccia:
 	- Interfacce conformi a standard (ANSI, IEEE, ISO) o de facto (SATA, SCSI, SUB, ThunderBolt)

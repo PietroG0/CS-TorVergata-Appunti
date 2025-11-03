@@ -12,16 +12,16 @@
 4) Infine, a partire dal sequence diagram, si produca un raffinamento del class diagram iniziale, identificando le operazioni ed eventuali classi, associazioni o attributi aggiuntivi
 
 
-![[Pasted image 20241129134706.png | 600]]
+![ 600](Pasted%20image%2020241129134706.png%20)
 
 
 
-![[Pasted image 20241129134924.png]]
+![Pasted image 20241129134924](../../../Immagini/Immagini/Pasted%20image%2020241129134924.png)
 
 
 
-![[Pasted image 20241129135203.png]]
+![Pasted image 20241129135203](../../../Immagini/Immagini/Pasted%20image%2020241129135203.png)
 
 
-![[Pasted image 20241129135552.png]]
+![Pasted image 20241129135552](../../../Immagini/Immagini/Pasted%20image%2020241129135552.png)
 

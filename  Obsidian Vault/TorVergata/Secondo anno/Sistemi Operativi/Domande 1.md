@@ -34,7 +34,7 @@ Risposta 2
 
 - **Segmentazione** = Una soluzione diretta e molto generica è fornire la macchina di molti spazi degli indirizzi completamente indipendenti, chiamati **segmenti**. Poiché ogni segmento costituisce uno spazio degli indirizzi separato, segmenti diversi possono crescere o ridursi indipendentemente, senza influenzarsi l’un l’altro.
 
-	![[Screenshot 2024-01-18 alle 14.41.55.png|| 500]]
+	![| 500](../../../Immagini/Immagini/Screenshot%202024-01-18%20alle%2014.41.55.png)
 
 
 3. Discutere dell'importanza dei file, delle tipologie di file e della loro implementazione.

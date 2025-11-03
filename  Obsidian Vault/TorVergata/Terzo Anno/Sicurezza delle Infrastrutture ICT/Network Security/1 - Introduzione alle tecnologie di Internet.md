@@ -25,7 +25,7 @@ Come gestire l'elaborazione e la trasmissione di contenuti informativi tra piatt
 
 **TCP/IP Model**: Composti da 4 livelli. Ogni livello provvede un sottoinsieme di funzionalità
 
-![[Pasted image 20250516142354.png#center | 400]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250516142354.png#center%20|%20400)
 
 **Modelli a layer**: Funzionalità sparse in differenti "livelli astratti", chiamati *layer*, con interfacce
 **Protocollo**: Un insieme di funzionalità e di corrispettive regole di esecuzione tra i vari layer

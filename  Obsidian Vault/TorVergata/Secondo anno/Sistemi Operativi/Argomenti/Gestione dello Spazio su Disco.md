@@ -22,7 +22,7 @@
 	- Le prestazioni migliori richiedono blocchi più grandi, ma ciò può comportare uno spreco maggiore di spazio su disco
 	- La scelta ottimale della dimensione del blocco deve bilanciare il tempo di trasferimento e l'efficienza dello spazio; in genere 4KB
 
-![[Pasted image 20231214165637.png| 400]]
+![ 400](../../../../Immagini/Immagini/Pasted%20image%2020231214165637.png)
 
 **Implicazioni per Dischi Magnetici e Memoria Flash**
 - Dischi Magnetici:

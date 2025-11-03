@@ -17,10 +17,10 @@
 
 **Focus: memoria principale**
 
-[[Memory Abstraction]]
-[[Virtual Memory]]
-[[Algoritmi di sostituzione delle pagine]]
-[[Problemi di Progettazione per Sistemi di Paging]]
-[[Tabella delle Pagine]]
+[Memory Abstraction](Argomenti/Memory%20Abstraction.md)
+[Virtual Memory](Argomenti/Virtual%20Memory.md)
+[Algoritmi di sostituzione delle pagine](Argomenti/Algoritmi%20di%20sostituzione%20delle%20pagine.md)
+[Problemi di Progettazione per Sistemi di Paging](Argomenti/Problemi%20di%20Progettazione%20per%20Sistemi%20di%20Paging.md)
+[Tabella delle Pagine](Argomenti/Tabella%20delle%20Pagine.md)
 
 

@@ -3,7 +3,7 @@
 - I file vengono collezionati in directory (o cartelle)
 - Una directory conserva un identificatore per ogni file che contiene
 - Una directory è un file a sé stante
-- La filosofia [[Unix]]: "Everything is a file"
+- La filosofia [Unix](Unix.md): "Everything is a file"
 
 Le directory e i file formano una gerarchia:
 - La gerarchia inizia dalla "directory principale" (root)
@@ -13,5 +13,5 @@ Le directory e i file formano una gerarchia:
 I file sono "protetti" da tuple a tre bit per il proprietario, il gruppo e gli altri utenti
 - Le tuple contengono un bit (r)ead, (w)rite, e un bit e(x)ecute 
 
-![[Schermata del 2023-10-11 09-55-22.png]]
+![Schermata del 2023-10-11 09-55-22](../../../../Immagini/Immagini/Schermata%20del%202023-10-11%2009-55-22.png)
 

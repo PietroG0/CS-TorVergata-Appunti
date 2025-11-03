@@ -11,7 +11,7 @@ Problemi di Memorizzazione:
 2) Persistenza delle informazioni oltre la vita del processo che le utilizza
 3) Accessibilità delle informazioni da più processi simultaneamente
 
-[[Soluzioni di Memorizzazione e ruolo dei File Systems]]
+[Soluzioni di Memorizzazione e ruolo dei File Systems](Argomenti/Soluzioni%20di%20Memorizzazione%20e%20ruolo%20dei%20File%20Systems.md)
 
 **Cosa sono i File System?**
 I file system sono:
@@ -19,8 +19,8 @@ I file system sono:
 - Un'astrazione sui dispositivi di memorizzazione
 - Organizzati in file e (tipicamente) directory
 
-![[Pasted image 20231204132630.png]]
+![Pasted image 20231204132630](../../../Immagini/Immagini/Pasted%20image%2020231204132630.png)
 
-[[I file]]
+[I file](Argomenti/I%20file.md)
 
 **Come garantire le prestazioni del File System?**

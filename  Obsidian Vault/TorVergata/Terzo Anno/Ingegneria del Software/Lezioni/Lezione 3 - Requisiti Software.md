@@ -38,7 +38,7 @@ I requisiti vengono generati applicando un processo di *ingegneria dei requisiti
 	4. L'utente deve avere la possibilità di definire l'icona che rappresenta il tipo di file esterno
 	5. Quando l'utente seleziona un'icona che rappresenta un file esterno, deve poter essere eseguito il tool in grado di visualizzare il file
 
-![[Pasted image 20241107132820.png | 600]]
+![ 600](Pasted%20image%2020241107132820.png%20)
 
 
 #### Categorie di requisiti
@@ -84,7 +84,7 @@ es.1 Specificare un tempo senza fornire il riferimento al fuso orario (in un app
 - I requisiti non funzionali espressi in modo generico dall'utente (es. il sistema software deve essere easy-to-use) possono risultare *non quantificabili* e *difficili da verificare*
 - E' quindi necessario esprimere i requisiti non funzionali usando una *misura* determinata che permetta di *verificare quantitativamente* se il requisito verrà soddisfatto dal sistema software
 
-![[Pasted image 20241107134149.png | 500]]
+![ 500](Pasted%20image%2020241107134149.png%20)
 
 
 #### Requisiti utenti

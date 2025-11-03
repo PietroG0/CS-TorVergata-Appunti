@@ -63,7 +63,7 @@ Esplicitamente formulato come segue:
 
 #### Il cipher perfetto: One-Time Pad = Vernam cipher
 
-![[Pasted image 20250507103118.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250507103118.png#center%20|%20600)
 
 Qui si spiega il concetto di cifratura perfetta tramite il metodo del **one-time pad**, evidenziando i passaggi fondamentali sia per l'encryption sia per la decryption.
 
@@ -101,6 +101,6 @@ Quindi, evidenzia come l’unica condizione necessaria per garantire la sicurezz
 - Bit di informazione con *XOR* = Random bit
 - Lo XOR con qualsiasi stringa random "rimuove" ogni informazione o plaintext
 
-![[Pasted image 20250311150901.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250311150901.png#center%20|%20500)
 
 

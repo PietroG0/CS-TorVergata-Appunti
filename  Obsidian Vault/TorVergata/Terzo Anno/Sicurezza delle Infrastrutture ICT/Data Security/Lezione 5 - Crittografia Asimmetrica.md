@@ -1,6 +1,6 @@
 #Sicurezza 
 
-![[Pasted image 20250418143134.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250418143134.png#center%20|%20600)
 
 
 #### Problemi con la crittografia asimmetrica
@@ -48,5 +48,5 @@
 - Difficile da trovare anche $\Phi(N)$
 - Senza sapere $\Phi(N)$ deve essere difficile computare $d$ da $e$
 
-![[Pasted image 20250423171715.png#center | 550]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250423171715.png#center%20|%20550)
 

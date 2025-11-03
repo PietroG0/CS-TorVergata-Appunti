@@ -12,12 +12,12 @@ Concetti base di un sistema operativo
 - I file persistono rispetto ai processi
 
 
-Definizione di [[Processo]].
-Definizione di [[File]]. 
-Definizione delle [[Chiamate di Sistema]]. 
-Definizione di [[Struttura di un Sistema operativo]]. 
-Definizione di [[Virtualizzazione]]. 
-Definizione di [[Container]]. 
-Definizione di [[Exokernel]]. 
-Definizione di [[Unikernel]]. 
-Definizione di [[Microkernel based Client-Server]].  
+Definizione di [Processo](Argomenti/Processo.md).
+Definizione di [File](Argomenti/File.md). 
+Definizione delle [Chiamate di Sistema](Argomenti/Chiamate%20di%20Sistema.md). 
+Definizione di [Struttura di un Sistema operativo](Argomenti/Struttura%20di%20un%20Sistema%20operativo.md). 
+Definizione di [Virtualizzazione](Argomenti/Virtualizzazione.md). 
+Definizione di [Container](Argomenti/Container.md). 
+Definizione di [Exokernel](Argomenti/Exokernel.md). 
+Definizione di [Unikernel](Argomenti/Unikernel.md). 
+Definizione di [Microkernel based Client-Server](Argomenti/Microkernel%20based%20Client-Server.md).  

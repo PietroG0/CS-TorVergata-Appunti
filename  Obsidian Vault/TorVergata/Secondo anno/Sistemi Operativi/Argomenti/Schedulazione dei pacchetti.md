@@ -13,7 +13,7 @@ Schedulazione con priorità:
 - Traffico in arrivo classificato, accodato per classi
 - Invia il pacchetto dalla coda non vuota con priorità più alta
 
-![[Pasted image 20240426174901.png| 600]]
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020240426174901.png)
 
 
 ##### Schedulazione dei pacchetti: Round Robin
@@ -22,7 +22,7 @@ Schedulazione con priorità:
 
 - Il server esegue ciclicamente e ripetutamente la scansione delle code di classe, inviando a turno un pacchetto completo di ogni classe (se disponibile)
 
-![[Pasted image 20240426175039.png| 500]]
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020240426175039.png)
 
 
 ##### Schedulazione dei pacchetti: Weighted Fair Queueing
@@ -30,5 +30,5 @@ Schedulazione con priorità:
 - Ciascuna classe, i, ha un peso, wi, e riceve una quantità ponderata di servizio di ogni ciclo: $wi/sommatoria di j*wj$ 
 - Garazia di larghezza di banda minima (per classe di traffico)
 
-![[Pasted image 20240426175255.png| 500]]
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020240426175255.png)
 

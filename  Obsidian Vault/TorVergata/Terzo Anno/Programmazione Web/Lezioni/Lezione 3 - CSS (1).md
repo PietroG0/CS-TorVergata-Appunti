@@ -10,7 +10,7 @@
 - Fornisce l'istruzione di rendering
 - Ogni dichiarazione è delimitata da un ";"
 
-![[Pasted image 20250526140758.png#center | 300]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250526140758.png#center%20|%20300)
 
 
 **Stili nel head**
@@ -107,13 +107,13 @@ Esempio: <p id = "para1">...</p>
 }
 ```
 
-![[Pasted image 20250526141836.png#center | 550]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250526141836.png#center%20|%20550)
 
 
 **Raggruppare selettori**
 - Si possono anteporre più selettori ad un blocco di dichiarazioni
 
-![[Pasted image 20250526142033.png]]
+![Pasted image 20250526142033](../../../../Immagini/Immagini/Pasted%20image%2020250526142033.png)
 
 
 
@@ -135,7 +135,7 @@ Parent - genitore:
 Sibling - fratelli
 - Elementi con lo stesso parent
 
-![[Pasted image 20250526142224.png#center | 400]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250526142224.png#center%20|%20400)
 
 **Selettori composti**
 1. Selettori per descendant (spazio)
@@ -218,11 +218,11 @@ Alcune proprietà sono ereditate dai *discendenti*
 - La dichiarazione color viene passa allo span
 - Le altre no
 
-![[Pasted image 20250526145457.png]]
+![Pasted image 20250526145457](../../../../Immagini/Immagini/Pasted%20image%2020250526145457.png)
 
 
 #### Cascade
 - Il Cascade *"cascata"* è un algoritmo che definisce come combinare valori di proprietà provenienti da fonti diverse
 
-![[Pasted image 20250526145920.png]]
+![Pasted image 20250526145920](../../../../Immagini/Immagini/Pasted%20image%2020250526145920.png)
 

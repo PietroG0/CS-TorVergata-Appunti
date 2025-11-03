@@ -16,16 +16,16 @@ Git è un controllo di versione open source e distribuito. È un sistema progett
 >[!important]- Index / Staging Area
 >È dove vengono preparati i commit
 
-![[Pasted image 20240311120417.png|center|400]]
+![center|400](../Immagini/Pasted%20image%2020240311120417.png)
 ## Processo di base del workflow
 1. Modificare i file nel working tree;
 2. Eseguire lo staging delle modifiche che si desidera includere nel commit successivo;
 3. Eseguire il commit delle modifiche
 	- Il commit prenderà i file dall'index e li memorizzerà come snapshot nella repository.
 ### Commit
-![[Pasted image 20240311120629.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240311120629.png)
 ### Repository remote
-![[Pasted image 20240311120703.png|center|400]]
+![center|400](../Immagini/Pasted%20image%2020240311120703.png)
 # HTML5
 ## Markup semantico
 Lo scopo dell'HTML5 è quello di aggiungere *significato* e *struttura* al contenuto.
@@ -47,7 +47,7 @@ Invece, con HTML5:
 - articoli: `<article>`;
 - navigazione: `<nav>`;
 - contenuto a parte: `<aside>`.
-![[Pasted image 20240311121907.png|center|300]]
+![center|300](../Immagini/Pasted%20image%2020240311121907.png)
 ### L'elemento `<main>`
 Il tag `<main>` specifica il contenuto principale di un documento.
 - Il contenuto all'interno di questo elemento dovrebbe essere univoco per il documento.
@@ -76,7 +76,7 @@ Tratta di sezioni tematiche. Possono contenere heading e paragrafi, o comunque t
 ### L'elemento `<article>`
 Si utilizza per porzioni di pagina auto-consistenti, teoricamente riusabili in contesti differenti. I contesti operativi sono in blog e giornali.
 #### Articoli e sezioni
-![[Pasted image 20240311160031.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240311160031.png)
 ### L'elemento `<figure>`
 Un'immagine e una didascalia possono essere raggruppate in un elemento `<figure>`
 ```HTML
@@ -122,10 +122,10 @@ Sei livelli di intestazione: da `<h1>` fino a `<h6>`. Creano l'indice della pagi
 Essi servono ad identificare i paragrafi. Possono contenere al loro interno del testo, immagini o degli elementi inline. Se non si chiude l'elemento il browser può chiuderlo in automatico ( chiudilo sempre ).
 ### L'elemento `<code>`
 Viene mostrato in monospace e non è preformattato.
-![[Pasted image 20240311162042.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240311162042.png)
 ### Commenti `<!-- ... -->`
 Testo non mostrato all'utente e non interpretato dal browser.
-![[Pasted image 20240311162158.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240311162158.png)
 ### Immagini `<img>`
 ```HTML
 <img src="happyface.gif" alt="happy">
@@ -144,5 +144,5 @@ Il contenuto dell'elemento diventa attivo e il browser cambia cursore.
 Specifica la URL di un documento nel web.
 ## Indirizzi nelle pagine web : URL
 - URL ( Uniform Resource Locator ) 
-![[Pasted image 20240311162856.png|center|500]]
+![center|500](../Immagini/Pasted%20image%2020240311162856.png)
 I server cercano i file localmente in base al path fornito.

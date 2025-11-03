@@ -14,24 +14,24 @@
 - trovare il più grande oggetto in H
 - cancellare il più grande oggetto in H
 
-![[Pasted image 20231026112415.png]]
+![Pasted image 20231026112415](../../../../Immagini/Immagini/Pasted%20image%2020231026112415.png)
 
 *Un albero d-ario è completo*: se tutti nodi interni hanno esattamente d figli e le foglie sono tutte allo stesso livello
 
-![[Pasted image 20231026112513.png]]
+![Pasted image 20231026112513](../../../../Immagini/Immagini/Pasted%20image%2020231026112513.png)
 
 Struttura dati heap associata ad un insieme S = albero binario radicato con le seguenti proprietà:
 1) completo fino al penultimo livello
 2) gli elementi di S sono memorizzati nei nodi dell'albero
 3) chiave(padre(v) >= chiave(v)) per ogni nodo v diverso dalla radice
 
-![[Pasted image 20231026112638.png]]
+![Pasted image 20231026112638](../../../../Immagini/Immagini/Pasted%20image%2020231026112638.png)
 
 1) Il massimo è contenuto nella radice
 2) L'albero con n nodi ha altezza $O(\log n)$
 3) Gli heap con struttura rafforzata possono essere rappresentati in un array di dimensione pari a n
 
-![[Pasted image 20231026112812.png]]
+![Pasted image 20231026112812](../../../../Immagini/Immagini/Pasted%20image%2020231026112812.png)
 
 sin(i) = $2i$
 des(i) = $2i+1$
@@ -40,8 +40,8 @@ padre(i) = $[i/2]$
 E' sufficiente un vettore di dimensione n
 In generale dimensione vettore diverso da numero elementi
 
-[[La procedura fixHeap]]
-[[Estrazione del massimo]]
-[[Costruzione dell'heap]]
-[[HeapSort Codice]]
+[La procedura fixHeap](Argomenti/La%20procedura%20fixHeap.md)
+[Estrazione del massimo](Argomenti/Estrazione%20del%20massimo.md)
+[Costruzione dell'heap](Argomenti/Costruzione%20dell'heap.md)
+[HeapSort Codice](Argomenti/HeapSort%20Codice.md)
 

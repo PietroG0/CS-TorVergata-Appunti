@@ -3,27 +3,27 @@
 
 #### Problema con la Firma Digitale: **Impersonification Attack**
 
-![[Pasted image 20250427163342.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250427163342.png#center%20|%20600)
 
 
 #### RSA Key Transport, **MITM attack**
 
-![[Pasted image 20250428114010.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250428114010.png#center%20|%20600)
 
-![[Pasted image 20250428114043.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250428114043.png#center%20|%20600)
 
 
 
 #### La soluzione: Certificato Digitale
 Per **incatenare** una chiave pubblica ad un soggetto
 
-![[Pasted image 20250428115440.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250428115440.png#center%20|%20600)
 
 **Cryptographic binding**
 - Le firme digitali da un terzo party fidato: **un'autorità certificata**, che garantisce l'integrità del binding. Aka chiedo a qualcuno di cui mi fido di "firmare digitalmente" il rapporto fra il nome e la chiave pubblica. 
 
 
-![[Pasted image 20250428121616.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250428121616.png#center%20|%20600)
 
 Un **certificato digitale** viene rilasciato tramite un'autorità di certificazione (Certification Authority o CA). Un certificato digitale collega l'identità di un'entità (in questo caso una banca) alla sua chiave pubblica.
 
@@ -34,7 +34,7 @@ In sintesi:
 - La CA firma queste informazioni, creando il certificato che garantisce l'autenticità della banca agli altri
 
 
-![[Pasted image 20250428121849.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250428121849.png#center%20|%20600)
 
 Dopo che un certificato è stato emesso, bisogna verificare se è **valido ed affidabile** prima di fidarsi dell'identità dichiarata
 
@@ -66,7 +66,7 @@ Dopo che un certificato è stato emesso, bisogna verificare se è **valido ed af
 
 #### Metodi per verificare 
 
-![[Pasted image 20250505141428.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250505141428.png#center%20|%20600)
 
 Illustraimo il **meccanismo di autenticazione tramite firma digitale**, con lo scopo di dimostrare che una parte (in questo caso la banca) possiede effettivamente la **chiave privata** (SK) associata alla propria **chiave pubblica** (PK) contenuta in un certificato.
 
@@ -93,12 +93,12 @@ Illustraimo il **meccanismo di autenticazione tramite firma digitale**, con lo s
 
 
 
-![[Pasted image 20250505142700.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250505142700.png#center%20|%20600)
 
 Qui si mostra l'approccio **duale**, cioè si cifra qualcosa (in questo caso un NONCE), lo si manda al secondo soggetto, e dato che lo cifro con la chiave pubblica, solamente se possiedi la chiave privata (SK) potresti decifrare il NONCE. 
 
 
-![[Pasted image 20250505143334.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250505143334.png#center%20|%20600)
 
 Qui si descrive un **approccio pratico del protocollo TLS**, nello specifico quando viene utilizzato il **trasporto della chiave tramite RSA**. 
 

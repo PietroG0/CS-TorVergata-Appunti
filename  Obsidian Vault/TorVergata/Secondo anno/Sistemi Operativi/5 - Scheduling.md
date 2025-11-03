@@ -23,14 +23,14 @@ Interrupt di I/O
 - Alla conclusione di un I/O, un processo potrebbe diventare pronto
 - Decidere se eseguire il processo appena pronto, il precedente o un altro
 
-[[Tipologie di Scheduling e Prelazione]]
+[Tipologie di Scheduling e Prelazione](../../../Altri%20Argomenti/Tipologie%20di%20Scheduling%20e%20Prelazione.md)
 
-[[Introduzione al problema di Scheduling dei processi]]
+[Introduzione al problema di Scheduling dei processi](Argomenti/Introduzione%20al%20problema%20di%20Scheduling%20dei%20processi.md)
 
-[[Scheduling in Sistemi Batch]]
+[Scheduling in Sistemi Batch](Argomenti/Scheduling%20in%20Sistemi%20Batch.md)
 
-[[Scheduling in Sistemi Interattivi]]
+[Scheduling in Sistemi Interattivi](Argomenti/Scheduling%20in%20Sistemi%20Interattivi.md)
 
-[[Scheduling nei Sistemi Real-Time]]
+[Scheduling nei Sistemi Real-Time](Argomenti/Scheduling%20nei%20Sistemi%20Real-Time.md)
 
-[[Processi e Scheduling]]
+[Processi e Scheduling](../../../Altri%20Argomenti/Processi%20e%20Scheduling.md)

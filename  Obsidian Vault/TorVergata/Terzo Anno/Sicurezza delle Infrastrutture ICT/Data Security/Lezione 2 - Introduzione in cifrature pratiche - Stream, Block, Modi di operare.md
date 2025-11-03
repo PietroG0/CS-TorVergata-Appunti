@@ -16,7 +16,7 @@
 
 #### Cifrature Stream
 
-![[Pasted image 20250311151248.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250311151248.png#center%20|%20600)
 
 *Goal*: "Approssimare" un one-time-pad
 
@@ -50,7 +50,7 @@ Nonostante ciò, se il messaggio è cryptato 2 volte, il ciphertext verrà ripet
 >[!tip] Goal
 >"*Generalizzare*" la cifratura con sostituzione
 
-![[Pasted image 20250313144046.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250313144046.png#center%20|%20500)
 
 - Gli algoritmi a Blocchi dovrebbero essere implementati come una *Pseudo Permutazione Random*
 	- In pratica, le chiavi permetteranno solo di selezionare intorno a $2^{keysize}$ permutazioni
@@ -63,13 +63,13 @@ Pseudo Random Permutation:
 
 - Permutazione: Funzione *biettiva* 
 
-![[Pasted image 20250313144409.png#center | 700]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250313144409.png#center%20|%20700)
 
 
 
 Un possibile **problema** della cifratura a Blocchi potrebbe essere cryptare il messaggio 2 volte.
 
-![[Pasted image 20250313144813.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250313144813.png#center%20|%20600)
 
 
 #### Cifratura a Blocchi: Modi di Operare
@@ -94,7 +94,7 @@ Per **messaggi più lunghi**:
 
 #### Modalità CBC (Cipher Block Chaining)
 
-![[Pasted image 20250313145947.png]]
+![Pasted image 20250313145947](../../../../Immagini/Immagini/Pasted%20image%2020250313145947.png)
 
 Questa immagine spiega la modalità **CBC**, un metodo che utilizza una **permutazione pseudocasuale (PRP)** e un meccanismo di concatenazione tra i blocchi per garantire una maggiore sicurezza
 
@@ -166,7 +166,7 @@ $c[i] = ENC(K, c[i-1] \oplus m[i])$
 **In pratica**: costruisce una keystream **PRNG** fuori un blocco **PRP**
 Molto sicuro, se **PRP** è sicuro lo sarà anche **PRNG**
 
-![[Pasted image 20250313160812.png]]
+![Pasted image 20250313160812](../../../../Immagini/Immagini/Pasted%20image%2020250313160812.png)
 
 >[!example] Sommario
 >Modalità con **più vantaggi**

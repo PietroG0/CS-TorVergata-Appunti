@@ -13,5 +13,5 @@ Soft Real-Time: Qualche scadenza mancata è torrelabile
 
 **Condizione di "Schedulabilità"**: La CPU deve essere in grado di gestire la somma totale del tempo richiesto dai processi.
 
-![[Pasted image 20231110150510.png]]
+![Pasted image 20231110150510](../../../../Immagini/Immagini/Pasted%20image%2020231110150510.png)
 

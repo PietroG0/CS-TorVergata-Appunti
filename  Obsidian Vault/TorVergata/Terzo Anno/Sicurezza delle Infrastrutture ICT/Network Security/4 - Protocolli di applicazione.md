@@ -5,7 +5,7 @@ Un aspetto cruciale per la nostra esperienza quotidiana su Internet è il ruolo 
 
 - Un concetto importante qui è quello del **Point of Presence (PoP)**: questi sono centri dati che ospitano server, router, switch e altri dispositivi di rete, fungendo da nodi attraverso cui il traffico degli utenti viene raccolto e instradato. Dal PoP, la connessione si rafforza ulteriormente grazie a linee ad alta capacità che portano il traffico verso i più grandi snodi della rete, i Network Access Point (NAP)
 
-![[Pasted image 20250608172201.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250608172201.png#center%20|%20500)
 
 
 #### Il paradigma Client-Server
@@ -20,7 +20,7 @@ Il Domain Name System (DNS) è il protocollo che traduce i nomi di dominio, faci
 
 **Il percorso seguito da una richiesta DNS**
 
-![[Pasted image 20250608172711.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250608172711.png#center%20|%20600)
 
 
 #### HTTP

@@ -7,8 +7,8 @@ Servizi e protocolli di trasporto
 	- lato ricezione: riassembla i segmenti in messaggi e li passa al livello di applicazione
 - I router nel cammino da un host all'altro operano solo sull'intestazione del datagramma, ignorando il segmento incapsulato al suo interno 
 
-[[Demultiplexing]]
-[[UDP User Datagram Protocol]]
-[[Obsidian Vault/Trasporto orientato alla connessione TCP]]
-[[Principi del controllo della congestione]]
+[Demultiplexing](../Argomenti/Demultiplexing.md)
+[UDP User Datagram Protocol](../Argomenti/UDP%20User%20Datagram%20Protocol.md)
+[Obsidian Vault/Trasporto orientato alla connessione TCP](Obsidian%20Vault/Trasporto%20orientato%20alla%20connessione%20TCP)
+[Principi del controllo della congestione](../Argomenti/Principi%20del%20controllo%20della%20congestione.md)
 

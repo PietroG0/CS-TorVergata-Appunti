@@ -8,7 +8,7 @@ I processi hanno bisogno di un modo per sincronizzarsi:
 - Per evitare che si intralcino a vicenda
 - Si applica anche all'esecuzione multithread
 
-Definizione di [[Race Conditions]]
-Definizione di [[Critical Region]]
-Definizione di [[Mutua Esclusione]]
+Definizione di [Race Conditions](Argomenti/Race%20Conditions.md)
+Definizione di [Critical Region](Argomenti/Critical%20Region.md)
+Definizione di [Mutua Esclusione](Argomenti/Mutua%20Esclusione.md)
 

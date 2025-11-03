@@ -2,7 +2,7 @@
 - Funzione Principale: Le directory mappano i nomi ASCII dei file sulle informazioni necessarie per localizzare i dati su disco
 - Metodi di Allocazione: Variano a seconda del sistema operativo, includendo indirizzi di blocchi contigui, il primo blocco nelle liste concatenate, o i numeri degli I-node
 
-![[Pasted image 20231213153004.png| 500]]
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020231213153004.png)
 
 **Gestione dei nomi dei File**
 • Nomi di File Variabili: Supporto per nomi di file di lunghezza variabile, con un limite tipico di 255 caratteri.

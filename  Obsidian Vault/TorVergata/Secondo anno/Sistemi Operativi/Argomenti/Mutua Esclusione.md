@@ -1,6 +1,6 @@
 **Esclusione reciproca con Busy Waiting: Alternanza rigorosa**
 
-![[Pasted image 20231109132648.png]]
+![Pasted image 20231109132648](../../../../Immagini/Immagini/Pasted%20image%2020231109132648.png)
 
 Anche questa è una NON soluzione
 - Non permette ai processi di entrare nelle loro regioni critiche per due volte di seguito
@@ -18,7 +18,7 @@ Alice e Bob vogliono usare un'unica postazione computer in un ufficio. Ma ci son
 - La persona che non ha la precedenza aspetta finchè l'altra non ha finito
 - Una volta finito, la persona che ha usato il pc segnala che ha finito, e l'altra può iniziare
 
-![[Pasted image 20231109133116.png]]
+![Pasted image 20231109133116](../../../../Immagini/Immagini/Pasted%20image%2020231109133116.png)
 
 
 **Come è realizzata la mutua esclusione nella CPU?**
@@ -43,12 +43,12 @@ Metodo per gestire Regioni Critiche:
 - Se chiamati correttamente, garantisce la mutua esclusione
 - Se usati in modo errato, la mutua esclusione fallisce
 
-![[Pasted image 20231109133544.png]]
+![Pasted image 20231109133544](../../../../Immagini/Immagini/Pasted%20image%2020231109133544.png)
 
 
 **Utilizzo dell'istruzione XCHG**
 
-![[Pasted image 20231109133658.png]]
+![Pasted image 20231109133658](../../../../Immagini/Immagini/Pasted%20image%2020231109133658.png)
 
 
 **Istruzione TSL e XCHG**
@@ -68,10 +68,10 @@ Le soluzioni finora adottate consentono a un processo di tenere occupata la CPU 
 
 Soluzione: lasciare che un processo in attesa di entrare nella sua regione critica restituisca volontariamente la CPU allo scheduler.
 
-[[Produttore-Consumatore]]
-[[I Semafori]]
-[[Readers/Writers]]
-[[Mutex e Pthreads]]
+[Produttore-Consumatore](Produttore-Consumatore.md)
+[I Semafori](I%20Semafori.md)
+[Readers/Writers](Readers/Writers)
+[Mutex e Pthreads](Mutex%20e%20Pthreads.md)
 
 
 

@@ -8,7 +8,7 @@ Implementazione:
 - Mantenere una lista dei processi eseguibili
 - Una volta esaurito il quanto, il processo viene spostato alla fine della lista
 
-![[Pasted image 20231120143425.png]]
+![Pasted image 20231120143425](../../../../Immagini/Immagini/Pasted%20image%2020231120143425.png)
 
 Durata del Quanto:
 - La scelta del quanto influisce sull'efficienza
