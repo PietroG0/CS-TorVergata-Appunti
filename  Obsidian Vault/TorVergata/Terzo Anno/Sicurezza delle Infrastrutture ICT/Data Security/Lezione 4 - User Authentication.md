@@ -62,7 +62,7 @@
 >Dimostrare che conosci la tua password, semplicemente immettendola
 
 
-![ 500](Pasted%20image%2020250318141148.png%20)
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020250318141148.png%20)
 
 **Due principali modelli di attacco**
 - Attacco al canale della comunicazione
@@ -79,7 +79,7 @@
 - Aumenta la sicurezza, se l'attaccante ruba il Database, dovrebbe comunque "invertire" passwd
 - Con un buon hash c'è solo un metodo --> brute-force/indovinare
 
-![ 600](Pasted%20image%2020250318141617.png%20)
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020250318141617.png%20)
 
 **Quale Hash utilizzare?**
 Il migliore ad oggi è SHA256, ma ha 2 problematiche
@@ -100,7 +100,7 @@ Il migliore ad oggi è SHA256, ma ha 2 problematiche
 #### Challenge-Handshake Authentication
 **Prova di conoscenza: Result of computation**
 
-![ 500](Pasted%20image%2020250318142230.png%20)
+![ 500](../../../../Immagini/Immagini/Pasted%20image%2020250318142230.png%20)
 
 >[!info] Due Proprietà
 >-Questa computazione **non** può rilevare il segreto:
@@ -112,7 +112,7 @@ Il migliore ad oggi è SHA256, ma ha 2 problematiche
 
 **CHAP**
 
-![ 600](Pasted%20image%2020250318142732.png%20)
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020250318142732.png%20)
 
 **Passwd segreta non può mai essere trasmessa in chiaro**
 - Sicuro contro avversari che possono eavesdrop il canale
@@ -204,13 +204,13 @@ Un altro metodo è utilizzare il **salt**.
 > - Cattive abitudini nella scelta delle password
 > - Regole human-friendly per "generare" password
 
-![ 600](Pasted%20image%2020250318150009.png%20)
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020250318150009.png%20)
 
 
-![ 600](Pasted%20image%2020250318150028.png%20)
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020250318150028.png%20)
 
 
-![ 600](Pasted%20image%2020250318150058.png%20)
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020250318150058.png%20)
 
 
 #### Entropia
@@ -225,7 +225,7 @@ $x_{1} = face(A), x_{2} = face(B)$, $p_{1}=p_{2}=\frac{1}{2}$
 --> $H(X) = -2 \cdot (\frac{1}{2} \log{2} \cdot \frac{1}{2})$ = $-\log{2}\frac{1}{2}$ = $\log_{2} 2$ = $1$ 
 
 
-![ 600](Pasted%20image%2020250318153829.png%20)
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020250318153829.png%20)
 
 
 #### Approcci per il cracking delle password
