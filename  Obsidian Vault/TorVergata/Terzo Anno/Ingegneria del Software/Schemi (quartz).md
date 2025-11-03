@@ -21,8 +21,7 @@ Ho cercato di sintetizzare la maggior parte degli argomenti di ISW
 
 
 #### Modelli 
-![[content/TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Modelli.png]]
-
+![Modelli](Modelli.png)
 
 #### Risk Analysis
 ![[Risk Analysis.png]]
@@ -30,5 +29,4 @@ Ho cercato di sintetizzare la maggior parte degli argomenti di ISW
 
 faccio una prova
 #### Testing 
-![[content/TorVergata/Terzo Anno/Ingegneria del Software/Schemi/Testing.png]]
-
+![Testing](Testing.png)

@@ -4,7 +4,8 @@ Dato un insieme S di n oggetti presi da un dominio totalmente ordinato, ordinare
 
 Approccio incrementale: estende l'ordinamento da $k$ a $k+1$ elementi, scegliendo il minimo degli $n-k$ elementi non ancora ordinati e mettendolo in posizione $k+1$
 
-![Pasted image 20231027102325.png|565x293](Pasted%20image%2020231027102325.png%7C565x293.md)
+![[Pasted image 20231027102325.png|565x293]]
+
 
 ```
 SelectionSort
@@ -18,7 +19,7 @@ for k=0 to n-2 do   # Fino ad n-2 perchè basta confrontare l'ultimo con il penu
 
 Costo = $O(n^2)$
 
-[[Insertion Sort]]
+[Insertion Sort](Insertion%20Sort.md)
 [[Bubble Sort]]
 
 Algoritmi di ordinamento che usano la tecnica del _divide et impera_

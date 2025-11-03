@@ -1,6 +1,5 @@
 #Software 
 
-
 #### Design pattern
 **Caratteristiche**
 - Rappresentano soluzioni a problematiche ricorrenti che si incontrano durante le varie fasi di sviluppo del software
