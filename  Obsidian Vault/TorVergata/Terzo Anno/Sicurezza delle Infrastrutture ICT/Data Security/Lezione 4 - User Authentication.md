@@ -225,7 +225,7 @@ $x_{1} = face(A), x_{2} = face(B)$, $p_{1}=p_{2}=\frac{1}{2}$
 --> $H(X) = -2 \cdot (\frac{1}{2} \log{2} \cdot \frac{1}{2})$ = $-\log{2}\frac{1}{2}$ = $\log_{2} 2$ = $1$ 
 
 
-![Pasted%20image%2020250318153829.png%20](../../../../Immagini/Immagini/Pasted%20image%2020250318153829.png%20)
+![Pasted image 20250318153829.png](../../../../Immagini/Immagini/Pasted%20image%2020250318153829.png%20)
 
 
 #### Approcci per il cracking delle password
