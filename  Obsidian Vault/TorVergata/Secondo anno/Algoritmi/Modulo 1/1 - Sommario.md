@@ -11,5 +11,3 @@
 5) Cambiamento di variabile
 
 
-
-![image](../../../../Immagini/Immagini/image.png)
