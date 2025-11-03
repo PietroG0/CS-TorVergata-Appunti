@@ -15,7 +15,7 @@ Per ogni nodo v vale che:
 - Le chiavi nel sottoalbero destro di v sono > chiave(v)
 
 
-![[Pasted image 20241125151112.png | 600]]
+![ 600](Pasted%20image%2020241125151112.png%20)
 
 ###### Algoritmo search
 Traccia un cammino nell'albero partendo dalla radice: su ogni nodo, usa la proprietà di ricerca per decidere se proseguire nel sottoalbero sinistro o destro
@@ -57,7 +57,7 @@ pred(nodo u) --> nodo
 	
 ```
 
-![[Pasted image 20241125152004.png | 500]]
+![ 500](Pasted%20image%2020241125152004.png%20)
 
 
 
@@ -66,12 +66,12 @@ Sia u il nodo contenente l'elemento e da cancellare:
 1) u è una foglia = rimuovila
 2) u ha un solo figlio = 
  
-![[Pasted image 20240910141116.png | 500]]
+![ 500](Pasted%20image%2020240910141116.png%20)
 
 
 3) u ha due figli: sostituiscilo con il predecessore (o successore) (v) e rimuovi fisicamente il predecessore (o successore) (che ha al più un figlio)
 
-![[Pasted image 20240910141253.png | 500]]
+![ 500](Pasted%20image%2020240910141253.png%20)
 
 
 
@@ -97,24 +97,24 @@ Generalmente $\beta(v)$ mantenuto come informazione addizionale nel record relat
 
 ###### Caso SS
 
-![[Pasted image 20240910145630.png | 600]]
+![ 600](Pasted%20image%2020240910145630.png%20)
 
 - Si applica una rotazione semplice verso destra su *v*;
 - 2 sottocasi possibili:
 	- L'altezza di T2 è h --> l'altezza dell'albero coinvolto nella rotazione passa da h+3 a h+2
 	- L'altezza di T2 è h+1 --> l'altezza dell'albero coinvolto nella rotazione rimane pari a h+3
 
-![[Pasted image 20240910145831.png|600]]
+![600](../../../../Immagini/Immagini/Pasted%20image%2020240910145831.png)
 
 
 ###### Caso SD
 
-![[Pasted image 20240910145918.png|500]]
+![500](../../../../Immagini/Immagini/Pasted%20image%2020240910145918.png)
 
 - Applicare due rotazioni semplici: una verso sinistra sul foglio sinistro del nodo critico (nodo z), l'altra verso destra sul nodo critico (nodo v)
 
 
-![[Pasted image 20240910150107.png]]
+![Pasted image 20240910150107](../../../../Immagini/Immagini/Pasted%20image%2020240910150107.png)
 
 - I fattori di bilanciamento di tutti i nodi tornano ok
 - L'altezza dell'albero dopo la rotazione passa da h+3 a h+2

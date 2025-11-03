@@ -14,7 +14,7 @@ Mobilità
 
 #### Componenti di una rete wireless
 
-![[Pasted image 20240530140501.png]]
+![Pasted image 20240530140501](../Immagini/Immagini/Pasted%20image%2020240530140501.png)
 
 Collegamento Wireless
 - Usato in genere per collegare un host wireless alla stazione base oppure ad un altro host wireless

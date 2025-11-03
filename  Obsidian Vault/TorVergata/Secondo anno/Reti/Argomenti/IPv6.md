@@ -5,7 +5,7 @@
 
 #### Formato del datagramma IPv6
 
-![[Pasted image 20240430131115.png]]
+![Pasted image 20240430131115](../../../../Immagini/Immagini/Pasted%20image%2020240430131115.png)
 
 Cosa manca rispetto ad IPv4:
 - no checksum (per velocizzare l'elaborazione presso i router)
@@ -20,7 +20,7 @@ Cosa manca rispetto ad IPv4:
 - Tunneling: datagramma IPv6 trasportato come patload in un datagramma IPv4 tra i router IPv4 
 - Tunneling utilizzato ampiamente in altri contesti (4G/5G)
 
-![[Pasted image 20240430131324.png| 600]]
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020240430131324.png)
 
 
 

@@ -10,7 +10,7 @@
 - Network Functions Virtualization (NFV): astrae le funzioni di rete dall'hardware: le funzioni di rete sono programmate in software e eseguite su hardware COTS, sfruttando risorse di calcolo, storage e rete. Sono usate svariate tecniche e tecnologie per migliorare le prestazioni. Possono essere quindi anche eseguite in cloud. NFV è complementare a SDN
 
 
-![[Pasted image 20240430132846.png| 600]]
+![ 600](../Immagini/Immagini/Pasted%20image%2020240430132846.png)
 
 
 #### Principi architetturali di Internet
@@ -23,5 +23,5 @@ Tre convinzioni fondamentali:
 #### L'argomento "end-to-end"
 Alcune funzionalità possono essere implementate nel nucleo della rete o nella periferia della rete 
 
-![[Pasted image 20240430133103.png]]
+![Pasted image 20240430133103](../Immagini/Immagini/Pasted%20image%2020240430133103.png)
 

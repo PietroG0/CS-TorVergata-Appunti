@@ -8,7 +8,7 @@
 
 - **Applicazioni**: algoritmo di Kruskal per la determinazione del minimo albero ricoprente di un grafo, calcolo dei minimi antenati comuni, ecc.
 
-![[Pasted image 20250320163619.png]]
+![Pasted image 20250320163619](../../../../Immagini/Immagini/Pasted%20image%2020250320163619.png)
 
 **Obiettivo**: Progettare una struttura dati che sia efficiente su una sequenza arbitraria di operazioni
 
@@ -46,20 +46,20 @@ accede alla foglia x corrispondente all'elemento e. Da tale nodo segue il puntat
 
 ```
 
-![[Pasted image 20250320164231.png]]
+![Pasted image 20250320164231](../../../../Immagini/Immagini/Pasted%20image%2020250320164231.png)
 
 
 
 #### Esempio 
 
-![[GIF Speed Changer (1).gif#center | 500]]
+![](../../../../Immagini/Immagini/GIF%20Speed%20Changer%20(1).gif#center%20|%20500)
 
 
 
 #### Union di costo lineare
 **Find e makeSet** richiedono solo tempo $O(1)$, ma particolari sequenze di **union** possono essere molto inefficienti:
 
-![[Pasted image 20250320165730.png#center| 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250320165730.png#center|%20500)
 
 Queste operazioni costeranno $\Theta (n^{2})$
 
@@ -75,10 +75,10 @@ Nell'unione degli insiemi $A$ e $B$, attacchiamo gli elementi dell'insieme **di 
 
 Ogni insieme mantiene esplicitamente anche la propria size (numero di elementi)
 
-![[Pasted image 20250320171210.png#center|300]]  
+![](../../../../Immagini/Immagini/Pasted%20image%2020250320171210.png#center|300)  
 
 
-![[GIF Speed Changer (2).gif#center | 500]]
+![](../../../../Immagini/Immagini/GIF%20Speed%20Changer%20(2).gif#center%20|%20500)
 
 #### Realizzazione
 
@@ -102,7 +102,7 @@ $T_{am}$ = Tempo per operazione **ammortizzato** sull'intera sequenza di unioni.
 
 #### Complessità temporale per singola operazione
 
-![[Pasted image 20250324150337.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250324150337.png#center%20|%20600)
 
 
 #### Alberi QuickUnion
@@ -111,18 +111,18 @@ $T_{am}$ = Tempo per operazione **ammortizzato** sull'intera sequenza di unioni.
 - Radice = elemento rappresentativo dell'insieme
 - Rimanenti nodi = altri elementi (**escluso** l'elemento nella radice)
 
-![[Quick Union.gif#center | 600]]
+![](../../../../Immagini/Immagini/Quick%20Union.gif#center%20|%20600)
 
 
 #### Complessità delle operazioni
 
-![[Pasted image 20250324151723.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250324151723.png#center%20|%20600)
 
 
 #### Find di costo lineare
 Particolari sequenze di **union** possono generare un albero di altezza lineare, e quindi la **find** è molto inefficiente (costa **n-1** nel caso peggiore)
 
-![[Pasted image 20250324151839.png#center | 400]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250324151839.png#center%20|%20400)
 
 $\rightarrow$ Se eseguiamo **n makeSet**, **n-1 union** come sopra, seguite da **m find**, il tempo richiesto **dall'intera sequenza** di operazioni è $O(n+{n-1}+nm) = O(nm)$ 
 
@@ -133,10 +133,10 @@ $\rightarrow$ Se eseguiamo **n makeSet**, **n-1 union** come sopra, seguite da *
 >**Union by size**: nell'unione degli insiemi A e B, rendiamo la radice dell'albero **con meno nodi** figlia della radice dell'albero **con più nodi**
 
 
-![[Pasted image 20250324161248.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250324161248.png#center%20|%20600)
 
 
-![[Union by Size.gif#center | 500]]
+![](../../../../Immagini/Immagini/Union%20by%20Size.gif#center%20|%20500)
 
 
 **Lemma**:
@@ -145,7 +145,7 @@ Con la **union by size**, dato un albero QuickUnion con size (numero di nodi) $s
 
 #### Un'ulteriore euristica: compressione dei cammini
 
-![[Pasted image 20250324161610.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250324161610.png#center%20|%20600)
 
 **Idea**: Quando eseguo *find(x)* e attraverso il cammino da $x$ alla radice, comprimo il cammino, ovvero rendo tutti i nodi del cammino figli della radice
 

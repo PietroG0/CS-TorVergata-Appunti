@@ -18,7 +18,7 @@ Ciascuna interfaccia in una LAN
 - Ha un indirizzo MAC univoco
 - Ha un indirizzo IP univoco
 
-![[Pasted image 20240524122409.png | 600]]
+![ 600](Pasted%20image%2020240524122409.png%20)
 
 - Allocazione degli indirizzi MAC gestita dall'IEEE
 - I produttori (di schede di rete) comprano porzioni dello spazio degli indirizzi MAC (per assicurare l'unicità)

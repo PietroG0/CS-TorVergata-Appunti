@@ -4,7 +4,7 @@ Dato un insieme S di n oggetti presi da un dominio totalmente ordinato, ordinare
 
 Approccio incrementale: estende l'ordinamento da $k$ a $k+1$ elementi, scegliendo il minimo degli $n-k$ elementi non ancora ordinati e mettendolo in posizione $k+1$
 
-![[Pasted image 20231027102325.png|565x293]]
+![565x293](../../../../Immagini/Immagini/Pasted%20image%2020231027102325.png)
 
 
 ```

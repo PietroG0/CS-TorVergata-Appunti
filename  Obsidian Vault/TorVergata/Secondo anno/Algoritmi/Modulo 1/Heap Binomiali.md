@@ -5,7 +5,7 @@ Un *albero binomiale* $B_i$ è definito ricorsivamente come segue:
 1) $B_0$ consiste di un *unico* nodo
 2) Per $i>0, B_{i+1}$ è ottenuto fondendo due alberi binomiali $B_i$, ponendo la radice dell'uno come figlia della radice dell'altro
 
-![[Pasted image 20241125164327.png]]
+![Pasted image 20241125164327](../../../../Immagini/Immagini/Pasted%20image%2020241125164327.png)
 
 
 #### Proprietà strutturali

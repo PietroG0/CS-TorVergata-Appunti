@@ -25,7 +25,7 @@ Trovare un insieme indipendente di **peso massimo**, ovvero un insieme $S$ di no
 >Un **Insieme Indipendente** (II) di $G$ è un sottoinsieme di nodi che non contiene due nodi adiacenti, ovvero per ogni coppia di nodi dell'insieme i due nodi non sono collegati da un arco
 
 
-![[Ins Indipendenza.gif#center | 400]]
+![](../../../../Immagini/Immagini/Ins%20Indipendenza.gif#center%20|%20400)
 
 
 #### Forza bruta: enumerazione
@@ -45,12 +45,12 @@ Enumeriamo tutti i sottoinsiemi degli $n$ nodi, per ognuno verifichiamo che è u
 *Idea*
 Costruisco la soluzione in modo incrementale scegliendo ogni volta il nodo indipendente di valore massimo
 
-![[Greedy Insert Ind.gif#center]]
+![](../../../../Immagini/Immagini/Greedy%20Insert%20Ind.gif#center)
 
 
 In questa istanza funziona, ma
 
-![[Pasted image 20250327154655.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250327154655.png#center%20|%20500)
 
 In questa no
 
@@ -70,14 +70,14 @@ Considera $v_{n} \notin S^*$
 Allora $S^*$ è una soluzione ottima per $G'$
 Se esistesse una soluzione $S$ migliore per $G'$, $S$ sarebbe migliore anche per $G$
 
-![[Pasted image 20250327155049.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250327155049.png#center%20|%20500)
 
 **Caso 2**: $v_{n} \in S^*$
 Considera $G'' = G - \{V_{n-1}, V_n\}$ 
 Allora $S^{*} / \{v_{n}\}$ è una soluzione ottima per $G''$
 Se esistesse una soluzione $S$ migliore per $G'', S \cup \{v_{n}\}$ sarebbe migliore di $S^*$ per $G$
 
-![[Pasted image 20250327155345.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250327155345.png#center%20|%20500)
 
 **Idea**
 Procediamo iterativamente considerando prefissi di $G$ dai più piccoli verso i più grandi
@@ -127,7 +127,7 @@ $v_{j} \in II$ di peso massimo di $G_{j}$ $\rightarrow$ $w_{j} + $OPT[j-2]  \geq
 
 Complessità temporale? $T(n) = \Theta(n)$
 
-![[Algoritmi Strutture Dati Dynamic II.gif#center | 550]]
+![](../../../../Immagini/Immagini/Algoritmi%20Strutture%20Dati%20Dynamic%20II.gif#center%20|%20550)
 
 
 #### Programmazione Dinamica: principi generali

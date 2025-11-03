@@ -22,7 +22,7 @@
 	- Quando un frame viene ricevuto, lo switch "impara" la posizione del mittente: Segmento LAN in ingresso
 	- Registra la coppia mittente/posizione nella tabella di commutazione
 
-![[Pasted image 20240524124404.png | 500]]
+![ 500](Pasted%20image%2020240524124404.png%20)
 
 #### Switch: filtraggio e inoltro dei frame
 Quando uno switch riceve un frame:

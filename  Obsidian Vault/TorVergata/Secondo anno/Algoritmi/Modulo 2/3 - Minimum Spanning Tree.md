@@ -8,7 +8,7 @@
 >Ci sono $n^{n-2}$ spanning tree di $K_n$
 
 
-![[Pasted image 20250325135655.png#center | 700]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250325135655.png#center%20|%20700)
 
 **Il problema dell'MST**
 *input*:
@@ -24,7 +24,7 @@
 #### Unicità dell'MST
 L'MST non è unico in generale
 
-![[Pasted image 20250325141051.png]]
+![Pasted image 20250325141051](../../../../Immagini/Immagini/Pasted%20image%2020250325141051.png)
 
 **Proprietà**
 Se $G$ ha pesi distinti allora l'MST è unico
@@ -48,7 +48,7 @@ Tutti e tre gli algoritmi producono un MST
 **Ciclo**
 Set di archi nella forma a-b, b-c, c-d, ..., y-z, z-a.
 
-![[Pasted image 20250325141651.png#center | 450]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250325141651.png#center%20|%20450)
 
 Ciclo C = 1-2, 2-3, 3-4, 4-5, 5-6, 6-1
 
@@ -58,7 +58,7 @@ Un cut è un sottoinsieme di nodi $S$. (Qualche volta definito come una partizio
 **Cutset**
 Il corrispondente cutset $D$ di un cut $S$ è un sottoinsieme di archi con esattamente un endpoint in $S$
 
-![[Pasted image 20250325141903.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250325141903.png#center%20|%20600)
 
 
 
@@ -68,7 +68,7 @@ Sia $S$ un sottoinsieme di nodi, e sia $e$ un arco con costo minimo con endpoint
 **Cycle property**
 Sia $C$ un ciclo qualsiasi, e sia $f$ un arco con costo massimo appartenente a $C$. Di conseguenza, esisterà un MST che non contiene $f$
 
-![[Pasted image 20250325142825.png#center]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250325142825.png#center)
 
 
 **Dimostrazione della Cut Property**
@@ -110,7 +110,7 @@ L'obiettivo è dimostrare che possiamo costruire un **MST** che **non contiene**
 5. Il costo di $T'$ **non è maggiore** di $T^*$, quindi $T'$ è **anch'esso un MST che non contiene** $f$
 
 
-![[Pasted image 20250326151543.png#center| 400]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250326151543.png#center|%20400)
 
 
 #### Algoritmo di Kruskal
@@ -144,7 +144,7 @@ algorithm Kruskal (graph G=(V,E,c))
 ```
 
 
-![[Kruskal Algoritmi Strutture Dati.gif#center | 500]]
+![](../../../../Immagini/Immagini/Kruskal%20Algoritmi%20Strutture%20Dati.gif#center%20|%20500)
 
 #### Correttezza dell'algoritmo di Kruskal
 
@@ -165,7 +165,7 @@ algorithm Kruskal (graph G=(V,E,c))
 
 >[!col] 
 >**Algoritmo di Kruskal**
->![[Pasted image 20250326153050.png| 300]]
+>![ 300](../../../../Immagini/Immagini/Pasted%20image%2020250326153050.png)
 >
 >
 >
@@ -192,7 +192,7 @@ algorithm Kruskal (graph G=(V,E,c))
 >Immediata conseguenza della **cut property**, usata esattamente $n-1$ volte
 
 
-![[Algoritmi e Strutture Dati Modulo 2 immagine.gif#center | 500]]
+![](../../../../Immagini/Immagini/Algoritmi%20e%20Strutture%20Dati%20Modulo%202%20immagine.gif#center%20|%20500)
 
 
 #### Tempo di esecuzione
@@ -206,7 +206,7 @@ Per $n-1$ volte, trovare il più economico arco che attraversa il cut indotto da
 - Per ogni nodo $v$ inesplorato, la priorità è il costo di attaccamento $a[v]$ = costo dell'arco più economico incidente a $v$ avendo un enpoint in $S$
 
 
-![[Pasted image 20250326155343.png#center| 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250326155343.png#center|%20500)
 
 **Tempo di esecuzione**
 - Tempo $O(m+n)$ più il costo delle operazioni della coda con priorità
@@ -244,7 +244,7 @@ Assumere che soddisfi proprietà naturali
 
 **Clustering di spazio massimo**: Dato un intero $k$, trovare un $k$-clustering di spazio massimo
 
-![[Pasted image 20250327141428.png#center | 500]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250327141428.png#center%20|%20500)
 
 
 #### Greedy Clustering Algorithm
@@ -263,7 +263,7 @@ Equivalente a trovare un MST ed eliminare il $k$-esimo arco più costoso
 Eseguire l'algoritmo di Kruskal fino alla fine implementa un Hierarchial Clustering, i.e. un $k$-clustering per ogni valore di $k=n, {n-1}, ..., 1$
 
 
-![[k cluster.gif#center | 500]]
+![](../../../../Immagini/Immagini/k%20cluster.gif#center%20|%20500)
 
 #### Analisi dell'algoritmo Greedy
 
@@ -279,6 +279,6 @@ Eseguire l'algoritmo di Kruskal fino alla fine implementa un Hierarchial Cluster
 >- Lo spacing di $C$ è $\leq d^*$ dato che $p$ e $q$ sono in due cluster differenti
 
 
-![[Pasted image 20250327144117.png#center | 350]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250327144117.png#center%20|%20350)
 
 

@@ -1,5 +1,5 @@
 
-![[Pasted image 20241118160732.png | 500]]
+![ 500](Pasted%20image%2020241118160732.png%20)
 
 Il grafo può essere rappresentato usando due predicati:
 - path(X, Y). --> indica che esiste un percorso da X a Y nel grafo

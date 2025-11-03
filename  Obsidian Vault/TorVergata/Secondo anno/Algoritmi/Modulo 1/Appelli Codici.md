@@ -219,7 +219,7 @@ Idea: Creare un Grafo G', a 2 livelli, se Ciano non può procedere in un arco of
 - Per ogni arco (u,v) in G ho l'arco (u1', u1') € G' tale che lo stato è ON
 - Per ogni arco (u,v) in G ho l'arco (u2', u2') € G' tale che lo stato è OFF
 
-![[CianoOnL.png]]
+![CianoOnL](../../../../Immagini/Immagini/CianoOnL.png)
 
 
 3) Un labirinto e' modellato come un grafo non diretto G = (V,E). Voi siete nel nodo s e l’uscita si trova nel nodo t. Potete percorrere gli archi, spendendo un minuto per ogni arco. Nel labirinto inoltre c’e' un nodo speciale p che e' un teletrasporto, e un insieme di nodi U ⊆ V che sono uscite del teletrasporto. Se siete su p potete teletrasportarvi in un qualsiasi nodo q ∈ U a vostra scelta. Il tempo del teletrasporto e' di 3 minuti.
@@ -250,7 +250,7 @@ b) Progettare un algoritmo efficiente che calcola una soluzione ottima, ovvero u
 
 Idea: Creare un grafo ausiliario G' a 2 livelli, poi mediante Dijkstra andremo a trovare il cammino minimo da s a t
 
-![[TurboBL.png]]
+![TurboBL](../../../../Immagini/Immagini/TurboBL.png)
 
 **Archi**
 - Per ogni arco (u,v) € G esiste un arco (u1', v1') € G' con peso w(u,v)

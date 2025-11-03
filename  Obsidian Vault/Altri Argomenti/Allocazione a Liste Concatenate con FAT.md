@@ -9,7 +9,7 @@ Struttura della FAT:
 - Sequenze terminate da un indicatore speciale (es. -1) per marcare la fine.  
 - In memoria principale
 
-![[Pasted image 20231211160225.png| 400]]
+![ 400](../Immagini/Immagini/Pasted%20image%2020231211160225.png)
 
 Vantaggi della FAT:
 - L'intero blocco è disponibile per i dati, ottimizzando lo spazio

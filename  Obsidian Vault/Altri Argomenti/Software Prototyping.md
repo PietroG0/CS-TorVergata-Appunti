@@ -18,12 +18,12 @@ Sviluppo software rapido per suscitare o validare requisiti
 
 #### Rapid Prototyping Model
 
-![[Pasted image 20241015162303.png | 500]]
+![ 500](Pasted%20image%2020241015162303.png%20)
 
 
 #### Prototyping process
 
-![[Pasted image 20241015162338.png]]
+![Pasted image 20241015162338](../Immagini/Immagini/Pasted%20image%2020241015162338.png)
 
 
 #### Prototipi come specificazioni 
@@ -44,7 +44,7 @@ Sviluppo software rapido per suscitare o validare requisiti
 
 #### Throw-away prototyping process
 
-![[Pasted image 20241015162940.png]]
+![Pasted image 20241015162940](../Immagini/Immagini/Pasted%20image%2020241015162940.png)
 
 
 #### Consegna del Prototipo Throw-away 

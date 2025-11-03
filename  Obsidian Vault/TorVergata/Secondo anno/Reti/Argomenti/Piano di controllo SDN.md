@@ -5,7 +5,7 @@
 
 #### Piano di controllo per router 
 
-![[Pasted image 20240515142755.png]]
+![Pasted image 20240515142755](../../../../Immagini/Immagini/Pasted%20image%2020240515142755.png)
 
 Perchè un piano di controllo logicamente centralizzato?
 - Gestione più semplice della rete: evitare errori di configurazione dei router, maggiore flessibilità dei flussi di traffico
@@ -16,7 +16,7 @@ Perchè un piano di controllo logicamente centralizzato?
 - Implementazione aperta (non proprietaria) del piano di controllo
 
 
-![[Pasted image 20240515143056.png]]
+![Pasted image 20240515143056](../../../../Immagini/Immagini/Pasted%20image%2020240515143056.png)
 
 Switch del piano dei dati:
 - Switch veloci e semplici che implementano l'inoltro generalizzato del piano dei dati in hardware
@@ -35,7 +35,7 @@ Applicazioni di controllo di rete:
 - "Cervelli" di controllo: Implementano le funzioni di controllo utilizzando servizi di livello inferiore attraverso API fornite dal controller SDN
 - Scorporate: può essere fornito da terzi, distinto dal fornitore di routing o dal controller SDN
 
-![[Pasted image 20240515143527.png]]
+![Pasted image 20240515143527](../../../../Immagini/Immagini/Pasted%20image%2020240515143527.png)
 
 
 #### Protocollo OpenFlow

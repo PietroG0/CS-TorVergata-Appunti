@@ -1,5 +1,5 @@
 
-![[Pasted image 20241107115100.png]]
+![Pasted image 20241107115100](../Immagini/Immagini/Pasted%20image%2020241107115100.png)
 
 #### Scrum Roles
 - The *Scrum master*:
@@ -28,7 +28,7 @@
 
 
 ## User Stories
-- Una pratica comune, usata in [[Agile Methods]], spesso in combinazione con Scrum (ma non definita nella guida di Scrum)
+- Una pratica comune, usata in [Agile Methods](Agile%20Methods.md), spesso in combinazione con Scrum (ma non definita nella guida di Scrum)
 - Un *User Story*:
 	- E' un formato per descrivere i requisiti degli utenti come una "storia". Dovrebbe essere corta, tipicamente di una sola frase, e descritta dal punto di vista dell'utente
 

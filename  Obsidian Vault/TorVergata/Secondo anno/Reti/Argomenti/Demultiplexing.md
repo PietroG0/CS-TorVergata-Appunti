@@ -17,7 +17,7 @@
 	- invia il segmento UDP alla socket con quel numero di porta
 
 
-![[Pasted image 20240403143107.png]]
+![Pasted image 20240403143107](../../../../Immagini/Immagini/Pasted%20image%2020240403143107.png)
 
 
 ## Demultiplexing orientato alla connessione
@@ -31,7 +31,7 @@
 - Un host server crea una socket passiva specificando un numero di porta
 - La socket passiva viene usata per accettare le richieste di connessione, per ciascuna delle quali verrà creata una nuova socket connessa (con la medesima porta e indirizzo IP locale, ma diversa porta e indirizzo remoto, discriminando pertanto le socket connesse di client diversi)
 
-![[Pasted image 20240403143354.png]]
+![Pasted image 20240403143354](../../../../Immagini/Immagini/Pasted%20image%2020240403143354.png)
 
 
 ### Riassunto

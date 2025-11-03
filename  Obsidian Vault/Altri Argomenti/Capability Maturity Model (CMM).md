@@ -3,7 +3,7 @@
 - Ogni livello comprende tutte le caratteristiche definite per il livello precedente
 
 
-![[Pasted image 20241107122430.png | 600]]
+![ 600](Pasted%20image%2020241107122430.png%20)
 
 
 ## Key Process Areas
@@ -17,5 +17,5 @@
 	- Metodi di verifica della realizzazione
 
 
-![[Pasted image 20241107122732.png | 600]]
+![ 600](Pasted%20image%2020241107122732.png%20)
 

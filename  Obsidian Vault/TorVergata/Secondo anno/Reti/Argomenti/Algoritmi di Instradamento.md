@@ -26,7 +26,7 @@ Obiettivo degli algoritmi di instradamento: determinare percorsi o cammini "buon
 #### Algoritmo distance vector
 Basato sulla equazione di Bellman-Ford
 
-![[Pasted image 20240514112238.png]]
+![Pasted image 20240514112238](../../../../Immagini/Immagini/Pasted%20image%2020240514112238.png)
 
 Idea chiave:
 - Di tanto in tanto, ogni nodo invia ai vicini il proprio vettore delle distanze stimate, distance vector
@@ -49,7 +49,7 @@ Ciascun nodo notifica i vicini solo quando la sua DV cambia
 
 #### Vettore di distanza: diffusione di informazioni sullo stato
 
-![[Pasted image 20240514112818.png]]
+![Pasted image 20240514112818](../../../../Immagini/Immagini/Pasted%20image%2020240514112818.png)
 
 Cambiamento del costo dei collegamenti:
 - Un nodo rileva la modifica del costo del collegamento locale

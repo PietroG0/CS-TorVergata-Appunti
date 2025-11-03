@@ -6,7 +6,7 @@
 ### Distribuzione di file: client-server vs P2P
 Quanto tempo per distribuire un file (di dimensione F) da un server a N peer?
 
-![[Pasted image 20240405144301.png]]
+![Pasted image 20240405144301](../../../../Immagini/Immagini/Pasted%20image%2020240405144301.png)
 
 #### File distrubution time: client-server
 - Trasmissione via server: deve inviare (caricare) in sequenza N copie di file:
@@ -16,7 +16,7 @@ Quanto tempo per distribuire un file (di dimensione F) da un server a N peer?
 	- d min: banda di download più bassa
 	- tempo di download per il client con banda minima è almeno: F/d min
 
-![[Pasted image 20240405144538.png]]
+![Pasted image 20240405144538](../../../../Immagini/Immagini/Pasted%20image%2020240405144538.png)
 
 
 #### Distribuzione di file: P2P
@@ -28,19 +28,19 @@ Quanto tempo per distribuire un file (di dimensione F) da un server a N peer?
 	- capacità totale di upload (che limita la massima velocità di download) è us + Sommatoria di ui 
 
 
-![[Pasted image 20240405144822.png]]
+![Pasted image 20240405144822](../../../../Immagini/Immagini/Pasted%20image%2020240405144822.png)
 
 
 #### Client-server vs P2P: example
 
-![[Pasted image 20240405144859.png]]
+![Pasted image 20240405144859](../../../../Immagini/Immagini/Pasted%20image%2020240405144859.png)
 
 
 #### Distribuzione di file P2P: BitTorrent
 - File diviso in chunk (parti), in genere da 256kb
 - I peer nel torrent inviano/ricevono chunk del file
 
-![[Pasted image 20240405145001.png]]
+![Pasted image 20240405145001](../../../../Immagini/Immagini/Pasted%20image%2020240405145001.png)
 
 - Un peer che entra a far parte del torrent:
 	- non ha chunk del file, ma li accumulerà nel tempo da altri peer
@@ -73,5 +73,5 @@ Invio di chunk: tit-for-tat:
 2) Alice diventa uno dei primi quattro fornitori di Bob; Bob ricambia
 3) Bob diventa uno dei primi 4 fornitori di Alice
 
-![[Pasted image 20240405145925.png]]
+![Pasted image 20240405145925](../../../../Immagini/Immagini/Pasted%20image%2020240405145925.png)
 

@@ -1,11 +1,11 @@
 #### Livello di rete: Internet
 
-![[Pasted image 20240428164405.png]]
+![Pasted image 20240428164405](../../../../Immagini/Immagini/Pasted%20image%2020240428164405.png)
 
 
 #### Formato dei Datagrammi IP
 
-![[Pasted image 20240428164444.png]]
+![Pasted image 20240428164444](../../../../Immagini/Immagini/Pasted%20image%2020240428164444.png)
 
 
 #### Frammentazione dei datagrammi IP
@@ -21,7 +21,7 @@
 
 #### Frammentazione e riassemblaggio IP
 
-![[Pasted image 20240428164750.png]]
+![Pasted image 20240428164750](../../../../Immagini/Immagini/Pasted%20image%2020240428164750.png)
 
 - Deprecato, rimosso in IPv6
 - Path MTU Discovery
@@ -33,4 +33,4 @@ Sono stati proposti approcci alternativi più robusti.
 Tra le alternative: manipolazione di segmenti SYN in fase di instaurazione di una connessione TCP, cambiando l'opzione relativa al MSS
 
 
-[[Indirizzamento IP]]
+[Indirizzamento IP](Indirizzamento%20IP.md)

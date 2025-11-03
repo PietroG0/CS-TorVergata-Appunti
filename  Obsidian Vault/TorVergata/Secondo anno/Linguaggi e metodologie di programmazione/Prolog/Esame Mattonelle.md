@@ -1,6 +1,6 @@
 #Linguaggi 
 
-![[Screenshot 2025-01-17 alle 13.33.51.png]]
+![Screenshot 2025-01-17 alle 13.33.51](../../../../Immagini/Immagini/Screenshot%202025-01-17%20alle%2013.33.51.png)
 
 ```
 

@@ -39,5 +39,5 @@ Instradamento tra sistemi autonomi
 - Annunci link-state inondati solo in area o dorsale
 - Ogni nodo ha una topologia dettagliata dell'area; conosce solo la direzione
 
-![[Pasted image 20240515141251.png]]
+![Pasted image 20240515141251](../../../../Immagini/Immagini/Pasted%20image%2020240515141251.png)
 

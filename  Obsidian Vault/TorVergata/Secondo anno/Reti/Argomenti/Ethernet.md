@@ -18,7 +18,7 @@ Tecnologia "dominante" per le LAN cablate:
 ##### Struttura del frame Ethernet
 L'interfaccia trasmittente incapsula il datagramma IP in frame Ethernet 
 
-![[Pasted image 20240524123348.png]]
+![Pasted image 20240524123348](../../../../Immagini/Immagini/Pasted%20image%2020240524123348.png)
 
 Preambolo:
 - Usato per "risvegliare" le schede di rete dei riceventi e sincronizzare i loro clock con quello del trasmittente 

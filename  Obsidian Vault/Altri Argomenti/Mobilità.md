@@ -1,6 +1,6 @@
 Spettro della mobilità, dal punto di vista del livello di rete
 
-![[Pasted image 20240603143803.png]]
+![Pasted image 20240603143803](../Immagini/Immagini/Pasted%20image%2020240603143803.png)
 
 #### Il problema della mobilità
 Se un dispositivo si sposta da una rete all'altra:
@@ -21,7 +21,7 @@ Lasciare che siano gli end-system a gestirla: funzionalità nella "periferia"
 
 #### Rete domestica, rete visitata: 4G/5G
 
-![[Pasted image 20240603144328.png | 600]]
+![ 600](Pasted%20image%2020240603144328.png%20)
 
 Home Network:
 - Piano di servizio (a pagamento) con un operatore di telefonia mobile
@@ -33,7 +33,7 @@ Visited Network:
 
 ##### ISP/WiFi
 
-![[Pasted image 20240603144554.png | 600]]
+![ 600](Pasted%20image%2020240603144554.png%20)
 
 Nessuna nozione di "casa"
 - Credenziali dell'ISP (ad esempio, nome utente, password) memorizzate sul dispositivo o presso l'utente
@@ -42,9 +42,9 @@ Nessuna nozione di "casa"
 	- Alcune eccezioni (es. eduroam)
 	- Esistono architetture (IP mobile) per la mobilità di tipo 4G, ma non sono utilizzate
 
-![[Pasted image 20240603144829.png]]
+![Pasted image 20240603144829](../Immagini/Immagini/Pasted%20image%2020240603144829.png)
 
-![[Pasted image 20240603144853.png]]
+![Pasted image 20240603144853](../Immagini/Immagini/Pasted%20image%2020240603144853.png)
 
 - Instradamento triangolare:
 	- Inefficiente se il corrispondente e il dispositivo mobile sono nella stessa rete
@@ -54,7 +54,7 @@ Nessuna nozione di "casa"
 	- La nuova rete visitata si registra presso l'HSS domestico
 	- I datagrammi continuano a essere inoltrati dalla rete domestica al dispositivo mobile nella nuova rete
 
-![[Pasted image 20240603145046.png]]
+![Pasted image 20240603145046](../Immagini/Immagini/Pasted%20image%2020240603145046.png)
 
 - Supera le inefficienze dell'instradamento triangolare
 - Non trasparente al corrispondente: il corrispondente deve ottenere l'indirizzo car-of (nella rete visitata) dall'agente domestico
@@ -62,7 +62,7 @@ Nessuna nozione di "casa"
 	- Può essere gestito, ma aggiunge complessità
 
 
-![[Pasted image 20240603145353.png]]
+![Pasted image 20240603145353](../Immagini/Immagini/Pasted%20image%2020240603145353.png)
 
 - Il dispositivo mobile comunica con l'MME locale attraverso il canale del piano di controllo con la bS
 - L'MME usa l'informazione sull'IMSI del dispositivo mobile per contattare l'HSS della home network del dispositivo
@@ -71,9 +71,9 @@ Nessuna nozione di "casa"
 
 - La BS e il dispositivo mobile selezionano i paramentri per il canale radio tra BS e dispositivo mobile nel piano di dati
 
-![[Pasted image 20240603145809.png]]
+![Pasted image 20240603145809](../Immagini/Immagini/Pasted%20image%2020240603145809.png)
 
-![[Pasted image 20240603145938.png]]
+![Pasted image 20240603145938](../Immagini/Immagini/Pasted%20image%2020240603145938.png)
 
 4) La BS source smette di inviare datagrammi al cellulare, inoltra invece alla nuova BS (che inoltra al dispositivo mobile attraverso il canale radio)
 5) La BS target informa l'MME che è la nuova BS per il dispositivo mobile

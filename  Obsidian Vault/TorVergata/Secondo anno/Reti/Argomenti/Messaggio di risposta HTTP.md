@@ -1,4 +1,4 @@
-![[Pasted image 20240315114122.png]]
+![Pasted image 20240315114122](../../../../Immagini/Immagini/Pasted%20image%2020240315114122.png)
 
 Alcuni campi di intestazione nei messaggi di richiesta:
 

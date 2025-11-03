@@ -3,11 +3,11 @@ Usa la tecnica del divide et impera:
 2) Risolvi i due sottoproblemi ricorsivamente
 3) Impera: fondi le due sottosequenze ordinate
 
-![[Pasted image 20231027103255.png]]
+![Pasted image 20231027103255](../../../../../Immagini/Immagini/Pasted%20image%2020231027103255.png)
 
 *Esempio di esecuzione*
 
-![[Pasted image 20231027103316.png]]
+![Pasted image 20231027103316](../../../../../Immagini/Immagini/Pasted%20image%2020231027103316.png)
 
 
 *Procedura Merge*
@@ -15,7 +15,7 @@ Usa la tecnica del divide et impera:
 -estrai ripetutamente il minimo di A e B e copialo nell'array di output, finchè A oppure B non diventa vuoto
 -copia gli elementi dell'array non vuoto alla fine dell'array di output
 
-![[Pasted image 20231027103441.png]]
+![Pasted image 20231027103441](../../../../../Immagini/Immagini/Pasted%20image%2020231027103441.png)
 
 *Lemma*
 La procedure Merge fonde due sequenze ordinate di lunghezza n1 e n2 in tempo Teta(n1 + n2)
@@ -23,7 +23,7 @@ La procedure Merge fonde due sequenze ordinate di lunghezza n1 e n2 in tempo Tet
 *Dim* 
 Ogni confronto "consuma" un elemento di una delle due sequenze. Ogni posizione di $X$ è riempita in tempo costante. Il numero totale di elementi è $n1 + n2$. Anche la linea 12 (copia del vettore ausiliario) costa $\Theta(n1+n2)$
 
-![[Pasted image 20231027103633.png]]
+![Pasted image 20231027103633](../../../../../Immagini/Immagini/Pasted%20image%2020231027103633.png)
 
 *Tempo di esecuzione*
 - La complessità temporale del MergeSort è descritto dalla seguente relazione di ricorrenza:

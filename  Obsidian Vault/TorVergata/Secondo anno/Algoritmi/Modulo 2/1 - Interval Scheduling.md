@@ -2,7 +2,7 @@
 
 #### Interval Scheduling
 
-![[Pasted image 20250320142302.png]]
+![Pasted image 20250320142302](../../../../Immagini/Immagini/Pasted%20image%2020250320142302.png)
 
 - Job $J$ inizia a $s_j$ e finisce a $f_j$
 - Due jobs sono **compatibili** se non si intersecano
@@ -33,7 +33,7 @@ Considerare i jobs in qualche ordine naturale. Accettare ogni job purchè sia co
 
 **Fewest conflicts**: Per ogni lavoro $j$, contare il numero di jobs in conflitto $cj$. Schedulare in ordine ascendente di $cj$
 
-![[Pasted image 20250320143144.png | 400]]
+![ 400](Pasted%20image%2020250320143144.png%20)
 
 ```
 Earliest-Finish-Time-First (n, s1, s2, ..., sn, f1, f2, ..., fn)
@@ -48,7 +48,7 @@ return S.
 
 ```
 
-![[Interval Scheduling.gif]]
+![Interval Scheduling](../../../../Immagini/Immagini/Interval%20Scheduling.gif)
 
 
 #### Costo
@@ -70,7 +70,7 @@ Per ogni $r = 1,2,...,k$ abbiamo $f(i_{r}) <= f(j_{r})$
 $r=1$ Ovvio
 
 $r>1$:
-![[Pasted image 20250320144746.png | 700]]
+![ 700](Pasted%20image%2020250320144746.png%20)
 
 
 >[!info] Teorema
@@ -82,7 +82,7 @@ $r>1$:
 - Assumere che il greedy non sia ottimale
 - Allora $m>k$
 
-![[Pasted image 20250320151527.png | 700]]
+![ 700](Pasted%20image%2020250320151527.png%20)
 
 
 
@@ -93,10 +93,10 @@ $r>1$:
 **Esercizio**
 Questo programma usa 4 classi per schedulare 10 lezioni
 
-![[Pasted image 20250320151820.png | 700]]
+![ 700](Pasted%20image%2020250320151820.png%20)
 
 
-![[Pasted image 20250320152123.png | 700]]
+![ 700](Pasted%20image%2020250320152123.png%20)
 
 In questo modo si sono utilizzate 3 classi invece che 4
 
@@ -122,7 +122,7 @@ Considerare le lezioni in qualche ordine naturale. Assegnare ad ogni lezione ad 
 
 **Fewest conflicts**: Per ogni lezione $j$, contare il numero di lezioni in conflitto $cj$. Schedulare in ordine ascendente di $cj$
 
-![[Pasted image 20250320152605.png | 400]]
+![ 400](Pasted%20image%2020250320152605.png%20)
 
 
 ```
@@ -142,7 +142,7 @@ return schedule.
 ```
 
 
-![[Interval Partitioning.gif]]
+![Interval Partitioning](../../../../Immagini/Immagini/Interval%20Partitioning.gif)
 
 
 #### Costo
@@ -166,7 +166,7 @@ L'algoritmo earliest-start-time-first può essere implementato in tempo $O(n \lo
 *Osservazione chiave*
 Numero di classi necessarie >= Profondità
 
-![[Pasted image 20250320153520.png]]
+![Pasted image 20250320153520](../../../../Immagini/Immagini/Pasted%20image%2020250320153520.png)
 
 **Osservazione**
 L'algoritmo earliest-start-time-first non schedula mai due lezioni *incompatibili* nella stessa classe

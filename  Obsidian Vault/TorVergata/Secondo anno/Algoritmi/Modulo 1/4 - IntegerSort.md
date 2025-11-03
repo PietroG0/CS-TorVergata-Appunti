@@ -3,11 +3,11 @@ Algoritmo che non usa confronti
 Per ordinare n interi con valori in $[1, k]$
 Mantiene un array y di $k$ contatori tale che $y[x]$ = numero di volte che il valore $x$ compare in $X$
 
-![[Pasted image 20231026152028.png]]
+![Pasted image 20231026152028](../../../../Immagini/Immagini/Pasted%20image%2020231026152028.png)
 
 Scorre $y$ da sinistra verso destra e, se $y[x] = k$, scrive in $X$ il valore $x$ per $k$ volte
 
-![[Pasted image 20231026152110.png]]
+![Pasted image 20231026152110](../../../../Immagini/Immagini/Pasted%20image%2020231026152110.png)
 
 
 
@@ -28,5 +28,5 @@ IntegerSort(X, k)
 ```
 
 
-![[Pasted image 20231026152534.png]]
+![Pasted image 20231026152534](../../../../Immagini/Immagini/Pasted%20image%2020231026152534.png)
 

@@ -46,7 +46,7 @@ Il livello di collegamento ha la responsabilità di trasferire i datagrammi da u
 
 #### Adattatore di rete negli host
 
-![[Pasted image 20240523124728.png]]
+![Pasted image 20240523124728](../Immagini/Immagini/Pasted%20image%2020240523124728.png)
 
 Lato mittente, il controllore:
 - Incapsula il datagramma in un frame

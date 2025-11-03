@@ -7,9 +7,9 @@
 	- Messaggi ICMP trasportati nei datagrammi IP
 	- Non viene considerato un protocollo di trasporto perchè non usato dalle applicazioni di rete per trasferire i propri messaggi
 
-![[Pasted image 20240523163536.png]]
+![Pasted image 20240523163536](../../../../Immagini/Immagini/Pasted%20image%2020240523163536.png)
 
-![[Pasted image 20240523163558.png]]
+![Pasted image 20240523163558](../../../../Immagini/Immagini/Pasted%20image%2020240523163558.png)
 
 
 #### Traceroute e ICMP
@@ -25,7 +25,7 @@ Criteri di arresto:
 	- La destinazione restituisce il messaggio ICMP "port unreachable"
 - La sorgente si ferma
 
-![[Pasted image 20240523163835.png]]
+![Pasted image 20240523163835](../../../../Immagini/Immagini/Pasted%20image%2020240523163835.png)
 
 #### ICMP: Internet Control Message Protocol
 - ICMPv6 per IPv6:

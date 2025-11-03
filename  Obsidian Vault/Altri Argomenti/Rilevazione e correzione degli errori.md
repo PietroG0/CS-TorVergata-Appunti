@@ -2,7 +2,7 @@
 EDC: Error Detection and Correction
 D: Dati protetti dal controllo d'errore, può includere i campi di intestazione 
 
-![[Pasted image 20240523125246.png| 500]]
+![ 500](../Immagini/Immagini/Pasted%20image%2020240523125246.png)
 
 Il ricevente:
 - Calcola la parità dei $d$ bit ricevuti
@@ -12,7 +12,7 @@ Parità bidimensionale:
 - Rileva tutte le combinazioni di al più 3 errori
 - Rilevazione e correzione di errori singoli
 
-![[Pasted image 20240523125436.png| 500]]
+![ 500](../Immagini/Immagini/Pasted%20image%2020240523125436.png)
 
 
 #### Controllo di parità
@@ -44,7 +44,7 @@ Ricevente:
 - D: dati da trasmettere
 - G: sequenza di (r + 1) bit concordata, detta generatore 
 
-![[Pasted image 20240523144054.png]]
+![Pasted image 20240523144054](../Immagini/Immagini/Pasted%20image%2020240523144054.png)
 
 Mittente: calcola r bit CRC, R, tali che <D,R> sia divisibile esattamente da G
 - Il ricevente conosce G, divide <D,R> per G. Se il resto è diverso da zero: errore rilevato!

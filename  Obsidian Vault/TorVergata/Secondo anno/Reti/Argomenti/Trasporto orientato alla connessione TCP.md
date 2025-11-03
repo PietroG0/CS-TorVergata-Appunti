@@ -25,12 +25,12 @@
 
 #### TCP: Buffer di invio e ricezione TCP
 
-![[Pasted image 20240405150741.png]]
+![Pasted image 20240405150741](../../../../Immagini/Immagini/Pasted%20image%2020240405150741.png)
 
 
 #### TCP: MSS
 
-![[Pasted image 20240405150813.png|500]]
+![500](../../../../Immagini/Immagini/Pasted%20image%2020240405150813.png)
 
 	La dimensione massima del segmento TCP predefinita per IPv4 è di 536. Per IPv6 è 1220. Se un host desidera impostare MSS su unvalore diverso da quello predefinito, la dimensione massima del segmento viene specificata come opzione TCP, inizialmente nel pacchetto TCP SYN durante l'handshake TCP.
 
@@ -48,7 +48,7 @@
 
 #### Struttura dei segmenti TCP
 
-![[Pasted image 20240405151314.png]]
+![Pasted image 20240405151314](../../../../Immagini/Immagini/Pasted%20image%2020240405151314.png)
 
 
 #### Numeri di sequenza e ACK di TCP
@@ -62,12 +62,12 @@ ACK:
 - RFC 2018: Acknowledgment Selettivo
 	
 
-![[Pasted image 20240405151503.png|500]]
+![500](../../../../Immagini/Immagini/Pasted%20image%2020240405151503.png)
 
 
 #### Numeri di sequenza e ACK di TCP
 
-![[Pasted image 20240405151548.png]]
+![Pasted image 20240405151548](../../../../Immagini/Immagini/Pasted%20image%2020240405151548.png)
 
 
 #### TCP: tempo di andata e ritorno (round trip time) timeout
@@ -102,18 +102,18 @@ Evento: ACK ricevuto
 
 #### Ricevente TCP: Generazione degli ACK
 
-![[Pasted image 20240408110355.png]]
+![Pasted image 20240408110355](../../../../Immagini/Immagini/Pasted%20image%2020240408110355.png)
 
 
 #### Ritrasmissione rapida
 
-![[Pasted image 20240408110437.png]]
+![Pasted image 20240408110437](../../../../Immagini/Immagini/Pasted%20image%2020240408110437.png)
 
 
 #### TCP: controllo di flusso
 Cosa succede se il livello di rete fornisce i dati più velocemente di quanto il livello applicativo rimuova i dati dai buffer delle socket?
 
-![[Pasted image 20240408110536.png]]
+![Pasted image 20240408110536](../../../../Immagini/Immagini/Pasted%20image%2020240408110536.png)
 
 Controllo di flusso:
 - Il destinatario controlla il mittente, cosicchè il mittente non ecceda il buffer del destinatario, inviando troppo e troppo velocemente
@@ -138,7 +138,7 @@ Prima di scambiare i dati, il mittente e il destinatario si "stringono la mano"
 - Riordino dei messaggi
 - Impossibilità di "vedere" l'altro lato
 
-![[Pasted image 20240408111213.png|400]]  ![[Pasted image 20240408111246.png]] 
+![400](../../../../Immagini/Immagini/Pasted%20image%2020240408111213.png)  ![Pasted image 20240408111246](../../../../Immagini/Immagini/Pasted%20image%2020240408111246.png) 
 
 
 ##### TCP 3-way handshake
@@ -173,5 +173,5 @@ Prima di scambiare i dati, il mittente e il destinatario si "stringono la mano"
 - E' possibile gestire scambi FIN simultanei
 
 
-![[Pasted image 20240408112305.png]]
+![Pasted image 20240408112305](../../../../Immagini/Immagini/Pasted%20image%2020240408112305.png)
 

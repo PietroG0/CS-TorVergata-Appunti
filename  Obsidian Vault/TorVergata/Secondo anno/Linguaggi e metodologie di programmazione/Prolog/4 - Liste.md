@@ -11,14 +11,14 @@ Esempi di Liste
 
 [mia, [vincent, jules], [butch, girlfriend(butch)]]
 
-[[], dead(z), [2, [b, c]], [], Z, [2,[b, c]]]
+[4 - Liste](.md), [], Z, [2,[b, c]]]
 
 ```
 
 Possiamo specificare le liste in Prolog racchiudendo gli elementi della lista tra parentesi quadre. Gli elementi sono separati da virgole. Ad esempio, il *primo elenco* mostrato sopra è un elenco con quattro elementi. *La lunghezza di una lista è il numero di elementi che contiene*, quindi il nostro primo esempio è una lista di lunghezza quattro. Dal secondo esempio, *apprendiamo che tutti i tipi di oggetti Prolog possono essere elementi di una lista*. Il primo elemento di questa lista è mia, un atomo; il secondo elemento è ladro(honey_bunny), un termine complesso; il terzo elemento è X, una variabile; il quarto elemento è 2, un numero. Inoltre, *apprendiamo anche che lo stesso elemento può comparire più di una volta nella stessa lista*: ad esempio, il quinto elemento di questa lista è mia, che è uguale al primo elemento. Il terzo esempio mostra che esiste una lista speciale, la lista vuota. La lista vuota è una lista che non contiene elementi. Il quarto esempio ci insegna qualcosa di estremamente importante: *le liste possono contenere altre liste come elementi*.
 
 
-#### [[1 - Primi Esercizi#Liste]]
+#### [](1%20-%20Primi%20Esercizi.md#Liste)
 
 
 #### Recursing down Lists

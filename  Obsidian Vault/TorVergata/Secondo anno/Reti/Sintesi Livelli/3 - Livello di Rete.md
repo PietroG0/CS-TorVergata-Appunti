@@ -22,7 +22,7 @@ Quindi il router esamina i campi dell'intestazione di tutti i datagrammi IP che 
 
 2. La figura mostra un approccio alternativo in cui un controller remoto, separato fisicamente dai router, calcola e distribuisce le tabelle di inoltro a tutti i router. La funzionalità di instradamento del piano di controllo è separata fisicamente dal router; il dispositivo di instradamento effettua solo l’inoltro, mentre il controller remoto calcola e distribuisce le tabelle di inoltro. Il controller remoto potrebbe essere implementato in un data center remoto con elevata affidabilità e ridondanza e potrebbe essere gestito da un ISP o da una terza parte.
 
-![[Pasted image 20240702161716.png | 500]]
+![ 500](Pasted%20image%2020240702161716.png%20)
 
 
 #### Modello di servizio

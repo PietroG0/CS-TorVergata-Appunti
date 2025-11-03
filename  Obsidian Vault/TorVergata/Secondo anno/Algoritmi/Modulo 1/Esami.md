@@ -2,7 +2,7 @@
 
 #### Esame 1 20-02-2023
 
-![[Pasted image 20241115112158.png]]
+![Pasted image 20241115112158](../../../../Immagini/Immagini/Pasted%20image%2020241115112158.png)
 
 
 *B)*
@@ -20,7 +20,7 @@
 
 
 
-![[Pasted image 20241115113554.png]]
+![Pasted image 20241115113554](../../../../Immagini/Immagini/Pasted%20image%2020241115113554.png)
 
 ```
 Algoritmo(A):
@@ -42,7 +42,7 @@ Query(Y, i):
 
 
 
-![[Pasted image 20241115113957.png]]
+![Pasted image 20241115113957](../../../../Immagini/Immagini/Pasted%20image%2020241115113957.png)
 
 *Idea*: Per trovare la strategia migliore, bisogna confrontare d(s,t) con cost(v) per ogni $v\in V$
 
@@ -68,7 +68,7 @@ Algoritmo(A):
 
 #### Appello 2 04-07-2023
 
-![[Pasted image 20241115115214.png | 600]]
+![ 600](Pasted%20image%2020241115115214.png%20)
 
 
 *B)*
@@ -84,7 +84,7 @@ Algoritmo(A):
 
 
 
-![[Pasted image 20241115120146.png]]
+![Pasted image 20241115120146](../../../../Immagini/Immagini/Pasted%20image%2020241115120146.png)
 
 ```
 BenCol(nodo v, color)
@@ -98,7 +98,7 @@ BenCol(nodo v, color)
 
 
 
-![[Pasted image 20241115120457.png]]
+![Pasted image 20241115120457](../../../../Immagini/Immagini/Pasted%20image%2020241115120457.png)
 
 *Idea*: Calcolare attraverso Dijkstra l'SPT radicato in Sa e l'SPT radicato in Sb. Così otteniamo le distanze dalle 2 sorgenti verso tutti i nodi $x \in V$
 
@@ -126,7 +126,7 @@ Algoritmo:
 
 #### Esame 3 25-07-2023
 
-![[Pasted image 20241115121623.png | 600]]
+![ 600](Pasted%20image%2020241115121623.png%20)
 
 
 *B)*
@@ -141,7 +141,7 @@ Algoritmo:
 - Fondere due heap binari, uno contenente $n^2$ nodi e l'altro $n$ nodi: *Faccio il merge di due heap O(nlogn)*
 
 
-![[Pasted image 20241115133457.png]]
+![Pasted image 20241115133457](../../../../Immagini/Immagini/Pasted%20image%2020241115133457.png)
 
 *Idea*:
 Creare un grafo ausiliario G' a livelli, più precisamente con 2 livelli. Appena Ciano incontra un nodo con un bottone può decidere se premere il bottone e andare nel secondo livello oppure continuare nel primo livello (se l'arco successivo è ON). Nel secondo livello, si invertono ON e OFF, quindi se Ciano preme il bottone perchè davanti a se l'arco è OFF e non può procedere, premendo il bottone andrà nel secondo livello dove potrà andare avanti. Ciano può ripetere questo processo finchè non vince.
@@ -165,7 +165,7 @@ Esiste un cammino in G da s a t se e soltanto se esiste un cammino da s' a t' in
 
 #### Esame 4 12-09-2023
 
-![[Pasted image 20241115135005.png]]
+![Pasted image 20241115135005](../../../../Immagini/Immagini/Pasted%20image%2020241115135005.png)
 
 
 *B)*
@@ -179,7 +179,7 @@ Esiste un cammino in G da s a t se e soltanto se esiste un cammino da s' a t' in
 - Fondere due alberi AVL, uno contenente n nodi e l'altro logn nodi: *Faccio logn inserimenti ognuno di costo logn --> O(logn * logn)
 
 
-![[Pasted image 20241115135926.png]]
+![Pasted image 20241115135926](../../../../Immagini/Immagini/Pasted%20image%2020241115135926.png)
 
 ```
 ContaNodi(nodo v, h1, h2, h):
@@ -198,7 +198,7 @@ ContaNodi(nodo v, h1, h2, h):
 
 
 
-![[Pasted image 20241115140151.png]]
+![Pasted image 20241115140151](../../../../Immagini/Immagini/Pasted%20image%2020241115140151.png)
 
 *Idea*:
 Ordino con l'IntegerSort O(n), poi $\forall i = 1, ..., n$ faccio la ricerca binaria
@@ -221,7 +221,7 @@ Felice(A):
 
 #### Esame 5 27-09-2023
 
-![[Pasted image 20241115140448.png]]
+![Pasted image 20241115140448](../../../../Immagini/Immagini/Pasted%20image%2020241115140448.png)
 
 
 *B)*
@@ -236,7 +236,7 @@ Felice(A):
 - Fondere due heap binomiali contenenti rispettivamente $n$ e $n^2$ nodi: *Utilizzo il merge e poi utilizzo ristruttura --> O(log^2 n)*
 
 
-![[Pasted image 20241115141907.png]]
+![Pasted image 20241115141907](../../../../Immagini/Immagini/Pasted%20image%2020241115141907.png)
 
 *Idea*:
 L'idea è di confrontare la distanza da s a t con la minima distanza cost(vi) dove
@@ -260,7 +260,7 @@ Algoritmo
 
 
 
-![[Pasted image 20241115142218.png]]
+![Pasted image 20241115142218](../../../../Immagini/Immagini/Pasted%20image%2020241115142218.png)
 
 ```
 Oracolo(A)
@@ -292,7 +292,7 @@ Query(Y, i)
 
 #### Esame 6 30-01-2024
 
-![[Pasted image 20241115145638.png]]
+![Pasted image 20241115145638](../../../../Immagini/Immagini/Pasted%20image%2020241115145638.png)
 
 *B)*
 - $T(n) = T\frac{n}{8}+ 8$  -->  $n^{\log_{8} 1}$ vs 8 --> $T(n) = \Theta(\log n)$ 
@@ -305,7 +305,7 @@ Query(Y, i)
 - In un grafo orientato, capire se c'è un cammino da s a t al più di K archi che passa per un nodo specifico w: *Faccio una BFS aggiungendo al più K archi e passando per w --> O(m+n)*
 
 
-![[Pasted image 20241115150323.png]]
+![Pasted image 20241115150323](../../../../Immagini/Immagini/Pasted%20image%2020241115150323.png)
 
 *Idea*:
 Dall'alto tengo traccia dei valori degli antenati, mentre dal basso il numero di nodi che soddisfano la condizione
@@ -324,7 +324,7 @@ ContaSumAnt(nodo v, Delta, sum)
 
 
 
-![[Pasted image 20241115150607.png]]
+![Pasted image 20241115150607](../../../../Immagini/Immagini/Pasted%20image%2020241115150607.png)
 
 ```
 Oracolo(A)
@@ -351,7 +351,7 @@ Oracolo(A)
 
 #### Esame 7 19-02-2024
 
-![[Pasted image 20241115150825.png]]
+![Pasted image 20241115150825](../../../../Immagini/Immagini/Pasted%20image%2020241115150825.png)
 
 
 *B)*
@@ -366,7 +366,7 @@ Oracolo(A)
 - In un grafo pesato e non orientato, capire se esiste un cammino da s a t che oltre ad essere minimo passa per uno specifico nodo u: *Dijkstra --> O(m + n log n)*
 
 
-![[Pasted image 20241115151400.png]]
+![Pasted image 20241115151400](../../../../Immagini/Immagini/Pasted%20image%2020241115151400.png)
 
 ```
 Problema_Sum(A):
@@ -386,7 +386,7 @@ Problema_Sum(A):
 
 #### Esame 8 13-06-2024
 
-![[Pasted image 20241127191137.png]]
+![Pasted image 20241127191137](../../../../Immagini/Immagini/Pasted%20image%2020241127191137.png)
 
 
 *B)*
@@ -403,11 +403,11 @@ Soluzione = $\Theta(2^{n/2})$
 - Capire se in un grafo diretto esistono due nodi $s$ e $t$ tale che non c'è nessun cammino da $s$ a $t$: *BFS* --> $O(m \cdot n)$ 
 - Dato un grafo diretto esistono due nodi $s$ e $t$ tale che non c'è nessun cammino da $s$ a $t$ che comincia con un arco rosso e poi usa solo archi blu: 
 
-![[Pasted image 20241127191957.png]]
+![Pasted image 20241127191957](../../../../Immagini/Immagini/Pasted%20image%2020241127191957.png)
 
 
 
-![[Pasted image 20241127192500.png]]
+![Pasted image 20241127192500](../../../../Immagini/Immagini/Pasted%20image%2020241127192500.png)
 
 
 *Idea*:
@@ -436,7 +436,7 @@ Algo(T, u.val, v.val, max_val) --> foglie_buone
 
 
 #### Esame 9 16-07-2024
-![[Pasted image 20241128142632.png]]
+![Pasted image 20241128142632](../../../../Immagini/Immagini/Pasted%20image%2020241128142632.png)
 
 
 *B)*
@@ -456,7 +456,7 @@ Soluzione = $\Theta(n^3)$
 
 #### Esercizio 2
 
-![[Pasted image 20241128160934.png]]
+![Pasted image 20241128160934](../../../../Immagini/Immagini/Pasted%20image%2020241128160934.png)
 
 
 *Idea*:
@@ -499,7 +499,7 @@ L'algoritmo è corretto perchè scansiono l'array 2 volte, andando a modificare 
 
 
 #### Esercizio 3
-![[Pasted image 20241128161956.png]]
+![Pasted image 20241128161956](../../../../Immagini/Immagini/Pasted%20image%2020241128161956.png)
 
 
 *idea*:
@@ -517,7 +517,7 @@ Per ogni livello $G^j$ con $j \in {1,2,3,4,5}$ ad ogni livello si rimuovono gli 
 
 #### Esame 10 09-09-2024
 
-![[Pasted image 20241129155147.png]]
+![Pasted image 20241129155147](../../../../Immagini/Immagini/Pasted%20image%2020241129155147.png)
 
 
 *B)*
@@ -537,7 +537,7 @@ Soluzione = $\Theta(n^4)$
 
 #### Esercizio 2
 
-![[Pasted image 20241129160222.png]]
+![Pasted image 20241129160222](../../../../Immagini/Immagini/Pasted%20image%2020241129160222.png)
 
 *Idea*:
 Se un numero appare più di $n/2$ volte non sarà possibile permutare gli elementi per evitare che due numeri uguali siano vicini. Per permutare gli elementi l'idea è quella di inizialmente ordinarli, poi posizionare i numeri pari in indici pari ed i numeri dispari in indici dispare.
@@ -597,7 +597,7 @@ L'algoritmo funziona in spazio O(n)O(n)O(n) e tempo O(n)O(n)O(n) ed è corretto 
 
 #### Esercizio 3
 
-![[Pasted image 20241129161934.png]]
+![Pasted image 20241129161934](../../../../Immagini/Immagini/Pasted%20image%2020241129161934.png)
 
 *Idea*:
 Costruire un algoritmo ricorsivo che, grazie ad una variabile che conta il colore del nodo visitato precedentemente, verifica se esiste un cammino ben colorato. 
@@ -636,7 +636,7 @@ Alternato(T, v.col, color):
 
 #### Esame 11 24-09-2024
 
-![[Pasted image 20241203105407.png]]
+![Pasted image 20241203105407](../../../../Immagini/Immagini/Pasted%20image%2020241203105407.png)
 
 
 *B)*
@@ -656,7 +656,7 @@ Soluzione: $O(2^{n/2})$
 
 #### Esercizio 2
 
-![[Pasted image 20241203110208.png]]
+![Pasted image 20241203110208](../../../../Immagini/Immagini/Pasted%20image%2020241203110208.png)
 
 *Idea*:
 Progettare una struttura dati che, con l'aiuto di una variabile, confronta quest'ultima con il costo di A(i), se il fabbisogno $x$ è maggiore o uguale alla variabile, si restituisce i. 
@@ -692,8 +692,8 @@ L'algoritmo è giusto poichè rispetta il costo $O(n)$, dato che scorre al massi
 
 #### Esercizio 3
 
-![[Pasted image 20241203110757.png]]
-![[Pasted image 20241203110808.png]]
+![Pasted image 20241203110757](../../../../Immagini/Immagini/Pasted%20image%2020241203110757.png)
+![Pasted image 20241203110808](../../../../Immagini/Immagini/Pasted%20image%2020241203110808.png)
 
 *Idea*
 L'idea per questo algoritmo è progettare un grafo $G'$ a livelli, esattamente con 2 livelli. Il primo per verificare il Percorso senza inversioni, il secondo livello per verificare il Percorso con l'inversione di un hub configurabile. Utilizziamo una visita DFS/BFS per verificare questa proprietà anche se gli archi di un determinato switch sono invertiti. Se incontriamo uno specifico hub configurabile, switchamo livello cambiando gli archi entranti e uscenti di quest'ultimo, ovviamente il primo percorso a raggiungere un hub di destinazione è il migliore a livello di costo computazionale. L'idea alla base è confrontare le due casistiche utilizzando un grafo a livelli.
@@ -705,7 +705,7 @@ $2 |E| = |E'|$
 
 #### Esame 12 21-01-2025
 
-![[Pasted image 20250122120841.png]]
+![Pasted image 20250122120841](../../../../Immagini/Immagini/Pasted%20image%2020250122120841.png)
 
 
 #### Esercizio 2
@@ -729,7 +729,7 @@ $T(n) = T(n-1) + n^2$
 
 
 #### Esercizio 2
-![[Pasted image 20250122124705.png]]
+![Pasted image 20250122124705](../../../../Immagini/Immagini/Pasted%20image%2020250122124705.png)
 
 *Idea*
 Ordinare l'array in input con il MergeSort (costo $O(n \log n$)).
@@ -762,7 +762,7 @@ print(can_partition(A))  # Output: True (esempio con somma obiettivo 7 per tutte
 
 #### Esercizio 3
 
-![[Pasted image 20250124142638.png]]
+![Pasted image 20250124142638](../../../../Immagini/Immagini/Pasted%20image%2020250124142638.png)
 
 *Idea*
 Utilizzare un Grafo ausiliario $G'$, dove la cardinalità dei nodi in $G$ li duplichiamo in $G'$ --> $|V'| = 2|V|$, questo serve per dividere i due costi dei nodi. In questa divisione, aggiungeremo due archi da un nodo diviso all'altro di costo zero, in modo che si può intercambiare il colore dell'arco. Gli archi di $G'$ rimangono della stessa quantità in $G$, con una sola differenza, che il costo degli archi $W_{(e)} = W_{(e)} + W_{(v)}$, in modo tale da utilizzare Dijkstra solo una volta in modo efficace, calcolando il costo degli archi minimo, cioè il costo complessivo. 

@@ -44,7 +44,7 @@ TDMA: Time Division Multiple Access (accesso multiplo a divisione di tempo)
 - La durata di uno slot temporale è in genere tale da consentire la trasmissione di un pacchetto a livello di collegamento
 - Gli slot inutilizzati rimangono inutilizzato (idle)
 
-![[Pasted image 20240523145404.png]]
+![Pasted image 20240523145404](../Immagini/Immagini/Pasted%20image%2020240523145404.png)
 
 - Un nodo che ha dati da trasmettere deve attendere il proprio turno (cioè lo slot assegnatoli)
 - Nel proprio turno, un nodo trasmette a R bps, ma potendo farlo solo in 1/N della durata dell'intervallo temporale, la sua velocità media è R/N... a prescindere dal fatto che ci siano altri nodi che vogliono trasmettere sul canale
@@ -55,7 +55,7 @@ FDMA: Frequency Division Multiple Access (accesso multiplo a divisione di freque
 - A ciascun nodo viene assegnata una banda di frequenze fisse
 - Il tempo di trasmissione non utilizzato nelle bande di frequenza resta inutilizzato
 
-![[Pasted image 20240523150242.png]]
+![Pasted image 20240523150242](../Immagini/Immagini/Pasted%20image%2020240523150242.png)
 
 - Un nodo può trasmettere nella propria banda di frequenze appena ha dati da inviare, senza dover attendere turni
 - Trasmettendo alla velocità massima consentita della sua banda di frequenze ridotta, la velocità è R/N a prescindere che altri vogliano trasmettere
@@ -72,7 +72,7 @@ Quando un nodo ha un pacchetto da inviare
 
 #### Slotted ALOHA
 
-![[Pasted image 20240523150540.png| 500]]
+![ 500](../Immagini/Immagini/Pasted%20image%2020240523150540.png)
 
 Assunzioni: 
 - Tutti i frame hanno la stessa dimensione
@@ -89,7 +89,7 @@ Operazioni:
 - Se si verifica una collisione: 
 	- Il nodo ritrasmette il frame nello slot successivo con probabilità $p$ finchè non ha successo
 
-![[Pasted image 20240523150835.png]]
+![Pasted image 20240523150835](../Immagini/Immagini/Pasted%20image%2020240523150835.png)
 
 Pro:
 - Un singolo nodo attivo può trasmettere continuamente alla massima velocità del canale
@@ -120,7 +120,7 @@ Efficienza: frazione a lungo termine di slot riusciti (molti nodi, tutti con mol
 - La probabilità di collisione aumenta in assenza di sincronizzazione:
 	- Il frame inviato a $t_0$ collide con altri frame inviati in $[t_0-1, t_0+1]$
 
-  ![[Pasted image 20240523151933.png]]
+  ![Pasted image 20240523151933](../Immagini/Immagini/Pasted%20image%2020240523151933.png)
 - Efficienza massima del protocollo ALOHA puto: 18%
 
 
@@ -187,7 +187,7 @@ Token Passing:
 
 #### Rete di accesso via cavo: FDM, TDM, allocazione centralizzata e accesso casuale!
 
-![[Pasted image 20240523162511.png]]
+![Pasted image 20240523162511](../Immagini/Immagini/Pasted%20image%2020240523162511.png)
 
 - Molteplici canali FDM downstram (broadcast): fino a 1.6 Gbps/canale
 	- Un solo CMTS trasmette nei canali --> nessun problema di accesso multiplo
@@ -196,7 +196,7 @@ Token Passing:
 
 #### Rete di accesso via cavo
 
-![[Pasted image 20240523162651.png]]
+![Pasted image 20240523162651](../Immagini/Immagini/Pasted%20image%2020240523162651.png)
 
 DOCSIS: specifiche di interfaccia del servizio dati via cavo
 - FDM su canali di frequenze upstream e downstream

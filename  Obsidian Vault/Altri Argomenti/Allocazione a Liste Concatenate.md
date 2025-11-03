@@ -10,7 +10,7 @@ Struttura delle Voci di Directory:
 - Ogni voce di directory traccia solo l'indirizzo del primo blocco di un file
 - Il percorso completo di un file è costruito seguendo i puntatori da un blocco all'altro 
 
-![[Pasted image 20231211145835.png| 500]]
+![ 500](../Immagini/Immagini/Pasted%20image%2020231211145835.png)
 
 **Prestazioni e Limitazioni**
 Accesso ai Dati:
@@ -26,5 +26,5 @@ Implicazioni Pratiche:
 - ma introduce complessità e rallentamenti nelle operazioni di accesso casuale
 - Adatto per file a cui si accende principalmente in modo sequenziale
 
-[[Allocazione a Liste Concatenate con FAT]]
-[[I-Node]]
+[Allocazione a Liste Concatenate con FAT](Allocazione%20a%20Liste%20Concatenate%20con%20FAT.md)
+[I-Node](../TorVergata/Secondo%20anno/Sistemi%20Operativi/Argomenti/I-Node.md)

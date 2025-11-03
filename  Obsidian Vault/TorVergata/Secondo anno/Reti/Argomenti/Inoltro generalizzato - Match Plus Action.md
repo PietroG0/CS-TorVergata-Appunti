@@ -1,4 +1,4 @@
-![[Pasted image 20240430131520.png]]
+![Pasted image 20240430131520](../../../../Immagini/Immagini/Pasted%20image%2020240430131520.png)
 
 Ciascun router ha una tabella di inoltro (o tabella dei flussi)
 - Astraazione "match plus action": cerca corrispondenze nei bit dei pacchetti in arrivo, agisce
@@ -7,7 +7,7 @@ Ciascun router ha una tabella di inoltro (o tabella dei flussi)
 		- più campi di intestazione possono determinare l'azione
 		- più azioni possibili: scarta/copia/modifica/logga il pacchetto
 
-![[Pasted image 20240430131806.png| 600]]
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020240430131806.png)
 
 
 #### Tabella dei flussi

@@ -21,10 +21,10 @@ Utilizzo di UDP
 - HTTP/3
 - Trasferimento affidabile con UDP
 
-![[Pasted image 20240403144147.png]]
+![Pasted image 20240403144147](../../../../Immagini/Immagini/Pasted%20image%2020240403144147.png)
 
 
-![[Pasted image 20240403144213.png]]
+![Pasted image 20240403144213](../../../../Immagini/Immagini/Pasted%20image%2020240403144213.png)
 
 
 ### Riassunto

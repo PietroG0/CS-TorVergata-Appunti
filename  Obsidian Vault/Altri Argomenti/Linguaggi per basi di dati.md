@@ -1,13 +1,13 @@
 Operazioni sullo schema:
 - DDL: data definition language
 
-![[Pasted image 20231014135012.png]]
+![Pasted image 20231014135012](../Immagini/Immagini/Pasted%20image%2020231014135012.png)
 
 
 Operazioni sui dati:
 - DML: data manipulation language
  
-![[Schermata del 2023-10-14 13-50-40.png]]
+![Schermata del 2023-10-14 13-50-40](../Immagini/Immagini/Schermata%20del%202023-10-14%2013-50-40.png)
 
 I DBMS dispongono di vari linguaggi e interfacce diverse
 - Linguaggi testuali interattivi (SQL)

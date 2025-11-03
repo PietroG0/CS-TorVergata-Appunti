@@ -7,7 +7,7 @@
 	- Propagare le informazioni di raggiungibilità a tutti i router interni all'AS
 	- Annunciare (alle reti confinanti) le informazioni sulla raggiungibilità delle destinazioni
 
-![[Pasted image 20240515141600.png]]
+![Pasted image 20240515141600](../../../../Immagini/Immagini/Pasted%20image%2020240515141600.png)
 
 #### Nozioni di base su BGP
 - Sessione BGP: due router BGP ("peers") si scambiano messaggi BGP attraverso una connessione TCP semi-permanente:

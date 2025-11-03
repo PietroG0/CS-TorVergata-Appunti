@@ -8,15 +8,15 @@ Struttura dati:
 
 **Il tipo di dato Dizionario**
 
-![[Pasted image 20231109141523.png]]
+![Pasted image 20231109141523](../../../../Immagini/Immagini/Pasted%20image%2020231109141523.png)
 
 **Il tipo di dato Pila**
 
-![[Pasted image 20231109141551.png]]
+![Pasted image 20231109141551](../../../../Immagini/Immagini/Pasted%20image%2020231109141551.png)
 
 **Il tipo di dato Coda**
 
-![[Pasted image 20231109141609.png]]
+![Pasted image 20231109141609](../../../../Immagini/Immagini/Pasted%20image%2020231109141609.png)
 
 **Tecniche di rappresentazione dei dati**
 
@@ -35,7 +35,7 @@ Rappresentazioni collegate:
 - Proprietà (forte): è possibile aggiungere o togliere record a una struttura collegata
 - Proprietà (debole): gli indirizzi dei record di una struttura collegata non sono necessariamente consecutivi
 
-![[Pasted image 20231109142559.png]]
+![Pasted image 20231109142559](../../../../Immagini/Immagini/Pasted%20image%2020231109142559.png)
 
 Realizzazione di un dizionario
 

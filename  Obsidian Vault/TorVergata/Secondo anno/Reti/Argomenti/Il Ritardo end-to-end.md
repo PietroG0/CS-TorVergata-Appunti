@@ -12,7 +12,7 @@ La perdita di pacchetti si verifica quando la coda precedente a un collegamento 
 
 Il <span style="color:#ff0000">Throughput</span> rappresenta la frequenza alla quale i bit sono trasferiti tra mittente e ricevente, espresso in bit per unità di tempo. Può essere istantaneo, misurato in un determinato istante, o medio, calcolato su un periodo più lungo.
 
-![[Pasted image 20240312152900.png]]
+![Pasted image 20240312152900](../../../../Immagini/Immagini/Pasted%20image%2020240312152900.png)
 
 Nel caso in cui la velocità di trasmissione del mittente (Rs) sia minore o uguale alla velocità di ricezione del ricevente (Rc), il throughput medio end-to-end è limitato dalla velocità di trasmissione o ricezione più bassa.
 

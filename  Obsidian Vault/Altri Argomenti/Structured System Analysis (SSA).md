@@ -38,7 +38,7 @@
 ###### SSA - Step 4
 Esempio: costruire un albero di decisione
 
-![[Pasted image 20241118114227.png | 500]]
+![ 500](Pasted%20image%2020241118114227.png%20)
 
 
 
@@ -46,7 +46,7 @@ Esempio: costruire un albero di decisione
 - Definire i contenuti esatti di ogni store e la sua rappresentazione 
 - Definire il livello di accesso con l'uso di data-immediate-access diagram (DIAD)
 
-![[Pasted image 20241118114427.png | 600]]
+![ 600](Pasted%20image%2020241118114427.png%20)
 
 
 ###### SSA - Step 6

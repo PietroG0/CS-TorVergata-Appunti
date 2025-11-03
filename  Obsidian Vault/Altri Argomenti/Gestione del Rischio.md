@@ -9,7 +9,7 @@
 	- Rischi del prodotto colpiscono la qualità o le performance del software che sta venendo sviluppato
 	- Rischi del business colpiscono lo sviluppo dell'organizzazione 
 
-![[Pasted image 20241021152335.png | 600]]
+![ 600](Pasted%20image%2020241021152335.png%20)
 
 
 #### Il processo per la gestione del rischio
@@ -26,7 +26,7 @@
 	- Monitora il rischio durante il progetto
 
 
-![[Pasted image 20241021152617.png | 600]]
+![ 600](Pasted%20image%2020241021152617.png%20)
 
 
 #### Identificazione del rischio 
@@ -39,7 +39,7 @@
 - Rischi dei requisiti
 - Rischi delle stime
 
-![[Pasted image 20241021152737.png | 600]]
+![ 600](Pasted%20image%2020241021152737.png%20)
 
 
 #### Analisi del rischio
@@ -54,7 +54,7 @@
 - Gli effetti dei rischi potrebbero essere catastrofici, seri, tollerabili o insignificanti
 
 
-![[Pasted image 20241021152936.png | 600]]
+![ 600](Pasted%20image%2020241021152936.png%20)
 
 
 Identificare la top 10 dei rischi considerando:
@@ -75,7 +75,7 @@ Identificare la top 10 dei rischi considerando:
 	- Se il rischio sorge, i piani di emergenza sono strategie per affrontare quel rischio
 
 
-![[Pasted image 20241021153348.png | 600]]
+![ 600](Pasted%20image%2020241021153348.png%20)
 
 
 #### Monitoraggio del rischio
@@ -85,5 +85,5 @@ Identificare la top 10 dei rischi considerando:
 - Ogni rischio chiave dovrebbe essere discusso e maneggiato con dei meetings
 
 
-![[Pasted image 20241021153633.png | 600]]
+![ 600](Pasted%20image%2020241021153633.png%20)
 

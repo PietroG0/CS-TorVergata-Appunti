@@ -19,11 +19,11 @@ Modello ER - Relazione
 - La relazione è un legame che stabilisce un'interazione tra le entità
 - Si rappresenta un solo verso della relazione
 
-![[Pasted image 20231026094055.png]]
+![Pasted image 20231026094055](../Immagini/Immagini/Pasted%20image%2020231026094055.png)
 
 Esempio di relazione ricorsiva sull'entità Persona è l'associazione Essere genitore nella quale Persona partecipa con il ruolo di Genitore e di Figlio
 
-![[Pasted image 20231026094149.png]]
+![Pasted image 20231026094149](../Immagini/Immagini/Pasted%20image%2020231026094149.png)
 
 Modello ER - Attributi e Chiavi
 Attributi
@@ -35,7 +35,7 @@ Le proprietà delle entità e delle relazioni sono descritte tramite gli attribu
 La chiave primaria è un attributo o un insieme di attributi che identificano univocamente un'istanza dell'entità
 Spesso, anche in presenza di chiavi palesi, si utilizza un numero progressivo come chiave primaria ovver una chiave artificiale
 
-![[Pasted image 20231026094448.png]]
+![Pasted image 20231026094448](../Immagini/Immagini/Pasted%20image%2020231026094448.png)
 
 Modello ER - Proprietà
 - Ogni entità deve avere una chiave primaria

@@ -2,7 +2,7 @@
 - Trasferisce i pacchetti dal collegamento di ingresso al collegamento di uscita appropriato
 - Tasso di trasferimento: tasso al quale i pacchetti vengono trasferiti dalla porta di input a quella di output
 
-![[Pasted image 20240426173532.png| 600]]
+![ 600](../Immagini/Immagini/Pasted%20image%2020240426173532.png)
 
 ##### Commutazione in memoria
 Router di prima generazione:
@@ -10,7 +10,7 @@ Router di prima generazione:
 - Pacchetti copiati nella memoria del sistema
 - Velocità limitata dall'ampiezza di banda della memoria
 
-![[Pasted image 20240426173744.png| 600]]
+![ 600](../Immagini/Immagini/Pasted%20image%2020240426173744.png)
 
 ##### Commutazione tramite bus
 - Le porte di ingresso trasferiscono un pacchetto direttamente alle porte di uscita tramite un bus condiviso

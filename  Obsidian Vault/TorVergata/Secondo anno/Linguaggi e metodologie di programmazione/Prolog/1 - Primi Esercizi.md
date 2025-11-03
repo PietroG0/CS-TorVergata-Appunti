@@ -67,16 +67,16 @@ Trovare l'avo è più complesso che trovare il nonno. Infatti, richiede un'induz
 - *Unificare*: trovare un valore comune per due variabili che le rende uguali
 
 
-#### [[Grafo in Prolog]]
+#### [Grafo in Prolog](../../../../Altri%20Argomenti/Grafo%20in%20Prolog.md)
 
-#### [[Liste]]
+#### [Liste](../../../../Altri%20Argomenti/Liste.md)
 
-#### [[Predicati]]
+#### [Predicati](../../../../Altri%20Argomenti/Predicati.md)
 
-#### [[Fibonacci]]
+#### [Fibonacci](../../Algoritmi/Modulo%201/Argomenti/Fibonacci.md)
 
-#### [[Operatori ]]
+#### [Operatori ](Operatori%20)
 
-#### [[Obsidian Vault/Torre di Hanoi]]
+#### [Obsidian Vault/Torre di Hanoi](Obsidian%20Vault/Torre%20di%20Hanoi)
 
 

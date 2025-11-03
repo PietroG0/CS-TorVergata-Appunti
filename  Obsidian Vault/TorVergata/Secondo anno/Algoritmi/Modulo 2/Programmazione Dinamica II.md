@@ -6,7 +6,7 @@
 - Due jobs sono **compatibili** se non si sovrappongono
 - **Goal**: Trovare il sottoinsieme di peso massimo di job mutualmente compatibili
 
-![[Pasted image 20250415131217.png#center| 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250415131217.png#center|%20600)
 
 
 **Earliest-finish-time first algorithm**
@@ -17,7 +17,7 @@
 
 *Osservazione*. L'algoritmo Greedy fallisce specularmente per la versione con i pesi (weighted version)
 
-![[Pasted image 20250415131445.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250415131445.png#center%20|%20600)
 
 
 **Weighted interval scheduling**
@@ -26,7 +26,7 @@ I Jobs sono in ordine crescente di finish time: $f_{1} \leq f_{2} \leq ... \leq 
 *Def*. $p(j)$ = indice più grande $i < j$ tale che il job $i$ è compatibile con $j$
 *Ex*. $p(8) = 1, p(7) = 3, p(2) = 0$
 
-![[Pasted image 20250415131754.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250415131754.png#center%20|%20600)
 
 
 **Programmazione Dinamica: scelta binaria**
@@ -105,7 +105,7 @@ L'algoritmo ricorsivo è specularmente lento per i sottoproblemi che so sovrappo
 *Ex*. 
 Numero di chiamate ricorsive per una famiglia di istanze "layered" che crescono come la sequenza di Fibonacci
 
-![[Pasted image 20250415144127.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250415144127.png#center%20|%20600)
 
 
 **Weighted interval scheduling: memorizzazione**
@@ -114,9 +114,9 @@ Numero di chiamate ricorsive per una famiglia di istanze "layered" che crescono 
 - Risultato della cache del sottoproblema $j$ in $M[j]$
 - Usare $M[j]$ per evitare di risolvere il sottoproblema $j$ più di una volta
 
-![[Pasted image 20250415144702.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250415144702.png#center%20|%20600)
 
-![[Pasted image 20250415144722.png#center | 600]]
+![](../../../../Immagini/Immagini/Pasted%20image%2020250415144722.png#center%20|%20600)
 
 
 *Claim*.

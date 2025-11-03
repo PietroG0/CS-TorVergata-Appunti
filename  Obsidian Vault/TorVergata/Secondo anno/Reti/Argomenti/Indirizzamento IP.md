@@ -3,7 +3,7 @@
 	- i router hanno tipicamente interfacce 
 	- gli host hanno tipicamente una o due interfacce
 
-![[Pasted image 20240428165226.png| 600]]
+![ 600](../../../../Immagini/Immagini/Pasted%20image%2020240428165226.png)
 
 
 #### Sottoreti (Subnet)
@@ -22,7 +22,7 @@ CIDR: Classless InterDomain Routing
 - Parte della sottorete dell'indirizzo di lunghezza arbitraria
 - Formato dell'indirizzo: a.b.c.d/x, dove x è il numero di bit della porzione di sottorete dell'indirizzo
 
-![[Pasted image 20240428165448.png]]
+![Pasted image 20240428165448](../../../../Immagini/Immagini/Pasted%20image%2020240428165448.png)
 
 
 #### Indirizzamento IP: classful addressing

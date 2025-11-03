@@ -4,9 +4,9 @@
 2) Le n-uple sono distinte 
 3) Ciascuna n-upla è ordinata: l'i-esimo valore proviene dall'i-esimo dominio
 
-![[Schermata del 2023-10-19 11-30-26.png]]
+![Schermata del 2023-10-19 11-30-26](../Immagini/Immagini/Schermata%20del%202023-10-19%2011-30-26.png)
 
 - Ciascuno dei domini ha due ruoli diversi, distinguibili attraverso la posizione
 - La struttura è posizionale
 
-[[Struttura non posizionale]].
+[Struttura non posizionale](Struttura%20non%20posizionale.md).

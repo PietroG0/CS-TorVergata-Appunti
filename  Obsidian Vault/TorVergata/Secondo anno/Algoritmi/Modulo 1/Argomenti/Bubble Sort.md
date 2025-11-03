@@ -1,6 +1,6 @@
 Approccio incrementale. esegue $n-1$ scansioni. Ad ogni scansione guarda coppie di elementi adiacenti e li scambia se non sono nell'ordine
 
-![[Pasted image 20231027102928.png]]
+![Pasted image 20231027102928](../../../../../Immagini/Immagini/Pasted%20image%2020231027102928.png)
 
 
 ```

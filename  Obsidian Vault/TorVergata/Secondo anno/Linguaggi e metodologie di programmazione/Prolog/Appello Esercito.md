@@ -1,6 +1,6 @@
 #Linguaggi 
 
-![[Pasted image 20250117125515.png]]
+![Pasted image 20250117125515](../../../../Immagini/Immagini/Pasted%20image%2020250117125515.png)
 
 ```
 

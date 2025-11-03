@@ -1,11 +1,11 @@
-1) [[Byte]]
-2) [[Short]]
-3) [[Int]]
-4) [[Long]]
-5) [[Float]]
-6) [[Double]]
-7) [[Boolean]]
-8) [[Char]]
+1) [Byte](Byte)
+2) [Short](Short.md)
+3) [Int](Int.md)
+4) [Long](Long.md)
+5) [Float](Float.md)
+6) [Double](Double.md)
+7) [Boolean](Boolean.md)
+8) [Char](Char.md)
 
 Non serve New per i dati primitivi
 

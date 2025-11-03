@@ -14,7 +14,7 @@ Dispositivo di rete gestito:
 Dati:
 - "stati" del dispositivo: dati di configurazione (assegnati dall'amministratore, come indirizzo IP), dati operativi (acquisiti dal dispositivo, come i vicini OSPF), statistiche
 
-![[Pasted image 20240523164331.png]]
+![Pasted image 20240523164331](../../../../Immagini/Immagini/Pasted%20image%2020240523164331.png)
 
 
 #### Approcci dell'operatore di rete per gestire la rete
@@ -33,11 +33,11 @@ NETCONF/YANG
 #### Protocollo SNMP
 Due modi per trasmettere le informazioni MIB e comandi
 
-![[Pasted image 20240523164643.png]]
+![Pasted image 20240523164643](../../../../Immagini/Immagini/Pasted%20image%2020240523164643.png)
 
 ##### Protocollo SNMP: tipi di messaggio
 
-![[Pasted image 20240523164716.png]]
+![Pasted image 20240523164716](../../../../Immagini/Immagini/Pasted%20image%2020240523164716.png)
 
 ##### SNMP: Management Information Base (MIB)
 - I dati operativi (e alcuni dati di configurazione) del dispositivo gestito
@@ -47,7 +47,7 @@ Due modi per trasmettere le informazioni MIB e comandi
 - Structure of Management Information (SMI): linguaggio di definizione dei dati 
 - Esempio di variabili MIB per il protocollo UDP:
 
-![[Pasted image 20240523164912.png]]
+![Pasted image 20240523164912](../../../../Immagini/Immagini/Pasted%20image%2020240523164912.png)
 
 #### Panoramica di NETCONF
 - Obiettivo: gestire/configurare in maniera attiva dispositivi sulla rete
@@ -63,11 +63,11 @@ Due modi per trasmettere le informazioni MIB e comandi
 
 #### NETCONF: Inizializzazione, scambio, chiusura
 
-![[Pasted image 20240523165143.png]]
+![Pasted image 20240523165143](../../../../Immagini/Immagini/Pasted%20image%2020240523165143.png)
 
 ##### Operazioni NETCONF selezionate
 
-![[Pasted image 20240523165212.png]]
+![Pasted image 20240523165212](../../../../Immagini/Immagini/Pasted%20image%2020240523165212.png)
 
 
 #### YANG

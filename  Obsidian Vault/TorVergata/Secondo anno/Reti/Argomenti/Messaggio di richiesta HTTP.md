@@ -2,7 +2,7 @@
 - Messaggio di richiesta HTTP:
 	- ASCII
 
-![[Pasted image 20240315112918.png]]
+![Pasted image 20240315112918](../../../../Immagini/Immagini/Pasted%20image%2020240315112918.png)
 
 Alcuni campi di intestazione nei messaggi di richiesta:
 <span style="color:#ff0000">Host</span>
@@ -23,7 +23,7 @@ Alcuni campi di intestazione nei messaggi di richiesta:
 <span style="color:#ff0000">Connection</span>
 - Controlla se la connessione rimarrà aperta al terminale dello scambio richiesta/risposta. Il valore close indica che la connessione sarà chiusa; altrimenti, una lista non vuota di nomi di header, che saranno rimossi dal primo proxy non trasparente o cache, indica che la connessione rimarrà aperta
 
-![[Pasted image 20240315113441.png]]
+![Pasted image 20240315113441](../../../../Immagini/Immagini/Pasted%20image%2020240315113441.png)
 
 <span style="color:#ff0000">Metodo POST</span>:
 - la pagina web spesso include un form per l'input dell'utente

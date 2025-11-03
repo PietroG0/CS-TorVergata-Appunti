@@ -5,7 +5,7 @@
 -Ordiniamo per l'i-esima cifra con una passata di BucketSort
 -i-esima cifra è la chiave, il numero info satellite
 
-![[Pasted image 20231031142521.png]]
+![Pasted image 20231031142521](../../../../Immagini/Immagini/Pasted%20image%2020231031142521.png)
 
 **Correttezza**
 - Se x e y hanno una diversa t-esima cifra, la t-esima passata di BucketSort li ordina

@@ -12,9 +12,9 @@ Partizione (in loco)
 -da destra verso sinistra, ci si ferma su un elemento minore del perno
 - Scambia gli elementi e riprendi la scansione
 
-![[Pasted image 20231027104527.png]]
+![Pasted image 20231027104527](../../../../../Immagini/Immagini/Pasted%20image%2020231027104527.png)
 
-![[Pasted image 20231027104550.png]]
+![Pasted image 20231027104550](../../../../../Immagini/Immagini/Pasted%20image%2020231027104550.png)
 
 ```
 QuickSort(A, i, f)
@@ -27,7 +27,7 @@ QuickSort(A, i, f)
 
 #### *Esempio di esecuzione*
 
-![[Pasted image 20231027104656.png]]
+![Pasted image 20231027104656](../../../../../Immagini/Immagini/Pasted%20image%2020231027104656.png)
 
 ```
 QuickSort(A,i,f)
@@ -53,7 +53,7 @@ $T(n) = O(n^2)$
 
 $O(n \log n)$, partizionamento sempre bilanciato 
 
-![[Pasted image 20231027105119.png]]
+![Pasted image 20231027105119](../../../../../Immagini/Immagini/Pasted%20image%2020231027105119.png)
 
 #### *Intuizioni sul caso medio*
 - Problema: la partizione può essere sbilanciata
@@ -65,7 +65,7 @@ $O(n \log n)$, partizionamento sempre bilanciato
 
 - Nota: sembrano partizioni piuttosto sbilanciate
 
-![[Pasted image 20231027105407.png]]
+![Pasted image 20231027105407](../../../../../Immagini/Immagini/Pasted%20image%2020231027105407.png)
 
 Versione randomizzata: scegli il perno x a caso fra gli elementi da ordinare
 

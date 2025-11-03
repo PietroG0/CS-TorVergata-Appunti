@@ -1,6 +1,6 @@
 NAT: Tutti i dispositivi della rete locale condividono un solo indirizzo IPv4 per il mondo esterno 
 
-![[Pasted image 20240430130229.png]]
+![Pasted image 20240430130229](../../../../Immagini/Immagini/Pasted%20image%2020240430130229.png)
 
 - Tutti i dispositivi della rete locale hanno indirizzi a 32 bit in uno spazio di indirizzi IP "privato" che possono essere utilizzati solo nella rete locale 
 - Vantaggi:
@@ -17,7 +17,7 @@ Implementazione: i router NAT devono (in maniera trasparente):
 - Datagrammi in ingresso: sostituire (indirizzo IP NAT, nuovo n. porta) nei campi di destinazione di ogni datagramma in ingresso con il corrispondente (indirizzo IP NAT, nuovo n. porta) memorizzato nella tabella NAT
 
 
-![[Pasted image 20240430130810.png]]
+![Pasted image 20240430130810](../../../../Immagini/Immagini/Pasted%20image%2020240430130810.png)
 
 
 Il NAT è oggetto di controversie:

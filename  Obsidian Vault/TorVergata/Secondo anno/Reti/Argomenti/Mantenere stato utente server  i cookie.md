@@ -10,7 +10,7 @@
 	4) un database sul sito
 
 
-![[Pasted image 20240324172132.png]]
+![Pasted image 20240324172132](../../../../Immagini/Immagini/Pasted%20image%2020240324172132.png)
 
 <span style="color:#ff0000">I cookie possono essere usati per</span>:
 - Autorizzazione

@@ -63,7 +63,7 @@ Differenze con Internet cablato
 	- Forte nozione di "home network", contrapposta al roaming in una "visited network"
 	- Accesso globale, con infrastruttura di autenticazione, e accordi tra operatori
 
-![[Pasted image 20240603123909.png]]
+![Pasted image 20240603123909](../../../../Immagini/Immagini/Pasted%20image%2020240603123909.png)
 
 Mobile Device:
 - Smartphone, tablet, laptop, IoT, con radio 4G LTE
@@ -98,12 +98,12 @@ Mobility Management Entity
 
 #### LTE: separazione del piano dei dati e di controllo
 
-![[Pasted image 20240603124622.png]]
+![Pasted image 20240603124622](../../../../Immagini/Immagini/Pasted%20image%2020240603124622.png)
 
 Piano di controllo
 - Nuovi protocolli per la gestione della mobilità, la sicurezza e l'autenticazione 
 
-![[Pasted image 20240603124710.png]]
+![Pasted image 20240603124710](../../../../Immagini/Immagini/Pasted%20image%2020240603124710.png)
 
 Piano dei dati
 - Nuovi protocolli a livello fisico e di collegamento
@@ -121,11 +121,11 @@ Tunneling:
 - S-GW reinvia i datagrammi al P-GW tramite un altro tunnel 
 - Supporta la mobilità: solo gli endpoint del tunnel cambiano quando l'utente mobile si sposta
 
-![[Pasted image 20240603142615.png]]
+![Pasted image 20240603142615](../../../../Immagini/Immagini/Pasted%20image%2020240603142615.png)
 
 
 #### Piano dei dati LTE: Associazione con una BS
-![[Pasted image 20240603142656.png]]
+![Pasted image 20240603142656](../../../../Immagini/Immagini/Pasted%20image%2020240603142656.png)
 
 1) BS invia in broadcast un segnale di sincronizzazione primario ogni 5 ms su tutte le frequenze
 - BS di più carrier possono inviare in broadcast segnali di sincronizzazione
@@ -140,7 +140,7 @@ Tunneling:
 
 #### LTE: Sleep Modes
 
-![[Pasted image 20240603143019.png]]
+![Pasted image 20240603143019](../../../../Immagini/Immagini/Pasted%20image%2020240603143019.png)
 
 Come in WiFi, Bluetooth: i mobile node LTE possono mettere la radio a "dormire" per preservare la batteria:
 - Light Sleep: dopo centinaia di millisecondi di inattività
@@ -151,7 +151,7 @@ Come in WiFi, Bluetooth: i mobile node LTE possono mettere la radio a "dormire" 
 
 #### Rete cellulare globale: Una rete di reti IP
 
-![[Pasted image 20240603143244.png | 600]]
+![ 600](Pasted%20image%2020240603143244.png%20)
 
 Home Network HSS:
 - Informazioni sull'identificazione e sui servizi, mentre si è nella rete domestica e in roaming

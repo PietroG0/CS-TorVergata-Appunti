@@ -94,7 +94,7 @@ Altri requisiti:
 - Ogni diploma specifica un numero totale minimo di crediti per completare la laurea
 - Gli studenti possono combinare corsi in programmi di studi per i loro bisogni individuali 
 
-![[Pasted image 20241120142339.png | 500]]
+![ 500](Pasted%20image%2020241120142339.png%20)
 
 
 
@@ -121,7 +121,7 @@ Altri requisiti
 - La condizione corrente di ogni disco deve essere nota e registrata
 
 
-![[Pasted image 20241120142903.png | 500]]
+![ 500](Pasted%20image%2020241120142903.png%20)
 
 
 #### Esempio C.1 Contact management
@@ -134,7 +134,7 @@ Altri requisiti
 	- Gli eventi tipici sono: chiamate telefoniche, visite, mandare un fax, organizzare un allenamento, ecc.
 
 
-![[Pasted image 20241120143311.png | 500]]
+![ 500](Pasted%20image%2020241120143311.png%20)
 
 
 #### Linee guida per la specifica delle classi
