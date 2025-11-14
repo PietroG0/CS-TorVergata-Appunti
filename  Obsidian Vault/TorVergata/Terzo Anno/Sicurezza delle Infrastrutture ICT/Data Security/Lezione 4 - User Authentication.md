@@ -32,7 +32,6 @@
 	- E.g. Migliore se in sistemi/dispositivi diversi
 	- E.g. Migliore se uno dei due è basato sulla biometrica
 
-
 #### One-time password in 2-factor authentication
 **Diversi requisiti**
 - One-time token di autorizzazione
