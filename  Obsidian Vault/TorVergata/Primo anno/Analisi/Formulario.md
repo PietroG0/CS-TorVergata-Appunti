@@ -2,7 +2,7 @@
 
 #### Primo Esercizio
 ###### Dominio di una funzione
-![[Formule dominio funzione Oct 8 2019.png|467x484]]
+![467x484](../../../Immagini/Immagini/Formule%20dominio%20funzione%20Oct%208%202019.png)
 
 
 ###### Asintoti
@@ -16,7 +16,7 @@
 
 ###### Derivate
 
-![[Derivate Formulario.jpg|490x634]]
+![490x634](../../../Immagini/Immagini/Derivate%20Formulario.jpg)
 
 - Derivata prima per *monotonia*
 	- $f'(x) > 0 \to f$ crescente
@@ -60,7 +60,7 @@
 #### Secondo Esercizio
 
 ###### Taylor
-![[Formulario Taylor.png]]
+![Formulario Taylor](../../../Immagini/Immagini/Formulario%20Taylor.png)
 
 Se $x_{0} \ne 0$, sostituire $t = x - x_{0}$   
 
