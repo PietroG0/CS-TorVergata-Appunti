@@ -1,20 +1,20 @@
 #Analisi
 
-#### Primo Esercizio
-###### Dominio di una funzione
+# Primo Esercizio
+#### Dominio di una funzione
 ![467x484](../../../Immagini/Immagini/Formule%20dominio%20funzione%20Oct%208%202019.png)
 
 
-###### Asintoti
+#### Asintoti
 - *Orizzontali*: $y = y_{0}$ se $\lim_{x \to \infty} f(x) = y_{0}$ 
 - *Verticali*: $x = x_{0}$ se $\lim_{x \to x_{0}} f(x) = \infty$
 - *Obliqui*: $y = mx + q$ con $m = \lim_{x \to \infty} \frac{f(x)}{x}$, $q = \lim_{x \to \infty} f(x) - mx$ 
 
-###### Simmetrie
+#### Simmetrie
 - *Pari*: $f(-x) = f(x)$
 - *Dispari*: $f(-x) = -f(x)$
 
-###### Derivate
+#### Derivate
 
 ![490x634](../../../Immagini/Immagini/Derivate%20Formulario.jpg)
 
@@ -30,7 +30,7 @@
 - *Massimi e minimi*: Studiare segno di $f'$
 - *Intersezioni*: con gli assi $x$ e $y$ trovando rispettivamente $f(x) = 0$ e $f(0)$
 
-###### Retta tangente a f, parallela a una retta assegnata
+#### Retta tangente a f, parallela a una retta assegnata
 1. Trova il *coefficiente angolare* della retta assegnata
 	- Porta l'equazione nella forma $y=mx + q$
 	- Esempio: da $8x - 2y = 5$, ricava $y = 4x - \frac{5}{2}$, quindi $m=4$
@@ -44,7 +44,7 @@
 4. Se richiesto, usa il punto specifico (uno dei $x_{1}$) per la tangente richiesta
 
 
-###### Intervallo I di biiettività (funzione iniettiva e suriettiva)
+#### Intervallo I di biiettività (funzione iniettiva e suriettiva)
 1. Studia la *monotonia* su possibii intervalli:
 	- Individua dove $f'(x)$ è strettamente positivo o negativo
 
@@ -57,9 +57,9 @@
 	- Se su $I, f$ è strettamente monotona, continua e ha limiti che arrivano rispettivamente a $-\infty$ e $+\infty$, allora su quell'intervallo la funzione è biunivoca da $I$ a $\mathbb{R}$ 
 
 
-#### Secondo Esercizio
+# Secondo Esercizio
 
-###### Taylor
+#### Taylor
 ![Formulario Taylor](../../../Immagini/Immagini/Formulario%20Taylor.png)
 
 Se $x_{0} \ne 0$, sostituire $t = x - x_{0}$   
