@@ -64,3 +64,45 @@
 
 Se $x_{0} \ne 0$, sostituire $t = x - x_{0}$   
 
+
+
+## Terzo esercizio
+#### Integrali
+![image-3](../../../Immagini/Immagini/image-3.png)
+
+#### Convergenza e Divergenza
+Un integrale improprio $\int_{a}^{b} f(x) dx$ *converge* se il limite che definisce l'integrale *esiste ed è finito*. *Diverge* se il limite è *infinito o non esiste*
+
+**Con quali valori di $\alpha$ converge l'integrale?**
+Forma del tipo: $$\int_{a}^{b} \frac{1}{x^{\alpha}} dx, \quad a \geq 0, \quad b \to +\infty \quad \text{oppure} \quad b \to 0^{+}$$
+**Regole di convergenza**
+Integrale improprio in $+\infty$
+$$\int_{1}^{+\infty} \frac{1}{x^{\alpha}} dx \quad \text{converge se} \quad \alpha > 1$$
+$$\int_{1}^{+\infty} \frac{1}{x^{\alpha}} dx \quad \text{diverge se} \quad \alpha \leq 1$$
+Integrale improprio in $0$
+$$\int_{0}^{1} \frac{1}{x^{\alpha}} dx \quad \text{converge se} \quad \alpha < 1$$
+$$\int_{0}^{1} \frac{1}{x^{\alpha}} dx \quad \text{diverge se} \quad \alpha \geq 1$$
+
+## Quarto Esercizio
+#### Cauchy
+**Schema Risolutivo**
+1. Individua la *forma dell'equazione*:
+	- Se è del tipo $y'(x) + p(x)y(x) = q(x) \to$ equazione lineare
+	- Se separabili: *riordina* per avere $y' = f(x)g(y)$
+
+2. Riordina e scrivi l'equazione nella forma risolvibile
+	- Se lineare: porta tutte le $y$ da una parte
+	- Se separabile: isola i termini in $y$ e in $x$
+
+3. Calcola *l'integrale generale*:
+	$$y(x) = e^{\int p(x)dx} [\int q(x) \cdot e^{\int p(x)dx} dx + C]$$
+4. Applica la *condizione iniziale*:
+	- Sostituisci $x_{0}$ e il valore dato $y(x_{0}) = y(0)$, risolvi per la costante $C$
+
+
+**Domande del tipo: "L'equazione y(x) = n ha almeno una soluzione in" $(\alpha, \beta)$?** 
+1. Calcola la funzione soluzione
+2. Verifica se il valore cercato è compreso nell'immagine della funzione
+3. Applica il teorema dei valori intermedi se la soluzione generale è continua e prende tutti i valori richiesti nell'intervallo dato
+
+
