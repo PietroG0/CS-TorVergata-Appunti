@@ -16,18 +16,18 @@
 
 #### Derivate
 
-![490x634](../../../Immagini/Immagini/Derivate%20Formulario.jpg)
+![image-2](../../../Immagini/Immagini/image-2.png)
 
 - Derivata prima per *monotonia*
 	- $f'(x) > 0 \to f$ crescente
 	- $f'(x) < 0 \to f$ decrescente
 
 - Derivata seconda per *concavità*
-	- $f''(x) > 0 \to f$ convessa
-	- $f''(x) < 0 \to f$ concava
+	- $f''(x) > 0 \to f$ convessa $\bigcup$  
+	- $f''(x) < 0 \to f$ concava  $\bigcap$ 
 	- Punti di flesso $f''(x) = 0$
 
-- *Massimi e minimi*: Studiare segno di $f'$
+- *Massimi e minimi*: Studiare segno di $f'$, dove la funzione è crescente $\to$ *massimo relativo*, dove la funzione è decrescente $\to$ *minimo relativo*
 - *Intersezioni*: con gli assi $x$ e $y$ trovando rispettivamente $f(x) = 0$ e $f(0)$
 
 #### Retta tangente a f, parallela a una retta assegnata
