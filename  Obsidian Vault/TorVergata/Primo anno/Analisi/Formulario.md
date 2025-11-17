@@ -6,9 +6,20 @@
 
 
 #### Asintoti
-- *Orizzontali*: $y = y_{0}$ se $\lim_{x \to \infty} f(x) = y_{0}$ 
-- *Verticali*: $x = x_{0}$ se $\lim_{x \to x_{0}} f(x) = \infty$
-- *Obliqui*: $y = mx + q$ con $m = \lim_{x \to \infty} \frac{f(x)}{x}$, $q = \lim_{x \to \infty} f(x) - mx$ 
+- *Orizzontali*:
+
+$$y = y_{0} \quad \text{se} \quad \lim_{x \to \infty} f(x) = y_{0}$$ 
+
+- *Verticali*: 
+
+$$x = x_{0} \quad \text{se} \quad \lim_{x \to x_{0}} f(x) = \infty$$
+
+
+- *Obliqui*:
+
+$$y = mx + q \quad \text{con} \quad m = \lim_{x \to \infty} \frac{f(x)}{x}, \quad q = \lim_{x \to \infty} f(x) - mx$$
+
+
 
 #### Simmetrie
 - *Pari*: $f(-x) = f(x)$
