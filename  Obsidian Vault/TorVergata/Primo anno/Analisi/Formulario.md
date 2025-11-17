@@ -79,13 +79,18 @@ Forma del tipo:
 $$\int_{a}^{b} \frac{1}{x^{\alpha}} dx, \quad a \geq 0, \quad b \to +\infty \quad \text{oppure} \quad b \to 0^{+}$$
 
 **Regole di convergenza**
+
 Integrale improprio in $+\infty$
 
 $$\int_{1}^{+\infty} \frac{1}{x^{\alpha}} dx \quad \text{converge se} \quad \alpha > 1$$
+
 $$\int_{1}^{+\infty} \frac{1}{x^{\alpha}} dx \quad \text{diverge se} \quad \alpha \leq 1$$
+
+
 Integrale improprio in $0$
 
 $$\int_{0}^{1} \frac{1}{x^{\alpha}} dx \quad \text{converge se} \quad \alpha < 1$$
+
 $$\int_{0}^{1} \frac{1}{x^{\alpha}} dx \quad \text{diverge se} \quad \alpha \geq 1$$
 
 ## Quarto Esercizio
