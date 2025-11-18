@@ -135,7 +135,7 @@ Le componenti di questa forma sono:
 L'unità immaginaria $i$ è definita dalla proprietà fondamentale $i^2 = -1$
 
 #### Il Coniugato complesso $(\overline{z})$ 
-Il coniugato complesso di un numero $z = x + iy$ è definito come 1:
+Il coniugato complesso di un numero $z = x + iy$ è definito come:
 
 $$\bar{z} = x - iy$$
 
@@ -156,7 +156,7 @@ Sfruttando il modulo $\rho$ e l'argomento $\theta$, si possono definire le forme
     
 $$z = \rho (\cos \theta + i \sin \theta)$$
     
-    dove $x = \rho \cos \theta$ e $y = \rho \sin \theta$.1
+dove $x = \rho \cos \theta$ e $y = \rho \sin \theta$
 
 
 
@@ -165,9 +165,9 @@ $$z = \rho (\cos \theta + i \sin \theta)$$
     Questa forma è la più sintetica e operativamente potente e si basa sulla Formula di Eulero:
     
 $$e^{i\theta} = \cos \theta + i \sin \theta$$
-    
-    Sostituendo l'identità di Eulero nella forma trigonometrica, si ottiene la forma esponenziale:
-    
+
+Sostituendo l'identità di Eulero nella forma trigonometrica, si ottiene la forma esponenziale:
+
 $$z = \rho e^{i\theta}$$
 
 #### Calcolo dell'Argomento $(\Theta)$ 
