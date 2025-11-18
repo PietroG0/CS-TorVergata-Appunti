@@ -154,7 +154,7 @@ Sfruttando il modulo $\rho$ e l'argomento $\theta$, si possono definire le forme
 1. Forma Trigonometrica:
     Dalle relazioni trigonometriche in un triangolo rettangolo, si ottiene la rappresentazione:    
     
-    $$z = \rho (\cos \theta + i \sin \theta)$$
+$$z = \rho (\cos \theta + i \sin \theta)$$
     
     dove $x = \rho \cos \theta$ e $y = \rho \sin \theta$.1
 
@@ -162,13 +162,13 @@ Sfruttando il modulo $\rho$ e l'argomento $\theta$, si possono definire le forme
 
 2. Forma Esponenziale (Polare):
     
-    Questa forma è la più sintetica e operativamente potente e si basa sulla Formula di Eulero 4:
+    Questa forma è la più sintetica e operativamente potente e si basa sulla Formula di Eulero:
     
-    $$e^{i\theta} = \cos \theta + i \sin \theta$$
+$$e^{i\theta} = \cos \theta + i \sin \theta$$
     
     Sostituendo l'identità di Eulero nella forma trigonometrica, si ottiene la forma esponenziale:
     
-    $$z = \rho e^{i\theta}$$
+$$z = \rho e^{i\theta}$$
 
 #### Calcolo dell'Argomento $(\Theta)$ 
 
