@@ -1,7 +1,5 @@
 #Analisi
-
-# Primo Esercizio
-#### Dominio di una funzione
+## Dominio di una funzione
 ![467x484](../../../Immagini/Immagini/Formule%20dominio%20funzione%20Oct%208%202019.png)
 
 
@@ -68,20 +66,17 @@ $$y = mx + q \quad \text{con} \quad m = \lim_{x \to \infty} \frac{f(x)}{x}, \qua
 	- Se su $I, f$ è strettamente monotona, continua e ha limiti che arrivano rispettivamente a $-\infty$ e $+\infty$, allora su quell'intervallo la funzione è biunivoca da $I$ a $\mathbb{R}$ 
 
 
-# Secondo Esercizio
 
-#### Taylor
+## Taylor
 ![Formulario Taylor](../../../Immagini/Immagini/Formulario%20Taylor.png)
 
 Se $x_{0} \ne 0$, sostituire $t = x - x_{0}$   
 
 
-
-## Terzo esercizio
-#### Integrali
+## Integrali
 ![image-3](../../../Immagini/Immagini/image-3.png)
 
-#### Convergenza e Divergenza
+## Convergenza e Divergenza
 Un integrale improprio $\int_{a}^{b} f(x) dx$ *converge* se il limite che definisce l'integrale *esiste ed è finito*. *Diverge* se il limite è *infinito o non esiste*
 
 **Con quali valori di $\alpha$ converge l'integrale?**
@@ -103,9 +98,7 @@ Integrale improprio in $0$
 $$\int_{0}^{1} \frac{1}{x^{\alpha}} dx \quad \text{converge se} \quad \alpha < 1$$
 
 $$\int_{0}^{1} \frac{1}{x^{\alpha}} dx \quad \text{diverge se} \quad \alpha \geq 1$$
-
-## Quarto Esercizio
-#### Cauchy
+## Cauchy
 **Schema Risolutivo**
 1. Individua la *forma dell'equazione*:
 	- Se è del tipo $y'(x) + p(x)y(x) = q(x) \to$ equazione lineare
@@ -126,4 +119,81 @@ $$\int_{0}^{1} \frac{1}{x^{\alpha}} dx \quad \text{diverge se} \quad \alpha \geq
 2. Verifica se il valore cercato è compreso nell'immagine della funzione
 3. Applica il teorema dei valori intermedi se la soluzione generale è continua e prende tutti i valori richiesti nell'intervallo dato
 
+
+
+## Numeri Complessi
+La forma più comune per la manipolazione algebrica è la **forma algebrica** (o forma normale).
+
+Dato un numero complesso $z = (x,y)$, la forma algebrica è:
+
+$$z = a + ib$$
+
+Le componenti di questa forma sono:
+- $x = Re(z)$: la parte **reale** di $z$
+- $y = Im(z)$: il **coefficiente dell'immaginario** di $z$
+
+L'unità immaginaria $i$ è definita dalla proprietà fondamentale $i^2 = -1$
+
+#### Il Coniugato complesso $(\overline{z})$ 
+Il coniugato complesso di un numero $z = x + iy$ è definito come 1:
+
+$$\bar{z} = x - iy$$
+
+La sua proprietà più cruciale è il prodotto di un numero per il suo coniugato, che risulta sempre essere un numero reale non negativo, equivalente al quadrato del modulo 1:
+
+$$z \bar{z} = (x + iy)(x - iy) = x^2 - (iy)^2 = x^2 + y^2 = |z|^2$$
+
+#### Modulo e Argomento
+La formula rigorosa per il calcolo del modulo, derivata dal Teorema di Pitagora applicato al triangolo formato dai cateti $x$ e $y$, è:
+
+$$\rho = |z| = \sqrt{x^2 + y^2}$$
+
+#### Formula Trigonometrica ed Esponenziale
+Sfruttando il modulo $\rho$ e l'argomento $\theta$, si possono definire le forme trigonometrica ed esponenziale, note collettivamente come **forma polare**.
+
+1. Forma Trigonometrica:
+    Dalle relazioni trigonometriche in un triangolo rettangolo, si ottiene la rappresentazione:    
+    
+    $$z = \rho (\cos \theta + i \sin \theta)$$
+    
+    dove $x = \rho \cos \theta$ e $y = \rho \sin \theta$.1
+
+
+
+2. Forma Esponenziale (Polare):
+    
+    Questa forma è la più sintetica e operativamente potente e si basa sulla Formula di Eulero 4:
+    
+    $$e^{i\theta} = \cos \theta + i \sin \theta$$
+    
+    Sostituendo l'identità di Eulero nella forma trigonometrica, si ottiene la forma esponenziale:
+    
+    $$z = \rho e^{i\theta}$$
+
+#### Calcolo dell'Argomento $(\Theta)$ 
+
+![image-4](../../../Immagini/Immagini/image-4.png)
+
+#### Conversioni
+
+![image-5](../../../Immagini/Immagini/image-5.png)
+
+
+#### Potenze e Radici n-esime
+Le $n$ radici $n$-esime distinte sono date dalla formula:
+
+
+$$w_k = \sqrt[n]{\rho} \left[ \cos \left( \frac{\theta + 2k\pi}{n} \right) + i \sin \left( \frac{\theta + 2k\pi}{n} \right) \right]$$
+
+In forma esponenziale:
+
+$$w_k = \sqrt[n]{\rho} \cdot e^{i(\frac{\theta+2k\pi}{n})}$$
+
+#### L'Equazione di Secondo Grado in $\mathbb{C}$
+
+Un'equazione di secondo grado con coefficienti reali $a, b, c \in \mathbb{R}$ e $a \ne 0$ ammette sempre due soluzioni nel campo complesso $\mathbb{C}$. La formula risolutiva standard rimane invariata:
+
+$$x_{1, 2} = \frac{-b \pm \sqrt{\Delta}}{2a}$$
+
+dove $\Delta = b^2 - 4ac$ è il discriminante.
 
