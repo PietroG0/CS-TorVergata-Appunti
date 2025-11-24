@@ -73,6 +73,7 @@ $$y = mx + q \quad \text{con} \quad m = \lim_{x \to \infty} \frac{f(x)}{x}, \qua
 Se $x_{0} \ne 0$, sostituire $t = x - x_{0}$   
 
 Da aggiungere:
+
 $$(1+x)^{\frac{1}{2}} = 1 + \frac{1}{2}x - \frac{1}{8}x^{2} + \frac{1}{16}x^{3}$$
 
 
