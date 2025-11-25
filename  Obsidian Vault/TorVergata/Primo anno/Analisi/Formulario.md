@@ -76,6 +76,8 @@ Da aggiungere:
 
 $$(1+x)^{\frac{1}{2}} = 1 + \frac{1}{2}x - \frac{1}{8}x^{2} + \frac{1}{16}x^{3}$$
 
+$$\frac{1}{1+x} = 1-x+x^{2}-y^{3} + ...$$
+
 
 
 ## Integrali
