@@ -83,11 +83,6 @@ $$\frac{1}{1+x} = 1-x+x^{2}-y^{3} + ...$$
 ## Integrali
 ![image-3](../../../Immagini/Immagini/image-3.png)
 
-Da aggiungere:
-
-$$\int{\frac{dt}{a^{2} + t^{2}}} = \frac{1}{a} \arctan \left(\frac{t}{a}\right)+ C$$
-
-
 ## Convergenza e Divergenza
 Un integrale improprio $\int_{a}^{b} f(x) dx$ *converge* se il limite che definisce l'integrale *esiste ed è finito*. *Diverge* se il limite è *infinito o non esiste*
 
