@@ -83,6 +83,23 @@ $$\frac{1}{1+x} = 1-x+x^{2}-y^{3} + ...$$
 ## Integrali
 ![image-3](../../../Immagini/Immagini/image-3.png)
 
+
+Da aggiungere:
+
+$$\int \frac{1}{\sin(x)} dx = \int \frac{\sin(x)}{{\sin^{2}}(x)} dx = \int \frac{\sin(x)}{1-cos^{2}x}$$
+
+
+Successivamente, sostituendo $t = \cos(x)$, $dt = -\sin(x) dx$ 
+
+
+$$\int \frac{-dt}{1-t^{2}} = \int(\frac{A}{t-1} + \frac{B}{t+1}) dt$$
+
+
+$$= \frac{1}{2} \log |t-1| - \frac{1}{2} \log |t+1| + C$$
+
+$$= \frac{1}{2} \log\left(\frac{1-\cos(x)}{1 + \cos(x)}\right)+ C$$
+
+
 ## Convergenza e Divergenza
 Un integrale improprio $\int_{a}^{b} f(x) dx$ *converge* se il limite che definisce l'integrale *esiste ed è finito*. *Diverge* se il limite è *infinito o non esiste*
 
