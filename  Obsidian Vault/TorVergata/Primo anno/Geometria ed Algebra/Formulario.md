@@ -63,7 +63,7 @@ I vettori sono *Linearmente indipendenti*
 ## Verificare se i vettori formano una Base
 **Obiettivo**: I vettori devono essere sia indipendenti che generatori
 
-*Operazione*: Verifica l'indipendenza e conta i vettori
+*Operazione*: Verifichiamo l'indipendenza e conta i vettori
 
 *Esempio*:
 Siamo in $\mathbb{R}^{2}$. Ho i vettori $v_{1} = (1,1)$ e $v_{2} = (-1,1)$. 
@@ -74,4 +74,38 @@ Sono una base?
 
 *Esito*: Essendo $n=2$ vettori indipendenti in uno spazio di dimensione 2, sono automaticamente una *Base*
 
+
+## Trovare le Coordinate rispetto a una Base
+**Obiettivo**: Trovare le "istruzioni" (scalari) per costruire un vettore usando una base specifica diversa da quella standard
+
+*Operazione*: Risolvere il sistema $x \cdot b_{1} + y \cdot b_{2} = v$
+
+*Esempio*:
+Base $B = \{(1,1), (1,-1)\}$. Vettore $v = (3,2)$. 
+Quali sono le coordinate $v$ in base $B$?
+
+$$a_{1}(1,1) + a_{2}(1, -1) = (3,2)$$
+
+Sistema:
+
+$$\begin{cases} a_{1} + a_{2} = 3\\
+a_{1} - a_{2} = 2\end{cases}$$
+
+Sommando le due equazioni: $2a_{1} = 5 \rightarrow a_{1} = \frac{5}{2}$ 
+Sostituendo nella prima: $\frac{5}{2} + a_{2} = 3 \rightarrow a_{2} = 3 - 2,5 = \frac{1}{2}$
+
+*Esito*: Le coordinate sono $(\frac{5}{2}, \frac{1}{2})$ 
+
+
+## Completamento a Base
+**Obiettivo**: Abbiamo pochi vettori indipendenti dobbiamo aggiungere uno per fare una base.
+
+*Operazione*: Aggiungere vettori della basse canonica (es. (1,0,0)) e controllare se il determinante (o l'indipendenza) regge
+
+*Esempio*:
+Abbiamo $w_{1}, w_{2}$ indipendenti in $\mathbb{R}^{3}$. Ce ne serve un terzo.
+Prendiamo $e_{1} = (1,0,0)$ dalla base canonica.
+Verifichiamo se $\{w_{1}, w_{2}, e_{1}\}$ sono indipendenti (impostiamo il sistema omogeneo o controlliamo che $e_{1}$ non sia combinazione degli altri).
+
+*Esito*: Se sono indipendenti, hai trovato la nuova base $\{w_{1}, w_{2}, (1,0,0)\}$ 
 
