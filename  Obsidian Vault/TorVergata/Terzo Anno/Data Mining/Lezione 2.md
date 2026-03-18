@@ -23,7 +23,7 @@ Gli array di **numpy** sono utilizzati per descrivere matrici o vettori delle fe
 center = np.array([0,0])  # un array di due elementi
 
 # una matrice di 11 righe e 3 colonne
-points = np.array([[0.5, 0.5, 1], [0.6, 1.16, 1], [1.14, 0.8, 1], [-1.1, -1.0, 1], [1.01, -0.9, 1],[0.3, 0.5, 0], [-0.6, 0.6, 0], [0.2, -0.7, 0], [-0.8, -0.2, 0], [1.0, -0.5, 0], [-1.5, 0.1, 0]])
+points = np.array([0.5, 0.5, 1](0.5,%200.5,%201))
 
 
 print(points)
@@ -70,7 +70,7 @@ print(a [ [1,6,4] ])  # operazione di filtro
 # ridefiniamo center e points solo per rendere questa cella indipendente dalla precedente
 
 center = np.array([0,0])
-points = np.array([[0.5, 0.5, 1], [0.6, 1.16, 1], [1.14, 0.8, 1], [-1.1, -1.0, 1],[1.01, -0.9, 1], [0.3, 0.5, 0], [-0.6, 0.6, 0], [0.2, -0.7, 0],[-0.8, -0.2, 0], [1.0, -0.5, 0], [-1.5, 0.1, 0]])
+points = np.array([0.5, 0.5, 1](0.5,%200.5,%201))
 
 fig, ax = plt.subplots(figsize=(8, 8))   # nuova figura di dimensione 8x8
 

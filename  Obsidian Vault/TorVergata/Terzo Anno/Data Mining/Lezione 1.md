@@ -3,20 +3,20 @@
 ## I tre diversi tipi di machine learning
 Esistono tre diversi tipi di machine learning: **apprendimento con supevisione**, **apprendimento senza supervisione** e **apprendimento di rafforzamento** 
 
-![[image-6.png|516]]
+![516](../../../Immagini/Immagini/image-6.png)
 
 
 ### Effettuare previsioni sul futuro grazie all'apprendimento con supervisione
 Lo scopo principale dell'apprendimento con supervisione consiste nel trarre un modello a partire da dati di **addestramento** etichettati, i quali ci consentono di effettuare previsioni relative a dati non disponibili o foturi. Il termine **con supervisione** fa riferimento al fatto che nell'insieme di campioni i segnali di output desiderati (le etichette) sono già noti
 
-![[image-7.png|530]]
+![530](../../../Immagini/Immagini/image-7.png)
 
 Considerando l'esempio del filtraggio dei messaggi spam di posta elettronica, possiamo addestrare un modello applicando un algoritmo di apprendimento con supervisione a un insieme di messaggi di posta elettronica **già etichettati**, che siano stati correttamente contrassegnati come spam oppure non-spam, per fargli determinare se un nuovo messaggio di posta elettronica appartiene all'una o all'altra categoria. 
 
 #### Classificazione per la predizione delle etichette delle classi
 La classificazione è una sottocategoria dell'apprendimento con supervisione, dove l'obiettivo è quello di **prevedere le etichette di categoria delle classi per le nuove istanze**, sulla base delle osservazioni compiute nel passato. Queste etichette sono valori discreti, non ordinati, che possono essere considerati come **appartenenti a un gruppo delle istanze**. Un esempio di un compito di **classificazione multiclasse** è il riconoscimento del testo scritto a mano. Qui possiamo raccogliere un dataset di apprendimento che è costituito da più esempi di scrittura a mano di ciascuna lettera dell'alfabeto. Ora, se un utente fornisce un nuovo carattere scritto a mano tramite un dispositivo di input, il nostro modello predittivo sarà in grado di prevedere con una certa precisione la lettera corretta dell'alfabeto.
 
-![[image-8.png|364]]
+![364](../../../Immagini/Immagini/image-8.png)
 
 Questa figura illustra il concetto del **compito di classificazione binaria sulla base di campioni di apprendimento**: quindici di essi sono etichettati come *classe negativa* (i cerchi) e altrettanti campioni sono etichettati come *classe positiva* (i segni +). In questa situazione, il nostro dataset è bidimensionale, il che significa che a ogni campione possono essere associati due colori: $X_{1}$ e $X_{2}$. Ora, possiamo utilizzare un algoritmo di apprendimento con supervisione per trarre una regola che sia in grado di separare queste due classi e classificare i nuovi dati in ognuna di queste due categoria sulla base dei loro valori $X_{1}$ e $X_{2}$
 
@@ -25,7 +25,7 @@ Questa figura illustra il concetto del **compito di classificazione binaria sull
 Un secondo tipo di apprendimento con supervisione è la previsione di risultati continui, chiamata anche **analisi di regressione**. Nell'analisi di regressione, abbiamo un certo numero di variabili predittive (descrittive) e una variabile target continua (risultato). 
 Supponiamo di essere interessati a prevedere le valutazioni di una prova scritta dei nostri studenti. Se vi è una relazione fra il tempo dedicato a studiare per il test e i risultati finali, potremmo utilizzare questi tempi come **dati di apprendimento** per derivare un modello che utilizzi proprio come il tempo dedicato allo studio per prevedere le valutazioni dei futuri studenti che pensano di svolgere questo test. 
 
-![[image-9.png|374]]
+![374](../../../Immagini/Immagini/image-9.png)
 
 Questa figura illustra il concetto di **regressione lineare**. Data una variabile predittiva $x$ e una variabile risposta $y$, tracciamo una linea retta attraverso questi dati in modo da minimizzare la distanza (si parla infatti di distanza quadratica media) fra i punti del campione e la linea. Ora possiamo utilizzare il punto di intersezione e la pendenza che abbiamo appreso da questi dati per prevedere la variabile target per nuovi dati. 
 
@@ -37,7 +37,7 @@ Tuttavia, nell'apprendimento di raforzamento, questo feedback non è l'etichetta
 Tramite l'interazione con l'ambiente, un agente può quindi utilizzare l'apprendimento di rafforzamento per imparare una serie di azioni che massimizzano questa ricompensa tramite un approccio esplorativo del tipo **trial-and-error** o una pianificazione deliberativa.  
 Un esempio classico di apprendimento di rafforzamento è il motore del gioco degli scacchi, qui l'agente decide come svolgere una serie di mosse a seconda dello stato della scacchiera (l'ambiente) e la ricompensa può essere definita come la vittoria o la sconfitta alla fine del gioco
 
-![[image-10.png|496]]
+![496](../../../Immagini/Immagini/image-10.png)
 
 
 ### Scoprire le strutture nascoste con l'apprendimento senza supervisione
@@ -48,7 +48,7 @@ Nell'apprendimento senza supervisione, al contrario, abbiamo a che fare con **da
 #### Ricerca di sottogruppi tramite il clustering
 Il **clustering** è una tecnica esplorativa di analisi dei dati che ci consente di **organizzare una serie di informazioni all'interno di gruppi significativi** (i cluster) senza avere alcuna precedente conoscenza delle appartenenze a tali gruppi. Ogni cluster che può essere derivato durante l'analisi definisce un gruppo di oggetti che condividono un certo grado di similarità, ma che sono più dissimili rispetto agli oggetti presenti negli altri cluster, motivo per cui il clustering viene talvolta chiamato "classificazione senza supervisione". 
 
-![[image-11.png|371]]
+![371](../../../Immagini/Immagini/image-11.png)
 
 Questa figura illustra il modo in cui il clustering può essere applicato all'organizzazione di alcuni dati senza etichetta suddividendoli in tre gruppi distinti sulla base della similarità delle caratteristiche $X_{1}$ e $X_{2}$
 
@@ -61,7 +61,7 @@ Per fare questo, svilupperemo un algoritmo basato sull'esperienza (addestrato) d
 
 Supponiamo $d=2$ $(\mathbb{R}^{2})$ , $v=(v_{x}, v_{y})$  
 
-![[image-16.png|396]]
+![396](../../../Immagini/Immagini/image-16.png)
 
 >[!tip] DEF
 >Un'istanza è **linearmente separabile** quando esiste una retta (2D), un piano (3D), un iperpiano (nD) che può separare perfettamente i dati appartenenti a due classi distinte
@@ -81,7 +81,7 @@ $$\phi (z) \begin{cases}
 -1 \quad \text{se} \quad z < 0
 \end{cases}$$
 
-![[image-17.png]]
+![image-17](../../../Immagini/Immagini/image-17.png)
 
 
 #### Codice Python
