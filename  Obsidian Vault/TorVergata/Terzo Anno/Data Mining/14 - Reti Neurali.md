@@ -291,36 +291,6 @@ nn.fit(X_train, y_train, X_valid=X_test, y_valid=y_test)
 
 ---
 
-## 12. Schema Riassuntivo Completo
-
-```
-╔══════════════════════════════════════════════════════════════╗
-║                    CICLO DI ADDESTRAMENTO                    ║
-╠══════════════════════════════════════════════════════════════╣
-║                                                              ║
-║  Per ogni epoca:                                             ║
-║    Per ogni mini-batch:                                      ║
-║                                                              ║
-║    1. FORWARD PASS                                           ║
-║       x → [W_H, b_H] → z_H → σ → a_H                       ║
-║                              → [W_OUT, b_OUT] → z_OUT → σ → a_OUT
-║                                                              ║
-║    2. CALCOLA ERRORE                                         ║
-║       J = -Σ [y·log(a) + (1-y)·log(1-a)]                    ║
-║                                                              ║
-║    3. BACKWARD PASS                                          ║
-║       δ_OUT = a_OUT - y                                      ║
-║       δ_H   = a_H(1-a_H) ⊙ (δ_OUT · W_OUT^T)               ║
-║                                                              ║
-║    4. AGGIORNA PESI                                          ║
-║       W_OUT ← W_OUT - η · (A_H^T · δ_OUT)                   ║
-║       W_H   ← W_H   - η · (X^T   · δ_H)                    ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
-```
-
----
-
 ## Glossario Rapido
 
 | Termine | Significato intuitivo |
