@@ -8,7 +8,7 @@ $$
 \phi(z) = \phi(\mathbf{w} \cdot \mathbf{x}) = \mathbf{w} \cdot \mathbf{x}
 $$
 
-![[image-27.png]]
+![image-27](../../../Immagini/Immagini/image-27.png)
 
 L'idea chiave: se $(y^{(i)} - \mathbf{w} \cdot \mathbf{x}^{(i)})^2$ è vicino a 0, allora il valore predetto è vicino a quello reale → stessa classe. Minimizzare questo errore è l'obiettivo.
 
@@ -29,12 +29,12 @@ Proprietà fondamentali di J:
 - **Derivabile** → si può usare la discesa del gradiente
 - **Garantisce convergenza** (con η abbastanza piccolo)
 
-![[image-28.png]]
+![image-28](../../../Immagini/Immagini/image-28.png)
 
 
 ## 3. Discesa del Gradiente
 
-![[image-29.png]]
+![image-29](../../../Immagini/Immagini/image-29.png)
 
 Vogliamo trovare $\mathbf{w}^*$ che minimizza $J(\mathbf{w})$. La regola di aggiornamento è:
 
