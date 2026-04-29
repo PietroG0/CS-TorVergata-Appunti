@@ -1,5 +1,3 @@
-# 🧠 Reti Neurali — Spiegazione Completa
-
 ## 1. Il Problema
 
 Immagina di avere 150 fiori e devi classificarli in 3 specie, guardando solo 4 misure (lunghezza/larghezza di petali e sepali). La rete neurale **impara da sola** a fare questa classificazione, guardando esempi già etichettati.
