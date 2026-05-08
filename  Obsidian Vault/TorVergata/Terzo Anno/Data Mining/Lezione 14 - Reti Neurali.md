@@ -1,4 +1,4 @@
-## 1. Il Problema
+## Il Problema
 
 Immagina di avere 150 fiori e devi classificarli in 3 specie, guardando solo 4 misure (lunghezza/larghezza di petali e sepali). La rete neurale **impara da sola** a fare questa classificazione, guardando esempi già etichettati.
 
@@ -6,7 +6,7 @@ Immagina di avere 150 fiori e devi classificarli in 3 specie, guardando solo 4 m
 
 ---
 
-## 2. La Struttura della Rete
+## La Struttura della Rete
 
 La rete ha **3 livelli**:
 
@@ -20,7 +20,7 @@ La rete ha **3 livelli**:
 
 ---
 
-## 3. Come Funziona un Singolo Neurone
+## Come Funziona un Singolo Neurone
 
 Ogni neurone fa **2 cose**:
 
@@ -39,7 +39,7 @@ La sigmoide **schiaccia** qualsiasi numero in un valore tra 0 e 1.
 ![image-23](../../../Immagini/Immagini/image-23.png)
 
 
-## 4. La Funzione Sigmoide
+## La Funzione Sigmoide
 
 $$\sigma(z) = \frac{1}{1 + e^{-z}}$$
 
@@ -53,7 +53,7 @@ $$\sigma'(z) = \sigma(z)\,(1 - \sigma(z))$$
 
 ---
 
-## 5. Propagazione in Avanti (Forward Pass)
+## Propagazione in Avanti (Forward Pass)
 
 I calcoli fluiscono da sinistra a destra:
 
@@ -91,7 +91,7 @@ che è uguale al numero totale di tutti i pesi $N$.
 
 ---
 
-## 6. Addestramento — Come Impara la Rete?
+## Addestramento — Come Impara la Rete?
 
 ### Codifica one-hot
 
@@ -118,7 +118,7 @@ Troppo lento! La soluzione è la **backpropagation**.
 
 ---
 
-## 7. Algoritmo di Backpropagation
+## Algoritmo di Backpropagation
 
 L'idea chiave: calcolare tutti i gradienti **in un solo passaggio**, propagando l'errore all'indietro strato per strato.
 
@@ -175,7 +175,7 @@ dove $\eta$ è il **learning rate** (tasso di apprendimento).
 
 ---
 
-## 8. Forma Vettoriale — Tabella Riassuntiva
+## Forma Vettoriale — Tabella Riassuntiva
 
 | Operazione | Formula | Codice Python |
 |---|---|---|
@@ -190,7 +190,7 @@ dove $\eta$ è il **learning rate** (tasso di apprendimento).
 
 ---
 
-## 9. Complessità Computazionale
+## Complessità Computazionale
 
 | Metodo | Costo per epoca |
 |---|---|
@@ -201,7 +201,7 @@ La backpropagation è **un ordine di grandezza più efficiente**.
 
 ---
 
-## 10. Implementazione Python — Classe `NeuralNetMLP`
+## Implementazione Python — Classe `NeuralNetMLP`
 
 ### Parametri principali
 
@@ -272,7 +272,7 @@ Vantaggi: più veloce, aggiornamenti più frequenti, minor memoria.
 
 ---
 
-## 11. Applicazione — Dataset Iris
+## Applicazione — Dataset Iris
 
 ```python
 nn = NeuralNetMLP(

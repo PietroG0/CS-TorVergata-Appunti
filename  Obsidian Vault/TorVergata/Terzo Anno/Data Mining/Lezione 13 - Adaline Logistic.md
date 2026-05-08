@@ -1,4 +1,4 @@
-## 1. Cos'è Adaline?
+## Cos'è Adaline?
 
 **ADALINE** = **ADA**ptive **LI**near **NE**uron.
 
@@ -14,7 +14,7 @@ L'idea chiave: se $(y^{(i)} - \mathbf{w} \cdot \mathbf{x}^{(i)})^2$ è vicino a 
 
 ---
 
-## 2. Funzione di Costo — Somma degli Errori Quadrati (SSE)
+## Funzione di Costo — Somma degli Errori Quadrati (SSE)
 
 $$
 J(\mathbf{w}) = \frac{1}{2} \sum_{i=1}^{n} \left( y^{(i)} - \mathbf{w} \cdot \mathbf{x}^{(i)} \right)^2
@@ -32,7 +32,7 @@ Proprietà fondamentali di J:
 ![image-28](../../../Immagini/Immagini/image-28.png)
 
 
-## 3. Discesa del Gradiente
+## Discesa del Gradiente
 
 ![image-29](../../../Immagini/Immagini/image-29.png)
 
@@ -93,7 +93,7 @@ La struttura si somiglia, ma in Adaline $\mathbf{w} \cdot \mathbf{x}^{(i)}$ è u
 
 ---
 
-## 4. Iperparametri — Learning Rate η
+## Iperparametri — Learning Rate η
 
 La convergenza dipende dalla scelta di η:
 
@@ -113,7 +113,7 @@ In pratica:
 
 ---
 
-## 5. Implementazione Python — Classe Adaline
+## Implementazione Python — Classe Adaline
 
 ```python
 class AdalineGD(object):
@@ -152,7 +152,7 @@ class AdalineGD(object):
 
 ---
 
-## 6. Regressione Logistica
+## Regressione Logistica
 
 ### Motivazione
 
@@ -184,7 +184,7 @@ Questa è la **funzione sigmoide logistica** $\phi(z)$.
 
 ---
 
-## 7. La Funzione Sigmoide come Attivazione
+## La Funzione Sigmoide come Attivazione
 
 $$
 \phi(\mathbf{w} \cdot \mathbf{x}) = \frac{1}{1 + e^{-\mathbf{w} \cdot \mathbf{x}}} = Pr(y = 1 \mid \mathbf{x})
@@ -206,7 +206,7 @@ $$
 
 ---
 
-## 8. Funzione di Costo — Log-Verosimiglianza
+## Funzione di Costo — Log-Verosimiglianza
 
 ### Verosimiglianza del singolo campione
 
@@ -243,7 +243,7 @@ $$
 
 ---
 
-## 9. Derivazione del Gradiente — Regressione Logistica
+## Derivazione del Gradiente — Regressione Logistica
 
 Calcoliamo la derivata di $\ell_i(\mathbf{w})$ rispetto a $w_j$:
 
@@ -289,7 +289,7 @@ $$
 
 ---
 
-## 10. Implementazione Python — Regressione Logistica
+## Implementazione Python — Regressione Logistica
 
 ```python
 class LogisticRegressionGD(object):
@@ -326,7 +326,7 @@ class LogisticRegressionGD(object):
 
 ---
 
-## 11. Confronto Finale — Adaline vs Regressione Logistica
+## Confronto Finale — Adaline vs Regressione Logistica
 
 | Aspetto | Adaline | Regressione Logistica |
 |---|---|---|
