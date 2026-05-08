@@ -5,7 +5,7 @@
 - **Border point**: un punto non core ma che è vicino ad un core
 - **Noise point**: nè core, nè border
 
-![[image-30.png]]
+![image-30](../../../Immagini/Immagini/image-30.png)
 
 ## Raggiungibilità 
 - Un punto $p$ è **raggiungibile direttamente per densità** da $q$ se $q$ è un core e $p$ è nel suo vicinato. In questo caso $q$ **appartiene ad un cluster**
@@ -69,7 +69,7 @@ plt.show()
 ```
 
 
-![[image-31.png|324]]
+![324](../../../Immagini/Immagini/image-31.png)
 
 
 ``` python
@@ -151,7 +151,7 @@ plt.show()
 ```
 
 
-![[image-32.png|379]]
+![379](../../../Immagini/Immagini/image-32.png)
 
 
 Dataset random
@@ -195,13 +195,13 @@ for i, the_dataset in enumerate([noisy_circles, noisy_moons, blobs]):
 ```
 
 
-![[image-33.png]]
+![image-33](../../../Immagini/Immagini/image-33.png)
 
 
 ## Stima del parametro eps
 Per stimare il valore ottimale di **eps**, ad ogni punto $p$ si associa la distanza dal punto più lontano tra i suoi **min_pts** vicini. Le distanze così ottenute vengono ordinate in modo crescente, ottenendo una curva che cresce lentamente all'inizio e poi aumenta bruscamente
 
-![[image-34.png|455]]
+![455](../../../Immagini/Immagini/image-34.png)
 
 I punti situati in zone dense presentano distanze piccole, mentre quelli in zone più isolate hanno distanze maggiori. Il punto in cui la curva cambia più nettamente, il cosiddetto **gomito**, indica il confine tra zone dense e rumore. Il valore della distanza in prossimità del gomito rappresenta un buon candidato per **eps**. 
 
@@ -284,7 +284,7 @@ for i, the_dataset in enumerate([noisy_circles, noisy_moons, blobs]):
 
 ```
 
-![[image-35.png]]
+![image-35](../../../Immagini/Immagini/image-35.png)
 
 
 ``` python
@@ -348,7 +348,7 @@ plt.text(C[0]-1, C[1]-.01, 'C', color='red')
 ```
 
 
-![[image-36.png|467]]
+![467](../../../Immagini/Immagini/image-36.png)
 
 
 ``` python
@@ -368,5 +368,5 @@ plt.grid(True)
 ```
 
 
-![[image-37.png|518]]
+![518](../../../Immagini/Immagini/image-37.png)
 

@@ -34,7 +34,7 @@ Troviamo $w^{*}$ che minimizza $J(w)$ utilizzando l'algoritmo di discesa del gra
 $$w \leftarrow w + \Delta w = w - \eta \Delta J(w)$$
 dove $\Delta J(w)$ indica il vettore delle derivate parziali (gradiente di $J$). La costante $\eta$ è chiamata **tasso di apprendimento** e controlla di quanto ci si sposta in funzione del gradiente. Andiamo a calcolare il valore delle componenti di $\Delta J(w)$
 
-![[image-20.png]]
+![image-20](../../../Immagini/Immagini/image-20.png)
 
 Dove $x_{j}$ rappresenta la colonna $j$ di $X$ e $x^{(i)}$ indica la riga $i$. Quindi, la precedente può essere riscritta come al prodotto scalare del vettore colonna $j$ di $X$ per il vettore
 

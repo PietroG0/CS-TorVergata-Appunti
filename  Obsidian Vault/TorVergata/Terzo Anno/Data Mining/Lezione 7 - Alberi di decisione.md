@@ -6,7 +6,7 @@
 >L'idea è quella di progettare un classificatore basato su una serie di test sulle caratteristiche in cui i testi vengono scelti in funzione delle risposte precedenti. Si ottiene una struttura ad albero in cui i nodi interni sono relativi ai test, gli archi corrispondono agli esiti del test, e alle foglie corrispondono le decisioni (le classi)
 
 
-![[image-38.png|561]]
+![561](../../../Immagini/Immagini/image-38.png)
 
 La figura mostra un classificatore del dataset Iris: su ogni nodo interno è riportato il test nella forma $f_{i} < val$ dove $i$ indica la colonna relativa alla caratteristica coinvolta.
 
