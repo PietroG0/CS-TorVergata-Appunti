@@ -22,9 +22,8 @@ $$I_G(D_p) = \frac{n_c}{n}\left( 1 - \frac{n_c}{n} \right) + \frac{n-n_c}{n}\lef
 
 che tende a $0$ con $n_c$ che tende a $0$ o a $n$ (una delle classi contiene quasi tutti i campioni). Il valore è massimo se le classi sono equidistribuite. Quindi $I_G$ è una sorta di misura dell'incertezza. Inoltre quando $I_G(D_p)$ è nullo, una delle classi prevale sull'altra quindi tutti i campioni appartengono ad una unica classe ed il nodo è considerato *puro*. Soltanto campioni con una stessa etichetta soddisfa la catena di condizioni che ha portato al nodo: ogni altro campione che soddisfa gli stessi vincoli può essere classificato con la stessa etichetta.
 
-  
 
-In fase di addestramento, si vuole arrivare il prima possibile a nodi puri. Questo si ottiene dividendo i campioni relativi al nodo $p$ in due classi gruppi $D_L$ e $D_R$ che rappresentano i campioni associati al nodi sinistro e destro di $p$: se $I_G(D_L)$ e $I_G(D_R)$ sono simili a $I_G(D_p)$, la probabilità di sbagliare classificazione resta la stessa anche dopo il test sul nodo $p$, ovvero il test su $p$ non ha portato vantaggi. Un vantaggio lo otteniamo se $I_G(D_L)$ e $I_G(D_R)$ sono piccoli (la loro media pesata), ovvero se
+In fase di addestramento, si vuole arrivare il prima possibile a nodi puri. Questo si ottiene dividendo i campioni relativi al nodo $p$ in due classi gruppi $D_L$ e $D_R$ che rappresentano i campioni associati ai nodi sinistro e destro di $p$: se $I_G(D_L)$ e $I_G(D_R)$ sono simili a $I_G(D_p)$, la probabilità di sbagliare classificazione resta la stessa anche dopo il test sul nodo $p$, ovvero il test su $p$ non ha portato vantaggi. Un vantaggio lo otteniamo se $I_G(D_L)$ e $I_G(D_R)$ sono piccoli (la loro media pesata), ovvero se
 $$IG(D_p) = I_G(D_p) - \left( \frac{|D_L|}{n} I_G(D_L) + \frac{n-|D_L|}{n} I_G(D_R) \right)$$
 è massima. La funzione $IG$ è il **guadagno informativo**.
 

@@ -1,11 +1,3 @@
-## Il Problema
-
-Immagina di avere 150 fiori e devi classificarli in 3 specie, guardando solo 4 misure (lunghezza/larghezza di petali e sepali). La rete neurale **impara da sola** a fare questa classificazione, guardando esempi già etichettati.
-
-![image-21](../../../Immagini/Immagini/image-21.png)
-
----
-
 ## La Struttura della Rete
 
 La rete ha **3 livelli**:
