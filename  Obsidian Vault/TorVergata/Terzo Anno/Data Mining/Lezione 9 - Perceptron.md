@@ -1,7 +1,7 @@
 #DataMining 
 
 ## Notazioni
-- $ X \in R^{nxd}$ **matrice delle caratteristiche**: $n$ esempi e $d$ caratteristiche
+- $X \in R^{nxd}$ **matrice delle caratteristiche**: $n$ esempi e $d$ caratteristiche
 - $x^{(i)}$ è la riga $i$-esima di $X$
 - $x_{j}^{(i)}$ è la caratteristica $j$-esima di $x^{(i)}$ 
 - $y$ **vettore delle etichette** (output). Di dimensione $n$

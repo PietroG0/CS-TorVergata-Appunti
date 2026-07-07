@@ -38,9 +38,7 @@ Proprietà fondamentali di J:
 
 Vogliamo trovare $\mathbf{w}^*$ che minimizza $J(\mathbf{w})$. La regola di aggiornamento è:
 
-$$
-\mathbf{w} \leftarrow \mathbf{w} + \Delta\mathbf{w} = \mathbf{w} - \eta \, \nabla J(\mathbf{w})
-$$
+$$\mathbf{w} \leftarrow \mathbf{w} + \Delta\mathbf{w} = \mathbf{w} - \eta \, \nabla J(\mathbf{w})$$
 
 ### Calcolo del gradiente
 
@@ -229,9 +227,7 @@ $$
 
 ### Log-verosimiglianza (da massimizzare)
 
-$$
-\ell(\mathbf{w}) = \sum_{i=1}^{n} \left[ y^{(i)} \log\phi(\mathbf{w} \cdot \mathbf{x}^{(i)}) + (1-y^{(i)}) \log\left(1-\phi(\mathbf{w} \cdot \mathbf{x}^{(i)})\right) \right]
-$$
+$$\ell(\mathbf{w}) = \sum_{i=1}^{n} \left[ y^{(i)} \log\phi(\mathbf{w} \cdot \mathbf{x}^{(i)}) + (1-y^{(i)}) \log\left(1-\phi(\mathbf{w} \cdot \mathbf{x}^{(i)})\right) \right]$$
 
 ### Funzione di costo (da minimizzare)
 
@@ -277,9 +273,7 @@ $$
 \frac{d}{d w_j} J(\mathbf{w}) = -\sum_{i=1}^{n} x_j^{(i)} \left( y^{(i)} - \phi(\mathbf{w} \cdot \mathbf{x}^{(i)}) \right)
 $$
 
-$$
-\boxed{w_j \leftarrow w_j + \eta \sum_{i=1}^{n} x_j^{(i)} \left( y^{(i)} - \phi(\mathbf{w} \cdot \mathbf{x}^{(i)}) \right)}
-$$
+$$\boxed{w_j \leftarrow w_j + \eta \sum_{i=1}^{n} x_j^{(i)} \left( y^{(i)} - \phi(\mathbf{w} \cdot \mathbf{x}^{(i)}) \right)}$$
 
 In forma matriciale:
 

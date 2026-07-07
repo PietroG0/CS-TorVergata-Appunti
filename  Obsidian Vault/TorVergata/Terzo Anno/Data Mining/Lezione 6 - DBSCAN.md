@@ -5,7 +5,7 @@
 - **Border point**: un punto non core ma che è vicino ad un core
 - **Noise point**: nè core, nè border
 
-![image-30](../../../Immagini/Immagini/image-30.png)
+![image-30|697](../../../Immagini/Immagini/image-30.png)
 
 ## Raggiungibilità 
 - Un punto $p$ è **raggiungibile direttamente per densità** da $q$ se $q$ è un core e $p$ è nel suo vicinato. In questo caso $q$ **appartiene ad un cluster**
